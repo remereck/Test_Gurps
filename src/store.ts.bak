@@ -1,0 +1,185 @@
+import { create } // replaced from 'zustand';
+import { Language, UserSkill, UserItem, CoreAttr, UserTrait, UserQuirk, CustomItemDef } from './types';
+import { getAttributeCost } from './utils';
+
+export interface CharacterState {
+  lang: Language;
+  setLang: (lang: Language) => void;
+
+  // Core Attributes
+  ST: number;
+  DX: number;
+  IQ: number;
+  HT: number;
+  setAttribute: (attr: 'ST' | 'DX' | 'IQ' | 'HT', value: number) => void;
+
+  // Pathway
+  pathwayId: string | null;
+  sequenceLevel: 9 | 8 | 7 | 6 | null;
+  setPathway: (id: string | null) => void;
+  setSequence: (level: 9 | 8 | 7 | 6 | null) => void;
+
+  // Lists
+  skills: UserSkill[];
+  setSkillPoints: (id: string, points: number) => void;
+  removeSkill: (id: string) => void;
+
+  advantages: UserTrait[];
+  addAdvantage: (id: string) => void;
+  removeAdvantage: (id: string) => void;
+  setAdvantageLevel: (id: string, level: number) => void;
+
+  disadvantages: UserTrait[];
+  addDisadvantage: (id: string) => void;
+  removeDisadvantage: (id: string) => void;
+  setDisadvantageLevel: (id: string, level: number) => void;
+
+  quirks: UserQuirk[];
+  addQuirk: (quirk: UserQuirk) => void;
+  removeQuirk: (index: number) => void;
+
+  inventory: UserItem[];
+  customItems: CustomItemDef[];
+  addCustomItem: (item: CustomItemDef) => void;
+  removeCustomItem: (id: string) => void;
+  addItem: (id: string) => void;
+  removeItem: (id: string) => void;
+
+  // Money
+  moneyPence: number;
+  setMoneyPence: (amount: number) => void;
+
+  // Vitals & Corruption
+  spiUsed: number;
+  setSpiUsed: (val: number) => void;
+  corruption: number;
+  setCorruption: (val: number) => void;
+
+  // Viewer State
+  viewerData: { title: string; desc: string; extra?: string; type?: string; rollTarget?: number; spiCost?: number } | null;
+  setViewerData: (data: { title: string; desc: string; extra?: string; type?: string; rollTarget?: number; spiCost?: number } | null) => void;
+
+  exportData: () => string;
+  importData: (json: string) => void;
+}
+
+const initialState = {
+  ST: 9,
+  DX: 9,
+  IQ: 9,
+  HT: 9,
+  pathwayId: null,
+  sequenceLevel: null,
+  skills: [],
+  advantages: [],
+  disadvantages: [],
+  quirks: [],
+  inventory: [],
+  customItems: [],
+  
+  addCustomItem: (item) => set((state) => ({ customItems: [...state.customItems, item], inventory: [...state.inventory, { id: item.id, quantity: 1 }] })),
+  removeCustomItem: (id) => set((state) => ({ customItems: state.customItems.filter(i => i.id !== id), inventory: state.inventory.filter(i => i.id !== id) })),
+  moneyPence: 240, // 1 pound default
+  spiUsed: 0,
+  corruption: 0,
+};
+
+export const useCharacterStore = create<CharacterState>((set, get) => ({
+  lang: 'es',
+  setLang: (lang) => set({ lang }),
+  
+  ...initialState,
+
+  setAttribute: (attr, value) => set({ [attr]: value }),
+  setPathway: (id) => set({ pathwayId: id, sequenceLevel: id ? 9 : null }),
+  setSequence: (level) => set({ sequenceLevel: level }),
+
+  setSkillPoints: (id, points) => set((state) => {
+    const existing = state.skills.find(s => s.id === id);
+    if (existing) {
+      return { skills: state.skills.map(s => s.id === id ? { ...s, points } : s) };
+    }
+    return { skills: [...state.skills, { id, points }] };
+  }),
+  removeSkill: (id) => set((state) => ({ skills: state.skills.filter(s => s.id !== id) })),
+
+  addAdvantage: (id) => set((state) => {
+    if (!state.advantages.find(a => a.id === id)) {
+      return { advantages: [...state.advantages, { id, level: 1 }] };
+    }
+    return state;
+  }),
+  removeAdvantage: (id) => set((state) => ({ advantages: state.advantages.filter(a => a.id !== id) })),
+  setAdvantageLevel: (id, level) => set((state) => ({
+    advantages: state.advantages.map(a => a.id === id ? { ...a, level } : a)
+  })),
+
+  addDisadvantage: (id) => set((state) => {
+    if (!state.disadvantages.find(d => d.id === id)) {
+      return { disadvantages: [...state.disadvantages, { id, level: 1 }] };
+    }
+    return state;
+  }),
+  removeDisadvantage: (id) => set((state) => ({ disadvantages: state.disadvantages.filter(d => d.id !== id) })),
+  setDisadvantageLevel: (id, level) => set((state) => ({
+    disadvantages: state.disadvantages.map(d => d.id === id ? { ...d, level } : d)
+  })),
+
+  addQuirk: (quirk) => set((state) => ({ quirks: [...state.quirks, quirk] })),
+  removeQuirk: (index) => set((state) => ({ quirks: state.quirks.filter((_, i) => i !== index) })),
+
+  addItem: (id) => set((state) => {
+    const existing = state.inventory.find(i => i.id === id);
+    if (existing) {
+      return { inventory: state.inventory.map(i => i.id === id ? { ...i, quantity: i.quantity + 1 } : i) };
+    }
+    return { inventory: [...state.inventory, { id, quantity: 1 }] };
+  }),
+  removeItem: (id) => set((state) => {
+    const existing = state.inventory.find(i => i.id === id);
+    if (existing && existing.quantity > 1) {
+      return { inventory: state.inventory.map(i => i.id === id ? { ...i, quantity: i.quantity - 1 } : i) };
+    }
+    return { inventory: state.inventory.filter(i => i.id !== id) };
+  }),
+
+  moneyPence: 240,
+  setMoneyPence: (amount) => set({ moneyPence: amount }),
+
+  spiUsed: 0,
+  setSpiUsed: (val) => set({ spiUsed: val }),
+  corruption: 0,
+  setCorruption: (val) => set({ corruption: val }),
+
+  viewerData: null,
+  setViewerData: (data) => set({ viewerData: data }),
+
+  exportData: () => {
+    const state = get();
+    const dataToExport = {
+      ST: state.ST, DX: state.DX, IQ: state.IQ, HT: state.HT,
+      pathwayId: state.pathwayId, sequenceLevel: state.sequenceLevel,
+      skills: state.skills, advantages: state.advantages, disadvantages: state.disadvantages,
+      quirks: state.quirks, inventory: state.inventory, customItems: state.customItems, moneyPence: state.moneyPence,
+      spiUsed: state.spiUsed, corruption: state.corruption
+    };
+    return JSON.stringify(dataToExport, null, 2);
+  },
+  importData: (json: string) => {
+    try {
+      const data = JSON.parse(json);
+      if (data.advantages && typeof data.advantages[0] === 'string') {
+        data.advantages = data.advantages.map((id: string) => ({ id, level: 1 }));
+      }
+      if (data.disadvantages && typeof data.disadvantages[0] === 'string') {
+        data.disadvantages = data.disadvantages.map((id: string) => ({ id, level: 1 }));
+      }
+      if (typeof data.quirksCount === 'number' && !data.quirks) {
+        /* replaced */
+      }
+      set({ ...data });
+    } catch (e) {
+      alert("Invalid JSON file");
+    }
+  }
+}));

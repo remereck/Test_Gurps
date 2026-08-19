@@ -1,0 +1,38 @@
+=== DARKNESS 9 ===
+###### **Sequence 9: Sleepless · Darkness Pathway** 
+
+=== DARKNESS 8 ===
+###### **Sequence 8: Midnight Poet · Darkness Pathway** 
+
+|**Stat / Ad**|**vantage**<br>**Gain**|**Skill**<br>**Change**|
+|---|---|---|
+|**SPI**|+3|Brawling/DX [Easy]<br>+3|
+|||Guns (any)/DX [Easy]<br>+2|
+|||Climbing/DX [Average]<br>+2|
+|||Ritualistic Magic/IQ [Very Hard]<br>+2|
+|**Ability**|**Nocturnality (passive):**+1 to all rolls du<br>poem about the night or the Evernight Go<br>effects below. All spells cost 2 SPI. Roll<br>calm and peaceful. They suffer -2 to all a<br>turns. Will roll (-2) to resist.**Lullaby:**Pu<br>Only Beyonders with strong spiritual per<br>Perception/SPI (Hard) or Will (-2), whic<br>asleep automatically with no roll. Sleep l<br>and find it hard to evoke or express emot<br>minute.**Pacify:**Target loses all desire to<br>can still defend. Lasts 1d3 turns. Will rol<br>Suffers -2 to all rolls and must succeed o<br>turns. Will roll (-2) to resist entirely.|ring the night.**Midnight Poem — Spell Effects:**By reciting a<br>ddess (one full round), the Midnight Poet manifests one of the<br>Ritualistic Magic for all spells.**Tranquilize:**Target feels deeply<br>ggressive or hostile actions (attacks, intimidation, etc.) for 1d6<br>ts all who hear the Lullaby to sleep (within earshot, ~20m radius).<br>ception or Cogitation abilities may resist — roll either Spiritual<br>hever is higher. Ordinary mortals and spiritually weak beings fall<br>asts 1d minutes unless shaken awake. Those who resist fall serene<br>ions (-1 to all social skill rolls and emotional expression) for 1<br>act — goes limp and unresponsive. Cannot take offensive actions;<br>l (-3) to resist.**Fear:**Target is filled with supernatural dread.<br>n a Will (-2) roll each turn to approach the Midnight Poet. Lasts 1d6|
+
+
+
+_Powered by GURPS: Pathways — Lord of the Mysteries_ 
+
+Page 89 
+
+**Reinforce Nocturnality:** The bonus during night increases to +2 (instead of +1). In total darkness (no moon or stars), **d Abilities** the bonus becomes +3. **Danger Detection in the Dark:** The bonus in low-light environments increases to +4. The Midnight Poet now senses danger in darkness up to 20 m away with pin-point direction. 
+
+=== DARKNESS 7 ===
+###### **Sequence 7: Nightmare · Darkness Pathway** 
+
+|**Stat / Advantage**||**Gain**|
+|---|---|---|
+|**SPI**|+3||
+|**IQ**|+1||
+
+
+
+Page 105 
+
+_Powered by GURPS: Pathways — Lord of the Mysteries_ 
+
+**Ability Silent Midnight Poem (1 SPI):** Can now chant Midnight Poems without opening the mouth. **Nightmare State (1 SPI):** The Nightmare's body falls asleep while the Soul Body moves freely within city range to enter dreams. While in this state, vision is tainted and all Observation rolls suffer -3. The Nightmare sees glowing orbs that belong to the dream of someone. **Dream Shaping (1 SPI):** Shapes the dream of a target, guiding them into revealing certain things or truths. Can be used for interrogation: all Interrogation, Detect Lies, and Observation rolls gain +3 during this state. Target rolls Will -2; on critical failure the target divulges their biggest secret. **Dream Invasion (2 SPI):** Forcefully drags a target into a dream. Target rolls Spiritual Intuition -5; on failure they are unaware they are in a dream; on critical failure they suffer -1 to all actions in the dream. Range: 20 meters if done quickly, 100 meters with 2 turns of preparation. The Nightmare can coax the target into sleeping to reduce casting cost by 1 SPI. Once used, both the Nightmare and the target fall into the dream. The Nightmare can coax up to 10 people into sleeping, but can only enter the dream of 1 target. **Nightmare Limbs (1 SPI):** Generates tentacles from the back for close combat. These tentacles are made of flesh and blood — if destroyed, the Nightmare takes 1d6-2 damage. Tentacles have the Nightmare's HP -2. When used, they deal 1d6+1 damage. **Reinforce Nocturnality:** At night or in darkness, DX and IQ bonuses increase to +3 (from +2). Perception bonus to **d Abilities** spot hidden creatures in darkness increases to +4. **Shadows:** The Stealth bonus rises to +4 (from +3). The Nightmare can merge into shadows as a free action once per turn, gaining Invisibility (vision only) until they attack or leave the shadow. **Danger Detection:** +5 to any roll to detect ambushes and traps (from +4). Range expands to 30 m (from 20 m). **Sequence 7: Spirit Medium · Death Pathway Stat / Advantage Gain Skill Change SPI** +3 Occultism/IQ [Average] +2 (additional) **Per** +1 Ritualistic Magic/IQ [Very Hard] +2 (upgrade) **Will** +1 Thaumatology/IQ [Very Hard] +1 Spiritual Perception/SPI [Average] +2 **Ability Spirit Channeling (2 SPI):** Roll Ritualistic Magic to communicate with natural spirits and dead souls. Most require materials (Full Moon Essence Oil, Corpse Incense, or the Medium's own blood). Success = willing to converse. Success by 3+ = favorable. Failure = refuse. Critical Failure = offended — they haunt you. 1 spirit at a time. Living souls can also be channeled (harder). Two methods: (1) Forceful — SPI contest vs Will; (2) Relaxation — Amantha Extract + Eye of Spirit medication. Crit fail on a living soul causes backlash (+1 CP). Deceased spirits need no ritual penalty. **Frost Shadow (1–2 SPI/turn):** Roll Ritualistic Magic to summon a combat spirit. On success, it manifests on your turn and you control it mentally as a free action. Duration: concentration, up to 1 minute (dismiss as free action). Choose one form per summon: • Ice Armor — +2 DR (+3 vs cold), lasts while maintained. • Frost Scythe — sw+2 cutting +1 cold damage, Reach 1–2. • Freezing Field — 10m radius; enemies inside take 1 HP cold damage per round (HT roll to resist; half damage on success). **Spirit Affinity (Passive):** Understand spirits without Ritualistic Magic. Spirits regard you as kin — won't attack first. If friendly, they may share information unprompted (1d6; 4+ succeeds). Intelligent undead (IQ 8+) may resist with a Will roll; on success they ignore the affinity. **Zombie Disguise (1 SPI):** Disguise as zombie; +1 Will vs death/cold/decay auras (including from ghosts and undead). **Eye of Death (1 SPI):** Upgrade from Gravedigger — costs SPI instead of FP. Reveals all weaknesses of Undead/Spirit creatures. For the rest of the scene: +2 to hit, +2 damage, ignore 2 DR against that creature. 
+
