@@ -1,0 +1,17 @@
+{
+  "name": "Lord of the Mysteries - Character Sheet",
+  "short_name": "LotM Sheet",
+  "description": "Interactive character sheet and pathway builder.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#050505",
+  "theme_color": "#050505",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

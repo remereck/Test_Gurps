@@ -6,7 +6,7 @@ export interface Attribute {
 }
 
 export type CoreAttr = 'ST' | 'DX' | 'IQ' | 'HT' | 'Per' | 'Will' | 'SPI';
-export type SkillDiff = 'E' | 'A' | 'H' | 'VH';
+export type SkillDiff = 'E' | 'A' | 'H' | 'VH' | 'WC';
 
 export interface SkillDef {
   id: string;
@@ -58,7 +58,7 @@ export interface PotionSkillBonus {
 }
 
 export interface PotionStatBonus {
-  stat: CoreAttr | 'BasicSpeed' | 'HP' | 'FP';
+  stat: CoreAttr | 'BasicSpeed' | 'Basic Speed' | 'HP' | 'FP' | string;
   bonus: number;
 }
 
@@ -71,7 +71,8 @@ export interface PotionAbility {
 }
 
 export interface Sequence {
-  level: 9 | 8 | 7 | 6;
+  level: number;
+  name?: { en: string; es: string } | string;
   statBonuses: PotionStatBonus[];
   skillBonuses: PotionSkillBonus[];
   abilities: PotionAbility[];

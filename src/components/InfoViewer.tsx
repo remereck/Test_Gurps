@@ -3,10 +3,12 @@ import { useCharacterStore } from '../store';
 import { TRANSLATIONS } from '../i18n';
 import { PATHWAYS } from '../data/pathwaysData';
 import { sanitize } from '../utils';
+import { useCorruptionMetrics } from '../utils/corruption';
 
 export default function InfoViewer() {
   const { lang, viewerData, spiUsed, setSpiUsed, pathwayId, sequenceLevel } = useCharacterStore();
   const t = TRANSLATIONS[lang];
+  const { textAccentClass, isLostControl } = useCorruptionMetrics();
   
   const [rollResult, setRollResult] = useState<{ rolls: number[]; total: number; success: boolean | string; margin: number } | null>(null);
 
@@ -73,9 +75,9 @@ export default function InfoViewer() {
   else if (viewerData.type === 'skill') borderColor = "border-green-500";
 
   return (
-    <div className={`h-full bg-[#111] border-l-4 ${borderColor} rounded-md p-3 flex flex-col overflow-y-auto custom-scrollbar relative`}>
+    <div className={`h-full bg-[#111] border-l-4 ${borderColor} rounded-md p-3 flex flex-col overflow-y-auto custom-scrollbar relative obfuscate-zone ${isLostControl ? 'eldritch-illegible-panel eldritch-container-distortion' : ''}`}>
       <div className="flex justify-between items-start mb-1">
-        <h3 className="m-0 text-[14px] font-bold text-yellow-500 uppercase">
+        <h3 className={`m-0 text-[14px] font-bold ${textAccentClass} uppercase transition-colors duration-500`}>
           {sanitize(viewerData.title)}
         </h3>
         {viewerData.type && (
@@ -89,7 +91,7 @@ export default function InfoViewer() {
       </div>
       
       {(viewerData.extra || viewerData.rollTarget !== undefined || viewerData.spiCost !== undefined) && (
-        <div className="mt-2 text-[11px] text-yellow-500 font-bold border-t border-[#333] pt-1 flex items-center justify-between">
+        <div className={`mt-2 text-[11px] ${textAccentClass} font-bold border-t border-[#333] pt-1 flex items-center justify-between transition-colors duration-500`}>
           <span>{viewerData.extra ? sanitize(viewerData.extra) : 'Info'}</span>
           <div className="flex gap-2">
             {viewerData.spiCost !== undefined && (
@@ -103,7 +105,7 @@ export default function InfoViewer() {
             {viewerData.rollTarget !== undefined && (
               <button 
                 onClick={handleRoll}
-                className="bg-[#222] border border-yellow-500/50 text-yellow-500 px-2 py-0.5 rounded hover:bg-[#333] hover:text-white transition-colors cursor-pointer"
+                className={`bg-[#222] border border-current ${textAccentClass} px-2 py-0.5 rounded hover:bg-[#333] hover:text-white transition-colors cursor-pointer`}
               >
                 ROLL 3d6
               </button>
@@ -118,7 +120,7 @@ export default function InfoViewer() {
             <span className="text-[11px] text-[#aaa]">Target: <span className="text-[#e5e5e5] font-bold">{viewerData.rollTarget}</span></span>
             <div className="flex gap-1">
               {rollResult.rolls.map((r, i) => (
-                <div key={i} className="w-5 h-5 bg-[#222] border border-[#444] rounded flex items-center justify-center font-mono text-[10px] text-yellow-500">{r}</div>
+                <div key={i} className={`w-5 h-5 bg-[#222] border border-[#444] rounded flex items-center justify-center font-mono text-[10px] ${textAccentClass}`}>{r}</div>
               ))}
             </div>
           </div>
@@ -134,7 +136,7 @@ export default function InfoViewer() {
               </span>
               <span className="text-[10px] text-[#aaa]">Margin: {rollResult.margin > 0 ? `+${rollResult.margin}` : rollResult.margin}</span>
             </div>
-            <span className="font-mono text-[18px] font-bold text-yellow-500">{rollResult.total}</span>
+            <span className={`font-mono text-[18px] font-bold ${textAccentClass}`}>{rollResult.total}</span>
           </div>
         </div>
       )}

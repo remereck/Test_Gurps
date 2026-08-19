@@ -1,6 +1,8 @@
 {
-  "name": "",
+  "name": "Release CH",
   "description": "",
   "requestFramePermissions": [],
-  "majorCapabilities": [""]
+  "majorCapabilities": [
+    "Hi"
+  ]
 }

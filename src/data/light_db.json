@@ -707,16 +707,16 @@
     "loen": {
       "units": [
         {"name": "Gold Pound", "abbr": "£", "value": 1, "subdivision": 20, "notes": "Highest common denomination; £1, £5, £10 notes exist"},
-        {"name": "Soli (Shilling)", "abbr": "s", "value": 1/20, "subdivision": 12, "notes": "Silver coin; 1s and 5s coins most common"},
-        {"name": "Penny", "abbr": "d", "value": 1/240, "subdivision": 4, "notes": "Copper coin; also ½d and ¼d (farthing) coins"}
+        {"name": "Soli (Shilling)", "abbr": "s", "value": 0.05, "subdivision": 12, "notes": "Silver coin; 1s and 5s coins most common"},
+        {"name": "Penny", "abbr": "d", "value": 0.004167, "subdivision": 4, "notes": "Copper coin; also ½d and ¼d (farthing) coins"}
       ],
       "conversion": "£1 = 20s = 240d"
     },
     "feysac": {
       "units": [
         {"name": "Gold Hoorn", "abbr": "gh", "value": 1, "subdivision": 10, "notes": "Decimal system"},
-        {"name": "Feysilver", "abbr": "fs", "value": 1/10, "subdivision": 10, "notes": "Silver coin; everyday workhorse"},
-        {"name": "Kopek", "abbr": "k", "value": 1/100, "notes": "Copper/bronze coin; smallest common unit"}
+        {"name": "Feysilver", "abbr": "fs", "value": 0.1, "subdivision": 10, "notes": "Silver coin; everyday workhorse"},
+        {"name": "Kopek", "abbr": "k", "value": 0.01, "notes": "Copper/bronze coin; smallest common unit"}
       ],
       "conversion": "1gh = 10fs = 100k",
       "exchange_rate": "1 Loen £ = 5.5 Gold Hoorn"
