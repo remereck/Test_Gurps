@@ -382,13 +382,199 @@ All attributes begin at 9. Players may raise any attribute by spending points at
 
 Advantages define what makes your character special. Choose 1–2 that strongly reinforce your concept. Budget carefully — advantages are expensive and every point you spend here comes from skills. 
 
-_(For full list of advantages, refer to the compendium data)_
+- **Absolute Direction** (+5 points): Always know which way is north; never become lost in natural terrain. +3 to Navigation and Body Sense rolls.
+- **Acute Hearing** (+2 points): +2 to Hearing rolls; detect faint sounds, eavesdrop through walls, identify speech in noise.
+- **Acute Social Awareness** (+5 points): +2 to all Body Language and Detect Lies rolls. You read a room before you enter it.
+- **Acute Vision** (+5 points): +2 to Vision rolls; notice details at a distance, read lips, spot hidden objects.
+- **Alcohol Tolerance** (+1 points): Never suffer social penalties from moderate drinking; Carousing rolls to appear sober at +3.
+- **Alertness** (+5 points): +1 per level to all Per rolls. Notice more of your surroundings — active and passive perception both benefit.
+- **Anchored Soul** (+10 points): All attempts to alter your mental identity — possession, compulsion, pathway side effects — are at -2 against you.
+- **Aura Sensitivity** (+5 points): Sense the emotional weight of places. In locations where violence, grief, or supernatural events occurred, receive a vague impression without rolling.
+- **Beckoning Luck** (+30 points): 2 rerolls per session — reroll any failed roll, usable at any time. If the re-roll also fails there is no additional effect — and fate may balance later.
+- **Black Market Access** (+5 points): Reliable source for illegal or restricted goods. Once per session attempt to acquire a specific item outside legal channels.
+- **Born Under a Named Star** (+15 points): Seers and Diviners who read your fate always notice something unusual. You register as 'marked' in ways they cannot fully interpret.
+- **Charisma** (+5 points): +1/level to Influence skills (Leadership, Panhandling, Public Speaking, Savoir-Faire, Sex Appeal, Streetwise); NPCs are predisposed to trust and listen to you [max 4 levels]
+- **Charmed Object** (+5 points): One item you own provides +1 to one specific skill when used (specify item and skill). Lost permanently if the item is destroyed.
+- **Church Organisation / Informant** (+5 points): A representative of a church enforcement body (Nighthawks, Mandated Punishers, Machinery Hivemind, etc.) has chosen you as an informant. Receive help from authorities when in minor legal trouble or when caught using Beyonder powers without harm to innocents. Earn contribution points for important information or assistance, exchangeable for money or Beyonder formulas/ingredients. 5 pts: newly recruited, must prove your worth. 10–15 pts: trusted informant; the organisation's representative trusts your judgement.
+- **Class Mobility** (+5 points): Move believably across two social classes. +2 to Savoir-Faire in either; NPCs rarely question your presence.
+- **Cleansed Spirit** (+5 points): CoR gained from passive exposure are halved. Active corruption from deliberate acts is unaffected.
+- **Cold Iron Tolerance** (+3 points): Unaffected by the mild spiritual discomfort iron causes to sensitive individuals. Rare in those with significant spiritual heritage.
+- **Cold Resistance** (+2 points): No penalties from cold weather up to freezing; hypothermia rolls at +2.
+- **Combat Reflexes** (+15 points): +1 to all active defenses, +6 to recover from stun, never freeze in surprise
+- **Connections: Church Lay / Staff** (+5 points): Recognized civilian assistant to one Orthodox Church. Access to facilities; some protection from routine Nighthawk scrutiny.
+- **Connections: Press / Credentials** (+3 points): Recognized press identity. Opens doors otherwise closed; plausible reason to be anywhere in a city.
+- **Contact** (+1 points): Reliable source of information or aid (varies by skill and frequency)
+- **Controlled Breathing** (+3 points): Hold breath for HT × 3 seconds without a roll; HT rolls to resist airborne toxins at +2.
+- **Danger Sense** (+15 points): GM warns of threats just before they strike (surprise is negated)
+- **Dead Language Fluency** (+5 points): Read and speak one dead language (Ancient Hermes, Ancient Loen, etc.) without having formally learned it. Origin unexplained.
+- **Death Sense** (+10 points): Passive awareness of recent death within 30 meters (within 24 hours). Sense its direction without rolling; can sense whether a person is dying.
+- **Divine Touchstone** (+10 points): An Orthodox deity has taken minor notice of you. Once per session ask the GM a yes/no question your character senses as an impression.
+- **Double-Jointed** (+15 points): +5 to Climbing and Escape; ignore up to -5 close-quarters penalties for wrestling or grappling; any body part bends any way.
+- **Dreamsight** (+10 points): Dreams contain genuine information. Once per session the GM may offer a cryptic dream-image related to current events; sharing it grants +1 to one investigation roll.
+- **Eidetic Memory** (+5 points): +5 to remember things after one reading; near-perfect recall
+- **Empathy** (+15 points): Sense emotions; +3 to social skill rolls
+- **Ether Body Awareness** (+5 points): Know immediately when a supernatural effect is targeting your soul, not just your body — even without Spirit Vision.
+- **Experienced Investigator** (+5 points): Once per investigation scene ask the GM one yes/no question about observable evidence without a skill roll.
+- **Faithful Grounding** (+5 points): Genuine faith acts as an anchor. Fright Checks in church buildings, shrines, or during prayer are at +3.
+- **Familiar Presence** (+5 points): Animals and spirits are unusually calm near you. Domestic animals never startle; non-hostile spirits observe rather than act against you.
+- **Fast Healer** (+5 points): Recover 1 additional HP per day of rest. Injuries that would leave others bedridden leave you functional in half the time.
+- **Fate Sensitivity** (+10 points): Once per session when making a decision with major consequences, ask the GM: 'Does this feel wrong?' The GM must answer honestly.
+- **Fearlessness** (+2 points): +1 per level to Fright Checks; also grants immunity to intimidation from beings with fewer levels of Fearlessness than you. Vital in a world of horrors.
+- **Fearsome Reputation** (+5 points): Known in criminal circles. Relevant NPCs start cautious; Intimidation in these circles is at +2.
+- **Fit** (+5 points): +1 to all HT rolls; recover FP at twice the normal rate
+- **Flexibility** (+5 points): +3 to Climbing and Escape; ignore up to -3 close-quarters penalties.
+- **Former Military Officer** (+10 points): Leadership and Tactics at +1; military contacts; entitled to officer courtesies in formal settings.
+- **General Weapon Certificate** (+15 points): Full civilian firearm permit. Costs £50 to obtain in-game. Allows carry of any non-military weapon in cities; required for pistols, rifles, shotguns in urban areas.
+- **Ghost Proximity Sense** (+5 points): Passive. Sense when a spirit is within 10 meters — a cold certainty. No details; no roll required.
+- **Great Balance** (+10 points): +2 to avoid knockdown; +1 to Acrobatics, Climbing, Piloting
+- **Hard Stomach** (+2 points): No HT rolls required for disgusting environments — gore, corpses, foul conditions.
+- **Hard to Kill** (+2 points): +1/level to HT rolls to avoid death; can take 1–5 levels
+- **Hard to Subdue** (+2 points): +1/level to remain conscious when reduced to 0 or negative HP
+- **Healer** (+10 points): +2 to all rolls to diagnose, treat, and heal; +3 to First Aid specifically; HT rolls to avoid or recover from disease at +2.
+- **High Pain Threshold** (+10 points): Ignore shock penalties from injury; +3 on HT rolls to avoid knockdown
+- **Hunting License** (+5 points): Legal in Loen for hunting rifle only. Costs £5 to obtain in-game. Valid in rural/suburban areas — carrying in city limits draws police attention.
+- **Incisive Vision** (+10 points): Upgraded Acute Vision (+4 to all Vision rolls); can read micro-expressions at 10m, see through minor visual illusions, spot concealed objects automatically.
+- **Incorruptible Will** (+10 points): +3 to all Will rolls to resist Beyonder abilities, evil god whispers, and ritual compulsion. Does not apply to mundane social pressure.
+- **Industrial Expertise** (+5 points): Deep familiarity with a specific industry (specify). +2 to all relevant skill rolls; NPCs in that industry trust your knowledge.
+- **Intuition** (+5 points): Once per session, the GM may give you a meaningful hunch about a decision. Ask the GM: 'Is this a good/bad idea?' The GM must answer honestly.
+- **Iron Jaw** (+3 points): Knockdown rolls from blows to the head at +2; never bite through your own tongue under shock.
+- **Knows the Acting Method** (+15 points): You innately understand the Acting Method for your Pathway. At the end of each session, roll 3d6 — the result is the percentage of digestion progress you gain toward your current potion, in addition to your normal Digestion Gain Per Session.
+- **Language (specify)** (+5 points): Individual language proficiency. See the Languages section for cost tables based on proficiency (Native/Accented/Broken) and type (Common vs Mystical).
+- **Language Talent** (+10 points): All language skills cost half the normal points
+- **Legal Enforcement Powers** (+5 points): Official authority to investigate, detain, and carry weapons in the line of duty. Works within jurisdiction only; may vary by city or organization.
+- **Lifting ST** (+3 points): Extra ST only for lifting/carrying purposes; does not affect damage
+- **Light Sleeper** (+2 points): Perception rolls while sleeping at +4; never caught completely unaware at night.
+- **Lightning Calculator** (+5 points): Perfect mental arithmetic; quick estimates at no penalty; numerical puzzles and mental maths at +2.
+- **Local Legend** (+5 points): Well-known in one neighbourhood (specify). +2 to social rolls there; people look out for you.
+- **Low-Profile Build** (+3 points): Physical appearance is unremarkable. All attempts to identify you from description are at -2.
+- **Luck** (+15 points): 1 reroll per session — may reroll any one failed roll.
+- **Marked by Ritual** (+10 points): A lasting spiritual imprint (define with GM). Grants +2 to one type of SPI roll but may attract unusual attention.
+- **Medical Training (Informal)** (+5 points): Use Physician at IQ-2 without purchasing the skill; First Aid rolls gain +1.
+- **Mentor** (+5 points): Senior figure offers intermittent guidance. Once per session consult for info, a contact, or a skill roll at their level.
+- **Multilingual** (+3 points): Fluent in two additional languages. No penalty to language-dependent social skills in those languages.
+- **Mystical Item** (+5 points): A single mystical item you already possess, defined with the GM. Cost scales with power: a minor charm (5 pts), a useful tool (10 pts), or a significant piece of equipment (15 pts). The item should match one of the 22 pathways' domains. If lost or destroyed, rename this advantage to 'Mystical Item (Lost)' — no refund.
+- **Natural Leader** (+5 points): When you issue a direct command under pressure, allies may reroll their first Fright Check or morale roll with +1. Once per scene.
+- **Navigator's Eye** (+5 points): Never become lost in any city previously visited; rural navigation rolls at +2.
+- **Night Eyes** (+5 points): Reduce all darkness penalties by 2; in dim gaslight or moonlight suffer no penalty at all.
+- **Official Beyonder** (+15 points): You operate under the sanction of a recognised church or organisation. Benefits: Revolver +2, Ritualistic Magic +1, Hidden Lore (Beyonders) +3, Occultism +2, Hermes Language (Broken). You have Legal Enforcement Powers as a sanctioned investigator. Drawback: Duty (to your organisation) — you can be called upon for assignments and must follow institutional protocol.
+- **Outdoorsman** (+10 points): +1 per level to all Outdoor skills (Camouflage, Fishing, Naturalist, Navigation, Survival, Tracking, Weather Sense). Max 4 levels.
+- **Pathway Resonance** (+10 points): Unexplained affinity with one specific Pathway (specify). +3 to rolls to identify items, individuals, or rituals associated with it.
+- **Perfect Balance** (+20 points): +6 to avoid knockdown; +2 to Acrobatics, Climbing, Piloting
+- **Photographic Instinct** (+3 points): Photography rolls at +2; instinctively know what to capture as evidence.
+- **Police Informant** (+5 points): Arrangement with local constabulary. Minor legal trouble can often be redirected. Discreet — exposure would be dangerous.
+- **Rapid Recovery** (+5 points): Stun durations halved; recover from knockdown in half normal time.
+- **Reputation** (+5 points): Known for something specific — positive reactions from relevant groups
+- **Resistant (specify)** (+3 points): HT rolls to resist a specific category at +3 (3 pts) or +8 (5 pts). Common choices: Disease, Poison, Temperature Extremes.
+- **Respectable Address** (+3 points): Lodgings in a creditable neighbourhood. +1 to social rolls with middle/upper class NPCs who would otherwise look down on you.
+- **Ritual Intuition** (+5 points): Sense when a ritual is being performed within 50 meters. Notice the spiritual disturbance without rolling — even without knowing its type.
+- **Safecracker** (+5 points): +3 to Lockpicking for combination locks and mechanical safes specifically.
+- **Sanctity** (+5 points): Your connection to the divine is unusually clear. +2 to Theology and Religious Ritual; once per session, the GM must answer one factual question about Church doctrine or history honestly.
+- **Sequence Knowledge** (+15 points): You know the formula for your next Sequence 8 potion — main ingredients, supplementary ingredients, and basic preparation method. This knowledge arrives instinctively once you reach Sequence 9. It does not grant the ingredients, a pre-prepared potion, or an Acting Method. Covers only the immediate next sequence.
+- **Single-Minded** (+5 points): +3 to any extended concentration task (research, crafting, lockpicking, etc.) when you can focus without interruption.
+- **Soul Reading (Untrained)** (+10 points): Once per scene the GM may offer one true impression about a target's emotional condition or hidden motive. Cannot be triggered deliberately.
+- **Spirit Tongue** (+10 points): Communicate basic intent to ghosts and lingering spirits without the Language of the Dead ability. Limited to yes/no exchanges.
+- **Spiritual Fortitude** (+5 points): Maximum CoR equal Will + 3 rather than just Will.
+- **Street Credibility** (+3 points): Trusted in the working-class underground. Call in small favours from dock workers, factory hands, and street operators once per session.
+- **Uncanny Survivor** (+10 points): Once per campaign arc, when you would die on a death roll, succeed automatically instead. The GM decides the cost.
+- **Underworld Lawyer** (+5 points): Once per session cite an obscure legal technicality convincingly enough to delay, redirect, or dismiss a legal problem.
+- **Versatile** (+5 points): +1 to defaults skill rolls — any time you use a skill at default, you are effectively one level better.
+- **Very Fit** (+15 points): +2 to all HT rolls; lose FP at half the normal rate; recover FP at twice the normal rate
+- **Voice** (+10 points): +2 to all rolls to influence others through speech
+- **Warded Dreams** (+5 points): All supernatural attempts to enter, read, or alter your dreams require an additional success by 3 or more to take effect.
+- **Wealth: Comfortable** (+5 points): Good income; start with £5. Status 1 — those impressed by wealth treat you better (GM discretion).
 
 ##### **Step 3: Disadvantages** 
 
 You may take up to **-40 points** of disadvantages (no minimum — they are entirely optional). These aren't penalties — they are character definition. The best disadvantages create story hooks and force interesting decisions. Up to 5 additional points of quirks (minor personality traits at -1 pt each) are allowed. 
 
-_(For full list of disadvantages, refer to the compendium data)_
+- **Absent-Mindedness** (-15 points): -3 to skill rolls requiring concentration or organisation in everyday life; must roll vs. IQ to remember to do something if interrupted or distracted. In combat, may forget to reload, change tactics, or use special abilities (GM's discretion).
+- **Addiction: Laudanum** (-10 points): Must use daily or suffer -2 to all rolls from withdrawal; supply costs drain income.
+- **Addiction: Tobacco** (-3 points): Minor withdrawal irritability (-1 to Will) if unable to smoke for a full day.
+- **Bad Temper (12)** (-10 points): Must roll vs. 12 to avoid angry outbursts when provoked
+- **Blacklisted** (-10 points): A specific industry, org, or church has your name. Employment or access there fails automatically without disguise.
+- **Blood Feud** (-5 points): A family, gang, or faction holds a grievance. Their agents appear as recurring threats (scale reflects their power).
+- **Bloodlust** (-10 points): Must go for killing blows in combat. IQ roll necessary to accept a surrender or take a prisoner. Downed foes get an extra shot to make sure.
+- **Bound to a Place** (-10 points): Spiritually tethered to a location (specify). Leaving for more than one week causes growing unease: -1 to Will per additional week, cumulative.
+- **Bully (12)** (-10 points): Must roll vs. 12 to resist intimidating or humiliating someone weaker when the opportunity arises
+- **Callous** (-5 points): -3 to social skill rolls when warmth or empathy is required. You may still act kindly — but it is an effort and it shows.
+- **Cannot Harm Innocents** (-10 points): Will not use deadly force when innocent bystanders might be affected, or against enemies not using deadly force on you. Non-deadly force is acceptable.
+- **Cannot Kill** (-15 points): Unwilling to kill anyone, even through omission, or to allow comrades to kill. If responsible for a death, react as Reluctant Killer (-5).
+- **Charity (12)** (-15 points): Cannot ignore genuine need. Must roll vs. 12 or help anyone who asks for assistance you can reasonably provide. May be exploited.
+- **Chronic Insomnia** (-10 points): Lose 1 FP each morning that cannot be recovered through rest; rolls requiring sustained concentration at -1.
+- **Chronophobia (Temporal)** (-10 points): Irrational terror of something time-related (clocks stopping, mirrors, specific hours). Triggered: immediate Fright Check at -3.
+- **Class Resentment** (-5 points): Must roll vs. Will-2 or express hostility when in prolonged contact with the resented class.
+- **Clueless** (-10 points): -3 to all social skill rolls; generally miss social cues and subtlety. You do not understand subtext, sarcasm, or implication.
+- **Code of Honor** (-5 points): Personal code limits actions; must be followed even at cost
+- **Coldblooded** (-10 points): Morality erodes upon advancement. Roll Will when suppressing evil desires (murder, lust, theft, etc.). Define with the GM which desires apply to your character.
+- **Compulsion (pathway)** (-5 points): Uncontrollable urge tied to pathway nature; triggered by stress
+- **Compulsion: Collection / (pathway)** (-5 points): Compelled to collect specific items (bones, keys, mirrors, etc.). Roll vs. Will-2 when presented with a collectible you do not own.
+- **Compulsion: Confess** (-5 points): Under significant stress, must tell someone a true secret. Roll vs. Will-2 or confess something genuine to the nearest trusted person.
+- **Compulsion: Preserve the / Dead** (-10 points): Cannot pass a neglected corpse without properly covering or acknowledging it. Roll vs. Will-3 to continue without addressing them first.
+- **Compulsive Behavior / (Indulge Evil Desires) SC 6** (-15 points): When an opportunity to commit an evil act (murder, torture, betrayal, etc.) presents itself, roll 3d6≤6 or indulge fully. Conscience offers no resistance.
+- **Compulsive Gambling** (-10 points): Regular income loss; prone to debt; requires Will roll at -2 to leave a game while ahead.
+- **Creditor's Target** (-10 points): You owe a dangerous debt. Periodic pressure, threats, or interference; cannot ignore it without severe consequences.
+- **Curious (12)** (-5 points): Must roll vs. 12 or investigate any mystery encountered
+- **Dead-Eyed** (-5 points): -2 to first-impression social rolls with strangers; animals are skittish around you; children sometimes cry.
+- **Delusion (minor)** (-5 points): Firmly believes something false about the supernatural world
+- **Drafted** (-5 points): Technically in a military reserve or conscript pool. Mobilisation orders can arrive at any time, legally compelling service.
+- **Drawn to Ritual Sites** (-5 points): Pulled toward places where rituals have been performed. When within blocks of a ritual site, compelled to investigate even without obvious reason.
+- **Duty (specify)** (-2 points): Regular, enforced obligation to an organization or individual. Value reflects frequency and danger: -5 for light duty (roll 6 or less), -10 for hazardous duty (roll 9 or less), -15 for extremely hazardous (roll 12 or less; appears weekly). Specify organization and nature at creation.
+- **Duty-Bound** (-5 points): An obligation takes priority over personal safety. Must regularly sacrifice time, money, or risk to fulfil it.
+- **Entity Fixation** (-10 points): -1 to all rolls when a specific entity type is present nearby; -2 to any roll that requires you to ignore them.
+- **Evil Eye Fear** (-5 points): Avoid eye contact with strangers; periodically perform warding rituals. If interrupted from a warding routine, -1 to Will rolls for the day.
+- **Ex-Convict** (-10 points): Social Stigma in formal settings; increased police scrutiny; certain employment and legal protections unavailable.
+- **Famous Face** (-5 points): Recognizable in the city. Disguise attempts at -2; surveillance harder; strangers approach you, sometimes dangerously.
+- **Fear of Silence** (-5 points): In complete silence — underground, at sea, in empty buildings — must roll vs. Will-2 or feel compelled to speak or make noise.
+- **Fugitive (Minor)** (-10 points): Open local warrant on a non-capital charge. Cannot approach police, visit courts, or enter government buildings without risk.
+- **Fugitive (Serious)** (-20 points): Serious criminal charges outstanding. Significant arrest risk on sight in major cities; cannot use real name officially.
+- **Glass Jaw** (-5 points): All knockdown rolls from head strikes at -2; concussion effects last longer.
+- **Glory Hound** (-5 points): Must roll vs. Will or ensure your role in any success is publicly known, even when discretion would be wiser.
+- **Greed (12)** (-15 points): Must roll vs. 12 or take any opportunity for significant profit
+- **Grief-Stricken** (-5 points): In situations that echo a specific loss, Will rolls to act clearly are at -2. Can be gradually resolved through play.
+- **Guilt** (-5 points): -1 to Will in situations that echo the original act; may be exploited by people who know the truth.
+- **Hallucinations (12)** (-10 points): Periodic false sensory experiences; visions, voices, phantom presences
+- **Haunted** (-10 points): A specific ghost follows you. Other spiritual beings notice it; it may interfere with rituals; can be used as leverage by those who know.
+- **Honest to Spirits** (-5 points): Cannot deliberately lie in the presence of ghosts or entities you know to be spiritually present. Instinctive, not a rational choice.
+- **Illegitimate Birth** (-5 points): -1 to social rolls in formal/upper-class settings where this is known; inheritance and legal rights are complicated.
+- **Impulsive** (-10 points): Must roll vs. IQ-2 to pause and plan; failure means you act on the first reasonable impulse in any urgent situation.
+- **Kleptomania** (-10 points): Compelled to steal small objects when the opportunity arises and no consequences are obvious. Roll vs. Will to resist when the situation makes theft easy.
+- **Laziness** (-10 points): Must roll vs. Will to undertake any sustained effort not immediately necessary or personally interesting. Unemployment is a real risk.
+- **Loner** (-5 points): Must roll vs. Will to spend extended time in groups larger than 3-4 people. Seek solitude when stressed; -1 to social rolls in crowds.
+- **Memory Bleed** (-10 points): Someone else's genuine memories intrude periodically — an unrelated person from your past, or someone whose spiritual body overlapped yours.
+- **Nightmares (12)** (-5 points): Disturbed sleep; wake unrefreshed — lose 1 FP each morning
+- **Obsession (12)** (-5 points): Consuming long-term goal dominates life and decisions
+- **Orphan with Dependents** (-10 points): Support younger siblings or a sick relative. Regular financial drain; their safety is a lever enemies can use.
+- **Overconfidence (12)** (-5 points): Believes they can handle situations they cannot
+- **Paranoia (12)** (-10 points): Must roll vs. 12 or assume strangers are threats; common potion side effect
+- **Pathway Pull** (-10 points): A specific Pathway exerts a narrative pull before you drink a potion.
+- **Perceptual Splitting** (-10 points): At moments of high spiritual activity, senses temporarily separate from your body. All physical rolls at -2 during an episode (1d seconds).
+- **Phobia (specify)** (-5 points): Irrational fear of a specific thing (cities, spiders, crowds, etc.). Fright Check at -2 when exposed; -1 to all rolls while the phobic stimulus is present and unavoidable. Severity depends on how common the trigger is.
+- **Phobia: Sacred Symbols** (-10 points): A specific church's symbols, prayers, or holy items cause genuine fright. Fright Check at -2 on direct exposure; -1 in consecrated buildings.
+- **Reckless** (-5 points): -1 to any roll where caution would be smarter; must roll vs. Will to back down from a physical challenge.
+- **Refugee Status** (-10 points): No legal right of permanent residence. No papers, no safety net; deportation is a real threat; police encounters are dangerous.
+- **Reluctant Killer** (-5 points): -4 to hit recognizable people with deadly force (-2 if face hidden); cannot Aim. If you kill a recognizable person, become morose for 3d days — Will rolls required to use violence again.
+- **Reputation: Troublemaker** (-5 points): Employers, landlords, and officials treat you with pre-emptive suspicion (GM discretion).
+- **Secret** (-5 points): Dangerous hidden truth; exposure has severe consequences
+- **Self-Defence Only** (-15 points): Use violence only to protect yourself or those in your care, to the minimum degree necessary; no pre-emptive strikes.
+- **Sense of Duty** (-2 points): Must help/protect certain groups even at personal risk
+- **Shyness** (-5 points): -1 to -2 to social skill rolls depending on severity and audience. Mild (-5): -1 in groups of 6+; Severe (-10): -2 in groups of 3+.
+- **Skinny** (-5 points): -2 to ST for purposes of knockback and grappling; +2 to rolls to escape bonds or fit into tight spaces. Clothing is hard to find off the rack.
+- **Social Anxiety** (-10 points): -2 to social skill rolls in groups of 6+; -3 when addressing strangers of higher status.
+- **Social Stigma** (-5 points): Society discriminates: Criminal Record -5, Servant Class -5
+- **Spiritually Loud** (-5 points): Spiritual presence registers as larger than your actual Sequence would suggest. Perceived as more powerful than you are — a curse as much as a blessing.
+- **Stubborn** (-5 points): Must roll vs. Will-3 to reverse your stated position in the same scene, even when clearly wrong.
+- **Superstitious (mundane)** (-5 points): If warding routine is disrupted, -1 to all rolls for the day; will go out of their way to observe superstitions.
+- **Threshold Blindness** (-5 points): One specific entity type or supernatural phenomenon you cannot perceive with any spiritual skill, regardless of roll results (specify at creation).
+- **Total Non-Violence** (-30 points): Will not use violence against intelligent creatures, even in self-defense. May defend against animals.
+- **Unfit** (-5 points): -1 to all HT rolls; recover FP at half normal rate. Unfit for sustained physical exertion.
+- **Unsettling Appearance** (-4 points): Your presence instinctively disturbs or repels others — a common consequence of Abyss and Chained Pathway potions. NPCs react with unease or distrust (GM discretion).
+- **Vow (specify)** (-5 points): A solemn promise that restricts your actions. Common examples: Poverty (give away all wealth beyond subsistence) -10, Partial Silence (limited speech) -5, Vegetarian -5.
+- **Wanted by Church** (-15 points): An Orthodox Church has marked you. Not just the police — Nighthawks or equivalent Beyonder enforcers may be looking.
+- **Wealth: Dead Broke** (-25 points): Start with £0; no home; beg or steal for every meal. Status−2 — most NPCs treat you with suspicion or disdain (GM discretion).
+- **Wealth: Poor** (-15 points): Start with 5 soli; boarding house; barely afford basic food. Status−1 — status-conscious NPCs look down on you (GM discretion).
+- **Wealth: Struggling** (-10 points): Start with 15 soli; modest room; occasional luxuries
+- **Weirdness Magnet** (-15 points): Strange supernatural events are drawn to you constantly
+- **Workaholic** (-5 points): Cannot relax; always finds something productive to do. -2 to social rolls in leisure settings; rolls to take a day off at Will-3.
 
 ##### **Step 4: Skills** 
 
@@ -432,7 +618,173 @@ Difficulty determines where your first point of investment lands relative to you
 
 Don't spread too thin — better to be exceptional at a few things than mediocre at many. 
 
-_(For full list of skills, refer to the compendium data)_
+- **---** (IQ/A): ---
+- **---** (IQ/A): ---
+- **---** (IQ/A): ---
+- **---** (IQ/A): ---
+- **---** (IQ/A): ---
+- **— INVESTIGATION & DETE** (IQ/A): CTION
+- **— UNDERWORLD & COVE /** (IQ/A): / — /
+- **Accounting** (IQ/H): Financial records and business maths
+- **Acrobatics** (DX/H): Tumbling, balance, gymnastics
+- **Acting** (IQ/A): Disguise emotions; theatrical performance
+- **Administration** (IQ/A): Bureaucratic management and procedure
+- **Aerobatics** (DX/H): Aerial maneuvers, stunts, and diving
+- **Alchemy** (IQ/VH): Transform substances; prepare elixirs, alchemical potions, and / magical compounds
+- **Animal Handling (any)** (IQ/A): Control and care for animals (specify type)
+- **Anthropology** (IQ/H): Cultures, customs, and social structures
+- **Appraisal** (IQ/A): Value items and artifacts
+- **Archaeology** (IQ/H): Excavation and analysis of ancient sites
+- **Area Knowledge** (IQ/E): Specific region (specify)
+- **Armoury (any)** (IQ/A): Repair and maintain weapons
+- **Artist (Drawing)** (IQ/H): Illustration and portraiture
+- **Artist (Painting)** (IQ/H): Painted works on canvas or paper
+- **Astrology** (IQ/H): Interpret celestial patterns for divination, navigation, and / fate-reading
+- **Astronomy** (IQ/H): Celestial bodies and their movements
+- **Axe/Mace** (DX/A): Heavy blunt/edged weapons
+- **Bayonet** (DX/A): Rifle-mounted blade
+- **Boating (Sailboat)** (DX/A): Sail and maneuver sailing vessels
+- **Boating (Unpowered)** (DX/A): Row and handle small unpowered boats
+- **Body Language** (Per/A): Read physical cues; posture, expression, tells
+- **Boxing** (DX/A): Trained fisticuffs with technique
+- **Brawling** (DX/E): Untrained street fighting
+- **Broadsword** (DX/A): Heavy one-handed blades; includes longsword
+- **Camouflage** (IQ/E): Hide yourself or objects
+- **Carousing** (HT/E): Drink and socialize effectively
+- **Carpentry** (IQ/E): Work with wood; build and repair structures
+- **Cartography** (IQ/A): Read, draw, and interpret maps
+- **Chemistry** (IQ/H): Compounds, reactions, and substances
+- **Climbing** (DX/A): Scale surfaces and walls
+- **Cogitation** (Will/H): A focused mental state that allows Beyonders to stabilise their / spirituality, resist mental interference, and prepare for divination or / spirit-related abilities. Replaces Meditation for Beyonder purposes.
+- **Connoisseur (specify)** (IQ/A): Expert knowledge of quality/value in a specific field (antiques, art, / wine, etc.)
+- **Cooking** (IQ/A): Prepare food; basic herbalism uses this as default
+- **Counterfeiting** (IQ/H): Replicate currency or official seals
+- **Criminology** (IQ/A): Crime investigation methods
+- **Cryptography** (IQ/H): Create and break codes, ciphers, and hidden messages
+- **Current Affairs** (IQ/E): Recent events (specify topic)
+- **Dancing** (DX/A): Formal and social dance
+- **Detect Lies** (Per/H): Spot deception and falsehood
+- **Diagnosis** (IQ/H): Identify ailments and conditions
+- **Diplomacy** (IQ/H): Negotiate peacefully; reach compromise
+- **Disguise** (IQ/A): Change appearance convincingly
+- **Divination Arts** (IQ/H): Active analytical divination: pendulum, tarot, scrying, dream / interpretation. Uses tools to extract precise information from the / Spirit Realm. SPI augments the roll (1 SPI = +1).
+- **Economics** (IQ/H): Markets, trade, and financial systems
+- **Electrician** (IQ/A): Work with electrical systems
+- **Engineering** (IQ/H): Design and analyse mechanical systems, structures, and blueprints
+- **Escape** (DX/H): Free oneself from bonds and confinement
+- **Explosives (Demolition)** (IQ/A): Prepare and set explosives to destroy targets
+- **Falconry** (IQ/A): Train and hunt with birds of prey
+- **Farming** (IQ/E): Cultivate crops and manage farmland
+- **Fast-Draw (Pistol)** (DX/E): Quick weapon draw from holster
+- **Fast-Talk** (IQ/A): Con, deceive, talk your way out
+- **Filch** (DX/A): Swipe items from surfaces without notice
+- **First Aid** (IQ/E): Emergency medical care
+- **Fishing** (Per/E): Catch fish; read water conditions
+- **Forensics** (IQ/H): Scientific crime scene investigation
+- **Forgery** (IQ/H): Create fake documents
+- **Fortune Telling** (IQ/A): Read cards, palms; mundane methods
+- **Forward Observer** (IQ/A): Direct artillery or ranged fire from a distant position
+- **Freight Handling** (IQ/A): Dock and warehouse logistics
+- **Gambling** (IQ/A): Games of chance
+- **Gardening** (IQ/E): Cultivate plants in managed spaces
+- **Gunner (Cannon)** (DX/E): Artillery pieces, ship cannons, field guns
+- **Gunner (Machine Gun)** (DX/E): Vehicle-mounted machine guns, heavy weapon emplacements
+- **Guns (Pistol)** (DX/E): Derringers, semi-automatic pistols
+- **Guns (Revolver)** (DX/E): Revolvers of all calibres
+- **Guns (Rifle)** (DX/E): Rifles, muskets, carbines
+- **Guns (Shotgun)** (DX/E): Scatter weapons
+- **Herb Lore** (IQ/VH): Magical/occult plant knowledge; preparation of mystical herbal / remedies and poisons
+- **Herbal Medicine** (IQ/VH): Natural therapeutic use of plants; requires Naturalist
+- **Hidden Lore** (IQ/A): Specific secret knowledge (specify type)
+- **Hiking** (HT/A): Long-distance foot travel; pace and endurance overland
+- **History** (IQ/H): Historical knowledge
+- **Holdout** (IQ/A): Conceal objects on your person
+- **Intelligence Analysis** (IQ/H): Evaluate and interpret gathered information
+- **Interrogation** (IQ/A): Extract information under pressure
+- **Intimidation** (Will/A): Threaten and coerce others
+- **Inventor!** (IQ/WC): Wildcard skill covering all invention, engineering, and mechanical / tasks
+- **Jeweler** (IQ/H): Work with precious metals and gems
+- **Jumping** (DX/E): Leap distances
+- **Knife** (DX/E): Combat knife use
+- **Knot-Tying** (DX/E): Bind, secure, and rig ropes; escape bonds at -2
+- **Law (specify)** (IQ/H): Legal knowledge; specializations include Military, Criminal, Civil
+- **Leadership** (IQ/A): Command and inspire others
+- **Leatherworking** (DX/E): Craft and repair leather goods and harnesses
+- **Lifting** (HT/A): Hoist heavy loads
+- **Linguistics** (IQ/H): Study of language structure; accelerates language learning
+- **Lip Reading** (Per/A): Understand speech without hearing it
+- **Literature** (IQ/H): Literary and cultural knowledge
+- **Lockpicking** (IQ/A): Open locks without key
+- **Machinist** (IQ/A): Operate and maintain machine tools
+- **Masonry** (IQ/E): Stonework and brick construction
+- **Mathematics (Applied)** (IQ/H): Practical maths for engineering and science
+- **Mechanic** (IQ/A): Repair machines (specify type)
+- **Merchant** (IQ/A): Trade, negotiation, market knowledge
+- **Musical Instrument** (IQ/H): Play a specific instrument (specify)
+- **Naturalist** (IQ/H): Broad knowledge of plants, animals, and ecology
+- **Navigation** (IQ/A): Find your way; chart courses
+- **Navigation (Land)** (IQ/A): Orienteer and chart routes overland
+- **Navigation (Sea)** (IQ/A): Determine course by stars and charts at sea
+- **Observation** (Per/A): Notice and remember details
+- **Occultism** (IQ/A): General supernatural lore
+- **Panhandling** (IQ/E): Beg for money or favours on the street
+- **Performance** (IQ/A): General stage and platform performance
+- **Pharmacy** (IQ/H): Drug and remedy preparation
+- **Philosophy** (IQ/H): Formal logic and ethical reasoning
+- **Photography** (IQ/A): Operate cameras; develop images in darkroom
+- **Physician** (IQ/H): Medical treatment and surgery
+- **Physics** (IQ/VH): Natural laws governing matter and energy; requires Mathematics
+- **Pickpocket** (DX/H): Steal from people's person
+- **Poetry** (IQ/A): Write verse; also aids public speaking
+- **Poisons** (IQ/H): Know, prepare, and apply toxins; also detect them
+- **Polearm** (DX/A): Long hafted weapons; spears, halberds, pikes
+- **Psychology** (IQ/H): Understand and predict people
+- **Public Speaking** (IQ/A): Address crowds effectively
+- **Religious Ritual** (IQ/H): Conduct religious ceremonies
+- **Research** (IQ/A): Find information in libraries
+- **Riding (Horse)** (DX/A): Ride and direct a mounted animal at speed
+- **Ritualistic Magic** (IQ/VH): Perform supernatural rituals: divination, summoning, binding,
+- **Running** (HT/A): Sprint and long-distance endurance
+- **Savoir-Faire** (IQ/E): Social graces (specify class)
+- **Scrounging** (Per/E): Find useful items in unlikely places
+- **Seamanship** (IQ/E): Work aboard ships
+- **Search** (Per/A): Systematically locate hidden objects or people
+- **Sewing** (DX/E): Stitch, repair, and make garments
+- **Sex Appeal** (HT/A): Attract, seduce, or distract through charisma
+- **Shadowing** (IQ/A): Follow without being noticed
+- **Shield** (DX/E): Block and parry with any shield type
+- **Shiphandling (Ship)** (IQ/H): Command and navigate a large sailing or steam vessel
+- **Shortsword** (DX/A): Light one-handed blades; includes sabre, cutlass
+- **Singing** (HT/E): Vocal performance; also used by Bards for Beyonder abilities
+- **Sleight of Hand** (DX/H): Conceal and manipulate objects in plain sight
+- **Smith (Iron)** (IQ/A): Forge and work iron tools and parts
+- **Smuggling** (IQ/A): Move contraband past inspections
+- **Sociology** (IQ/H): Broad study of human society and groups
+- **Soldier** (IQ/A): General military knowledge, drill, and doctrine
+- **Speed-Reading** (IQ/A): Read and comprehend text at high speed
+- **Spiritual Intuition** (SPI/H): Sense the flow of fate and changes in destiny; detect threats at a / glance
+- **Spiritual Perception** (SPI/A): Passive innate sense: see ghosts, auras, and traces of magic. Peers / into the Astral and Spiritual Bodies of beings.
+- **Stealth** (DX/A): Move silently, avoid detection
+- **Strategy** (IQ/H): Large-scale military and operational planning
+- **Streetwise** (IQ/A): Urban underworld knowledge
+- **Surgery** (IQ/VH): Invasive medical procedures; requires Physician
+- **Survival** (Per/A): Live off land (specify terrain)
+- **Swimming** (HT/E): Move through water
+- **Tactics** (IQ/H): Military and combat planning
+- **Teaching** (IQ/A): Instruct and educate others effectively
+- **Thaumatology** (IQ/VH): Deep magic theory
+- **Theology** (IQ/H): Religious doctrine and practice
+- **Throwing** (DX/A): Thrown weapons in general
+- **Thrown Weapon (Knife)** (DX/E): Throwing knives specifically
+- **Tracking** (Per/A): Follow trails and quarry
+- **Traps** (IQ/A): Detect, disarm, set traps
+- **Urban Survival** (Per/A): Survive in urban environments
+- **Ventriloquism** (IQ/H): Project voice to deceive listeners
+- **Veterinary** (IQ/H): Medical diagnosis and treatment for animals
+- **Weather Sense** (IQ/A): Predict weather from natural observation
+- **Wrestling** (DX/A): Grappling and takedowns
+- **Writing** (IQ/A): Compose documents, reports
+
 
 ##### **Character Creation Summary** 
 
