@@ -57,40 +57,40 @@ export default function TopNav() {
   };
 
   return (
-    <header className="h-[60px] bg-[#111] border-b-2 border-yellow-500 flex items-center justify-between px-5 rounded-t-lg shrink-0">
+    <header className="flex flex-col md:flex-row md:h-[60px] bg-[#111] border-b-2 border-yellow-500 items-start md:items-center justify-between p-3 md:px-5 rounded-t-lg shrink-0 gap-3 md:gap-0">
       <div className="flex flex-col">
-        <h1 className="m-0 text-[18px] text-yellow-500 uppercase tracking-[1px] font-bold">{t.appTitle}</h1>
+        <h1 className="m-0 text-[16px] md:text-[18px] text-yellow-500 uppercase tracking-[1px] font-bold">{t.appTitle}</h1>
         <div className="text-[10px] opacity-70 italic">V6.9e | Lord of the Mysteries System | Beyonder Sequence 8</div>
       </div>
-      <div className="flex items-center gap-2.5">
+      <div className="flex flex-wrap items-center gap-2">
         <button
           onClick={() => setLang(lang === 'en' ? 'es' : 'en')}
-          className="bg-[#222] border border-[#444] text-[#ddd] px-3 py-1.5 text-[11px] cursor-pointer rounded uppercase hover:bg-[#333] transition-colors print:hidden"
+          className="bg-[#222] border border-[#444] text-[#ddd] px-2 md:px-3 py-1.5 text-[10px] md:text-[11px] cursor-pointer rounded uppercase hover:bg-[#333] transition-colors print:hidden"
         >
-          Toggle Lang ({lang === 'en' ? 'ES' : 'EN'})
+          {lang === 'en' ? 'ES' : 'EN'}
         </button>
         <div className="print:hidden">
           <input type="file" accept=".json" className="hidden" ref={fileInputRef} onChange={handleImport} />
           <button
             onClick={() => fileInputRef.current?.click()}
-            className="bg-[#222] border border-[#444] text-[#ddd] px-3 py-1.5 text-[11px] cursor-pointer rounded uppercase hover:bg-[#333] transition-colors"
+            className="bg-[#222] border border-[#444] text-[#ddd] px-2 md:px-3 py-1.5 text-[10px] md:text-[11px] cursor-pointer rounded uppercase hover:bg-[#333] transition-colors"
           >
-            {t.import} .JSON
+            {t.import}
           </button>
         </div>
         <button
           onClick={handleExport}
-          className="bg-[#222] border border-[#444] text-[#ddd] px-3 py-1.5 text-[11px] cursor-pointer rounded uppercase hover:bg-[#333] transition-colors print:hidden"
+          className="bg-[#222] border border-[#444] text-[#ddd] px-2 md:px-3 py-1.5 text-[10px] md:text-[11px] cursor-pointer rounded uppercase hover:bg-[#333] transition-colors print:hidden"
         >
-          {t.export} .JSON
+          {t.export}
         </button>
         <button
           onClick={() => window.print()}
-          className="bg-[#222] border border-[#444] text-[#ddd] px-3 py-1.5 text-[11px] cursor-pointer rounded uppercase hover:bg-[#333] transition-colors print:hidden"
+          className="bg-[#222] border border-[#444] text-[#ddd] px-2 md:px-3 py-1.5 text-[10px] md:text-[11px] cursor-pointer rounded uppercase hover:bg-[#333] transition-colors print:hidden"
         >
-          Print PDF
+          PDF
         </button>
-        <div className="bg-yellow-500 text-black px-3 py-1 rounded-full font-bold text-[14px]">
+        <div className="bg-yellow-500 text-black px-2 md:px-3 py-1 rounded-full font-bold text-[12px] md:text-[14px]">
           {pointsSpent} / {totalBudget} CP
         </div>
       </div>
