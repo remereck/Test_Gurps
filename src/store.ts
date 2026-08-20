@@ -13,6 +13,16 @@ export interface CharacterState {
   HT: number;
   setAttribute: (attr: 'ST' | 'DX' | 'IQ' | 'HT', value: number) => void;
 
+  secondaryPurchases: {
+    HP: number;
+    FP: number;
+    Will: number;
+    Per: number;
+    BasicSpeed: number;
+    BasicMove: number;
+  };
+  setSecondaryPurchase: (attr: 'HP' | 'FP' | 'Will' | 'Per' | 'BasicSpeed' | 'BasicMove', amount: number) => void;
+
   // Pathway
   pathwayId: string | null;
   sequenceLevel: 9 | 8 | 7 | 6 | null;
@@ -83,6 +93,7 @@ const initialState = {
   moneyPence: 240, // 1 pound default
   spiUsed: 0,
   corruption: 0,
+  secondaryPurchases: { HP: 0, FP: 0, Will: 0, Per: 0, BasicSpeed: 0, BasicMove: 0 },
 };
 
 export const useCharacterStore = create<CharacterState>((set, get) => ({
@@ -92,6 +103,7 @@ export const useCharacterStore = create<CharacterState>((set, get) => ({
   ...initialState,
 
   setAttribute: (attr, value) => set({ [attr]: value }),
+  setSecondaryPurchase: (attr, amount) => set((state) => ({ secondaryPurchases: { ...state.secondaryPurchases, [attr]: amount } })),
   setPathway: (id) => set({ pathwayId: id, sequenceLevel: id ? 9 : null }),
   setSequence: (level) => set({ sequenceLevel: level }),
 
@@ -175,7 +187,8 @@ export const useCharacterStore = create<CharacterState>((set, get) => ({
       pathwayId: state.pathwayId, sequenceLevel: state.sequenceLevel,
       skills: state.skills, advantages: state.advantages, disadvantages: state.disadvantages,
       quirks: state.quirks, inventory: state.inventory, customItems: state.customItems,
-      moneyPence: state.moneyPence, spiUsed: state.spiUsed, corruption: state.corruption
+      moneyPence: state.moneyPence, spiUsed: state.spiUsed, corruption: state.corruption,
+      secondaryPurchases: state.secondaryPurchases
     };
     return JSON.stringify(dataToExport, null, 2);
   },
@@ -198,6 +211,9 @@ export const useCharacterStore = create<CharacterState>((set, get) => ({
       
       if (!data.customItems) {
         data.customItems = [];
+      }
+      if (!data.secondaryPurchases) {
+        data.secondaryPurchases = { HP: 0, FP: 0, Will: 0, Per: 0, BasicSpeed: 0, BasicMove: 0 };
       }
 
       set({ ...initialState, ...data });

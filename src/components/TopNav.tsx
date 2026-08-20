@@ -8,7 +8,7 @@ import CompendiumModal from './CompendiumModal';
 import RulebookModal from './RulebookModal';
 
 export default function TopNav() {
-  const { lang, setLang, exportData, importData, ST, DX, IQ, HT, skills, disadvantages, advantages, quirks } = useCharacterStore();
+  const { lang, setLang, exportData, importData, ST, DX, IQ, HT, skills, disadvantages, advantages, quirks, secondaryPurchases } = useCharacterStore();
   const t = TRANSLATIONS[lang];
   const fileInputRef = useRef<HTMLInputElement>(null);
   const { isLostControl, borderClass, textAccentClass, badgeClass } = useCorruptionMetrics();
@@ -20,6 +20,15 @@ export default function TopNav() {
     getAttributeCost(9, HT, false) + 
     getAttributeCost(9, DX, true) + 
     getAttributeCost(9, IQ, true);
+    
+  const pointsSpentOnSecondary = 
+    (secondaryPurchases?.HP || 0) * 2 +
+    (secondaryPurchases?.FP || 0) * 3 +
+    (secondaryPurchases?.Will || 0) * 5 +
+    (secondaryPurchases?.Per || 0) * 5 +
+    (secondaryPurchases?.BasicSpeed || 0) * 5 +
+    (secondaryPurchases?.BasicMove || 0) * 5;
+
   const pointsSpentOnSkills = skills.reduce((acc, s) => acc + s.points, 0);
   
   const advPoints = advantages.reduce((acc, t) => {
@@ -36,7 +45,7 @@ export default function TopNav() {
   const quirksDisCost = quirks.filter(q => q.cost < 0).reduce((a, b) => a + b.cost, 0);
   const disadvPointsAllowed = Math.min(40, Math.abs(disadvPointsRaw + quirksDisCost));
   const totalBudget = 70 + disadvPointsAllowed;
-  const pointsSpent = pointsSpentOnAttributes + pointsSpentOnSkills + advPoints + quirksAdvCost;
+  const pointsSpent = pointsSpentOnAttributes + pointsSpentOnSecondary + pointsSpentOnSkills + advPoints + quirksAdvCost;
 
   const handleExport = () => {
     const data = exportData();
@@ -122,7 +131,7 @@ export default function TopNav() {
           </button>
 
           <div className={`px-2 md:px-3 py-1 rounded-full font-bold text-[12px] md:text-[14px] ${badgeClass} transition-all duration-500 font-mono`}>
-            {pointsSpent} / {totalBudget} CP
+            {pointsSpent} / {totalBudget} Character Points
           </div>
         </div>
       </header>

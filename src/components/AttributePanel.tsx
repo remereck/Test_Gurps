@@ -1,13 +1,15 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useState } from 'react';
 import { useCharacterStore } from '../store';
 import { TRANSLATIONS } from '../i18n';
 import { getAttributeCost, getSkillLevelFromPoints } from '../utils';
 import { ADVANTAGES, DISADVANTAGES } from '../data/traitsData';
 import { PATHWAYS } from '../data/pathwaysData';
 import { useCorruptionMetrics } from '../utils/corruption';
+import { PlusCircle, X } from 'lucide-react';
 
 export default function AttributePanel() {
-  const { lang, ST, DX, IQ, HT, setAttribute, pathwayId, sequenceLevel, disadvantages, quirks, skills, advantages, setViewerData, spiUsed, setSpiUsed, corruption, setCorruption, hpDamage, setHpDamage, fpSpent, setFpSpent } = useCharacterStore();
+  const [isSecondaryModalOpen, setSecondaryModalOpen] = useState(false);
+  const { lang, ST, DX, IQ, HT, setAttribute, pathwayId, sequenceLevel, disadvantages, quirks, skills, advantages, setViewerData, spiUsed, setSpiUsed, corruption, setCorruption, hpDamage, setHpDamage, fpSpent, setFpSpent, secondaryPurchases, setSecondaryPurchase } = useCharacterStore();
   const t = TRANSLATIONS[lang];
   const { textAccentClass, corruptionPercent, isLostControl, colorStage } = useCorruptionMetrics();
 
@@ -41,12 +43,12 @@ export default function AttributePanel() {
   const finalIQ = IQ + statBonuses.IQ;
   const finalHT = HT + statBonuses.HT;
 
-  const finalHP = finalST + statBonuses.HP;
-  const finalFP = finalHT + statBonuses.FP;
-  const finalWill = Math.max(1, finalIQ + statBonuses.Will);
-  const finalPer = finalIQ + statBonuses.Per;
-  const finalSpeed = ((finalHT + finalDX) / 4) + statBonuses.BasicSpeed;
-  const finalMove = Math.floor(finalSpeed);
+  const finalHP = finalST + statBonuses.HP + (secondaryPurchases?.HP || 0);
+  const finalFP = finalHT + statBonuses.FP + (secondaryPurchases?.FP || 0);
+  const finalWill = Math.max(1, finalIQ + statBonuses.Will + (secondaryPurchases?.Will || 0));
+  const finalPer = finalIQ + statBonuses.Per + (secondaryPurchases?.Per || 0);
+  const finalSpeed = ((finalHT + finalDX) / 4) + statBonuses.BasicSpeed + ((secondaryPurchases?.BasicSpeed || 0) * 0.25);
+  const finalMove = Math.floor(finalSpeed) + (secondaryPurchases?.BasicMove || 0);
   const finalDodge = Math.floor(finalSpeed) + 3;
   const finalSPI = statBonuses.SPI;
 
@@ -58,6 +60,14 @@ export default function AttributePanel() {
     getAttributeCost(9, HT, false) + 
     getAttributeCost(9, DX, true) + 
     getAttributeCost(9, IQ, true);
+
+  const pointsSpentOnSecondary = 
+    (secondaryPurchases?.HP || 0) * 2 +
+    (secondaryPurchases?.FP || 0) * 3 +
+    (secondaryPurchases?.Will || 0) * 5 +
+    (secondaryPurchases?.Per || 0) * 5 +
+    (secondaryPurchases?.BasicSpeed || 0) * 5 +
+    (secondaryPurchases?.BasicMove || 0) * 5;
 
   const pointsSpentOnSkills = skills.reduce((acc, s) => acc + s.points, 0);
   
@@ -75,7 +85,7 @@ export default function AttributePanel() {
   const quirksDisCost = quirks.filter(q => q.cost < 0).reduce((a, b) => a + b.cost, 0);
   const disadvPointsAllowed = Math.min(40, Math.abs(disadvPointsRaw + quirksDisCost));
   const totalBudget = 70 + disadvPointsAllowed;
-  const pointsSpent = pointsSpentOnAttributes + pointsSpentOnSkills + advPoints + quirksAdvCost;
+  const pointsSpent = pointsSpentOnAttributes + pointsSpentOnSecondary + pointsSpentOnSkills + advPoints + quirksAdvCost;
   const pointsRemaining = totalBudget - pointsSpent;
 
   const currentEffectiveHP = isLostControl ? 0 : Math.max(0, finalHP - hpDamage);
@@ -120,8 +130,15 @@ export default function AttributePanel() {
       </section>
 
       <section className={`bg-[#111] border border-[#333] rounded-md flex flex-col overflow-hidden shrink-0 obfuscate-zone`}>
-        <div className={`bg-[#1a1a1a] px-3 py-2 border-b border-[#333] text-[11px] font-bold uppercase ${textAccentClass} transition-colors duration-500 ${isLostControl ? 'eldritch-illegible-panel eldritch-container-distortion' : ''}`}>
-          {t.secondary}
+        <div className={`bg-[#1a1a1a] px-3 py-2 border-b border-[#333] text-[11px] font-bold uppercase ${textAccentClass} transition-colors duration-500 ${isLostControl ? 'eldritch-illegible-panel eldritch-container-distortion' : ''} flex justify-between items-center`}>
+          <span>{t.secondary}</span>
+          <button 
+            onClick={() => setSecondaryModalOpen(true)}
+            className="text-[#aaa] hover:text-[#fff] transition-colors"
+            title={lang === 'es' ? 'Comprar características secundarias' : 'Buy secondary characteristics'}
+          >
+            <PlusCircle size={14} />
+          </button>
         </div>
         <div className="p-2.5 flex flex-col gap-2">
           <div className={isLostControl ? 'eldritch-illegible-panel eldritch-container-distortion flex flex-col gap-2' : 'flex flex-col gap-2'}>
@@ -208,6 +225,58 @@ export default function AttributePanel() {
           </div>
         </div>
       </section>
+
+      {isSecondaryModalOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4">
+          <div className="bg-[#111] border border-[#333] rounded-md w-full max-w-sm flex flex-col shadow-2xl">
+            <div className="bg-[#1a1a1a] px-3 py-3 border-b border-[#333] flex justify-between items-center">
+              <h3 className="text-[#eee] font-bold text-[13px] uppercase tracking-wider">
+                {lang === 'es' ? 'Comprar Secundarias' : 'Buy Secondary Stats'}
+              </h3>
+              <button onClick={() => setSecondaryModalOpen(false)} className="text-[#888] hover:text-white transition-colors">
+                <X size={16} />
+              </button>
+            </div>
+            <div className="p-4 flex flex-col gap-3">
+              {[
+                { attr: 'HP', cost: 2, val: secondaryPurchases?.HP || 0, max: 10 },
+                { attr: 'FP', cost: 3, val: secondaryPurchases?.FP || 0, max: 10 },
+                { attr: 'Will', cost: 5, val: secondaryPurchases?.Will || 0, max: 10 },
+                { attr: 'Per', cost: 5, val: secondaryPurchases?.Per || 0, max: 10 },
+                { attr: 'BasicSpeed', cost: 5, val: secondaryPurchases?.BasicSpeed || 0, label: '+0.25', max: 8 },
+                { attr: 'BasicMove', cost: 5, val: secondaryPurchases?.BasicMove || 0, max: 10 },
+              ].map(item => (
+                <div key={item.attr} className="flex justify-between items-center">
+                  <div className="flex items-baseline gap-2">
+                    <span className="text-[#eee] font-bold text-sm w-20">{item.attr}</span>
+                    <span className="text-[#888] text-[11px]">({item.cost} Character Points/{item.label || '+1'})</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <button 
+                      onClick={() => setSecondaryPurchase(item.attr as any, Math.max(0, item.val - 1))}
+                      className="w-6 h-6 flex items-center justify-center bg-[#222] border border-[#444] rounded text-[#ccc] text-xs hover:bg-[#333] transition-colors"
+                    >-</button>
+                    <span className="w-5 text-center font-mono text-sm text-[#eee]">{item.val}</span>
+                    <button 
+                      onClick={() => setSecondaryPurchase(item.attr as any, Math.min(item.max, item.val + 1))}
+                      className="w-6 h-6 flex items-center justify-center bg-[#222] border border-[#444] rounded text-[#ccc] text-xs hover:bg-[#333] transition-colors"
+                    >+</button>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="bg-[#1a1a1a] px-3 py-3 border-t border-[#333] flex justify-end">
+              <button 
+                onClick={() => setSecondaryModalOpen(false)} 
+                className="px-4 py-1.5 bg-[#333] text-white font-bold text-xs rounded hover:bg-[#444] transition-colors uppercase tracking-wider"
+              >
+                {lang === 'es' ? 'Cerrar' : 'Close'}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
     </div>
   );
 }
