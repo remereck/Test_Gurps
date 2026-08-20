@@ -159,7 +159,7 @@ export default function SkillPanel() {
                     if (def) setViewerData({ title: def.name[lang], desc: def.description[lang], extra: `Cost: ${def.cost} pts${def.hasLevels ? '/lvl' : ''}`, type: 'passive' });
                   }
                 }} 
-                className="flex-1 bg-[#222] border border-[#444] text-[#ddd] rounded p-1 text-[11px] outline-none cursor-pointer"
+                className="flex-1 min-w-0 w-full bg-[#222] border border-[#444] text-[#ddd] rounded p-1 text-[11px] outline-none cursor-pointer truncate"
               >
                 <option value="">-- {t.addAdvantage} ({ADVANTAGES.length}) --</option>
                 {Array.from(groupedAdvantages.entries()).map(([cat, list]) => (
@@ -172,7 +172,7 @@ export default function SkillPanel() {
               </select>
               <button 
                 onClick={() => { if(selectedAdv) { addAdvantage(selectedAdv); setSelectedAdv(''); } }} 
-                className="px-2.5 bg-[#222] text-yellow-500 border border-[#444] rounded hover:bg-[#333] font-bold cursor-pointer"
+                className="shrink-0 px-2.5 bg-[#222] text-yellow-500 border border-[#444] rounded hover:bg-[#333] font-bold cursor-pointer"
               >
                 +
               </button>
@@ -217,7 +217,7 @@ export default function SkillPanel() {
                     if (def) setViewerData({ title: def.name[lang], desc: def.description[lang], extra: `Cost: ${def.cost} pts${def.hasLevels ? '/lvl' : ''}`, type: 'drawback' });
                   }
                 }} 
-                className="flex-1 bg-[#222] border border-[#444] text-[#ddd] rounded p-1 text-[11px] outline-none cursor-pointer"
+                className="flex-1 min-w-0 w-full bg-[#222] border border-[#444] text-[#ddd] rounded p-1 text-[11px] outline-none cursor-pointer truncate"
               >
                 <option value="">-- {t.addDisadvantage} ({DISADVANTAGES.length}) --</option>
                 {Array.from(groupedDisadvantages.entries()).map(([cat, list]) => (
@@ -230,7 +230,7 @@ export default function SkillPanel() {
               </select>
               <button 
                 onClick={() => { if(selectedDisadv) { addDisadvantage(selectedDisadv); setSelectedDisadv(''); } }} 
-                className="px-2.5 bg-[#222] text-yellow-500 border border-[#444] rounded hover:bg-[#333] font-bold cursor-pointer"
+                className="shrink-0 px-2.5 bg-[#222] text-yellow-500 border border-[#444] rounded hover:bg-[#333] font-bold cursor-pointer"
               >
                 +
               </button>
@@ -280,7 +280,7 @@ export default function SkillPanel() {
                   });
                 }}
                 placeholder={lang === 'en' ? 'Custom Trait / Quirk...' : 'Rasgo / Quirk...'} 
-                className="flex-1 bg-[#222] border border-[#444] text-[#ddd] rounded p-1 text-[11px] outline-none"
+                className="flex-1 min-w-0 w-full bg-[#222] border border-[#444] text-[#ddd] rounded p-1 text-[11px] outline-none truncate"
                 onKeyDown={e => {
                   if (e.key === 'Enter' && quirkName) {
                     addQuirk({ name: quirkName, cost: quirkCost });
@@ -296,7 +296,7 @@ export default function SkillPanel() {
                 className="w-12 bg-[#222] border border-[#444] text-[#ddd] rounded p-1 text-[11px] outline-none text-center font-mono"
                 title={lang === 'en' ? 'Cost (Points)' : 'Costo (Puntos)'}
               />
-              <button onClick={() => { if(quirkName) { addQuirk({ name: quirkName, cost: quirkCost }); setQuirkName(''); setQuirkCost(-1); } }} className="px-2.5 bg-[#222] text-yellow-500 border border-[#444] rounded hover:bg-[#333] font-bold cursor-pointer">+</button>
+              <button onClick={() => { if(quirkName) { addQuirk({ name: quirkName, cost: quirkCost }); setQuirkName(''); setQuirkCost(-1); } }} className="shrink-0 px-2.5 bg-[#222] text-yellow-500 border border-[#444] rounded hover:bg-[#333] font-bold cursor-pointer">+</button>
             </div>
             <div className="space-y-1">
               {quirks.map((q, i) => (
@@ -333,7 +333,7 @@ export default function SkillPanel() {
                   if (def) setViewerData({ title: def.name[lang], desc: `${def.description[lang]}\n\n${def.attr}/${def.difficulty}`, type: 'skill' });
                 }
               }} 
-              className="flex-1 bg-[#222] border border-[#444] text-[#ddd] rounded p-1 text-[11px] outline-none cursor-pointer"
+              className="flex-1 min-w-0 w-full bg-[#222] border border-[#444] text-[#ddd] rounded p-1 text-[11px] outline-none cursor-pointer truncate"
             >
               <option value="">-- {t.addSkill} ({SKILLS.length}) --</option>
               {Array.from(groupedSkills.entries()).map(([cat, list]) => (
@@ -344,7 +344,7 @@ export default function SkillPanel() {
                 </optgroup>
               ))}
             </select>
-            <button onClick={handleAddSkill} className="px-2.5 bg-[#222] text-yellow-500 border border-[#444] rounded hover:bg-[#333] font-bold cursor-pointer">+</button>
+            <button onClick={handleAddSkill} className="shrink-0 px-2.5 bg-[#222] text-yellow-500 border border-[#444] rounded hover:bg-[#333] font-bold cursor-pointer">+</button>
           </div>
 
           {/* Active Skills List */}
