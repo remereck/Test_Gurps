@@ -5,6 +5,17 @@ import { PATHWAYS } from '../data/pathwaysData';
 import { sanitize } from '../utils';
 import { useCorruptionMetrics } from '../utils/corruption';
 
+function renderTextWithHighlights(text: string) {
+  if (!text) return null;
+  const parts = text.split(/(\{\{.*?\}\})/g);
+  return parts.map((part, i) => {
+    if (part.startsWith('{{') && part.endsWith('}}')) {
+      return <span key={i} className="text-blue-400 font-semibold inline">{part.slice(2, -2)}</span>;
+    }
+    return <React.Fragment key={i}>{part}</React.Fragment>;
+  });
+}
+
 export default function InfoViewer() {
   const { lang, viewerData, spiUsed, setSpiUsed, pathwayId, sequenceLevel } = useCharacterStore();
   const t = TRANSLATIONS[lang];
@@ -87,7 +98,7 @@ export default function InfoViewer() {
         )}
       </div>
       <div className="text-[12px] text-[#e5e5e5] leading-[1.4] whitespace-pre-wrap flex-1">
-        {sanitize(viewerData.desc)}
+        {renderTextWithHighlights(sanitize(viewerData.desc))}
       </div>
       
       {(viewerData.extra || viewerData.rollTarget !== undefined || viewerData.spiCost !== undefined) && (

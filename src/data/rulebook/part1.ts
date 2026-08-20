@@ -374,9 +374,13 @@ A character who leaves an attribute at 9 pays nothing and receives no refund —
 |Disadvantages|0 to -40 pts|Maximum -40 pts; not required — take only what fits your character|
 |Skills|~50 pts typical|Core of your character's competencies|
 
+<div id="ch3-attributes"></div>
+
 ##### **Step 1: Attributes** 
 
 All attributes begin at 9. Players may raise any attribute by spending points at the costs listed in the **Pathways — Attribute Rules** table above. Keep your campaign's starting point total in mind — attribute raises are expensive and every point spent here comes directly from your skill budget. 
+
+<div id="ch3-advantages"></div>
 
 ##### **Step 2: Advantages** 
 
@@ -483,6 +487,8 @@ Advantages define what makes your character special. Choose 1–2 that strongly 
 - **Warded Dreams** (+5 points): All supernatural attempts to enter, read, or alter your dreams require an additional success by 3 or more to take effect.
 - **Wealth: Comfortable** (+5 points): Good income; start with £5. Status 1 — those impressed by wealth treat you better (GM discretion).
 
+<div id="ch3-disadvantages"></div>
+
 ##### **Step 3: Disadvantages** 
 
 You may take up to **-40 points** of disadvantages (no minimum — they are entirely optional). These aren't penalties — they are character definition. The best disadvantages create story hooks and force interesting decisions. Up to 5 additional points of quirks (minor personality traits at -1 pt each) are allowed. 
@@ -575,6 +581,8 @@ You may take up to **-40 points** of disadvantages (no minimum — they are enti
 - **Wealth: Struggling** (-10 points): Start with 15 soli; modest room; occasional luxuries
 - **Weirdness Magnet** (-15 points): Strange supernatural events are drawn to you constantly
 - **Workaholic** (-5 points): Cannot relax; always finds something productive to do. -2 to social rolls in leisure settings; rolls to take a day off at Will-3.
+
+<div id="ch3-skills"></div>
 
 ##### **Step 4: Skills** 
 

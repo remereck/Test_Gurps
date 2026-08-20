@@ -87,21 +87,23 @@ export const wheelOfFortunePathway: Pathway = {
         },
         {
           id: 'wof_seq8_foresight',
-          name: { en: 'Foresight (Reinforced)', es: 'Previsión (Reforzada)' },
+          replaces: 'wof_seq9_foresight',
+          name: { en: 'Foresight+', es: 'Previsión+' },
           type: 'active',
           spiCost: 0,
           description: {
-            en: 'Vision increases to twice per session. Can attempt to trigger vision once per day (1 min concentration, SPI roll -4).',
-            es: 'La visión aumenta a dos veces por sesión. Puede intentar activar la visión una vez al día (1 min concentración, SPI -4).'
+            en: 'Foresight: Once per session, receives a spontaneous, unbidden vision of something about to happen (cryptic image/impression). Cannot be triggered on demand, Foresight+ Vision increases to {{twice per session}} and can attempt to trigger vision {{once per day}} (1 min concentration, SPI roll -4).',
+            es: 'Previsión: Una vez por sesión, recibe una visión espontánea de algo que está por suceder (imagen críptica). No puede ser activado a voluntad, Previsión+ La visión aumenta a {{dos veces por sesión}} y puede intentar activar la visión {{una vez al día}} (1 min concentración, SPI -4).'
           }
         },
         {
           id: 'wof_seq8_danger_premonition',
-          name: { en: 'Danger Premonition (Reinforced)', es: 'Premonición de Peligro (Reforzada)' },
+          replaces: 'wof_seq9_danger_premonition',
+          name: { en: 'Danger Premonition+', es: 'Premonición de Peligro+' },
           type: 'passive',
           description: {
-            en: 'Now includes supernatural threats (curses, spirit attacks) and provides a 2-second warning before danger strikes.',
-            es: 'Ahora incluye amenazas sobrenaturales (maldiciones, ataques) y proporciona 2 segundos de advertencia.'
+            en: 'Danger Premonition: Passive Danger Sense that includes premonitions of bad luck and fate-based traps, not only physical violence, Danger Premonition+ Now includes {{supernatural threats}} (curses, spirit attacks) and provides a {{2-second warning}} before danger strikes.',
+            es: 'Premonición de Peligro: Sentido de Peligro pasivo que incluye premoniciones de mala suerte y trampas del destino, no solo violencia física, Premonición de Peligro+ Ahora incluye {{amenazas sobrenaturales}} (maldiciones, ataques) y proporciona {{2 segundos de advertencia}} antes de que el peligro golpee.'
           }
         }
       ]
@@ -134,20 +136,22 @@ export const wheelOfFortunePathway: Pathway = {
         },
         {
           id: 'wof_seq7_foresight',
-          name: { en: 'Foresight (Mastered)', es: 'Previsión (Maestría)' },
+          replaces: 'wof_seq8_foresight',
+          name: { en: 'Foresight++', es: 'Previsión++' },
           type: 'passive',
           description: {
-            en: 'Use Foresight up to 3 times per session. GM warns of impending danger at least 3 seconds before it occurs.',
-            es: 'Usa Previsión hasta 3 veces por sesión. El DJ advierte de peligros 3 segundos antes de que ocurran.'
+            en: 'Foresight+: Vision increases to twice per session and can attempt to trigger vision once per day, Foresight++ Use Foresight up to {{3 times}} per session and GM warns of impending danger at least {{3 seconds}} before it occurs.',
+            es: 'Previsión+: La visión aumenta a dos veces por sesión y puede intentar activarla una vez al día, Previsión++ Usa Previsión hasta {{3 veces}} por sesión y el DJ advierte de peligros al menos {{3 segundos}} antes de que ocurran.'
           }
         },
         {
           id: 'wof_seq7_premonition',
-          name: { en: 'Premonition (Mastered)', es: 'Premonición (Maestría)' },
+          replaces: 'wof_seq8_danger_premonition',
+          name: { en: 'Danger Premonition++', es: 'Premonición de Peligro++' },
           type: 'passive',
           description: {
-            en: 'When Premonition triggers, gain +3 (instead of +2) to any single roll made to avoid/mitigate the foreseen event. Can be applied after seeing roll result.',
-            es: 'Cuando Premonición se activa, gana +3 a una tirada para evitar/mitigar el evento previsto. Puede aplicarse tras ver el resultado de la tirada.'
+            en: 'Danger Premonition+: Includes supernatural threats and provides a 2-second warning, Danger Premonition++ When Premonition triggers, gain {{+3}} to any single roll made to avoid/mitigate the foreseen event. Can be applied {{after seeing roll result}}.',
+            es: 'Premonición de Peligro+: Incluye amenazas sobrenaturales y proporciona 2 segundos de advertencia, Premonición de Peligro++ Cuando Premonición se activa, gana {{+3}} a una tirada para evitar/mitigar el evento previsto. Puede aplicarse {{tras ver el resultado}} de la tirada.'
           }
         }
       ]

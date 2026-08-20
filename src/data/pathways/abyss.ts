@@ -121,11 +121,12 @@ export const abyssPathway: Pathway = {
         },
         {
           id: 'abyss_seq8_proficiency',
-          name: { en: 'Criminal Proficiency (Reinforced)', es: 'Proficiencia Criminal (Reforzada)' },
+          replaces: 'abyss_seq9_weapons',
+          name: { en: 'Criminal Proficiency+', es: 'Proficiencia Criminal+' },
           type: 'passive',
           description: {
-            en: 'Improvised weapons treated as Brawling +2. Any firearm fired at effective DX+1. Poison-use rolls gain +2.',
-            es: 'Armas improvisadas tratadas como Pelea +2. Cualquier arma de fuego disparada a DX+1 efectivo. Uso de veneno gana +2.'
+            en: 'Criminal Proficiency: Regardless of the weapon, they can utilize all of them to kill effectively. Treat any improvised weapon as Knife or Brawling skill, Criminal Proficiency+ Improvised weapons treated as Brawling {{+2}}. Any firearm fired at effective {{DX+1}}. Poison-use rolls gain {{+2}}.',
+            es: 'Proficiencia Criminal: Independientemente del arma, pueden utilizarlas todas para matar con eficacia. Trata cualquier arma improvisada con la habilidad de Cuchillo o Pelea, Proficiencia Criminal+ Armas improvisadas tratadas como Pelea {{+2}}. Cualquier arma de fuego disparada a {{DX+1}} efectivo. Uso de veneno gana {{+2}}.'
           }
         }
       ]

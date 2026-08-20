@@ -11,28 +11,30 @@ import {
 import { SKILLS } from '../data/skillsData';
 import { ADVANTAGES, DISADVANTAGES } from '../data/traitsData';
 import { ITEMS } from '../data/itemsData';
+import { PATHWAYS } from "../data/pathwaysData";
 import { useCorruptionMetrics } from '../utils/corruption';
 import { formatMoney } from '../utils';
-import { EmptyStateView, ChurchesView, OrganizationsView, NationsView, GlossaryView, EquipmentView, SkillsView, TraitsView, RulesView } from './compendium';
+import { EmptyStateView, ChurchesView, OrganizationsView, NationsView, GlossaryView, EquipmentView, SkillsView, TraitsView, RulesView, PathwaysView } from './compendium';
 
 interface CompendiumModalProps {
   isOpen: boolean;
   onClose: () => void;
 }
 
-type TabType = 'churches' | 'organizations' | 'nations' | 'glossary' | 'equipment' | 'skills' | 'traits' | 'rules';
+type TabType = 'pathways' | 'churches' | 'organizations' | 'nations' | 'glossary' | 'equipment' | 'skills' | 'traits' | 'rules';
 
 export default function CompendiumModal({ isOpen, onClose }: CompendiumModalProps) {
   const { lang } = useCharacterStore();
   const t = TRANSLATIONS[lang];
   const { textAccentClass, borderClass } = useCorruptionMetrics();
 
-  const [activeTab, setActiveTab] = useState<TabType>('churches');
+  const [activeTab, setActiveTab] = useState<TabType>('pathways');
   const [searchQuery, setSearchQuery] = useState('');
   const [glossaryFilter, setGlossaryFilter] = useState<'all' | 'mechanic' | 'setting'>('all');
   const [itemCategoryFilter, setItemCategoryFilter] = useState<string>('all');
   const [skillAttrFilter, setSkillAttrFilter] = useState<string>('all');
   const [traitTypeFilter, setTraitTypeFilter] = useState<string>('all');
+  const [pathwayTypeFilter, setPathwayTypeFilter] = useState<string>("all");
   
   // Master-Detail state
   const [selectedItemId, setSelectedItemId] = useState<string | null>(null);
@@ -149,8 +151,30 @@ export default function CompendiumModal({ isOpen, onClose }: CompendiumModalProp
     }).sort((a, b) => a.name[lang].localeCompare(b.name[lang]));
   }, [searchQuery, traitTypeFilter, lang]);
 
+
+  // Filtered pathways
+  const filteredPathways = useMemo(() => {
+    return PATHWAYS.filter((p, index) => {
+      const isStandard = index < 22; // The first 22 are the standard pathways
+      const matchType = pathwayTypeFilter === 'all' || 
+                        (pathwayTypeFilter === 'standard' && isStandard) || 
+                        (pathwayTypeFilter === 'non-standard' && !isStandard);
+      const matchQuery = !searchQuery || 
+        (p.name?.[lang]?.toLowerCase() || p.name?.en?.toLowerCase() || '').includes(searchQuery.toLowerCase());
+      return matchType && matchQuery;
+    });
+  }, [searchQuery, pathwayTypeFilter, lang]);
+
   const getListItems = () => {
     switch (activeTab) {
+      
+      case 'pathways':
+        return filteredPathways.map((p, index) => ({ 
+          id: p.id, 
+          icon: '🌌', 
+          title: p.name?.[lang] || p.name?.en || 'Unknown', 
+          subtitle: PATHWAYS.indexOf(p) < 22 ? (lang === 'es' ? 'Estándar' : 'Standard') : (lang === 'es' ? 'No Estándar' : 'Non-Standard') 
+        }));
       case 'churches':
         return filteredChurches.map(c => ({ id: c.id, icon: '🏛️', title: c.deity, subtitle: c.stronghold }));
       case 'organizations':
@@ -190,6 +214,7 @@ export default function CompendiumModal({ isOpen, onClose }: CompendiumModalProp
     if (!selectedItemId && activeTab !== 'rules') {
       return <EmptyStateView activeTab={activeTab} lang={lang as 'en' | 'es'} />;
     }
+    if (activeTab === 'pathways' && selectedItemId) return <PathwaysView selectedItemId={selectedItemId} lang={lang as 'en' | 'es'} />;
     if (activeTab === 'churches' && selectedItemId) return <ChurchesView selectedItemId={selectedItemId} lang={lang as 'en' | 'es'} />;
     if (activeTab === 'organizations' && selectedItemId) return <OrganizationsView selectedItemId={selectedItemId} lang={lang as 'en' | 'es'} />;
     if (activeTab === 'nations' && selectedItemId) return <NationsView selectedItemId={selectedItemId} />;
@@ -242,6 +267,7 @@ export default function CompendiumModal({ isOpen, onClose }: CompendiumModalProp
                 onChange={(e) => setActiveTab(e.target.value as TabType)}
                 className="w-full bg-[#1e1e1e] border border-[#333] rounded px-3 py-2 text-sm text-[#eee] font-bold outline-none focus:border-yellow-500/50 appearance-none"
               >
+                <option value="pathways">{lang === 'es' ? '🌌 Vías (Pathways)' : '🌌 Pathways'}</option>
                 <option value="churches">{lang === 'es' ? '🏛️ Iglesias Ortodoxas' : '🏛️ Orthodox Churches'}</option>
                 <option value="organizations">{lang === 'es' ? '👁️ Org. Secretas' : '👁️ Secret Orgs'}</option>
                 <option value="nations">{lang === 'es' ? '🗺️ Naciones' : '🗺️ Nations'}</option>
@@ -257,6 +283,17 @@ export default function CompendiumModal({ isOpen, onClose }: CompendiumModalProp
             {(activeTab !== 'rules') && (
               <div className="p-3 border-b border-[#222] bg-[#141414] flex flex-col gap-3">
                 {/* Extra Filters for certain tabs */}
+                {activeTab === 'pathways' && (
+                  <select 
+                    value={pathwayTypeFilter}
+                    onChange={(e) => setPathwayTypeFilter(e.target.value)}
+                    className="w-full bg-[#1a1a1a] border border-[#333] rounded px-2 py-1.5 text-xs text-[#aaa] outline-none"
+                  >
+                    <option value="all">{lang === 'es' ? '-- Todas las vías --' : '-- All Pathways --'}</option>
+                    <option value="standard">{lang === 'es' ? 'Estándar' : 'Standard'}</option>
+                    <option value="non-standard">{lang === 'es' ? 'No Estándar' : 'Non-Standard'}</option>
+                  </select>
+                )}
                 {activeTab === 'glossary' && (
                   <div className="flex bg-[#1a1a1a] rounded p-1 border border-[#333]">
                     {(['all', 'setting', 'mechanic'] as const).map(cat => (

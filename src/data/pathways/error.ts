@@ -60,11 +60,12 @@ export const errorPathway: Pathway = {
         },
         {
           id: 'error_seq8_treasure',
-          name: { en: 'Superior Observation', es: 'Observación Superior' },
+          replaces: 'error_seq9_treasure',
+          name: { en: 'Treasure Sense+', es: 'Sentido del Tesoro+' },
           type: 'passive',
           description: {
-            en: 'Treasure sense upgrades to 20m. Read target micro-expressions: +2 to Detect Lies, Body Language, Observation.',
-            es: 'El sentido del tesoro se actualiza a 20m. Lee microexpresiones: +2 a Detectar Mentiras, Lenguaje Corporal, Observación.'
+            en: 'Treasure Sense: Can sense the presence of valuable items within a 10-meter range. Vague pull stronger for higher value, Treasure Sense+ Treasure sense upgrades to {{20m}}. Read target micro-expressions: {{+2}} to Detect Lies, Body Language, Observation.',
+            es: 'Sentido del Tesoro: Puede sentir la presencia de objetos valiosos en un rango de 10 metros. Un tirón vago que es más fuerte para valores más altos, Sentido del Tesoro+ El sentido del tesoro se actualiza a {{20m}}. Lee microexpresiones: {{+2}} a Detectar Mentiras, Lenguaje Corporal, Observación.'
           }
         }
       ]
@@ -103,30 +104,33 @@ export const errorPathway: Pathway = {
         },
         {
           id: 'error_seq7_observation',
-          name: { en: 'Superior Observation (Reinforced)', es: 'Observación Superior (Reforzada)' },
+          replaces: 'error_seq8_treasure',
+          name: { en: 'Treasure Sense++', es: 'Sentido del Tesoro++' },
           type: 'passive',
           description: {
-            en: 'Range expands to 30m. Read micro-expressions at a glance. Detect Lies/Body Language bonus increases to +3.',
-            es: 'El rango se expande a 30m. Lee microexpresiones de un vistazo. La bonificación aumenta a +3.'
-          }
+          en: 'Treasure Sense+: Treasure sense upgrades to 20m and read target micro-expressions (+2 bonus), Treasure Sense++ Treasure sense upgrades to {{30m}}, read target micro-expressions {{at a glance}}, and {{+3}} to Detect Lies, Body Language, Observation.',
+            es: 'Sentido del Tesoro+: El sentido del tesoro a 20m y lee microexpresiones (+2 bono), Sentido del Tesoro++ El sentido del tesoro se actualiza a {{30m}}, lee microexpresiones {{de un vistazo}}, y {{+3}} a Detectar Mentiras, Lenguaje Corporal, Observación.'
+            }
         },
         {
           id: 'error_seq7_mental',
-          name: { en: 'Mental Disruption (Reinforced)', es: 'Interrupción Mental (Reforzada)' },
+          replaces: 'error_seq8_mental',
+          name: { en: 'Mental Disruption+', es: 'Interrupción Mental+' },
           type: 'active',
           spiCost: 2,
           description: {
-            en: 'Will penalty increases to -4. Can target up to 2 individuals simultaneously for 2 SPI.',
-            es: 'La penalización de Voluntad aumenta a -4. Puede apuntar hasta 2 personas a la vez por 2 SPI.'
+            en: 'Mental Disruption: Cause certain hallucinations to be experienced by a target. Target rolls Will-3. Effects last up to 1 hour or until they break free, Mental Disruption+ Target rolls Will{{-4}} and you can target up to {{2}} individuals simultaneously for {{2 SPI}}.',
+            es: 'Interrupción Mental: Causa ciertas alucinaciones a un objetivo. El objetivo tira Voluntad-3. Los efectos duran hasta 1 hora o hasta que se liberen, Interrupción Mental+ El objetivo tira Voluntad{{-4}} y puedes apuntar hasta {{2}} personas a la vez por {{2 SPI}}.'
           }
         },
         {
           id: 'error_seq7_theft',
-          name: { en: 'Reminder / Theft (Reinforced)', es: 'Recordatorio / Robo (Reforzado)' },
+          replaces: 'error_seq8_reminder',
+          name: { en: 'Reminder / Theft+', es: 'Recordatorio / Robo+' },
           type: 'active',
           description: {
-            en: 'Reminder distance increases to 10m. Can steal actively guarded spiritual materials from containers/hands.',
-            es: 'La distancia de recordatorio aumenta a 10m. Puede robar materiales espirituales vigilados de contenedores/manos.'
+            en: 'Reminder / Theft: Steal spiritual materials from a 2m distance as long as it interacts with the spirit world. Also steal small non-material items partially in contact with the spirit world, Reminder / Theft+ Steal spiritual materials from a {{10m}} distance and can steal {{actively guarded}} spiritual materials from {{containers/hands}}.',
+            es: 'Recordatorio / Robo: Roba materiales espirituales a 2m de distancia mientras interactúen con el mundo espiritual. También roba pequeños objetos inmateriales, Recordatorio / Robo+ Roba materiales espirituales a {{10m}} de distancia y puede robar materiales espirituales {{vigilados de contenedores/manos}}.'
           }
         }
       ]

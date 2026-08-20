@@ -47,11 +47,13 @@ export const doorPathway: Pathway = {
         },
         {
           id: 'door_seq8_opening',
-          name: { en: 'Door Opening (Reinforced)', es: 'Apertura de Puerta (Reforzada)' },
-          type: 'passive',
+          replaces: 'door_seq9_opening',
+          name: { en: 'Door Opening+', es: 'Apertura de Puerta+' },
+          type: 'active',
+          spiCost: 1,
           description: {
-            en: 'Open warded doors without a roll. Bodily-door attack deals 1d+1 cut. Escape bonus increases to +4.',
-            es: 'Abre puertas protegidas sin tirar dados. El ataque de puerta corporal inflige 1d+1 de corte. El bono de escape aumenta a +4.'
+            en: 'Door Opening: Open any mundane lock by touch and will. Warded doors cost 1 SPI. Attack bodily doors for 1d-1 cut. Free Escape +2 vs mundane restraints, Door Opening+ Open warded doors {{without a roll}}, attack bodily doors for {{1d+1}} cut, and Free Escape {{+4}} vs mundane restraints.',
+            es: 'Apertura de Puerta: Abre cualquier cerradura mundana al tacto. Puertas protegidas cuestan 1 SPI. Ataca puertas corporales por 1d-1 de corte. Escape gratis +2 vs restricciones mundanas, Apertura de Puerta+ Abre puertas protegidas {{sin tirar dados}}, el ataque de puerta corporal inflige {{1d+1}} de corte, y el bono de escape aumenta a {{+4}}.'
           }
         }
       ]
@@ -85,12 +87,13 @@ export const doorPathway: Pathway = {
         },
         {
           id: 'door_seq7_opening',
-          name: { en: 'Door Opening (Group)', es: 'Apertura de Puerta (Grupo)' },
+          replaces: 'door_seq8_opening',
+          name: { en: 'Door Opening++', es: 'Apertura de Puerta++' },
           type: 'active',
           spiCost: 2,
           description: {
-            en: 'Bring up to 3 additional people through a door or spatial obstacle. Usable twice per scene.',
-            es: 'Lleva hasta 3 personas adicionales a través de una puerta u obstáculo espacial. Utilizable dos veces por escena.'
+            en: 'Door Opening+: Open warded doors without a roll, attack bodily doors for 1d+1 cut, and Free Escape +4 vs mundane restraints, Door Opening++ Bring up to {{3 additional people}} through a door or spatial obstacle. Usable {{twice per scene}}.',
+            es: 'Apertura de Puerta+: Abre puertas protegidas sin tirar dados, ataque a puerta corporal inflige 1d+1, escape +4 vs restricciones, Apertura de Puerta++ Lleva hasta {{3 personas adicionales}} a través de una puerta u obstáculo espacial. Utilizable {{dos veces por escena}}.'
           }
         },
         {
@@ -105,11 +108,13 @@ export const doorPathway: Pathway = {
         },
         {
           id: 'door_seq7_spellcasting',
-          name: { en: 'Trickmaster Spellcasting (Reinforced)', es: 'Hechizos (Reforzados)' },
-          type: 'passive',
+          replaces: 'door_seq8_spellcasting',
+          name: { en: 'Trickmaster Spellcasting+', es: 'Hechizos de Maestro de Trucos+' },
+          type: 'active',
+          spiCost: 1,
           description: {
-            en: 'Spells range doubled. Flash/Fog radii +2m. Escape Trick distance 10m. Gas Transfer 30m.',
-            es: 'Rango de hechizos duplicado. Radios de Destello/Niebla +2m. Truco de Escape 10m. Transferencia de gas 30m.'
+            en: 'Trickmaster Spellcasting: Cast tricks (1 SPI each, 10m range): Flash (blind), Electric Shock (stun), Freezing (cold), Burning, Wind, Fog, Tumble, Loud Noise, Black Curtain, Escape Trick, Gas Transfer, Object Bounce, Trickmaster Spellcasting+ Spells range {{20m}}, Flash/Fog radii {{+2m}}, Escape Trick distance {{10m}}, and Gas Transfer {{30m}}.',
+            es: 'Hechizos de Maestro de Trucos: Lanza trucos (1 SPI, rango 10m): Destello (ciega), Choque Eléctrico (aturde), Congelación, Quemadura, Viento, Niebla, Caída, Ruido Fuerte, Cortina Negra, Truco de Escape, Transferencia de Gas, Rebote de Objetos, Hechizos de Maestro de Trucos+ Rango de hechizos a {{20m}}, radios de Destello/Niebla {{+2m}}, Truco de Escape {{10m}}, y Transferencia de Gas a {{30m}}.'
           }
         }
       ]

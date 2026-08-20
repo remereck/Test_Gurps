@@ -5,6 +5,8 @@ export const part2 = `
 
 _"Gunfights in Backlund's alleys are brief and brutal. A revolver shot at close range ends arguments permanently. Beyonders fight differently — with inhuman speed, supernatural senses, and abilities that make conventional tactics useless. Learn to fight, or learn to run."_ 
 
+<div id="ch5-turn"></div>
+
 ##### **Initiative and Turn Order** 
 
 Combat is simultaneous in fiction but sequential in play. Turn order is determined at the start of each combat and stays fixed for the entire fight unless a character's Basic Speed changes (from injury or supernatural effects). 
@@ -21,6 +23,8 @@ Combat is simultaneous in fiction but sequential in play. Turn order is determin
 ##### **The Combat Round** 
 
 Each combat round represents approximately 1 second. On your turn, you choose one **maneuver** . When attacked, you may attempt one or more **active defenses** . 
+
+<div id="ch5-maneuvers"></div>
 
 ##### **Maneuvers (Choose One Per Turn)** 
 
@@ -54,6 +58,8 @@ Unlike full maneuvers (which define your entire action for a turn), **Attack Opt
 
 - **Rapid Strike:** Split a melee Attack maneuver into _two_ separate attacks against the same or different targets. Both attacks suffer -6 to skill. Additional rapid strikes in the same maneuver stack the penalty. 
 - **Deceptive Attack:** Take a -2 penalty to your melee attack roll for every -1 you wish to impose on the target's active defense against that attack. Maximum penalty is half your skill (rounded down). Can be combined with Rapid Strike (apply to each attack separately). 
+
+<div id="ch5-defenses"></div>
 
 ##### **Active Defenses** 
 
@@ -175,6 +181,8 @@ Shooting works like melee — roll 3d6 against your Guns skill — but distance,
 **Dodging ranged attacks:** You may Dodge normally. If you did not know the shot was coming (no visible wind-up, fired from concealment), you cannot defend at all — the bullet arrives before you can react. This is why Danger Sense and Spiritual Intuition are valuable. 
 
 **Guns and reloading:** Most revolvers hold 5–6 shots. Rifles hold 1 (single-shot) to 5–10 (magazine). Reloading takes one Ready maneuver per round for revolvers (speed-loaders halve this). Running out of ammunition mid-fight is a real tactical concern. 
+
+<div id="ch5-injury"></div>
 
 ##### **Consciousness and Survival** 
 
@@ -376,6 +384,16 @@ All three use the same roll; only the effects differ.
 
 The spirit sees what the eye cannot. Through Spirit Vision, Beyonders perceive the auras of life — colors of emotion, threads of health, darkness of corruption. Activate by expending 1 SPI. 
 
+##### **The Parts of the Soul (Las Partes del Alma)**
+According to mysticism, a living being is composed of four primary layers:
+1. **Physical Body (Cuerpo Físico):** The material shell.
+2. **Ether Body (Cuerpo de Éter):** The outermost spiritual layer that manifests as the aura of life. It reflects vital energy, physical health, and biological functions.
+3. **Astral Projection (Proyección Astral):** Located beneath the Ether Body, it directly reflects a person's emotional and mental state.
+4. **Body of Heart and Mind (Cuerpo de la Mente y el Corazón):** The inner core of consciousness, deep thoughts, and spirituality. Telepathists interact primarily with this layer.
+*(Note: The **Spirit Body (Cuerpo Espiritual)** is the fundamental essence that resides within, capable of leaving the physical body upon death or for spirit projection to the Spirit World).*
+
+When a Beyonder activates Spirit Vision, they primarily observe the **Ether Body** and the **Astral Projection**.
+
 ##### **A. Astral Projection Colors** 
 
 The Astral Projection lies beneath the Ether Body and reveals emotional state: 
@@ -446,6 +464,17 @@ There are multiple Pathways for Beyonders to take, all starting from Sequence 9.
 
 **[!] Starting as a Beyonder: If the players begin the game as Beyonders, roll 4d20 for Digestion at the start of the game. The result is the character's starting Digestion percentage toward their current potion. Beyonders who awaken during play instead begin at 0%.** 
 
+<div id="ch6-potions"></div>
+
+##### **Beyonder Potions & Formulas**
+Beyonder Potions are the source of a Beyonder's power. Every Sequence requires a specific **Potion Formula**.
+
+- **Main Ingredients:** Usually one or two Beyonder characteristics (crystallized powers from monsters or deceased Beyonders of the same pathway and sequence).
+- **Supplementary Ingredients:** Distilled water, specific herbs, powders, or creature blood. These dilute the madness of the main ingredients.
+- **Brewing:** The supplementary ingredients are mixed first, usually into pure water or alcohol, followed by the main ingredients. Once the main ingredients dissolve, the potion is ready and must be consumed immediately, or preserved in a spirituality-sealed container.
+
+<div id="ch6-digestion"></div>
+
 ##### **The Digestion System** 
 
 After consuming a potion, a Beyonder must _digest_ it — safely incorporating its power over time. Digestion is tracked as a percentage from 0% to 100%. The primary method is the **Acting Method** : the Beyonder engrosses themselves in the 'role' of the potion, embodying its nature deeply and consistently. Most Beyonders must wait years between potions to minimise the risk of losing control. From **Sequence 5 onward** , advancement also requires a ritual in addition to the potion — without it, the likelihood of losing control becomes near-certain. 
@@ -459,6 +488,8 @@ After consuming a potion, a Beyonder must _digest_ it — safely incorporating i
 |None (ignores pathway nature entirely)|0% or loses progress|
 
 **Character Point Investment:** A Beyonder may spend earned character points to accelerate digestion at a rate of **1 character point = 1% digestion progress** . This represents the Beyonder using experience and insight to better understand their potion's nature. Digestion progress does **not** decay; once gained, it is permanent. 
+
+<div id="ch6-cor"></div>
 
 ##### **CoR — Corruption** 
 
@@ -502,6 +533,8 @@ The Digestion Modifier depends on how fully the current potion has been digested
 - **Failure:** The potion overwhelms the drinker. The character is lost — they transform into an NPC **Rampager** (see below) immediately, permanently under the GM's control. 
 
 From **Sequence 5 onward** , advancement also requires a preparation ritual before the potion can be consumed at all. The ritual does not modify the PCR — it is a prerequisite to even attempt it. 
+
+<div id="ch6-advancement"></div>
 
 ##### **Advancing to the Next Sequence** 
 
@@ -827,6 +860,8 @@ Ritualistic Magic (IQ/Very Hard) is the skill of designing and executing rituals
 
 **Low-Sequence Beyonders** (Seq 9–8) have limited SPI and weak personal authority — they must invoke higher beings or make elaborate preparations to achieve meaningful effects. 
 
+<div id="ch7-categories"></div>
+
 ##### **I. The Core Skill** 
 
 **Ritualistic Magic (IQ/Very Hard)** — no default, cannot be substituted. Supporting skills provide complementary bonuses (cumulative, max **+3 total** ): 
@@ -850,6 +885,8 @@ Every ritual falls into one of three weights that determine base difficulty and 
 |Light|+0|2 SPI|Divination (1–2 SPI via Divination Arts), spirit creature summoning, minor communication, simple warding, basic prayer|
 |Moderate|-2|4–6 SPI|Enhancement, curse, cleansing, marking, fabrication, concealment, oath-sealing, protection, warding|
 |Heavy|-4|8+ SPI|Binding, unraveling, affliction, transference, soul-anchoring, permanent enchantment|
+
+<div id="ch7-resolution"></div>
 
 ##### **III. Resolution** 
 
@@ -939,6 +976,8 @@ Failure always costs time, materials, and SPI. The question is only how badly it
 CoR from ritual failures and dangerous work stacks with the main CoR system. Additional thresholds: 3 CoR = -1 to all ritual rolls. 5 CoR = gain -5 pt mental disadvantage. 8 CoR = gain second -5 pt disadvantage, attract unwanted spiritual attention. 10 CoR = character is fundamentally altered (may need retirement or major story arc). 
 
 Reduction: Extended rest away from ritual work removes 1 CoR after one full month of abstinence. Cleansing rituals can also remove CoR on a successful roll. 
+
+<div id="ch7-contracts"></div>
 
 ##### **VI. Spirit World Creatures & Contracts** 
 

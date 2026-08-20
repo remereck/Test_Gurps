@@ -6,6 +6,17 @@ import { SEQUENCE_TITLES } from '../data/sequenceTitles';
 import { sanitize } from '../utils';
 import { useCorruptionMetrics } from '../utils/corruption';
 
+function renderTextWithHighlights(text: string) {
+  if (!text) return null;
+  const parts = text.split(/(\{\{.*?\}\})/g);
+  return parts.map((part, i) => {
+    if (part.startsWith('{{') && part.endsWith('}}')) {
+      return <span key={i} className="text-blue-400 font-semibold inline">{part.slice(2, -2)}</span>;
+    }
+    return <React.Fragment key={i}>{part}</React.Fragment>;
+  });
+}
+
 // Standard 22 pathways ids
 const STANDARD_PATHWAY_IDS = new Set([
   'fool', 'error', 'door', 'visionary', 'sun', 'tyrant', 'white_tower', 'hanged_man',
@@ -34,11 +45,22 @@ export default function PathwayPanel() {
     if (!pathwayId || !sequenceLevel) return [];
     const pathway = PATHWAYS.find(p => p.id === pathwayId);
     if (!pathway) return [];
-    const abs = [];
+    const abs: any[] = [];
     for (let seq = 9; seq >= sequenceLevel; seq--) {
       const seqData = pathway.sequences.find(s => s.level === seq);
       if (seqData) {
-        abs.push(...seqData.abilities);
+        seqData.abilities.forEach(newAb => {
+          if (newAb.replaces) {
+            const index = abs.findIndex(a => a.id === newAb.replaces);
+            if (index !== -1) {
+              abs[index] = newAb;
+            } else {
+              abs.push(newAb);
+            }
+          } else {
+            abs.push(newAb);
+          }
+        });
       }
     }
     return abs;
@@ -153,7 +175,7 @@ export default function PathwayPanel() {
                             )}
                           </div>
                           <p className="text-[11px] text-[#aaa] m-0 line-clamp-2 leading-tight">
-                            {sanitize(ab.description[lang])}
+                            {renderTextWithHighlights(sanitize(ab.description[lang]))}
                           </p>
                         </div>
                       );

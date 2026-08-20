@@ -47,11 +47,12 @@ export const visionaryPathway: Pathway = {
         },
         {
           id: 'visionary_seq8_body_language',
-          name: { en: 'Enhanced Body Language Analysis', es: 'Análisis de Lenguaje Corporal Mejorado' },
+          replaces: 'visionary_seq9_body_language',
+          name: { en: 'Body Language Analysis+', es: 'Análisis de Lenguaje Corporal+' },
           type: 'passive',
           description: {
-            en: 'Passively read deeper emotional states, spiritual condition, and hidden auras with no SPI cost. Now always-on.',
-            es: 'Lee pasivamente estados emocionales más profundos, condiciones espirituales y auras ocultas sin costo. Siempre activo.'
+            en: 'Body Language Analysis: Analyze expressions/manners to reveal surface thoughts and dominant emotions. Sharp targets can sense observation, Body Language Analysis+ Passively read {{deeper emotional states}}, spiritual condition, and hidden auras with {{no SPI cost}}. Now {{always-on}}.',
+            es: 'Análisis de Lenguaje Corporal: Analiza expresiones para revelar pensamientos superficiales y emociones. Objetivos astutos pueden sentirlo, Análisis de Lenguaje Corporal+ Lee pasivamente {{estados emocionales más profundos}}, condiciones espirituales y auras ocultas {{sin costo}}. {{Siempre activo}}.'
           }
         }
       ]
@@ -96,11 +97,12 @@ export const visionaryPathway: Pathway = {
         },
         {
           id: 'visionary_seq7_mind_reading',
-          name: { en: 'Mind Reading (Reinforced)', es: 'Lectura Mental (Reforzada)' },
+          replaces: 'visionary_seq8_mind_reading',
+          name: { en: 'Mind Reading+', es: 'Lectura Mental+' },
           type: 'passive',
           description: {
-            en: 'Mind Reading is faster and requires less focus. Surface thoughts are perceived effortlessly.',
-            es: 'La lectura mental es más rápida y requiere menos enfoque. Los pensamientos superficiales se perciben sin esfuerzo.'
+            en: 'Mind Reading: Roll Psychology vs Will to read surface thoughts undetected. Predict immediate actions. 1 SPI/minute, Mind Reading+ Mind Reading is {{faster}} and requires {{less focus}}. Surface thoughts are perceived {{effortlessly}}.',
+            es: 'Lectura Mental: Tira Psicología vs Voluntad para leer pensamientos superficiales. Predice acciones inmediatas. 1 SPI/minuto, Lectura Mental+ La lectura mental es {{más rápida}} y requiere {{menos enfoque}}. Los pensamientos superficiales se perciben {{sin esfuerzo}}.'
           }
         }
       ]

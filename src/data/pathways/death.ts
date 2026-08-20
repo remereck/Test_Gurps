@@ -109,29 +109,32 @@ export const deathPathway: Pathway = {
         },
         {
           id: 'death_seq8_spirit_vision',
-          name: { en: 'Spirit Vision (Enhanced)', es: 'Visión Espiritual (Mejorada)' },
+          replaces: 'death_seq9_spirit_vision',
+          name: { en: 'Spirit Vision+', es: 'Visión Espiritual+' },
           type: 'passive',
           description: {
-            en: 'Examine parts of a Soul to deduce health/emotions, detect magical auras, and perceive spirits passively.',
-            es: 'Examina partes de un Alma para deducir salud/emociones, detectar auras mágicas y percibir espíritus pasivamente.'
+            en: 'Spirit Vision: See spiritual entities and Ether Body of living beings for limited health/spiritual analysis, Spirit Vision+ Examine parts of a Soul to deduce health/emotions, detect magical auras, and perceive spirits {{passively}}.',
+            es: 'Visión Espiritual: Ve entidades espirituales y Cuerpo Etérico para análisis de salud, Visión Espiritual+ Examina partes de un Alma para deducir salud/emociones, detectar auras mágicas y percibir espíritus {{pasivamente}}.'
           }
         },
         {
           id: 'death_seq8_undead_deterrence',
-          name: { en: 'Undead Deterrence (Reinforced)', es: 'Disuasión de No-Muertos (Reforzada)' },
+          replaces: 'death_seq9_undead_deterrence',
+          name: { en: 'Undead Deterrence+', es: 'Disuasión de No-Muertos+' },
           type: 'passive',
           description: {
-            en: 'Affects undead with SPI <= yours + 2. Controlled undead roll Will at -4 to act against you.',
-            es: 'Afecta a no-muertos con SPI <= al tuyo + 2. No-muertos controlados tiran Voluntad con -4 para atacarte.'
+            en: 'Undead Deterrence: Mindless undead (IQ 5-) with SPI <= yours ignore you unless provoked. Intelligent/controlled undead may roll Will to act against you. No effect on SPI > yours or Seq 5+ creations., {{Undead Deterrence+: Affects undead with SPI <= yours + 2. Controlled undead roll Will at -4 to act against you.}}',
+            es: 'Disuasión de No-Muertos: No-muertos sin mente con SPI <= al tuyo te ignoran salvo provocación. Inteligentes/controlados tiran Voluntad para actuar. Sin efecto si su SPI es mayor o creaciones de Seq 5+., {{Disuasión de No-Muertos+: Afecta a no-muertos con SPI <= al tuyo + 2. No-muertos controlados tiran Voluntad con -4 para atacarte.}}'
           }
         },
         {
           id: 'death_seq8_undead_detect',
-          name: { en: 'Undead Detection (Reinforced)', es: 'Detección de No-Muertos (Reforzada)' },
+          replaces: 'death_seq9_undead_detect',
+          name: { en: 'Undead Detection+', es: 'Detección de No-Muertos+' },
           type: 'passive',
           description: {
-            en: 'Range increases to 25m. Identify specific type of undead without a roll.',
-            es: 'El alcance aumenta a 25m. Identifica el tipo específico de no-muerto sin tirar.'
+            en: 'Undead Detection: Detect undead and spirit creatures within 15 meters without rolling. Observation rolls to understand them at +3., {{Undead Detection+: Range increases to 25m. Identify specific type of undead without a roll.}}',
+            es: 'Detección de No-Muertos: Detecta criaturas no-muertas y espíritus en 15 metros sin tirar. Tiradas de observación para entenderlos con +3., {{Detección de No-Muertos+: El alcance aumenta a 25m. Identifica el tipo específico de no-muerto sin tirar.}}'
           }
         }
       ]

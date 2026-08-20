@@ -1,4 +1,7 @@
 import React from 'react';
+import Markdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
+import rehypeRaw from 'rehype-raw';
 import { GLOSSARY } from '../../data/rulebookData';
 import { SKILLS } from '../../data/skillsData';
 import { ADVANTAGES, DISADVANTAGES } from '../../data/traitsData';
@@ -8,6 +11,7 @@ import { formatMoney } from '../../utils';
 export function GlossaryView({ selectedItemId, lang }: { selectedItemId: string, lang: 'en' | 'es' }) {
   const item = GLOSSARY.find(g => g.id === selectedItemId);
   if (!item) return null;
+
   return (
     <div className="space-y-6 animate-fadeIn max-w-3xl">
       <div className="border-b-4 border-[#333] pb-3">
@@ -24,9 +28,11 @@ export function GlossaryView({ selectedItemId, lang }: { selectedItemId: string,
         </div>
       </div>
       <div className="bg-[#111] p-5 rounded-lg border border-[#222] border-l-4 border-l-yellow-600/50 shadow-md">
-        <p className="text-sm text-[#bbb] leading-relaxed whitespace-pre-wrap font-serif">
-          {item.definition}
-        </p>
+        <div className="text-sm text-[#bbb] leading-relaxed font-serif markdown-body">
+          <Markdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]}>
+            {item.definition}
+          </Markdown>
+        </div>
       </div>
     </div>
   );

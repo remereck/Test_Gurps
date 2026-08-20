@@ -1,30 +1,107 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
 import { useCharacterStore } from '../store';
 import { rulebookMarkdown } from '../data/rulebook_markdown';
+import { ChevronDown, ChevronRight } from 'lucide-react';
 
 interface RulebookModalProps {
   isOpen: boolean;
   onClose: () => void;
 }
 
-const CHAPTERS = [
+interface NavItem {
+  id: string;
+  label: string;
+  subsections?: NavItem[];
+}
+
+const standardPathways = [
+  'Fool', 'Error', 'Door', 
+  'Visionary', 'Sun', 'Tyrant', 'White Tower', 'Hanged Man', 
+  'Darkness', 'Death', 'Twilight Giant', 
+  'Demoness', 'Red Priest', 
+  'Hermit', 'Paragon', 
+  'Wheel of Fortune', 
+  'Mother', 'Moon', 
+  'Abyss', 'Chained', 
+  'Justiciar', 'Black Emperor'
+];
+
+const buildSequenceSubsections = (seq: number) => {
+  return standardPathways.map(p => ({
+    id: `seq${seq}-${p.toLowerCase().replace(/ /g, '-')}`,
+    label: p
+  }));
+};
+
+const CHAPTERS: NavItem[] = [
   { id: 'quick-start', label: 'Quick Start' },
   { id: 'ch1', label: 'Chapter 1: Introduction' },
   { id: 'ch2', label: 'Chapter 2: Core Rules' },
-  { id: 'ch3', label: 'Chapter 3: Character Creation' },
+  { 
+    id: 'ch3', 
+    label: 'Chapter 3: Character Creation',
+    subsections: [
+      { id: 'ch3-attributes', label: 'Attributes & Characteristics' },
+      { id: 'ch3-advantages', label: 'Advantages' },
+      { id: 'ch3-disadvantages', label: 'Disadvantages' },
+      { id: 'ch3-skills', label: 'Skills' }
+    ]
+  },
   { id: 'ch4', label: 'Chapter 4: Spirituality' },
-  { id: 'ch5', label: 'Chapter 5: Combat' },
-  { id: 'ch6', label: 'Chapter 6: Beyonder System' },
+  { 
+    id: 'ch5', 
+    label: 'Chapter 5: Combat',
+    subsections: [
+      { id: 'ch5-turn', label: 'Initiative & Turn Order' },
+      { id: 'ch5-maneuvers', label: 'Maneuvers' },
+      { id: 'ch5-defenses', label: 'Active Defenses' },
+      { id: 'ch5-injury', label: 'Damage & Injury' }
+    ]
+  },
+  { 
+    id: 'ch6', 
+    label: 'Chapter 6: Beyonder System',
+    subsections: [
+      { id: 'ch6-potions', label: 'Potions & Formulas' },
+      { id: 'ch6-digestion', label: 'The Digestion System' },
+      { id: 'ch6-cor', label: 'Corruption (CoR)' },
+      { id: 'ch6-advancement', label: 'Advancing' }
+    ]
+  },
   { id: 'ch6-5', label: 'Chapter 6.5: Divination Arts' },
-  { id: 'ch7', label: 'Chapter 7: Ritualistic Magic' },
+  { 
+    id: 'ch7', 
+    label: 'Chapter 7: Ritualistic Magic',
+    subsections: [
+      { id: 'ch7-categories', label: 'Effect Categories' },
+      { id: 'ch7-resolution', label: 'Resolution' },
+      { id: 'ch7-contracts', label: 'Spirit World Contracts' }
+    ]
+  },
   { id: 'ch8', label: 'Chapter 8: Equipment' },
-  { id: 'ch9', label: 'Chapter 9: Sequence 9' },
-  { id: 'ch10', label: 'Chapter 10: Sequence 8' },
-  { id: 'ch11', label: 'Chapter 11: Sequence 7' },
-  { id: 'ch12', label: 'Chapter 12: Sequence 6' },
+  { 
+    id: 'ch9', 
+    label: 'Chapter 9: Sequence 9',
+    subsections: buildSequenceSubsections(9)
+  },
+  { 
+    id: 'ch10', 
+    label: 'Chapter 10: Sequence 8',
+    subsections: buildSequenceSubsections(8)
+  },
+  { 
+    id: 'ch11', 
+    label: 'Chapter 11: Sequence 7',
+    subsections: buildSequenceSubsections(7)
+  },
+  { 
+    id: 'ch12', 
+    label: 'Chapter 12: Sequence 6',
+    subsections: buildSequenceSubsections(6)
+  },
   { id: 'ch13', label: 'Chapter 13: Boon Granting' },
   { id: 'ch14', label: 'Chapter 14: Non-Standard' },
   { id: 'ch15', label: 'Chapter 15: Non-Std Potions' }
@@ -32,6 +109,12 @@ const CHAPTERS = [
 
 export default function RulebookModal({ isOpen, onClose }: RulebookModalProps) {
   const { lang } = useCharacterStore();
+  const [expandedChapters, setExpandedChapters] = useState<Record<string, boolean>>({});
+
+  const toggleChapter = (id: string, e: React.MouseEvent) => {
+    e.stopPropagation();
+    setExpandedChapters(prev => ({ ...prev, [id]: !prev[id] }));
+  };
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -65,18 +148,44 @@ export default function RulebookModal({ isOpen, onClose }: RulebookModalProps) {
         {/* Content Body */}
         <div className="flex-1 flex overflow-hidden">
           {/* Sidebar Navigation */}
-          <div className="hidden md:flex w-64 shrink-0 bg-[#111] border-r border-[#222] overflow-y-auto custom-scrollbar p-4 flex-col gap-1.5">
+          <div className="hidden md:flex w-72 shrink-0 bg-[#111] border-r border-[#222] overflow-y-auto custom-scrollbar p-4 flex-col gap-1.5">
             <h3 className="text-yellow-600 font-bold mb-4 mt-2 uppercase text-xs tracking-widest px-2">
               {lang === 'es' ? 'Contenidos' : 'Contents'}
             </h3>
             {CHAPTERS.map(ch => (
-              <button
-                key={ch.id}
-                onClick={() => scrollToSection(ch.id)}
-                className="text-left px-3 py-2 text-sm text-[#aaa] hover:text-yellow-500 hover:bg-[#222] rounded transition-colors font-serif"
-              >
-                {ch.label}
-              </button>
+              <div key={ch.id} className="flex flex-col">
+                <div className="flex items-center w-full">
+                  <button
+                    onClick={() => scrollToSection(ch.id)}
+                    className="flex-1 text-left px-3 py-2 text-sm text-[#aaa] hover:text-yellow-500 hover:bg-[#222] rounded transition-colors font-serif"
+                  >
+                    {ch.label}
+                  </button>
+                  {ch.subsections && (
+                    <button 
+                      onClick={(e) => toggleChapter(ch.id, e)}
+                      className="p-2 text-[#666] hover:text-yellow-500 transition-colors"
+                    >
+                      {expandedChapters[ch.id] ? <ChevronDown size={14} /> : <ChevronRight size={14} />}
+                    </button>
+                  )}
+                </div>
+                
+                {/* Subsections */}
+                {ch.subsections && expandedChapters[ch.id] && (
+                  <div className="flex flex-col ml-4 mt-1 border-l border-[#333] pl-2 gap-1 mb-2">
+                    {ch.subsections.map(sub => (
+                      <button
+                        key={sub.id}
+                        onClick={() => scrollToSection(sub.id)}
+                        className="text-left px-3 py-1.5 text-xs text-[#888] hover:text-yellow-400 hover:bg-[#222] rounded transition-colors"
+                      >
+                        {sub.label}
+                      </button>
+                    ))}
+                  </div>
+                )}
+              </div>
             ))}
           </div>
 

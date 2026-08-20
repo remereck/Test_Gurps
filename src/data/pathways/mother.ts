@@ -66,7 +66,7 @@ export const motherPathway: Pathway = {
         },
         {
           id: 'mother_seq8_spirit_vision',
-          name: { en: 'Spirit Vision (Enhanced)', es: 'Visión Espiritual (Mejorada)' },
+          name: { en: 'Spirit Vision', es: 'Visión Espiritual' },
           type: 'passive',
           description: {
             en: 'Activates automatically at no SPI cost when examining a patient. Sees Ether Body, spiritual injuries, and emotional state. Spirit Vision and Diagnosis gain +2 while treating a patient.',
@@ -85,11 +85,12 @@ export const motherPathway: Pathway = {
         },
         {
           id: 'mother_seq8_farming_tools',
-          name: { en: 'Farming Tools Proficiency (Reinforced)', es: 'Proficiencia en Herramientas Agrícolas (Reforzada)' },
+          replaces: 'mother_seq9_tools',
+          name: { en: 'Farming Tools Proficiency+', es: 'Proficiencia en Herramientas Agrícolas+' },
           type: 'passive',
           description: {
-            en: 'Tool bonus increases to +4. Can apply First Aid or emergency procedures with any tool at hand with no penalty.',
-            es: 'Bono de herramienta aumenta a +4. Puede aplicar Primeros Auxilios o emergencias con cualquier herramienta a mano sin penalización.'
+            en: 'Farming Tools Proficiency: When fighting with a farming tool, choose the most appropriate skill and gain +2 to the attack roll, Farming Tools Proficiency+ Tool bonus increases to {{+4}}. Can apply First Aid or emergency procedures with any tool at hand {{with no penalty}}.',
+            es: 'Proficiencia en Herramientas Agrícolas: Al luchar con una herramienta agrícola, elige la habilidad más apropiada y gana +2 a la tirada de ataque, Proficiencia en Herramientas Agrícolas+ Bono de herramienta aumenta a {{+4}}. Puede aplicar Primeros Auxilios o emergencias con cualquier herramienta a mano {{sin penalización}}.'
           }
         }
       ]
@@ -161,21 +162,23 @@ export const motherPathway: Pathway = {
         },
         {
           id: 'mother_seq7_spirit_vision_nature',
-          name: { en: 'Spirit Vision (Nature)', es: 'Visión Espiritual (Naturaleza)' },
+          replaces: 'mother_seq8_spirit_vision',
+          name: { en: 'Spirit Vision+', es: 'Visión Espiritual+' },
           type: 'active',
-          spiCost: 1, // per min
+          spiCost: 1,
           description: {
-            en: 'Reads health/spiritual state of natural life. Senses disease/corruption within 100m.',
-            es: 'Lee salud/estado espiritual de vida natural. Siente enfermedades/corrupción en 100m.'
+            en: 'Spirit Vision: Activates automatically at no SPI cost when examining a patient. Sees Ether Body, spiritual injuries, and emotional state. Spirit Vision and Diagnosis gain +2 while treating a patient, Spirit Vision+ Reads health/spiritual state of {{natural life}}. Senses disease/corruption within {{100m}}.',
+            es: 'Visión Espiritual: Se activa automáticamente sin coste de SPI al examinar un paciente. Ve Cuerpo Etérico, heridas espirituales y estado emocional. Visión Espiritual y Diagnóstico ganan +2, Visión Espiritual+ Lee salud/estado espiritual de {{vida natural}}. Siente enfermedades/corrupción en {{100m}}.'
           }
         },
         {
           id: 'mother_seq7_farming_tools',
-          name: { en: 'Farming Tools (Mastered)', es: 'Herramientas Agrícolas (Maestría)' },
+          replaces: 'mother_seq8_farming_tools',
+          name: { en: 'Farming Tools Proficiency++', es: 'Proficiencia en Herramientas Agrícolas++' },
           type: 'passive',
           description: {
-            en: 'Use any tool as weapon at no default penalty, attack bonus +5. Counts as Beyonder weapon to harm spirits.',
-            es: 'Usa cualquier herramienta como arma sin penalidad, bono de ataque +5. Cuenta como arma Beyonder contra espíritus.'
+            en: 'Farming Tools Proficiency+: Tool bonus is +4. Can apply First Aid with any tool with no penalty, Farming Tools Proficiency++ Use any tool as weapon at {{no default penalty}}, attack bonus {{+5}}. Counts as {{Beyonder weapon}} to harm spirits.',
+            es: 'Proficiencia en Herramientas Agrícolas+: Bono de herramienta +4. Puede aplicar Primeros Auxilios con cualquier herramienta sin penalización, Proficiencia en Herramientas Agrícolas++ Usa cualquier herramienta como arma {{sin penalidad}}, bono de ataque {{+5}}. Cuenta como {{arma Beyonder}} contra espíritus.'
           }
         },
         {

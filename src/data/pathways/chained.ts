@@ -114,11 +114,12 @@ export const chainedPathway: Pathway = {
         },
         {
           id: 'chained_seq8_criminal',
-          name: { en: 'Criminal Expert (Reinforced)', es: 'Experto Criminal (Reforzado)' },
+          replaces: 'chained_seq9_criminal',
+          name: { en: 'Knowledge — Criminal Expert+', es: 'Conocimiento — Experto Criminal+' },
           type: 'passive',
           description: {
-            en: 'Improvised weapons gain +1 damage. Escape supernatural confinement at full skill without penalty. Hidden exit awareness expands to 20m.',
-            es: 'Armas improvisadas ganan +1 de daño. Escapa de confinamiento sobrenatural con habilidad completa sin penalización. Salidas ocultas se expanden a 20m.'
+            en: 'Knowledge — Criminal Expert: Mastery of criminal techniques. Escape rolls against mundane confinement suffer no penalty. Always know hidden exits within 10m, Knowledge — Criminal Expert+ Improvised weapons gain {{+1 damage}}. Escape {{supernatural confinement}} at full skill without penalty. Hidden exit awareness expands to {{20m}}.',
+            es: 'Conocimiento — Experto Criminal: Dominio de técnicas criminales. Tiradas de escape contra encierros mundanos no tienen penalización. Siempre conoce salidas ocultas en 10m, Conocimiento — Experto Criminal+ Armas improvisadas ganan {{+1 de daño}}. Escapa de {{confinamiento sobrenatural}} con habilidad completa sin penalización. Salidas ocultas se expanden a {{20m}}.'
           }
         }
       ]

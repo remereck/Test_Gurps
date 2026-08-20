@@ -1,4 +1,7 @@
 import React from 'react';
+import Markdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
+import rehypeRaw from 'rehype-raw';
 import { ORTHODOX_CHURCHES, SECRET_ORGANIZATIONS, NATIONS } from '../../data/rulebookData';
 
 export function ChurchesView({ selectedItemId, lang }: { selectedItemId: string, lang: 'en' | 'es' }) {
@@ -32,8 +35,10 @@ export function ChurchesView({ selectedItemId, lang }: { selectedItemId: string,
         <h3 className="text-xs text-[#888] font-bold uppercase mb-3 flex items-center gap-2">
            <span className="w-4 h-px bg-[#555]"></span> {lang === 'es' ? 'Notas Clave & Lore' : 'Key Notes & Lore'} <span className="flex-1 h-px bg-[#333]"></span>
         </h3>
-        <div className="text-[#bbb] text-sm leading-relaxed whitespace-pre-wrap italic font-serif pl-4 border-l-2 border-[#444]">
-          {church.keyNotes}
+        <div className="text-[#bbb] text-sm leading-relaxed font-serif pl-4 border-l-2 border-[#444] markdown-body">
+          <Markdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]}>
+            {church.keyNotes}
+          </Markdown>
         </div>
       </div>
     </div>
@@ -68,9 +73,11 @@ export function OrganizationsView({ selectedItemId, lang }: { selectedItemId: st
         <h3 className="text-xs text-[#888] font-bold uppercase mb-3 flex items-center gap-2">
            <span className="w-4 h-px bg-[#555]"></span> {lang === 'es' ? 'Foco y Propósito' : 'Known Focus'} <span className="flex-1 h-px bg-[#333]"></span>
         </h3>
-        <p className="text-[#bbb] text-sm leading-relaxed whitespace-pre-wrap font-serif">
-          {org.knownFocus}
-        </p>
+        <div className="text-[#bbb] text-sm leading-relaxed font-serif markdown-body">
+          <Markdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]}>
+            {org.knownFocus}
+          </Markdown>
+        </div>
       </div>
     </div>
   );
@@ -94,9 +101,11 @@ export function NationsView({ selectedItemId }: { selectedItemId: string }) {
         <div className="absolute top-0 right-0 p-8 text-9xl opacity-5 select-none pointer-events-none font-serif">
           {nation.name.charAt(0)}
         </div>
-        <p className="text-sm text-[#ccc] leading-relaxed whitespace-pre-wrap font-serif relative z-10">
-          {nation.description}
-        </p>
+        <div className="text-sm text-[#ccc] leading-relaxed font-serif relative z-10 markdown-body">
+          <Markdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]}>
+            {nation.description}
+          </Markdown>
+        </div>
       </div>
     </div>
   );

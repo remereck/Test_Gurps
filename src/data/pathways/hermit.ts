@@ -102,20 +102,23 @@ export const hermitPathway: Pathway = {
         },
         {
           id: 'hermit_seq8_eyes_prying',
-          name: { en: 'Eyes of Mystery Prying (Reinforced)', es: 'Ojos que Indagan Misterios (Reforzados)' },
-          type: 'passive',
+          replaces: 'hermit_seq9_eyes_prying',
+          name: { en: 'Eyes of Mystery Prying+', es: 'Ojos que Indagan Misterios+' },
+          type: 'active',
+          spiCost: 1,
           description: {
-            en: 'Passive penalty to Dream/Illusion increases to -3. Active use reveals combat weaknesses (low HP, low defense, damage vulnerability) in Ether Body.',
-            es: 'Penalidad pasiva a Sueño/Ilusión aumenta a -3. Uso activo revela debilidades de combate (HP bajo, defensa baja, vulnerabilidad al daño) en el Cuerpo Etérico.'
+            en: 'Eyes of Mystery Prying: Passive: -2 to rolls trapping you in Dreams/Illusions. Active: Spirit Vision detects Mystical Items/Beyonders via Astral Projection. Examines Astral, Ether, and Heart/Mind body for injury, corruption, and abilities, Eyes of Mystery Prying+ Passive penalty to Dream/Illusion increases to {{-3}}. Active use reveals {{combat weaknesses}} (low HP, low defense, damage vulnerability) in Ether Body.',
+            es: 'Ojos que Indagan Misterios: Pasivo: -2 a tiradas para atraparte en Sueños/Ilusiones. Activo: Visión Espiritual detecta Objetos Místicos/Beyonders por Proyección Astral. Examina cuerpos Astral, Etérico y de Mente/Corazón buscando heridas, corrupción y habilidades, Ojos que Indagan Misterios+ Penalidad pasiva a Sueño/Ilusión aumenta a {{-3}}. Uso activo revela {{debilidades de combate}} (HP bajo, defensa baja, vulnerabilidad al daño) en el Cuerpo Etérico.'
           }
         },
         {
           id: 'hermit_seq8_quick_rituals',
-          name: { en: 'Quick Rituals (Reinforced)', es: 'Rituales Rápidos (Reforzados)' },
+          replaces: 'hermit_seq9_quick_rituals',
+          name: { en: 'Quick Rituals+', es: 'Rituales Rápidos+' },
           type: 'passive',
           description: {
-            en: 'Penalty for rushed rituals is decreased by 4 (from 3).',
-            es: 'La penalidad por rituales apresurados se reduce en 4 (desde 3).'
+            en: 'Quick Rituals: Penalty for rushed rituals is decreased by 3, Quick Rituals+ Penalty for rushed rituals is decreased by {{4}}.',
+            es: 'Rituales Rápidos: La penalidad por rituales apresurados se reduce en 3, Rituales Rápidos+ La penalidad por rituales apresurados se reduce en {{4}}.'
           }
         }
       ]
@@ -146,20 +149,23 @@ export const hermitPathway: Pathway = {
         },
         {
           id: 'hermit_seq7_eyes_prying',
-          name: { en: 'Eyes of Mystery Prying (Mastered)', es: 'Ojos que Indagan Misterios (Maestría)' },
-          type: 'passive',
+          replaces: 'hermit_seq8_eyes_prying',
+          name: { en: 'Eyes of Mystery Prying++', es: 'Ojos que Indagan Misterios++' },
+          type: 'active',
+          spiCost: 1,
           description: {
-            en: 'Read surface thoughts/dreams of sleeping targets without a roll. For waking targets, penalty to save is -4. May learn 1 random weakness/fear on success.',
-            es: 'Lee pensamientos superficiales/sueños de objetivos dormidos sin tirar. Para objetivos despiertos, penalidad de salvación -4. Puede aprender 1 debilidad/miedo aleatorio al tener éxito.'
+            en: 'Eyes of Mystery Prying+: Passive penalty to Dream/Illusion is -3. Active use reveals combat weaknesses in Ether Body, Eyes of Mystery Prying++ Read surface thoughts/dreams of sleeping targets {{without a roll}}. For waking targets, penalty to save is {{-4}} and you may learn {{1 random weakness/fear}} on success.',
+            es: 'Ojos que Indagan Misterios+: Penalidad pasiva a Sueño/Ilusión es -3. Uso activo revela debilidades de combate en el Cuerpo Etérico, Ojos que Indagan Misterios++ Lee pensamientos superficiales/sueños de objetivos dormidos {{sin tirar}}. Para objetivos despiertos, penalidad de salvación {{-4}} y puede aprender {{1 debilidad/miedo aleatorio}} al tener éxito.'
           }
         },
         {
           id: 'hermit_seq7_quick_rituals',
-          name: { en: 'Quick Rituals (Mastered)', es: 'Rituales Rápidos (Maestría)' },
+          replaces: 'hermit_seq8_quick_rituals',
+          name: { en: 'Quick Rituals++', es: 'Rituales Rápidos++' },
           type: 'passive',
           description: {
-            en: 'Rushed ritual penalty reduction is -5. Perform rituals at half time (min 1 min) and can maintain concentration on one ritual while moving.',
-            es: 'Reducción de penalidad por ritual rápido es -5. Realiza rituales en mitad de tiempo (mín 1 min) y puede mantener concentración en un ritual mientras se mueve.'
+            en: 'Quick Rituals+: Penalty for rushed rituals is decreased by 4, Quick Rituals++ Rushed ritual penalty reduction is {{-5}}. Perform rituals at {{half time}} (min 1 min) and can maintain concentration on one ritual {{while moving}}.',
+            es: 'Rituales Rápidos+: La penalidad por rituales apresurados se reduce en 4, Rituales Rápidos++ Reducción de penalidad por ritual rápido es {{-5}}. Realiza rituales en {{mitad de tiempo}} (mín 1 min) y puede mantener concentración en un ritual {{mientras se mueve}}.'
           }
         }
       ]

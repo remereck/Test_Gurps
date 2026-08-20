@@ -1,7 +1,11 @@
 export const part4 = `
-<div id="ch11"></div>### **Chapter 11: Sequence 7 Potion Effects**
+<div id="ch11"></div>
+
+### **Chapter 11: Sequence 7 Potion Effects**
 
 This chapter details the specific effects, stat bonuses, and abilities granted by consuming a Sequence 7 potion. Abilities cost SPI as listed; passive abilities are always active.
+
+<div id="seq7-fool"></div>
 
 #### **Fool Pathway (Senda del Loco) — Sequence 7: Magician**
 
@@ -43,6 +47,8 @@ This chapter details the specific effects, stat bonuses, and abilities granted b
 - **Spirit Vision (Reinforced)** (Passive): Range expands to 20m. Can read Ether Body to determine exact HP, SPI, and Beyonder effects.
   *(Visión Espiritual (Reforzada)): Rango se expande a 20m. Lee el Cuerpo Etérico para ver HP exactos, SPI y efectos Beyonder.*
 
+<div id="seq7-error"></div>
+
 #### **Error Pathway (Senda de Error) — Sequence 7: Cryptologist**
 
 - **Stat Bonuses:** +1 IQ, +1 DX, +2 SPI
@@ -64,6 +70,8 @@ This chapter details the specific effects, stat bonuses, and abilities granted b
 
 - **Reminder / Theft (Reinforced)** (Active): Reminder distance increases to 10m. Can steal actively guarded spiritual materials from containers/hands.
   *(Recordatorio / Robo (Reforzado)): La distancia de recordatorio aumenta a 10m. Puede robar materiales espirituales vigilados de contenedores/manos.*
+
+<div id="seq7-door"></div>
 
 #### **Door Pathway (Senda de Puerta) — Sequence 7: Astrologer**
 
@@ -87,6 +95,8 @@ This chapter details the specific effects, stat bonuses, and abilities granted b
 - **Trickmaster Spellcasting (Reinforced)** (Passive): Spells range doubled. Flash/Fog radii +2m. Escape Trick distance 10m. Gas Transfer 30m.
   *(Hechizos (Reforzados)): Rango de hechizos duplicado. Radios de Destello/Niebla +2m. Truco de Escape 10m. Transferencia de gas 30m.*
 
+<div id="seq7-visionary"></div>
+
 #### **Visionary Pathway (Senda de Visionario) — Sequence 7: Psychiatrist**
 
 - **Stat Bonuses:** +2 IQ, +3 SPI
@@ -105,6 +115,8 @@ This chapter details the specific effects, stat bonuses, and abilities granted b
 
 - **Mind Reading (Reinforced)** (Passive): Mind Reading is faster and requires less focus. Surface thoughts are perceived effortlessly.
   *(Lectura Mental (Reforzada)): La lectura mental es más rápida y requiere menos enfoque. Los pensamientos superficiales se perciben sin esfuerzo.*
+
+<div id="seq7-sun"></div>
 
 #### **Sun Pathway (Senda del Sol) — Sequence 7: Solar High Priest**
 
@@ -140,6 +152,8 @@ This chapter details the specific effects, stat bonuses, and abilities granted b
 - **Very Fit** (Passive): +2 to all HT rolls; lose FP at half normal rate; recover FP at twice normal rate.
   *(Muy en Forma): +2 a tiradas HT; pierde FP a la mitad; recupera FP al doble.*
 
+<div id="seq7-tyrant"></div>
+
 #### **Tyrant Pathway (Senda del Tirano) — Sequence 7: Seafarer**
 
 - **Stat Bonuses:** +1 ST, +1 DX, +1 IQ, +1 SPI
@@ -168,6 +182,8 @@ This chapter details the specific effects, stat bonuses, and abilities granted b
 - **Absolute Direction** (Passive): Always know north. Never get lost. +3 to Navigation/Body Sense.
   *(Dirección Absoluta): Siempre sabe dónde está el norte. Nunca se pierde. +3 a Navegación/Sentido Corporal.*
 
+<div id="seq7-white-tower"></div>
+
 #### **White Tower Pathway (Senda de la Torre Blanca) — Sequence 7: Detective**
 
 - **Stat Bonuses:** +1 IQ, +1 DX, +2 SPI
@@ -186,6 +202,8 @@ This chapter details the specific effects, stat bonuses, and abilities granted b
 
 - **Ratiocination (Reinforced)** (Passive): Gains +3 to rolls reconstructing a conclusion from scattered clues. Time drops to 1d3 minutes.
   *(Raciocinio (Reforzado)): Gana +3 a tiradas reconstruyendo conclusiones de pistas. El tiempo baja a 1d3 minutos.*
+
+<div id="seq7-hanged-man"></div>
 
 #### **Hanged Man Pathway (Senda del Colgado) — Sequence 7: Shadow Ascetic**
 
@@ -212,6 +230,8 @@ This chapter details the specific effects, stat bonuses, and abilities granted b
 - **Spiritual Perception (Mastered)** (Passive): +3 to detect entities. Passive range 80m. Reveals emotional state.
   *(Percepción Espiritual (Maestría)): +3 para detectar entidades. Rango pasivo 80m. Revela estado emocional.*
 
+<div id="seq7-darkness"></div>
+
 #### **Darkness Pathway (Senda de la Oscuridad) — Sequence 7: Nightmare**
 
 - **Stat Bonuses:** +3 SPI, +1 IQ
@@ -237,6 +257,8 @@ This chapter details the specific effects, stat bonuses, and abilities granted b
 - **Shadows** (Active): Merge into shadows gaining Invisibility (vision only) until attack or leaving. Stealth +4.
   *(Sombras): Se funde con las sombras ganando Invisibilidad (solo visual) hasta atacar. Sigilo +4.*
 
+<div id="seq7-death"></div>
+
 #### **Death Pathway (Senda de la Muerte) — Sequence 7: Spirit Medium**
 
 - **Stat Bonuses:** +3 SPI, +1 ST, +1 HT
@@ -246,6 +268,8 @@ This chapter details the specific effects, stat bonuses, and abilities granted b
 
 - **Spirit Medium** (Active | Cost: 2 SPI): Can commune and control dead bodies and spirits.
   *(Médium Espiritual): Puede comunicarse y controlar cuerpos muertos y espíritus.*
+
+<div id="seq7-twilight-giant"></div>
 
 #### **Twilight Giant Pathway (Senda del Gigante del Crepúsculo) — Sequence 7: Weapon Master**
 
@@ -271,6 +295,8 @@ This chapter details the specific effects, stat bonuses, and abilities granted b
 
 - **Stone Body (Reinforced)** (Passive): DR from Pugilist's body increases by +1 (total DR 3 if combined with potion). Natural DR now protects against corrosion at half value (rounded down).
   *(Cuerpo de Piedra (Reforzado)): La RD del cuerpo de Púgil aumenta en +1 (RD total de 3 combinado con poción). La RD natural protege contra corrosión a la mitad del valor (redondeado hacia abajo).*
+
+<div id="seq7-demoness"></div>
 
 #### **Demoness Pathway (Senda de la Demonio) — Sequence 7: Witch**
 
@@ -311,6 +337,8 @@ This chapter details the specific effects, stat bonuses, and abilities granted b
 
 - **Shadow Concealment (Mastered)** (Passive): Stealth bonus -6. When still in total darkness, observers roll Per-4 to notice (invisible to mundane sight).
   *(Ocultamiento en las Sombras (Maestría)): Bono sigilo -6. Quieto en total oscuridad, observadores tiran Per-4 (invisible a visión mundana).*
+
+<div id="seq7-red-priest"></div>
 
 #### **Red Priest Pathway (Senda de Red Priest) — Sequence 7: Pyromaniac**
 
@@ -358,6 +386,8 @@ This chapter details the specific effects, stat bonuses, and abilities granted b
 - **Reinforced Survival Knowledge** (Passive): Healing increases to 1d6+2 HP. Can apply to self or an ally once per scene without needing to retreat from combat.
   *(Conocimiento de Supervivencia Reforzado): La curación aumenta a 1d6+2 HP. Puede aplicarse a sí mismo o a un aliado una vez por escena sin necesidad de retirarse del combate.*
 
+<div id="seq7-hermit"></div>
+
 #### **Hermit Pathway (Senda del Ermitaño) — Sequence 7: Warlock**
 
 - **Stat Bonuses:** +2 SPI
@@ -374,6 +404,8 @@ This chapter details the specific effects, stat bonuses, and abilities granted b
 - **Quick Rituals (Mastered)** (Passive): Rushed ritual penalty reduction is -5. Perform rituals at half time (min 1 min) and can maintain concentration on one ritual while moving.
   *(Rituales Rápidos (Maestría)): Reducción de penalidad por ritual rápido es -5. Realiza rituales en mitad de tiempo (mín 1 min) y puede mantener concentración en un ritual mientras se mueve.*
 
+<div id="seq7-paragon"></div>
+
 #### **Paragon Pathway (Senda del Parangón) — Sequence 7: Appraiser**
 
 - **Stat Bonuses:** +2 Per
@@ -389,6 +421,8 @@ This chapter details the specific effects, stat bonuses, and abilities granted b
 
 - **Rapid Analysis (Mastered)** (Passive): 1/4 time becomes 1/5 time (min 1 sec). Can appraise a common item instantly as a free action.
   *(Análisis Rápido (Maestría)): 1/4 de tiempo se vuelve 1/5 (mín 1 seg). Puede tasar objetos comunes al instante como acción libre.*
+
+<div id="seq7-wheel-of-fortune"></div>
 
 #### **Wheel of Fortune Pathway (Senda de la Rueda de la Fortuna) — Sequence 7: Lucky One**
 
@@ -408,6 +442,8 @@ This chapter details the specific effects, stat bonuses, and abilities granted b
 
 - **Premonition (Mastered)** (Passive): When Premonition triggers, gain +3 (instead of +2) to any single roll made to avoid/mitigate the foreseen event. Can be applied after seeing roll result.
   *(Premonición (Maestría)): Cuando Premonición se activa, gana +3 a una tirada para evitar/mitigar el evento previsto. Puede aplicarse tras ver el resultado de la tirada.*
+
+<div id="seq7-mother"></div>
 
 #### **Mother Pathway (Senda de la Madre) — Sequence 7: Harvest Priest**
 
@@ -442,6 +478,8 @@ This chapter details the specific effects, stat bonuses, and abilities granted b
 
 - **Potion Brewing** (Passive): -1 penalty without lab eliminated when using natural ingredients. Brewing time for healing potions halved.
   *(Elaboración de Pociones): Penalidad -1 sin laboratorio eliminada con ingredientes naturales. Tiempo para pociones curativas a la mitad.*
+
+<div id="seq7-moon"></div>
 
 #### **Moon Pathway (Senda de la Luna) — Sequence 7: Vampire**
 
@@ -492,6 +530,8 @@ This chapter details the specific effects, stat bonuses, and abilities granted b
 - **Physician (Mastered)** (Passive): +3 bonus applies to own healing (+1 HP/day rest). May diagnose spiritual ailments in animals/moon creatures without penalty.
   *(Médico (Maestría)): Bono +3 aplica a la curación propia (+1 HP/día reposo). Puede diagnosticar males espirituales en animales/criaturas lunares sin penalidad.*
 
+<div id="seq7-abyss"></div>
+
 #### **Abyss Pathway (Senda del Abismo) — Sequence 7: Serial Killer**
 
 - **Stat Bonuses:** +3 SPI, +1 ST, +1 HT
@@ -501,6 +541,8 @@ This chapter details the specific effects, stat bonuses, and abilities granted b
 
 - **Serial Killer** (Active | Cost: 2 SPI): Advanced combat and killing abilities.
   *(Asesino en Serie): Habilidades avanzadas de combate y asesinato.*
+
+<div id="seq7-chained"></div>
 
 #### **Chained Pathway (Senda del Encadenado) — Sequence 7: Werewolf**
 
@@ -548,6 +590,8 @@ This chapter details the specific effects, stat bonuses, and abilities granted b
 - **Escape Artist / Hidden Exits** (Passive): Escape supernatural bonds at full Escape +2. Sense hidden exits up to 30m, pierces Seq 7 concealment.
   *(Artista del Escape / Salidas Ocultas): Escapa lazos sobrenaturales con Escape +2. Siente salidas ocultas hasta 30m, penetra ocultamiento de Seq 7.*
 
+<div id="seq7-justiciar"></div>
+
 #### **Justiciar Pathway (Senda del Justiciero) — Sequence 7: Interrogator**
 
 - **Stat Bonuses:** +2 ST, +5 SPI
@@ -572,6 +616,8 @@ This chapter details the specific effects, stat bonuses, and abilities granted b
 
 - **Jurisdiction (Mastered)** (Passive): Knowledge of local laws/procedures extends to neighbouring jurisdictions. IQ bonus +4 for obscure/hidden regulations.
   *(Jurisdicción (Maestría)): Conocimiento de leyes locales se extiende a jurisdicciones vecinas. Bono de IQ +4 para regulaciones ocultas/oscuras.*
+
+<div id="seq7-black-emperor"></div>
 
 #### **Black Emperor Pathway (Senda del Emperador Negro) — Sequence 7: Briber**
 
@@ -598,6 +644,8 @@ This chapter details the specific effects, stat bonuses, and abilities granted b
 - **Eloquence (Mastered)** (Passive): Intimidation Eloquence Will penalty is -5. Fast-Talk/Diplomacy penalty is -2. Successful Intimidation reduces next Bribery SPI cost by 1 (min 1).
   *(Elocuencia (Maestría)): Penalización a Voluntad de Elocuencia de Intimidación es -5. Para Charlatanería/Diplomacia es -2. Intimidación exitosa reduce coste SPI de próximo Soborno en 1 (min 1).*
 
+<div id="seq7-sublunary-eye"></div>
+
 #### **Sublunary Eye Pathway (Sublunary Eye Pathway) — Sequence 7: Painter**
 
 - **Stat Bonuses:** +8 SPI
@@ -608,34 +656,38 @@ This chapter details the specific effects, stat bonuses, and abilities granted b
 - **Painter Domain Art 1** (Active | Cost: 1 SPI): Painting Disguise (2 SPI):They can also use
   *(Arte de Dominio 1): Painting Disguise (2 SPI):They can also use*
 
-- **Painter Domain Art 2** (Passive): also be done on someone else. Doesn't need a
-  *(Arte de Dominio 2): also be done on someone else. Doesn't need a*
+- **Painter Domain Art 2** (Active): By infusing a canvas with Spirituality, they can depict a scene or object. Once completed, the painting manifests a temporary, localized reality or effect.
+  *(Arte de Dominio 2): Al infundir espiritualidad en un lienzo, pueden representar una escena u objeto. Una vez terminada, la pintura manifiesta una realidad o efecto temporal y localizado.*
 
-- **Painter Domain Art 3** (Passive): Spirituality, they can depict the reality they in
-  *(Arte de Dominio 3): Spirituality, they can depict the reality they in*
+- **Painter Domain Art 3** (Passive): Their paintings naturally draw the gaze. A target looking at one of their paintings must resist being temporarily entranced.
+  *(Arte de Dominio 3): Sus pinturas atraen naturalmente la mirada. Un objetivo que mire una de sus pinturas debe resistir quedar temporalmente hipnotizado.*
 
-- **Painter Domain Art 4** (Passive): effects. A target must stare at a Painting for at
-  *(Arte de Dominio 4): effects. A target must stare at a Painting for at*
+- **Painter Domain Art 4** (Active): They can swap their physical location with a life-sized painting of themselves.
+  *(Arte de Dominio 4): Pueden intercambiar su ubicación física con una pintura de tamaño real de sí mismos.*
 
-- **Painter Domain Art 5** (Passive): as an area of effect. Their Paintings are a type
-  *(Arte de Dominio 5): as an area of effect. Their Paintings are a type*
+- **Painter Domain Art 5** (Active): They can paint a layer of 'background' over themselves or allies, effectively blending them into the environment like a chameleon.
+  *(Arte de Dominio 5): Pueden pintar una capa de 'fondo' sobre sí mismos o sus aliados, camuflándolos con el entorno como un camaleón.*
 
-- **Painter Domain Art 6** (Passive): two months when folded and three days when
-  *(Arte de Dominio 6): two months when folded and three days when*
+- **Painter Domain Art 6** (Active): By painting a target using their blood or spiritual trace, they can inflict curses or weaknesses on the subject.
+  *(Arte de Dominio 6): Al pintar a un objetivo usando su sangre o rastro espiritual, pueden infligir maldiciones o debilidades.*
 
-- **Painter Domain Art 7** (Passive): of the Painter and the things painted, with the
-  *(Arte de Dominio 7): of the Painter and the things painted, with the*
+- **Painter Domain Art 7** (Passive): The Painter can use spiritual materials, blood, or corrupted substances as paint, granting their artworks anomalous properties.
+  *(Arte de Dominio 7): El Pintor puede usar materiales espirituales, sangre o sustancias corruptas como pintura, otorgando propiedades anómalas.*
 
-- **Painter Domain Art 8** (Passive): on an Artist (Painting) roll for the Painting to
-  *(Arte de Dominio 8): on an Artist (Painting) roll for the Painting to*
+- **Painter Domain Art 8** (Passive): They gain a strong intuition for symbolism. Can roll Artist (Painting) to decipher mystical meanings.
+  *(Arte de Dominio 8): Obtienen una fuerte intuición para el simbolismo. Pueden tirar Artista (Pintura) para descifrar significados místicos.*
 
-- **Painter Domain Art 9** (Passive): Painting for a more powerful effect.Painting
-  *(Arte de Dominio 9): Painting for a more powerful effect.Painting*
+- **Painter Domain Art 9** (Active): They can leave a painting slightly unfinished to delay its activation, completing it with a final brushstroke later.
+  *(Arte de Dominio 9): Pueden dejar una pintura ligeramente inacabada para retrasar su activación, completándola más tarde.*
 
 
-<div id="ch12"></div>### **Chapter 12: Sequence 6 Potion Effects**
+<div id="ch12"></div>
+
+### **Chapter 12: Sequence 6 Potion Effects**
 
 This chapter details the specific effects, stat bonuses, and abilities granted by consuming a Sequence 6 potion. Abilities cost SPI as listed; passive abilities are always active.
+
+<div id="seq6-fool"></div>
 
 #### **Fool Pathway (Senda del Loco) — Sequence 6: Faceless**
 
@@ -647,6 +699,8 @@ This chapter details the specific effects, stat bonuses, and abilities granted b
 - **Faceless** (Active | Cost: 2 SPI): Advanced disguise, shapeshifting, and impersonation abilities.
   *(Sin Rostro): Disfraces avanzados, cambio de forma y habilidades de suplantación.*
 
+<div id="seq6-error"></div>
+
 #### **Error Pathway (Senda de Error) — Sequence 6: Prometheus**
 
 - **Stat Bonuses:** +3 SPI, +1 ST, +1 HT
@@ -656,6 +710,8 @@ This chapter details the specific effects, stat bonuses, and abilities granted b
 
 - **Prometheus** (Active | Cost: 2 SPI): Can steal abilities and time from others.
   *(Prometeo): Puede robar habilidades y tiempo de otros.*
+
+<div id="seq6-door"></div>
 
 #### **Door Pathway (Senda de Puerta) — Sequence 6: Scribe**
 
@@ -667,6 +723,8 @@ This chapter details the specific effects, stat bonuses, and abilities granted b
 - **Scribe** (Active | Cost: 2 SPI): Can record and replicate Beyonder abilities.
   *(Escriba): Puede registrar y replicar habilidades de Beyonder.*
 
+<div id="seq6-visionary"></div>
+
 #### **Visionary Pathway (Senda de Visionario) — Sequence 6: Hypnotist**
 
 - **Stat Bonuses:** +3 SPI, +1 ST, +1 HT
@@ -676,6 +734,8 @@ This chapter details the specific effects, stat bonuses, and abilities granted b
 
 - **Hypnotist** (Active | Cost: 2 SPI): Can hypnotize and subtly alter memories.
   *(Hipnotizador): Puede hipnotizar y alterar sutilmente los recuerdos.*
+
+<div id="seq6-sun"></div>
 
 #### **Sun Pathway (Senda del Sol) — Sequence 6: Notary**
 
@@ -687,6 +747,8 @@ This chapter details the specific effects, stat bonuses, and abilities granted b
 - **Notary** (Active | Cost: 2 SPI): Can notarize powers and contracts.
   *(Notario): Puede certificar poderes y contratos.*
 
+<div id="seq6-tyrant"></div>
+
 #### **Tyrant Pathway (Senda del Tirano) — Sequence 6: Wind-blessed**
 
 - **Stat Bonuses:** +3 SPI, +1 ST, +1 HT
@@ -696,6 +758,8 @@ This chapter details the specific effects, stat bonuses, and abilities granted b
 
 - **Wind-blessed** (Active | Cost: 2 SPI): Can control winds and fly.
   *(Bendecido por el Viento): Puede controlar los vientos y volar.*
+
+<div id="seq6-white-tower"></div>
 
 #### **White Tower Pathway (Senda de la Torre Blanca) — Sequence 6: Polymath**
 
@@ -707,6 +771,8 @@ This chapter details the specific effects, stat bonuses, and abilities granted b
 - **Polymath** (Active | Cost: 2 SPI): Can analyze and mimic abilities through observation.
   *(Erudito): Puede analizar e imitar habilidades a través de la observación.*
 
+<div id="seq6-hanged-man"></div>
+
 #### **Hanged Man Pathway (Senda del Colgado) — Sequence 6: Rose Bishop**
 
 - **Stat Bonuses:** +3 SPI, +1 HT
@@ -716,6 +782,8 @@ This chapter details the specific effects, stat bonuses, and abilities granted b
 
 - **Rose Bishop** (Active | Cost: 2 SPI): Flesh magic and blood manipulation.
   *(Obispo de las Rosas): Magia de carne y manipulación de sangre.*
+
+<div id="seq6-darkness"></div>
 
 #### **Darkness Pathway (Senda de la Oscuridad) — Sequence 6: Soul Assurer**
 
@@ -727,6 +795,8 @@ This chapter details the specific effects, stat bonuses, and abilities granted b
 - **Soul Assurer** (Active | Cost: 2 SPI): Soothes souls and commands spiritual entities.
   *(Apaciguador de Almas): Apacigua almas y comanda entidades espirituales.*
 
+<div id="seq6-death"></div>
+
 #### **Death Pathway (Senda de la Muerte) — Sequence 6: Spirit Guide**
 
 - **Stat Bonuses:** +3 SPI, +1 ST, +1 HT
@@ -736,6 +806,8 @@ This chapter details the specific effects, stat bonuses, and abilities granted b
 
 - **Soul Assurer** (Active | Cost: 2 SPI): Control over death and decay.
   *(Asegurador de Almas): Control sobre la muerte y la decadencia.*
+
+<div id="seq6-twilight-giant"></div>
 
 #### **Twilight Giant Pathway (Senda del Gigante del Crepúsculo) — Sequence 6: Dawn Paladin**
 
@@ -747,6 +819,8 @@ This chapter details the specific effects, stat bonuses, and abilities granted b
 - **Dawn Paladin** (Active | Cost: 2 SPI): Uses light of dawn to purge evil.
   *(Paladín del Alba): Usa la luz del alba para purgar el mal.*
 
+<div id="seq6-demoness"></div>
+
 #### **Demoness Pathway (Senda de la Demonio) — Sequence 6: Demoness of Pleasure**
 
 - **Stat Bonuses:** +3 SPI, +1 ST, +1 HT
@@ -756,6 +830,8 @@ This chapter details the specific effects, stat bonuses, and abilities granted b
 
 - **Demoness of Pleasure** (Active | Cost: 2 SPI): Uses pleasure and threads to control.
   *(Demonio del Placer): Usa el placer y los hilos para controlar.*
+
+<div id="seq6-red-priest"></div>
 
 #### **Red Priest Pathway (Senda de Red Priest) — Sequence 6: Conspirer**
 
@@ -767,6 +843,8 @@ This chapter details the specific effects, stat bonuses, and abilities granted b
 - **Conspirer Core Ability** (Active | Cost: 2 SPI): Master of schemes, gains strength when plans succeed. (Details pending in core rules)
   *(Habilidad Central de Conspirador): Maestro de planes, gana fuerza cuando los complots tienen éxito. (Detalles pendientes)*
 
+<div id="seq6-hermit"></div>
+
 #### **Hermit Pathway (Senda del Ermitaño) — Sequence 6: Scrolls Professor**
 
 - **Stat Bonuses:** +3 SPI, +1 ST, +1 HT
@@ -776,6 +854,8 @@ This chapter details the specific effects, stat bonuses, and abilities granted b
 
 - **Scroll Professor** (Active | Cost: 2 SPI): Can write spells on scrolls.
   *(Profesor de Pergaminos): Puede escribir hechizos en pergaminos.*
+
+<div id="seq6-paragon"></div>
 
 #### **Paragon Pathway (Senda del Parangón) — Sequence 6: Artisan**
 
@@ -787,6 +867,8 @@ This chapter details the specific effects, stat bonuses, and abilities granted b
 - **Artisan** (Active | Cost: 2 SPI): Can craft mystical items and mechanical constructs.
   *(Artesano): Puede fabricar objetos místicos y constructos mecánicos.*
 
+<div id="seq6-wheel-of-fortune"></div>
+
 #### **Wheel of Fortune Pathway (Senda de la Rueda de la Fortuna) — Sequence 6: Calamity Priest**
 
 - **Stat Bonuses:** +3 SPI, +1 ST, +1 HT
@@ -796,6 +878,8 @@ This chapter details the specific effects, stat bonuses, and abilities granted b
 
 - **Calamity Priest** (Active | Cost: 2 SPI): Can bring bad luck and disasters to enemies.
   *(Sacerdote de la Calamidad): Puede traer mala suerte y desastres a los enemigos.*
+
+<div id="seq6-mother"></div>
 
 #### **Mother Pathway (Senda de la Madre) — Sequence 6: Biologist**
 
@@ -807,6 +891,8 @@ This chapter details the specific effects, stat bonuses, and abilities granted b
 - **Biologist** (Active | Cost: 2 SPI): Mastery over biological life and cross-breeding.
   *(Biólogo): Maestría sobre la vida biológica y los cruces.*
 
+<div id="seq6-moon"></div>
+
 #### **Moon Pathway (Senda de la Luna) — Sequence 6: Potions Professor**
 
 - **Stat Bonuses:** +3 SPI, +1 ST, +1 HT
@@ -816,6 +902,8 @@ This chapter details the specific effects, stat bonuses, and abilities granted b
 
 - **Potions Professor** (Active | Cost: 2 SPI): Masters powerful restorative and offensive potions.
   *(Profesor de Pociones): Domina pociones poderosas restaurativas y ofensivas.*
+
+<div id="seq6-abyss"></div>
 
 #### **Abyss Pathway (Senda del Abismo) — Sequence 6: Devil**
 
@@ -827,6 +915,8 @@ This chapter details the specific effects, stat bonuses, and abilities granted b
 - **Devil** (Active | Cost: 2 SPI): Demonic transformation and danger precognition.
   *(Diablo): Transformación demoníaca y precognición de peligro.*
 
+<div id="seq6-chained"></div>
+
 #### **Chained Pathway (Senda del Encadenado) — Sequence 6: Zombie**
 
 - **Stat Bonuses:** +3 SPI, +1 ST, +1 HT
@@ -837,6 +927,8 @@ This chapter details the specific effects, stat bonuses, and abilities granted b
 - **Zombie** (Active | Cost: 2 SPI): Undead traits and ice/death powers.
   *(Zombi): Rasgos de no-muerto y poderes de hielo/muerte.*
 
+<div id="seq6-justiciar"></div>
+
 #### **Justiciar Pathway (Senda del Justiciero) — Sequence 6: Judge**
 
 - **Stat Bonuses:** +3 SPI, +1 ST, +1 HT
@@ -846,6 +938,8 @@ This chapter details the specific effects, stat bonuses, and abilities granted b
 
 - **Judge** (Active | Cost: 2 SPI): Can formulate laws and sentence crimes.
   *(Juez): Puede formular leyes y sentenciar crímenes.*
+
+<div id="seq6-black-emperor"></div>
 
 #### **Black Emperor Pathway (Senda del Emperador Negro) — Sequence 6: Baron of Corruption**
 
@@ -883,11 +977,13 @@ Boons are usually granted through complex Ritualistic Magic, direct contact with
 - **Revocation:** If the character acts against the benefactor's interests, the GM may revoke the Boon, stripping the character of all associated powers and imposing severe withdrawal penalties (-4 to all stats for 1d weeks). 
 - **Stacking:** If a character already has a standard Sequence and accepts a Boon, they gain the abilities of both. However, their maximum CoR is permanently reduced by 2, representing the spiritual strain of holding conflicting powers. 
 
-<div id="ch14"></div>### **Chapter 14: Non-Standard Pathways — Boon-Granted Paths**
+<div id="ch14"></div>
 
-This chapter details specific pathways that are primarily accessed through Boons from Outer Deities. Abilities cost SPI as listed; passive abilities are always active.
+### **Chapter 14: Non-Standard Pathways — Boon-Granted Paths**
 
-#### **Eternal Aeon (Inevitability) Pathway (Eternal Aeon (Inevitability) Pathway)**
+This chapter details Boon-granted paths from Outer Deities and alternative sequences.
+
+#### **Eternal Aeon (Inevitability) Pathway**
 
 ##### **Sequence 9: Dancer**
 
@@ -896,34 +992,16 @@ This chapter details specific pathways that are primarily accessed through Boons
 
 **Abilities:**
 
-- **Dancer Domain Art 1** (Passive): a transcendent, mystical state. After dancing f
-  *(Arte de Dominio 1): a transcendent, mystical state. After dancing f*
+- **Spiritual Dance** (Active): By performing a mystical dance, they enter a transcendent state, gaining +2 to all Will rolls for 1d turns.
+  *(Danza Espiritual): Al realizar una danza mística, entran en un estado trascendente, ganando +2 a todas las tiradas de Voluntad por 1d turnos.*
 
-- **Dancer Domain Art 2** (Passive): +2 to all Will rolls for 1d turns.Appeasing D
-  *(Arte de Dominio 2): +2 to all Will rolls for 1d turns.Appeasing D*
+- **Appeasing Dance** (Active): By dancing, witnesses must roll Will at -2 or be pacified for the duration of the dance and 1d turns after.
+  *(Danza Apaciguadora): Al bailar, los testigos deben tirar Voluntad con -2 o ser pacificados durante la duración del baile y 1d turnos después.*
 
-- **Dancer Domain Art 3** (Passive): witnesses must roll Will at -2 or be pacified —
-  *(Arte de Dominio 3): witnesses must roll Will at -2 or be pacified —*
+- **Vessel Dance** (Active): Summon up to 3 spiritual creatures. By offering blood, the Dancer can invite one into their body, gaining its abilities but risking possession (GM's discretion). On a critical failure, summons a hostile entity.
+  *(Danza de la Vasija): Invoca hasta 3 criaturas espirituales. Ofreciendo sangre, el Bailarín puede invitar a una a su cuerpo, ganando sus habilidades pero arriesgando posesión. En un fallo crítico, invoca una entidad hostil.*
 
-- **Dancer Domain Art 4** (Passive): for the duration of the dance and 1d turns afte
-  *(Arte de Dominio 4): for the duration of the dance and 1d turns afte*
-
-- **Dancer Domain Art 5** (Passive): summon up to 3 spiritual creatures whose pow
-  *(Arte de Dominio 5): summon up to 3 spiritual creatures whose pow*
-
-- **Dancer Domain Art 6** (Passive): roll. By offering blood to one of them, the Da
-  *(Arte de Dominio 6): roll. By offering blood to one of them, the Da*
-
-- **Dancer Domain Art 7** (Passive): body, gaining the creature's abilities — but su
-  *(Arte de Dominio 7): body, gaining the creature's abilities — but su*
-
-- **Dancer Domain Art 8** (Passive): answers (GM's discretion). The creature inhab
-  *(Arte de Dominio 8): answers (GM's discretion). The creature inhab*
-
-- **Dancer Domain Art 9** (Passive): outside combat). On a critical failure, summo
-  *(Arte de Dominio 9): outside combat). On a critical failure, summo*
-
-#### **Monarch of Decay Pathway (Monarch of Decay Pathway)**
+#### **Monarch of Decay Pathway**
 
 ##### **Sequence 9: Patient**
 
@@ -932,13 +1010,13 @@ This chapter details specific pathways that are primarily accessed through Boons
 
 **Abilities:**
 
-- **Patient Domain Art 1** (Passive): _Powered by GURPS: Pathways — Lord of the Mysteries_
-  *(Arte de Dominio 1): _Powered by GURPS: Pathways — Lord of the Mysteries_*
+- **Suppression of Pain** (Passive): They can temporarily ignore physical pain and push their body beyond normal limits, though injuries still persist.
+  *(Supresión del Dolor): Pueden ignorar temporalmente el dolor físico y empujar su cuerpo más allá de los límites normales, aunque las heridas persisten.*
 
 - **Patient Domain Art 2** (Passive): rotten, or contaminated
   *(Arte de Dominio 2): rotten, or contaminated*
 
-#### **High-Dimensional Overseer Pathway (High-Dimensional Overseer Pathway)**
+#### **High-Dimensional Overseer Pathway**
 
 ##### **Sequence 9: Shaman**
 
@@ -977,7 +1055,7 @@ This chapter details specific pathways that are primarily accessed through Boons
 - **Shaman Domain Art 10** (Passive): spell. All such spells use the Ritualistic Magi
   *(Arte de Dominio 10): spell. All such spells use the Ritualistic Magi*
 
-#### **Goddess of Fate Pathway (Goddess of Fate Pathway)**
+#### **Goddess of Fate Pathway**
 
 ##### **Sequence 9: Dreamless**
 
@@ -989,7 +1067,7 @@ This chapter details specific pathways that are primarily accessed through Boons
 - **Dreamless Divine Boon** (Passive): Boon granting powers of the Goddess of Fate Pathway. Channels outer deity authority.
   *(Bendición Divina: Dreamless): Poderes otorgados de la senda Goddess of Fate Pathway. Canaliza la autoridad de una deidad exterior.*
 
-#### **Primordial Hunger Pathway (Primordial Hunger Pathway)**
+#### **Primordial Hunger Pathway**
 
 ##### **Sequence 9: Tramp**
 
@@ -1016,10 +1094,10 @@ This chapter details specific pathways that are primarily accessed through Boons
 - **Tramp Domain Art 6** (Passive): ing for food takes|
   *(Arte de Dominio 6): ing for food takes|*
 
-- **Tramp Domain Art 7** (Passive): _Powered by GURPS: Pathways — Lord of the Mysteries_
-  *(Arte de Dominio 7): _Powered by GURPS: Pathways — Lord of the Mysteries_*
+- **Survival Instinct** (Passive): Enhanced ability to endure harsh environmental conditions, hunger, and fatigue.
+  *(Instinto de Supervivencia): Habilidad mejorada para soportar condiciones ambientales duras, hambre y fatiga.*
 
-#### **Mother Goddess of Depravity Pathway (Mother Goddess of Depravity Pathway)**
+#### **Mother Goddess of Depravity Pathway**
 
 ##### **Sequence 9: Villain**
 
@@ -1028,10 +1106,10 @@ This chapter details specific pathways that are primarily accessed through Boons
 
 **Abilities:**
 
-- **Villain Domain Art 1** (Passive): _Powered by GURPS: Pathways — Lord of the Mysteries_
-  *(Arte de Dominio 1): _Powered by GURPS: Pathways — Lord of the Mysteries_*
+- **Malicious Intuition** (Passive): They instinctively know the most cruel or vulnerable point to strike, both physically and psychologically.
+  *(Intuición Maliciosa): Saben instintivamente el punto más cruel o vulnerable para atacar, tanto física y psicológicamente.*
 
-#### **Patriarch Pathway (Patriarch Pathway)**
+#### **Patriarch Pathway**
 
 ##### **Sequence 9: Scrooge**
 
@@ -1089,7 +1167,7 @@ This chapter details specific pathways that are primarily accessed through Boons
 - **Sex Addict Domain Art 8** (Passive): nowledge: Truth Serum:Compels truth-telling. -2 Will (first
   *(Arte de Dominio 8): nowledge: Truth Serum:Compels truth-telling. -2 Will (first*
 
-#### **Chaos Mist Pathway (Chaos Mist Pathway)**
+#### **Chaos Mist Pathway**
 
 ##### **Sequence 9: Broker**
 
@@ -1132,7 +1210,7 @@ This chapter details specific pathways that are primarily accessed through Boons
 - **Shadow Merchant Divine Boon** (Passive): Boon granting powers of the Chaos Mist Pathway. Channels outer deity authority.
   *(Bendición Divina: Shadow Merchant): Poderes otorgados de la senda Chaos Mist Pathway. Canaliza la autoridad de una deidad exterior.*
 
-#### **Everlasting Pathway (Everlasting Pathway)**
+#### **Everlasting Pathway**
 
 ##### **Sequence 9: Initiator**
 
@@ -1163,10 +1241,10 @@ This chapter details specific pathways that are primarily accessed through Boons
 - **Commentator Domain Art 4** (Passive): d Abilities|Midoro's Worship:The Commentator can now hold up to four spells at a time (up from three).|
   *(Arte de Dominio 4): d Abilities|Midoro's Worship:The Commentator can now hold up to four spells at a time (up from three).|*
 
-- **Commentator Domain Art 5** (Passive): _Powered by GURPS: Pathways — Lord of the Mysteries_
-  *(Arte de Dominio 5): _Powered by GURPS: Pathways — Lord of the Mysteries_*
+- **Vocal Influence** (Passive): By commentating on an unfolding event, they can subtly tilt the probability of success or failure for the participants.
+  *(Influencia Vocal): Al comentar sobre un evento en desarrollo, pueden inclinar sutilmente la probabilidad de éxito o fracaso de los participantes.*
 
-#### **Condenser Pathway (Condenser Pathway)**
+#### **Condenser Pathway**
 
 ##### **Sequence 9: Astronomy Aficionado**
 
@@ -1175,19 +1253,19 @@ This chapter details specific pathways that are primarily accessed through Boons
 
 **Abilities:**
 
-- **Astronomy Aficionado Domain Art 1** (Passive): _Powered by GURPS: Pathways — Lord of the Mysteries_
-  *(Arte de Dominio 1): _Powered by GURPS: Pathways — Lord of the Mysteries_*
+- **Cosmic Attunement** (Passive): They can perceive subtle shifts in the stars and use them to predict imminent danger or luck.
+  *(Sintonía Cósmica): Pueden percibir cambios sutiles en las estrellas y usarlos para predecir peligros inminentes o suerte.*
 
-- **Astronomy Aficionado Domain Art 2** (Passive): The following entries document higher sequences of certain non-standard pathways where the potion formula or boon structure has been recorded.
-  *(Arte de Dominio 2): The following entries document higher sequences of certain non-standard pathways where the potion formula or boon structure has been recorded.*
+- **Starlight Navigation** (Passive): Never get lost at night. Can use the stars to orient themselves physically and spiritually.
+  *(Navegación Estelar): Nunca se pierden de noche. Pueden usar las estrellas para orientarse física y espiritualmente.*
 
-- **Astronomy Aficionado Domain Art 3** (Passive): Reading these entries: See Chapter 9 for instructions on how to read a pathway entry. The same rules for potion-granted skills and attributes from Chapter 9 apply here.
-  *(Arte de Dominio 3): Reading these entries: See Chapter 9 for instructions on how to read a pathway entry. The same rules for potion-granted skills and attributes from Chapter 9 apply here.*
+- **Resist Corruption** (Passive): They gain a minor resistance to madness induced by staring into the cosmos or encountering alien entities.
+  *(Resistir Corrupción): Obtienen una resistencia menor a la locura inducida por mirar al cosmos o encontrar entidades alienígenas.*
 
-- **Astronomy Aficionado Domain Art 4** (Passive): _Powered by GURPS: Pathways — Lord of the Mysteries_
-  *(Arte de Dominio 4): _Powered by GURPS: Pathways — Lord of the Mysteries_*
+- **Telescopic Vision** (Passive): Their eyes can focus on extremely distant objects with the clarity of a telescope.
+  *(Visión Telescópica): Sus ojos pueden enfocar objetos extremadamente distantes con la claridad de un telescopio.*
 
-#### **Second Law Pathway (Second Law Pathway)**
+#### **Second Law Pathway**
 
 ##### **Sequence 8: Secretary**
 
@@ -1196,16 +1274,16 @@ This chapter details specific pathways that are primarily accessed through Boons
 
 **Abilities:**
 
-- **Secretary Domain Art 1** (Passive): faint sounds, eavesdrop
-  *(Arte de Dominio 1): faint sounds, eavesdrop*
+- **Keen Hearing** (Passive): Can hear faint sounds and effectively eavesdrop through solid doors.
+  *(Oído Agudo): Puede escuchar sonidos tenues y escuchar a escondidas a través de puertas sólidas.*
 
-- **Secretary Domain Art 2** (Passive): through walls, identify|Diplomacy/IQ [Hard]|+2|
-  *(Arte de Dominio 2): through walls, identify|Diplomacy/IQ [Hard]|+2|*
+- **Organization & Diplomacy** (Passive): Grants a +2 bonus to Diplomacy and administration tasks.
+  *(Organización y Diplomacia): Otorga un bono de +2 a tareas de Diplomacia y administración.*
 
-- **Secretary Domain Art 3** (Passive): speech in noise|Psychology/IQ [Hard]|+3|
-  *(Arte de Dominio 3): speech in noise|Psychology/IQ [Hard]|+3|*
+- **Psychological Profiling** (Passive): Grants a +3 bonus to Psychology to understand motives in conversations.
+  *(Perfil Psicológico): Otorga un bono de +3 a Psicología para comprender motivos en conversaciones.*
 
-#### **Sublunary Eye Pathway (Sublunary Eye Pathway)**
+#### **Sublunary Eye Pathway**
 
 ##### **Sequence 8: Reporter**
 
@@ -1214,8 +1292,8 @@ This chapter details specific pathways that are primarily accessed through Boons
 
 **Abilities:**
 
-- **Reporter Domain Art 1** (Passive): _Powered by GURPS: Pathways — Lord of the Mysteries_
-  *(Arte de Dominio 1): _Powered by GURPS: Pathways — Lord of the Mysteries_*
+- **Information Gathering** (Passive): Heightened senses for eavesdropping, rapidly memorizing documents, and accurately recalling complex scenes.
+  *(Recopilación de Información): Sentidos agudizados para escuchar a escondidas, memorizar documentos rápidamente y recordar escenas complejas.*
 
 ##### **Sequence 7: Painter**
 
@@ -1224,34 +1302,34 @@ This chapter details specific pathways that are primarily accessed through Boons
 
 **Abilities:**
 
-- **Painter Domain Art 1** (Active | Cost: 1 SPI): Painting Disguise (2 SPI):They can also use
-  *(Arte de Dominio 1): Painting Disguise (2 SPI):They can also use*
+- **Painting Disguise** (Active | Cost: 1 SPI): They can alter their appearance and clothes using their spirituality to paint over their physical body. Can also be done on someone else. Doesn't need a mirror.
+  *(Disfraz Pintado): Pueden alterar su apariencia y ropa usando su espiritualidad para pintar sobre su cuerpo físico. También se puede hacer en otra persona. No necesita un espejo.*
 
-- **Painter Domain Art 2** (Passive): also be done on someone else. Doesn't need a
-  *(Arte de Dominio 2): also be done on someone else. Doesn't need a*
+- **Painting Reality** (Passive): By infusing a canvas with Spirituality, they can depict a scene or object. Once completed, the painting manifests a temporary, localized reality or effect.
+  *(Pintar la Realidad): Al infundir espiritualidad en un lienzo, pueden representar una escena u objeto. Una vez terminada, la pintura manifiesta una realidad o efecto temporal y localizado.*
 
-- **Painter Domain Art 3** (Passive): Spirituality, they can depict the reality they in
-  *(Arte de Dominio 3): Spirituality, they can depict the reality they in*
+- **Mesmeric Exhibition** (Passive): Their paintings naturally draw the gaze. A target looking at one of their paintings must resist being temporarily entranced or suffering subtle mental effects.
+  *(Exhibición Hipnótica): Sus pinturas atraen naturalmente la mirada. Un objetivo que mire una de sus pinturas debe resistir quedar temporalmente hipnotizado o sufrir efectos mentales sutiles.*
 
-- **Painter Domain Art 4** (Passive): effects. A target must stare at a Painting for at
-  *(Arte de Dominio 4): effects. A target must stare at a Painting for at*
+- **Paper Substitution** (Passive): They can swap their physical location with a life-sized painting of themselves, avoiding a lethal blow if prepared in advance.
+  *(Sustitución de Papel): Pueden intercambiar su ubicación física con una pintura de tamaño real de sí mismos, evitando un golpe letal si se preparó con anticipación.*
 
-- **Painter Domain Art 5** (Passive): as an area of effect. Their Paintings are a type
-  *(Arte de Dominio 5): as an area of effect. Their Paintings are a type*
+- **Concealment Canvas** (Passive): They can paint a layer of 'background' over themselves or allies, effectively blending them into the environment like a chameleon.
+  *(Lienzo de Ocultamiento): Pueden pintar una capa de 'fondo' sobre sí mismos o sus aliados, camuflándolos con el entorno como un camaleón.*
 
-- **Painter Domain Art 6** (Passive): two months when folded and three days when
-  *(Arte de Dominio 6): two months when folded and three days when*
+- **Portrait of Weakness** (Passive): By painting a target using their blood or spiritual trace, they can inflict curses or weaknesses on the subject through the painting.
+  *(Retrato de Debilidad): Al pintar a un objetivo usando su sangre o rastro espiritual, pueden infligir maldiciones o debilidades al sujeto a través de la pintura.*
 
-- **Painter Domain Art 7** (Passive): of the Painter and the things painted, with the
-  *(Arte de Dominio 7): of the Painter and the things painted, with the*
+- **Living Pigments** (Passive): The Painter can use spiritual materials, blood, or corrupted substances as paint, granting their artworks anomalous and dangerous properties.
+  *(Pigmentos Vivos): El Pintor puede usar materiales espirituales, sangre o sustancias corruptas como pintura, otorgando a sus obras propiedades anómalas y peligrosas.*
 
-- **Painter Domain Art 8** (Passive): on an Artist (Painting) roll for the Painting to
-  *(Arte de Dominio 8): on an Artist (Painting) roll for the Painting to*
+- **Artistic Intuition** (Passive): They gain a strong intuition for symbolism. Can roll Artist (Painting) to decipher the mystical meaning behind scenes, symbols, or anomalies.
+  *(Intuición Artística): Obtienen una fuerte intuición para el simbolismo. Pueden tirar Artista (Pintura) para descifrar el significado místico de escenas, símbolos o anomalías.*
 
-- **Painter Domain Art 9** (Passive): Painting for a more powerful effect.Painting
-  *(Arte de Dominio 9): Painting for a more powerful effect.Painting*
+- **Incomplete Masterpiece** (Passive): They can leave a painting slightly unfinished to delay its activation, completing it with a final brushstroke when the moment is right.
+  *(Obra Maestra Incompleta): Pueden dejar una pintura ligeramente inacabada para retrasar su activación, completándola con un último trazo cuando sea el momento adecuado.*
 
-#### **Eternal Aeon Pathway (Eternal Aeon Pathway)**
+#### **Eternal Aeon Pathway**
 
 ##### **Sequence 8: Alms Monk**
 
@@ -1260,10 +1338,10 @@ This chapter details specific pathways that are primarily accessed through Boons
 
 **Abilities:**
 
-- **Alms Monk Domain Art 1** (Passive): _Powered by GURPS: Pathways — Lord of the Mysteries_
-  *(Arte de Dominio 1): _Powered by GURPS: Pathways — Lord of the Mysteries_*
+- **Ascetic Endurance** (Passive): They gain physical and spiritual fortitude by enduring deprivation, poverty, and fasting.
+  *(Resistencia Ascética): Obtienen fortaleza física y espiritual al soportar privaciones, pobreza y ayuno.*
 
-#### **Eternal Edict Pathway (Eternal Edict Pathway)**
+#### **Eternal Edict Pathway**
 
 ##### **Sequence 8: Musician**
 
@@ -1272,39 +1350,40 @@ This chapter details specific pathways that are primarily accessed through Boons
 
 **Abilities:**
 
-- **Musician Domain Art 1** (Passive): around them.Symphony Decryption (active
-  *(Arte de Dominio 1): around them.Symphony Decryption (active*
+- **Symphony Decryption** (Passive): By listening to the ambient sounds and 'music of fate', they can decipher hidden truths, impending dangers, or the emotional states of those around them.
+  *(Descifrado Sinfónico): Al escuchar los sonidos ambientales y la 'música del destino', pueden descifrar verdades ocultas, peligros inminentes o los estados emocionales de quienes los rodean.*
 
-- **Musician Domain Art 2** (Passive): Success reveals several possible futures. Criti
-  *(Arte de Dominio 2): Success reveals several possible futures. Criti*
+- **Sound of Fate** (Passive): By playing a specific tune, they can briefly align with the strings of fate. Success reveals glimpses of possible futures; critical success provides extreme clarity.
+  *(Sonido del Destino): Al tocar una melodía específica, pueden alinearse brevemente con los hilos del destino. El éxito revela vislumbres de futuros posibles; un éxito crítico proporciona claridad extrema.*
 
-- **Musician Domain Art 3** (Passive): critical failure, spend 3 FP and gain 1 CoR. W
-  *(Arte de Dominio 3): critical failure, spend 3 FP and gain 1 CoR. W*
+- **Discordant Note** (Passive): They play a harsh, reality-breaking note. Targets in range must resist or suffer mental stun and temporary interruption of their active abilities. On a critical failure by the Musician, they take backlash.
+  *(Nota Discordante): Tocan una nota áspera que rompe la realidad. Los objetivos en el área deben resistir o sufrir aturdimiento mental e interrupción de sus habilidades. En un fallo crítico del Músico, sufren una reacción.*
 
-- **Musician Domain Art 4** (Passive): and GM discretion.Song of Fate (varies):A
-  *(Arte de Dominio 4): and GM discretion.Song of Fate (varies):A*
+- **Song of Fate** (Passive): By singing or playing a complex piece over several turns, they can subtly manipulate the probabilities of events around them, turning bad luck into good or vice versa for a limited time.
+  *(Canción del Destino): Al cantar o tocar una pieza compleja durante varios turnos, pueden manipular sutilmente las probabilidades de los eventos a su alrededor, convirtiendo la mala suerte en buena o viceversa por tiempo limitado.*
 
-- **Musician Domain Art 5** (Passive): singing. Roll Singing (HT/Easy) with a bonu
-  *(Arte de Dominio 5): singing. Roll Singing (HT/Easy) with a bonu*
+- **Harmonic Resonance** (Passive): They can match the frequency of objects or spells. Roll Singing or Musical Instrument. On a success, they can shatter brittle objects or weaken physical barriers.
+  *(Resonancia Armónica): Pueden igualar la frecuencia de objetos o hechizos. Tira Canto o Instrumento Musical. Si tienen éxito, pueden romper objetos frágiles o debilitar barreras físicas.*
 
-- **Musician Domain Art 6** (Active | Cost: 1 SPI): (GM discretion). Spend SPI appropriate to th
-  *(Arte de Dominio 6): (GM discretion). Spend SPI appropriate to th*
+- **Emotional Symphony** (Active | Cost: 1 SPI): They project their music into the Astral Projections of others, forcibly altering their emotional state (inducing sleep, rage, sorrow, or joy) depending on the melody.
+  *(Sinfonía Emocional): Proyectan su música en las Proyecciones Astrales de otros, alterando forzosamente su estado emocional (induciendo sueño, rabia, tristeza o alegría) dependiendo de la melodía.*
 
-- **Musician Domain Art 7** (Active | Cost: 1 SPI): SPI to forcibly succeed on the Singing roll. F
-  *(Arte de Dominio 7): SPI to forcibly succeed on the Singing roll. F*
+- **Aura of Inspiration** (Active | Cost: 1 SPI): While playing, allies within earshot receive a +1 bonus to all willpower and fear resistance rolls, emboldened by the spirituality of the music.
+  *(Aura de Inspiración): Mientras tocan, los aliados que los escuchan reciben un bono de +1 a todas las tiradas de voluntad y resistencia al miedo, envalentonados por la espiritualidad de la música.*
 
-- **Musician Domain Art 8** (Passive): the fate of an impending illness forces the tar
-  *(Arte de Dominio 8): the fate of an impending illness forces the tar*
+- **Dirge of Weakness** (Passive): A mournful tune that saps the physical vitality of enemies. Targets in hearing range must roll HT or suffer -1 to DX and ST while the song continues.
+  *(Endecha de Debilidad): Una melodía triste que agota la vitalidad física de los enemigos. Los objetivos en el rango auditivo deben tirar HT o sufrir -1 a DX y ST mientras continúe la canción.*
 
-- **Musician Domain Art 9** (Passive): emotional breakdown forces a Will roll or the|enhanced. The Musician constantly hears the symphony of fate
-  *(Arte de Dominio 9): emotional breakdown forces a Will roll or the|enhanced. The Musician constantly hears the symphony of fate*
+- **Echoes of the Past** (Passive): By playing in a specific location, they can 'hear' the residual sounds and conversations that occurred there recently, effectively performing auditory psychometry.
+  *(Ecos del Pasado): Al tocar en un lugar específico, pueden 'escuchar' los sonidos y conversaciones residuales que ocurrieron allí recientemente, realizando efectivamente una psicometría auditiva.*
 
+<div id="ch15"></div>
 
-<div id="ch15"></div>### **Chapter 15: Non-Standard Potion Pathways**
+### **Chapter 15: Non-Standard Potion Pathways**
 
-This chapter details alternative potion pathways that do not fit into the primary 22 Orthodox pathways (e.g., the 2nd Epoch pathways, forgotten formulas).
+This chapter details alternative potion pathways that do not fit into the primary 22 Orthodox pathways.
 
-*(No non-standard potion pathways are currently documented in the compendium.)*
+*(See Compendium > Pathways for the comprehensive list of abilities.)*
 
 <div class="bg-[#1a1a1a] p-4 rounded-md border border-[#333] my-8">
 
@@ -1315,4 +1394,4 @@ This chapter details alternative potion pathways that do not fit into the primar
 </div>
 
 _For complete rules, lore, classes, sequences, abilities, rituals, and combat mechanics, please refer to the specific sections within the Compendium._
-`
+`;

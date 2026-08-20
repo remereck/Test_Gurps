@@ -83,20 +83,22 @@ export const moonPathway: Pathway = {
         },
         {
           id: 'moon_seq8_spirit_vision',
-          name: { en: 'Spirit Vision (Reinforced)', es: 'Visión Espiritual (Reforzada)' },
+          replaces: 'moon_seq9_spirit_vision',
+          name: { en: 'Spirit Vision+', es: 'Visión Espiritual+' },
           type: 'passive',
           description: {
-            en: 'Reads health/emotional state of animals within 50m (no SPI cost). When examining a patient, Physician bonus increases to +3.',
-            es: 'Lee salud/estado emocional de animales a 50m (sin SPI). Al examinar paciente, el bono de Médico aumenta a +3.'
+            en: 'Spirit Vision: Read the Ether Body of living beings, revealing injuries, illnesses, toxins, and supernatural conditions (1 SPI/min), Spirit Vision+ Reads health/emotional state of animals within {{50m}} (no SPI cost). When examining a patient, Physician bonus increases to {{+3}}.',
+            es: 'Visión Espiritual: Lee el Cuerpo Etérico de seres vivos, revelando heridas, enfermedades, toxinas y condiciones (1 SPI/min), Visión Espiritual+ Lee salud/estado emocional de animales a {{50m}} (sin SPI). Al examinar paciente, el bono de Médico aumenta a {{+3}}.'
           }
         },
         {
           id: 'moon_seq8_potion_concoction',
-          name: { en: 'Potion Concoction (Reinforced)', es: 'Elaboración de Pociones (Reforzada)' },
+          replaces: 'moon_seq9_potion_concoction',
+          name: { en: 'Potion Concoction+', es: 'Elaboración de Pociones+' },
           type: 'passive',
           description: {
-            en: 'Penalty for all potions reduced by 1. Carry up to SPI x 1.5 doses (round up).',
-            es: 'Penalidad para todas las pociones reducida en 1. Puede llevar hasta SPI x 1.5 dosis (redondeando hacia arriba).'
+            en: 'Potion Concoction: Brew alchemical concoctions. Can carry up to (SPI) doses, Potion Concoction+ Penalty for all potions reduced by {{1}}. Carry up to {{SPI x 1.5}} doses (round up).',
+            es: 'Elaboración de Pociones: Elabora pociones alquímicas. Puede llevar hasta (SPI) dosis, Elaboración de Pociones+ Penalidad para todas las pociones reducida en {{1}}. Puede llevar hasta {{SPI x 1.5}} dosis (redondeando hacia arriba).'
           }
         }
       ]
@@ -223,25 +225,27 @@ export const moonPathway: Pathway = {
         },
         {
           id: 'moon_seq7_spirit_vision',
-          name: { en: 'Spirit Vision (Mastered)', es: 'Visión Espiritual (Maestría)' },
+          replaces: 'moon_seq8_spirit_vision',
+          name: { en: 'Spirit Vision++', es: 'Visión Espiritual++' },
           type: 'passive',
           description: {
-            en: 'Animal range expands to 80m. Can read animal\'s emotional state, recent memories (24h), and spiritual tampering.',
-            es: 'Alcance animal se expande a 80m. Puede leer estado emocional, recuerdos recientes (24h) y alteraciones espirituales.'
+            en: 'Spirit Vision+: Reads health/emotional state of animals within 50m (no SPI cost). Physician bonus increases to +3, Spirit Vision++ Animal range expands to {{80m}}. Can read animal\'s emotional state, {{recent memories}} (24h), and {{spiritual tampering}}.',
+            es: 'Visión Espiritual+: Lee salud/estado emocional de animales a 50m (sin SPI). Bono de Médico aumenta a +3, Visión Espiritual++ Alcance animal se expande a {{80m}}. Puede leer estado emocional, {{recuerdos recientes}} (24h) y {{alteraciones espirituales}}.'
           }
         },
         {
           id: 'moon_seq7_beast_taming',
-          name: { en: 'Beast Taming (Mastered)', es: 'Doma de Bestias (Maestría)' },
+          replaces: 'moon_seq8_animal_senses',
+          name: { en: 'Animal Senses / Taming+', es: 'Sentidos de Animales / Doma+' },
           type: 'passive',
           description: {
-            en: 'Control up to 3 animals, issue complex commands. Controlled animals gain +2 ST and +1 Basic Speed.',
-            es: 'Controla hasta 3 animales, da órdenes complejas. Animales controlados ganan +2 ST y +1 Velocidad Básica.'
+            en: 'Animal Senses / Taming: Read thoughts/senses of, communicate to, and control animals within 50m. Control up to (IQ/2) at once. Tamed animals get +4 involving drinking potions, Animal Senses / Taming+ Control up to {{3 animals}} and issue {{complex commands}}. Controlled animals gain {{+2 ST}} and {{+1 Basic Speed}}.',
+            es: 'Sentidos de Animales / Doma: Lee pensamientos/sentidos, comunícate y controla animales en 50m. Controla hasta (IQ/2). Animales domados ganan +4 al beber pociones, Sentidos de Animales / Doma+ Controla hasta {{3 animales}} y da {{órdenes complejas}}. Animales controlados ganan {{+2 ST}} y {{+1 Velocidad Básica}}.'
           }
         },
         {
           id: 'moon_seq7_physician',
-          name: { en: 'Physician (Mastered)', es: 'Médico (Maestría)' },
+          name: { en: 'Physician', es: 'Médico' },
           type: 'passive',
           description: {
             en: '+3 bonus applies to own healing (+1 HP/day rest). May diagnose spiritual ailments in animals/moon creatures without penalty.',

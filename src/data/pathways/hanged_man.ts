@@ -71,16 +71,17 @@ export const hangedManPathway: Pathway = {
         },
         {
           id: 'hanged_seq8_honorifics',
-          name: { en: 'Knowledge (Reinforced)', es: 'Conocimiento (Reforzado)' },
+          replaces: 'hanged_seq9_knowledge',
+          name: { en: 'Knowledge+', es: 'Conocimiento+' },
           type: 'passive',
           description: {
-            en: 'Gains 2 additional honorific names. Spiritual Perception rolls gain +2.',
-            es: 'Gana 2 nombres honoríficos adicionales. Percepción Espiritual gana +2.'
+            en: 'Knowledge: Learn three-part honorific names of secret existences., {{Knowledge+: Gains 2 additional honorific names. Spiritual Perception rolls gain +2.}}',
+            es: 'Conocimiento: Aprende nombres honoríficos de tres partes de existencias secretas., {{Conocimiento+: Gana 2 nombres honoríficos adicionales. Percepción Espiritual gana +2.}}'
           }
         },
         {
           id: 'hanged_seq8_perception_reinforced',
-          name: { en: 'Spiritual Perception (Reinforced)', es: 'Percepción Espiritual (Reforzada)' },
+          name: { en: 'Spiritual Perception', es: 'Percepción Espiritual' },
           type: 'passive',
           description: {
             en: 'Passive range expands to 50m. Automatically detect active Beyonder abilities within range.',
@@ -148,11 +149,12 @@ export const hangedManPathway: Pathway = {
         },
         {
           id: 'hanged_seq7_spiritual_perception',
-          name: { en: 'Spiritual Perception (Mastered)', es: 'Percepción Espiritual (Maestría)' },
+          replaces: 'hanged_seq8_perception_reinforced',
+          name: { en: 'Spiritual Perception++', es: 'Percepción Espiritual++' },
           type: 'passive',
           description: {
-            en: '+3 to detect entities. Passive range 80m. Reveals emotional state.',
-            es: '+3 para detectar entidades. Rango pasivo 80m. Revela estado emocional.'
+            en: 'Spiritual Perception+: Passive range expands to 50m. Automatically detect active Beyonder abilities within range., {{Spiritual Perception++: +3 to detect entities. Passive range 80m. Reveals emotional state.}}',
+            es: 'Percepción Espiritual+: El rango pasivo se expande a 50m. Detecta automáticamente habilidades Beyonder activas en el rango., {{Percepción Espiritual++: +3 para detectar entidades. Rango pasivo 80m. Revela estado emocional.}}'
           }
         }
       ]

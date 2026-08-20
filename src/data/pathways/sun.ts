@@ -109,11 +109,12 @@ export const sunPathway: Pathway = {
         },
         {
           id: 'sun_seq8_singing_upgrade',
-          name: { en: 'Singing (Reinforced)', es: 'Canto (Reforzado)' },
+          replaces: 'sun_seq9_singing',
+          name: { en: 'Singing — Buff Effects+', es: 'Canto — Efectos de Mejora+' },
           type: 'passive',
           description: {
-            en: 'Song duration doubles to 20 min. Courage ignores Fear up to -5; Strength/Agility give +2 rolls; Spiritual Recovery restores 2 SPI.',
-            es: 'La duración del canto se duplica a 20 min. Coraje ignora Miedo hasta -5; Fuerza/Agilidad dan +2; Recuperación Espiritual da 2 SPI.'
+            en: 'Singing: Bard imbues ONE effect for 10 min: Courage (-3 fear), Strength/Agility (+1 roll), or Spiritual Recovery (+1 SPI), Singing+ Song duration doubles to {{20 min}}. Courage ignores Fear up to {{-5}}; Strength/Agility give {{+2}} rolls; Spiritual Recovery restores {{2 SPI}}.',
+            es: 'Canto: Otorga UN efecto por 10 min: Coraje (ignora Miedo -3), Fuerza/Agilidad (+1), o Recuperación Espiritual (+1 SPI), Canto+ La duración se duplica a {{20 min}}. Coraje ignora Miedo hasta {{-5}}; Fuerza/Agilidad dan {{+2}}; Recuperación Espiritual da {{2 SPI}}.'
           }
         }
       ]
@@ -139,12 +140,13 @@ export const sunPathway: Pathway = {
         },
         {
           id: 'sun_seq7_holy_water',
-          name: { en: 'Sun Holy Water', es: 'Agua Bendita Solar' },
+          replaces: 'sun_seq8_holy_water',
+          name: { en: 'Holy Water+', es: 'Agua Bendita+' },
           type: 'active',
           spiCost: 3,
           description: {
-            en: 'Upgrades Holy Water: 2d6+2 corrosion vs undead (ignores non-mag DR).',
-            es: 'Mejora Agua Bendita: 2d6+2 corrosión vs no muertos (ignora RD no mágica).'
+            en: 'Holy Water: Imbue water with Sun authority. 1d6 corrosion vs undead/spirits (ignores non-magical DR), Holy Water+ Upgrades Holy Water: {{2d6+2}} corrosion vs undead (ignores non-magical DR).',
+            es: 'Agua Bendita: Imbuir agua con autoridad Solar. 1d6 de corrosión vs no muertos/espíritus (ignora RD no mágica), Agua Bendita+ Mejora Agua Bendita: {{2d6+2}} corrosión vs no muertos (ignora RD no mágica).'
           }
         },
         {
@@ -208,11 +210,12 @@ export const sunPathway: Pathway = {
         },
         {
           id: 'sun_seq7_very_fit',
-          name: { en: 'Very Fit', es: 'Muy en Forma' },
+          replaces: 'sun_seq9_fit',
+          name: { en: 'Fit+', es: 'En Forma+' },
           type: 'passive',
           description: {
-            en: '+2 to all HT rolls; lose FP at half normal rate; recover FP at twice normal rate.',
-            es: '+2 a tiradas HT; pierde FP a la mitad; recupera FP al doble.'
+            en: 'Fit: +1 to all HT rolls; recover FP at twice the normal rate, Fit+ {{+2}} to all HT rolls; lose FP at {{half}} normal rate; recover FP at twice normal rate.',
+            es: 'En Forma: +1 a todas las tiradas de HT; recupera FP al doble del ritmo normal, En Forma+ {{+2}} a tiradas HT; pierde FP a la {{mitad}}; recupera FP al doble.'
           }
         }
       ]

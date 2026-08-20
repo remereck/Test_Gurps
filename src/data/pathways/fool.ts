@@ -87,26 +87,29 @@ export const foolPathway: Pathway = {
           name: { en: 'Clown Intuition', es: 'Intuición de Payaso' },
           type: 'passive',
           description: {
-            en: 'Once per scene, make one free Dodge/Step before an attack hits. GM may grant vision "flash".',
-            es: 'Una vez por escena, haz un Esquivar/Paso gratis antes de que un ataque impacte. El GM puede otorgar una "visión" fugaz.'
+            en: 'Once per scene, make one free Dodge/Step before an attack hits. GM may grant vision flash.',
+            es: 'Una vez por escena, haz un Esquivar/Paso gratis antes de que un ataque impacte. El GM puede otorgar una visión fugaz.'
           }
         },
         {
           id: 'fool_seq8_spirit_vision',
-          name: { en: 'Spirit Vision (Reinforced)', es: 'Visión Espiritual (Reforzada)' },
-          type: 'passive',
+          replaces: 'fool_seq9_spirit_vision',
+          name: { en: 'Spirit Vision+', es: 'Visión Espiritual+' },
+          type: 'active',
+          spiCost: 1,
           description: {
-            en: 'Range increased to 15m. Read surface emotions and basic health without a roll.',
-            es: 'Rango aumentado a 15m. Lee emociones superficiales y salud básica sin tirada.'
+            en: 'Spirit Vision: See ghosts, spectres, auras. Deduce health/emotional state. See through objects and detect faint sounds within 10m, Spirit Vision+ Detect faint sounds within {{15m}} and read surface emotions and basic health {{without a roll}}.',
+            es: 'Visión Espiritual: Ve fantasmas, espectros, auras. Deduce salud/estado emocional. Ve a través de objetos y detecta sonidos tenues a 10m, Visión Espiritual+ Detecta sonidos tenues a {{15m}} y lee emociones superficiales y salud básica {{sin tirada}}.'
           }
         },
         {
           id: 'fool_seq8_danger_intuition',
-          name: { en: 'Danger Intuition (Reinforced)', es: 'Intuición de Peligro (Reforzada)' },
+          replaces: 'fool_seq9_danger',
+          name: { en: 'Danger Intuition+', es: 'Intuición de Peligro+' },
           type: 'passive',
           description: {
-            en: 'Warning now provides rough direction and general distance of the threat.',
-            es: 'La advertencia ahora proporciona una dirección aproximada y distancia general de la amenaza.'
+            en: 'Danger Intuition: Provides a vague warning sense whenever mortal danger is near — no roll required, Danger Intuition+ The warning now provides {{rough direction and general distance}} of the threat.',
+            es: 'Intuición de Peligro: Proporciona una vaga sensación de advertencia cada vez que hay peligro mortal cerca — no requiere tirada, Intuición de Peligro+ La advertencia ahora proporciona una {{dirección aproximada y distancia general}} de la amenaza.'
           }
         }
       ]
@@ -209,20 +212,23 @@ export const foolPathway: Pathway = {
         },
         {
           id: 'fool_seq7_clown_agility',
-          name: { en: 'Clown Agility (Reinforced)', es: 'Agilidad de Payaso (Reforzada)' },
+          replaces: 'fool_seq8_intuition',
+          name: { en: 'Clown Intuition+', es: 'Intuición de Payaso+' },
           type: 'passive',
           description: {
-            en: 'Clown Intuition triggering range expands to 8m. Free Dodge/Step can evade Area of Effect attacks.',
-            es: 'Rango de Intuición de Payaso se expande a 8m. Esquivar/Paso gratis puede evadir ataques de Área.'
+            en: 'Clown Intuition: Once per scene, make one free Dodge/Step before an attack hits. GM may grant vision flash, Clown Intuition+ Gives a short premonition when within {{8m}} of an attacker and the free Dodge/Step can evade {{Area of Effect}} attacks.',
+            es: 'Intuición de Payaso: Una vez por escena, haz un Esquivar/Paso gratis antes de que un ataque impacte. El GM puede otorgar una visión fugaz, Intuición de Payaso+ Da una premonición de un ataque inminente al estar a {{8m}} del atacante y el Esquivar/Paso gratis puede evadir ataques de {{Área}}.'
           }
         },
         {
           id: 'fool_seq7_spirit_vision_reinforced',
-          name: { en: 'Spirit Vision (Reinforced)', es: 'Visión Espiritual (Reforzada)' },
-          type: 'passive',
+          replaces: 'fool_seq8_spirit_vision',
+          name: { en: 'Spirit Vision++', es: 'Visión Espiritual++' },
+          type: 'active',
+          spiCost: 1,
           description: {
-            en: 'Range expands to 20m. Can read Ether Body to determine exact HP, SPI, and Beyonder effects.',
-            es: 'Rango se expande a 20m. Lee el Cuerpo Etérico para ver HP exactos, SPI y efectos Beyonder.'
+            en: 'Spirit Vision+: See ghosts, spectres, auras. See through objects. Detect faint sounds within 15m and read surface emotions and basic health without a roll, Spirit Vision++ Range expands to {{20m}} and you can read the {{Ether Body}} to determine {{exact HP, SPI, and Beyonder effects}}.',
+            es: 'Visión Espiritual+: Ve fantasmas, espectros, auras. Ve a través de objetos. Detecta sonidos tenues a 15m y lee emociones superficiales y salud básica sin tirada, Visión Espiritual++ Rango se expande a {{20m}} y lee el {{Cuerpo Etérico}} para ver {{HP exactos, SPI y efectos Beyonder}}.'
           }
         }
       ]

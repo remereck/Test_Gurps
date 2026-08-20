@@ -85,11 +85,12 @@ export const justiciarPathway: Pathway = {
         },
         {
           id: 'justiciar_seq8_authority',
-          name: { en: 'Authority (Reinforced)', es: 'Autoridad (Reforzada)' },
+          replaces: 'justiciar_seq9_authority',
+          name: { en: 'Authority+', es: 'Autoridad+' },
           type: 'passive',
           description: {
-            en: 'Will penalty for opponents increases to -2 within Sheriff\'s Jurisdiction area.',
-            es: 'La penalidad de Voluntad para oponentes aumenta a -2 dentro de la Jurisdicción del Alguacil.'
+            en: 'Authority: 1 SPI for scene. Opposing NPCs roll Will; on failure suffer -1 to attack, defense, and Quick Contests vs Arbiter, Authority+ Will penalty for opponents increases to {{-2}} within Sheriff\'s Jurisdiction area.',
+            es: 'Autoridad: 1 SPI por escena. PNJs oponentes tiran Voluntad; si fallan sufren -1 al ataque, defensa y Competiciones Rápidas contra el Árbitro, Autoridad+ La penalidad de Voluntad para oponentes aumenta a {{-2}} dentro de la Jurisdicción del Alguacil.'
           }
         }
       ]
@@ -149,20 +150,22 @@ export const justiciarPathway: Pathway = {
         },
         {
           id: 'justiciar_seq7_authority',
-          name: { en: 'Authority (Mastered)', es: 'Autoridad (Maestría)' },
+          replaces: 'justiciar_seq8_authority',
+          name: { en: 'Authority++', es: 'Autoridad++' },
           type: 'passive',
           description: {
-            en: 'Penalty within Jurisdiction increases to -4. Project Authority as free action once/scene: hostile NPCs in 10m hesitate for 1 turn (no actions except defense).',
-            es: 'Penalidad en Jurisdicción aumenta a -4. Proyecta Autoridad como acción libre una vez/escena: PNJs hostiles en 10m dudan 1 turno (solo defensa).'
+            en: 'Authority+: Will penalty for opponents is -2 within Jurisdiction, Authority++ Penalty within Jurisdiction increases to {{-4}}. Project Authority as free action once/scene: hostile NPCs in 10m {{hesitate for 1 turn}} (no actions except defense).',
+            es: 'Autoridad+: La penalidad de Voluntad para oponentes es -2 dentro de la Jurisdicción, Autoridad++ Penalidad en Jurisdicción aumenta a {{-4}}. Proyecta Autoridad como acción libre una vez/escena: PNJs hostiles en 10m {{dudan 1 turno}} (solo defensa).'
           }
         },
         {
           id: 'justiciar_seq7_jurisdiction',
-          name: { en: 'Jurisdiction (Mastered)', es: 'Jurisdicción (Maestría)' },
+          replaces: 'justiciar_seq8_jurisdiction',
+          name: { en: 'Jurisdiction+', es: 'Jurisdicción+' },
           type: 'passive',
           description: {
-            en: 'Knowledge of local laws/procedures extends to neighbouring jurisdictions. IQ bonus +4 for obscure/hidden regulations.',
-            es: 'Conocimiento de leyes locales se extiende a jurisdicciones vecinas. Bono de IQ +4 para regulaciones ocultas/oscuras.'
+            en: 'Jurisdiction: Intimidation/Admin contested by highest Will in area. Grants powers in stages: 0, 1, 2, Jurisdiction+ Knowledge of local laws/procedures extends to {{neighbouring jurisdictions}}. IQ bonus {{+4}} for obscure/hidden regulations.',
+            es: 'Jurisdicción: Intimidación/Admin vs Voluntad más alta del área. Otorga poderes por etapas: 0, 1, 2, Jurisdicción+ Conocimiento de leyes locales se extiende a {{jurisdicciones vecinas}}. Bono de IQ {{+4}} para regulaciones ocultas/oscuras.'
           }
         }
       ]

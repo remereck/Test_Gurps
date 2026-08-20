@@ -60,20 +60,22 @@ export const tyrantPathway: Pathway = {
         },
         {
           id: 'tyrant_seq8_scales',
-          name: { en: 'Phantom Scales (Reinforced)', es: 'Escamas Fantasma (Reforzadas)' },
+          replaces: 'tyrant_seq9_scales',
+          name: { en: 'Phantom Scales+', es: 'Escamas Fantasma+' },
           type: 'passive',
           description: {
-            en: 'Scales thicken into DR 2 (physical). Grappling penalty increases to -4.',
-            es: 'Las escamas se espesan a RD 2 (física). La penalización de apresamiento aumenta a -4.'
+            en: 'Phantom Scales: Illusory scales beneath the skin grant DR 1 vs physical impacts. Grapplers roll at -2 (slippery), Phantom Scales+ Scales thicken into {{DR 2}} (physical). Grappling penalty increases to {{-4}}.',
+            es: 'Escamas Fantasma: Escamas ilusorias otorgan RD 1 vs impactos. Enemigos apresando tiran con -2, Escamas Fantasma+ Las escamas se espesan a {{RD 2}} (física). La penalización de apresamiento aumenta a {{-4}}.'
           }
         },
         {
           id: 'tyrant_seq8_aquatic',
-          name: { en: 'Amphibious (Reinforced)', es: 'Anfibio (Reforzado)' },
+          replaces: 'tyrant_seq9_aquatic',
+          name: { en: 'Aquatic Affinity+', es: 'Afinidad Acuática+' },
           type: 'passive',
           description: {
-            en: 'Full Amphibious. Submerge 30 min without air. Dive 30m without protection.',
-            es: 'Anfibio completo. Sumérgete 30 min sin aire. Bucea 30m sin protección.'
+            en: 'Aquatic Affinity: Submerge 10 min without air. Dive to 15m without HT rolls. Ignore underwater movement penalties, Aquatic Affinity+ {{Full Amphibious}}. Submerge {{30 min}} without air. Dive {{30m}} without protection.',
+            es: 'Afinidad Acuática: Sumérgete 10 min sin aire. Bucea a 15m sin tiradas de HT. Ignora penalizadores bajo el agua, Afinidad Acuática+ {{Anfibio completo}}. Sumérgete {{30 min}} sin aire. Bucea {{30m}} sin protección.'
           }
         }
       ]
@@ -92,11 +94,12 @@ export const tyrantPathway: Pathway = {
       abilities: [
         {
           id: 'tyrant_seq7_aquatic',
-          name: { en: 'Aquatic Affinity (Enhanced)', es: 'Afinidad Acuática (Mejorada)' },
+          replaces: 'tyrant_seq8_aquatic',
+          name: { en: 'Aquatic Affinity++', es: 'Afinidad Acuática++' },
           type: 'passive',
           description: {
-            en: 'All skill rolls gain +1 while at sea or aboard a vessel.',
-            es: 'Todas las tiradas de habilidad ganan +1 estando en el mar o en un barco.'
+            en: 'Aquatic Affinity+: Full Amphibious, 30 min air, 30m dive, Aquatic Affinity++ All skill rolls gain {{+1}} while at sea or aboard a vessel.',
+            es: 'Afinidad Acuática+: Anfibio completo, 30 min aire, 30m buceo, Afinidad Acuática++ Todas las tiradas de habilidad ganan {{+1}} estando en el mar o en un barco.'
           }
         },
         {
@@ -120,21 +123,23 @@ export const tyrantPathway: Pathway = {
         },
         {
           id: 'tyrant_seq7_wrath',
-          name: { en: 'Wrath — Roar', es: 'Ira — Rugido' },
+          replaces: 'tyrant_seq8_wrath',
+          name: { en: 'Wrath+', es: 'Ira+' },
           type: 'active',
           spiCost: 1,
           description: {
-            en: 'Roar at target within 20m. Will-2 or target enters uncontrolled berserk rage.',
-            es: 'Ruge a un objetivo a 20m. Voluntad-2 o entra en estado berserk incontrolable.'
+            en: 'Wrath: Accumulate 4 wrath by hitting/being hit. At 4 wrath: Rampage or Raging Blow, Wrath+ Adds Roar ability: Roar at target within {{20m}}. Target rolls {{Will-2}} or enters uncontrolled berserk rage.',
+            es: 'Ira: Acumula 4 de ira. A 4 de ira: Frenesí o Golpe Rabioso, Ira+ Añade Rugido: Ruge a un objetivo a {{20m}}. Objetivo tira {{Voluntad-2}} o entra en estado berserk incontrolable.'
           }
         },
         {
           id: 'tyrant_seq7_scales',
-          name: { en: 'Phantom Scales (Mastered)', es: 'Escamas Fantasma (Maestría)' },
+          replaces: 'tyrant_seq8_scales',
+          name: { en: 'Phantom Scales++', es: 'Escamas Fantasma++' },
           type: 'passive',
           description: {
-            en: 'DR increases to 4 (physical). Extends to cover throat and eyes. Lasts 25 mins.',
-            es: 'La RD aumenta a 4 (física). Cubre garganta y ojos. Dura 25 minutos.'
+            en: 'Phantom Scales+: Scales grant DR 2 (physical) and Grapplers -4, Phantom Scales++ DR increases to {{4 (physical)}}. Extends to cover {{throat and eyes}}. Lasts 25 mins.',
+            es: 'Escamas Fantasma+: RD 2 física y -4 a apresar, Escamas Fantasma++ La RD aumenta a {{4 (física)}}. Se extiende para cubrir {{garganta y ojos}}. Dura 25 minutos.'
           }
         },
         {

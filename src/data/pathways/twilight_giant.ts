@@ -76,11 +76,12 @@ export const twilightGiantPathway: Pathway = {
         },
         {
           id: 'tg_seq8_combat_mastery',
-          name: { en: 'Combat Mastery (Reinforced)', es: 'Maestría en Combate (Reforzada)' },
+          replaces: 'tg_seq9_combat_mastery',
+          name: { en: 'Combat Mastery+', es: 'Maestría en Combate+' },
           type: 'passive',
           description: {
-            en: 'Treats any melee weapon as known at effective DX immediately (no warm-up needed). Ranged weapons still need one use to reach full proficiency.',
-            es: 'Trata cualquier arma cuerpo a cuerpo como conocida a nivel DX efectivo inmediatamente (sin calentamiento). Las armas a distancia aún necesitan un uso para alcanzar la competencia completa.'
+            en: 'Combat Mastery: Mastery of all kinds of weapons and armour, with no weapon they cannot use and no fighting style they cannot learn. Suffers no default penalty when using any weapon type for the first time — every weapon is treated as known at effective DX (no default penalty) from the moment it is picked up. Weapons used repeatedly in a session are treated as known at default +2. They also don and maintain any armour type without penalty and fight effectively in it., {{Combat Mastery+: Treats any melee weapon as known at effective DX immediately (no warm-up needed). Ranged weapons still need one use to reach full proficiency.}}',
+            es: 'Maestría en Combate: Maestría en todo tipo de armas y armaduras, sin arma que no puedan usar ni estilo que no puedan aprender. No sufre penalización por defecto al usar cualquier tipo de arma por primera vez: cada arma se trata como conocida a nivel DX efectivo (sin penalización por defecto) desde el momento en que se recoge. Las armas usadas repetidamente en una sesión se tratan como conocidas a nivel defecto +2. También se equipan y mantienen cualquier tipo de armadura sin penalización y luchan eficazmente con ella., {{Maestría en Combate+: Trata cualquier arma cuerpo a cuerpo como conocida a nivel DX efectivo inmediatamente (sin calentamiento). Las armas a distancia aún necesitan un uso para alcanzar la competencia completa.}}'
           }
         }
       ]
@@ -150,11 +151,12 @@ export const twilightGiantPathway: Pathway = {
         },
         {
           id: 'tg_seq7_stone_body',
-          name: { en: 'Stone Body (Reinforced)', es: 'Cuerpo de Piedra (Reforzado)' },
+          replaces: 'tg_seq8_dr',
+          name: { en: 'Stone Body+', es: 'Cuerpo de Piedra+' },
           type: 'passive',
           description: {
-            en: 'DR from Pugilist\'s body increases by +1 (total DR 3 if combined with potion). Natural DR now protects against corrosion at half value (rounded down).',
-            es: 'La RD del cuerpo de Púgil aumenta en +1 (RD total de 3 combinado con poción). La RD natural protege contra corrosión a la mitad del valor (redondeado hacia abajo).'
+            en: 'DR 1 (All): Resistance to all physical damage., {{Stone Body+: DR from Pugilist\'s body increases by +1 (total DR 3 if combined with potion). Natural DR now protects against corrosion at half value (rounded down).}}',
+            es: 'RD 1 (Todo): Resistencia a todo daño físico., {{Cuerpo de Piedra+: La RD del cuerpo de Púgil aumenta en +1 (RD total de 3 combinado con poción). La RD natural protege contra corrosión a la mitad del valor (redondeado hacia abajo).}}'
           }
         }
       ]

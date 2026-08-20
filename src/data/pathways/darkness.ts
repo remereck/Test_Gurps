@@ -72,20 +72,22 @@ export const darknessPathway: Pathway = {
         },
         {
           id: 'darkness_seq8_nocturnality',
-          name: { en: 'Nocturnality (Reinforced)', es: 'Nocturnidad (Reforzada)' },
+          replaces: 'darkness_seq9_nocturnality',
+          name: { en: 'Nocturnality+', es: 'Nocturnidad+' },
           type: 'passive',
           description: {
-            en: 'Bonus during night increases to +2. In total darkness, it becomes +3.',
-            es: 'El bono nocturno aumenta a +2. En oscuridad total, pasa a ser +3.'
+            en: 'Nocturnality: +1 to all rolls during the night., {{Nocturnality+: Bonus during night increases to +2. In total darkness, it becomes +3.}}',
+            es: 'Nocturnidad: +1 a todas las tiradas durante la noche., {{Nocturnidad+: El bono nocturno aumenta a +2. En oscuridad total, pasa a ser +3.}}'
           }
         },
         {
           id: 'darkness_seq8_danger',
-          name: { en: 'Danger Detection (Reinforced)', es: 'Detección de Peligro (Reforzada)' },
+          replaces: 'darkness_seq9_danger',
+          name: { en: 'Danger Detection+', es: 'Detección de Peligro+' },
           type: 'passive',
           description: {
-            en: 'Bonus in low-light is +4. Senses danger up to 20m away with pin-point direction.',
-            es: 'Bono con poca luz de +4. Siente peligro a 20m con dirección exacta.'
+            en: 'Danger Detection in the Dark: Danger Sense heightened in low-light (+2). Navigates darkness without penalty., {{Danger Detection+: Bonus in low-light is +4. Senses danger up to 20m away with pin-point direction.}}',
+            es: 'Detección de Peligro en la Oscuridad: Sentido del Peligro mejorado en poca luz (+2). Navega en la oscuridad sin penalización., {{Detección de Peligro+: Bono con poca luz de +4. Siente peligro a 20m con dirección exacta.}}'
           }
         }
       ]

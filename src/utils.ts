@@ -6,16 +6,7 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export function sanitize(input: string): string {
-  if (!input) return '';
-  const map: { [key: string]: string } = {
-    '&': '&amp;',
-    '<': '&lt;',
-    '>': '&gt;',
-    '"': '&quot;',
-    "'": '&#x27;'
-  };
-  const reg = /[&<>"']/ig;
-  return input.replace(reg, (match) => (map[match]));
+  return input || '';
 }
 
 // Pence to standard format: £ X s Y d Z

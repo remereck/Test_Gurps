@@ -62,11 +62,12 @@ export const blackEmperorPathway: Pathway = {
         },
         {
           id: 'be_seq8_eloquence',
-          name: { en: 'Eloquence (Reinforced)', es: 'Elocuencia (Reforzada)' },
+          replaces: 'be_seq9_eloquence',
+          name: { en: 'Eloquence+', es: 'Elocuencia+' },
           type: 'passive',
           description: {
-            en: 'Eloquence works through Intimidation as effectively as persuasion. The target still rolls Will at -3, but the argument may be a growled threat.',
-            es: 'La Elocuencia funciona a través de Intimidación tan efectivamente como persuasión. El objetivo sigue tirando Voluntad a -3, pero el argumento puede ser una amenaza gruñida.'
+            en: 'Eloquence: When a Lawyer argues with full conviction, all listeners must succeed at a Will roll (-3) or find themselves inclined to agree, even if the claim is logically weak, Eloquence+ Works through {{Intimidation}} as effectively as persuasion. The target still rolls Will at -3, but the argument may be a growled threat.',
+            es: 'Elocuencia: Cuando un Abogado argumenta con total convicción, los oyentes deben superar una tirada de Voluntad (-3) o sentirse inclinados a estar de acuerdo, Elocuencia+ Funciona a través de {{Intimidación}} tan efectivamente como persuasión. El objetivo sigue tirando Voluntad a -3, pero el argumento puede ser una amenaza gruñida.'
           }
         }
       ]
@@ -133,11 +134,12 @@ export const blackEmperorPathway: Pathway = {
         },
         {
           id: 'be_seq7_eloquence',
-          name: { en: 'Eloquence (Mastered)', es: 'Elocuencia (Maestría)' },
+          replaces: 'be_seq8_eloquence',
+          name: { en: 'Eloquence++', es: 'Elocuencia++' },
           type: 'passive',
           description: {
-            en: 'Intimidation Eloquence Will penalty is -5. Fast-Talk/Diplomacy penalty is -2. Successful Intimidation reduces next Bribery SPI cost by 1 (min 1).',
-            es: 'Penalización a Voluntad de Elocuencia de Intimidación es -5. Para Charlatanería/Diplomacia es -2. Intimidación exitosa reduce coste SPI de próximo Soborno en 1 (min 1).'
+            en: 'Eloquence+: Works through Intimidation as effectively as persuasion. Target rolls Will at -3, Eloquence++ Intimidation Eloquence Will penalty is {{-5}}. Fast-Talk/Diplomacy penalty is {{-2}}. Successful Intimidation reduces next Bribery SPI cost by {{1}}.',
+            es: 'Elocuencia+: Funciona a través de Intimidación tan efectivamente como persuasión. El objetivo tira Voluntad a -3, Elocuencia++ Penalización a Voluntad de Intimidación es {{-5}}. Para Charlatanería/Diplomacia es {{-2}}. Intimidación exitosa reduce coste SPI de próximo Soborno en {{1}}.'
           }
         }
       ]

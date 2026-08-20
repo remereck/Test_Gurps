@@ -38,109 +38,37 @@ export const GENERATED_PATHWAYS: Pathway[] = [
           {
             "id": "eternal_aeon_inevitability_seq9_1",
             "name": {
-              "en": "Dancer Domain Art 1",
-              "es": "Arte de Dominio 1"
+              "en": "Spiritual Dance",
+              "es": "Danza Espiritual"
             },
-            "type": "passive",
+            "type": "active",
             "description": {
-              "en": "a transcendent, mystical state. After dancing f",
-              "es": "a transcendent, mystical state. After dancing f"
+              "en": "By performing a mystical dance, they enter a transcendent state, gaining +2 to all Will rolls for 1d turns.",
+              "es": "Al realizar una danza mística, entran en un estado trascendente, ganando +2 a todas las tiradas de Voluntad por 1d turnos."
             }
           },
           {
             "id": "eternal_aeon_inevitability_seq9_2",
             "name": {
-              "en": "Dancer Domain Art 2",
-              "es": "Arte de Dominio 2"
+              "en": "Appeasing Dance",
+              "es": "Danza Apaciguadora"
             },
-            "type": "passive",
+            "type": "active",
             "description": {
-              "en": "+2 to all Will rolls for 1d turns.Appeasing D",
-              "es": "+2 to all Will rolls for 1d turns.Appeasing D"
+              "en": "By dancing, witnesses must roll Will at -2 or be pacified for the duration of the dance and 1d turns after.",
+              "es": "Al bailar, los testigos deben tirar Voluntad con -2 o ser pacificados durante la duración del baile y 1d turnos después."
             }
           },
           {
             "id": "eternal_aeon_inevitability_seq9_3",
             "name": {
-              "en": "Dancer Domain Art 3",
-              "es": "Arte de Dominio 3"
+              "en": "Vessel Dance",
+              "es": "Danza de la Vasija"
             },
-            "type": "passive",
+            "type": "active",
             "description": {
-              "en": "witnesses must roll Will at -2 or be pacified \u2014",
-              "es": "witnesses must roll Will at -2 or be pacified \u2014"
-            }
-          },
-          {
-            "id": "eternal_aeon_inevitability_seq9_4",
-            "name": {
-              "en": "Dancer Domain Art 4",
-              "es": "Arte de Dominio 4"
-            },
-            "type": "passive",
-            "description": {
-              "en": "for the duration of the dance and 1d turns afte",
-              "es": "for the duration of the dance and 1d turns afte"
-            }
-          },
-          {
-            "id": "eternal_aeon_inevitability_seq9_5",
-            "name": {
-              "en": "Dancer Domain Art 5",
-              "es": "Arte de Dominio 5"
-            },
-            "type": "passive",
-            "description": {
-              "en": "summon up to 3 spiritual creatures whose pow",
-              "es": "summon up to 3 spiritual creatures whose pow"
-            }
-          },
-          {
-            "id": "eternal_aeon_inevitability_seq9_6",
-            "name": {
-              "en": "Dancer Domain Art 6",
-              "es": "Arte de Dominio 6"
-            },
-            "type": "passive",
-            "description": {
-              "en": "roll. By offering blood to one of them, the Da",
-              "es": "roll. By offering blood to one of them, the Da"
-            }
-          },
-          {
-            "id": "eternal_aeon_inevitability_seq9_7",
-            "name": {
-              "en": "Dancer Domain Art 7",
-              "es": "Arte de Dominio 7"
-            },
-            "type": "passive",
-            "description": {
-              "en": "body, gaining the creature's abilities \u2014 but su",
-              "es": "body, gaining the creature's abilities \u2014 but su"
-            }
-          },
-          {
-            "id": "eternal_aeon_inevitability_seq9_8",
-            "name": {
-              "en": "Dancer Domain Art 8",
-              "es": "Arte de Dominio 8"
-            },
-            "type": "passive",
-            "description": {
-              "en": "answers (GM's discretion). The creature inhab",
-              "es": "answers (GM's discretion). The creature inhab"
-            }
-          },
-          {
-            "id": "eternal_aeon_inevitability_seq9_9",
-            "name": {
-              "en": "Dancer Domain Art 9",
-              "es": "Arte de Dominio 9"
-            },
-            "type": "passive",
-            "description": {
-              "en": "outside combat). On a critical failure, summo",
-              "es": "outside combat). On a critical failure, summo"
+              "en": "Summon up to 3 spiritual creatures. By offering blood, the Dancer can invite one into their body, gaining its abilities but risking possession (GM's discretion). On a critical failure, summons a hostile entity.",
+              "es": "Invoca hasta 3 criaturas espirituales. Ofreciendo sangre, el Bailarín puede invitar a una a su cuerpo, ganando sus habilidades pero arriesgando posesión. En un fallo crítico, invoca una entidad hostil."
             }
           }
         ]
@@ -184,13 +112,13 @@ export const GENERATED_PATHWAYS: Pathway[] = [
           {
             "id": "monarch_of_decay_seq9_1",
             "name": {
-              "en": "Patient Domain Art 1",
-              "es": "Arte de Dominio 1"
+              "en": "Suppression of Pain",
+              "es": "Supresión del Dolor"
             },
             "type": "passive",
             "description": {
-              "en": "_Powered by GURPS: Pathways \u2014 Lord of the Mysteries_",
-              "es": "_Powered by GURPS: Pathways \u2014 Lord of the Mysteries_"
+              "en": "They can temporarily ignore physical pain and push their body beyond normal limits, though injuries still persist.",
+              "es": "Pueden ignorar temporalmente el dolor físico y empujar su cuerpo más allá de los límites normales, aunque las heridas persisten."
             }
           },
           {
@@ -402,7 +330,7 @@ export const GENERATED_PATHWAYS: Pathway[] = [
             "id": "goddess_of_fate_seq9_core",
             "name": {
               "en": "Dreamless Divine Boon",
-              "es": "Bendici\u00f3n Divina: Dreamless"
+              "es": "Bendición Divina: Dreamless"
             },
             "type": "passive",
             "description": {
@@ -523,13 +451,13 @@ export const GENERATED_PATHWAYS: Pathway[] = [
           {
             "id": "primordial_hunger_seq9_7",
             "name": {
-              "en": "Tramp Domain Art 7",
-              "es": "Arte de Dominio 7"
+              "en": "Survival Instinct",
+              "es": "Instinto de Supervivencia"
             },
             "type": "passive",
             "description": {
-              "en": "_Powered by GURPS: Pathways \u2014 Lord of the Mysteries_",
-              "es": "_Powered by GURPS: Pathways \u2014 Lord of the Mysteries_"
+              "en": "Enhanced ability to endure harsh environmental conditions, hunger, and fatigue.",
+              "es": "Habilidad mejorada para soportar condiciones ambientales duras, hambre y fatiga."
             }
           }
         ]
@@ -573,13 +501,13 @@ export const GENERATED_PATHWAYS: Pathway[] = [
           {
             "id": "mother_goddess_of_depravity_seq9_1",
             "name": {
-              "en": "Villain Domain Art 1",
-              "es": "Arte de Dominio 1"
+              "en": "Malicious Intuition",
+              "es": "Intuición Maliciosa"
             },
             "type": "passive",
             "description": {
-              "en": "_Powered by GURPS: Pathways \u2014 Lord of the Mysteries_",
-              "es": "_Powered by GURPS: Pathways \u2014 Lord of the Mysteries_"
+              "en": "They instinctively know the most cruel or vulnerable point to strike, both physically and psychologically.",
+              "es": "Saben instintivamente el punto más cruel o vulnerable para atacar, tanto física y psicológicamente."
             }
           }
         ]
@@ -924,8 +852,8 @@ export const GENERATED_PATHWAYS: Pathway[] = [
             },
             "type": "passive",
             "description": {
-              "en": "tiator \u00b7 Everlasting Pathway",
-              "es": "tiator \u00b7 Everlasting Pathway"
+              "en": "tiator · Everlasting Pathway",
+              "es": "tiator · Everlasting Pathway"
             }
           },
           {
@@ -948,8 +876,8 @@ export const GENERATED_PATHWAYS: Pathway[] = [
             },
             "type": "passive",
             "description": {
-              "en": "the shade of 'grey' that is applicable \u2014 e.g. \"the room appears",
-              "es": "the shade of 'grey' that is applicable \u2014 e.g. \"the room appears"
+              "en": "the shade of 'grey' that is applicable — e.g. \"the room appears",
+              "es": "the shade of 'grey' that is applicable — e.g. \"the room appears"
             }
           }
         ]
@@ -981,7 +909,7 @@ export const GENERATED_PATHWAYS: Pathway[] = [
             "id": "chaos_mist_seq8_core",
             "name": {
               "en": "Shadow Merchant Divine Boon",
-              "es": "Bendici\u00f3n Divina: Shadow Merchant"
+              "es": "Bendición Divina: Shadow Merchant"
             },
             "type": "passive",
             "description": {
@@ -1027,7 +955,7 @@ export const GENERATED_PATHWAYS: Pathway[] = [
             "id": "everlasting_seq9_core",
             "name": {
               "en": "Initiator Divine Boon",
-              "es": "Bendici\u00f3n Divina: Initiator"
+              "es": "Bendición Divina: Initiator"
             },
             "type": "passive",
             "description": {
@@ -1116,13 +1044,13 @@ export const GENERATED_PATHWAYS: Pathway[] = [
           {
             "id": "everlasting_seq8_5",
             "name": {
-              "en": "Commentator Domain Art 5",
-              "es": "Arte de Dominio 5"
+              "en": "Vocal Influence",
+              "es": "Influencia Vocal"
             },
             "type": "passive",
             "description": {
-              "en": "_Powered by GURPS: Pathways \u2014 Lord of the Mysteries_",
-              "es": "_Powered by GURPS: Pathways \u2014 Lord of the Mysteries_"
+              "en": "By commentating on an unfolding event, they can subtly tilt the probability of success or failure for the participants.",
+              "es": "Al comentar sobre un evento en desarrollo, pueden inclinar sutilmente la probabilidad de éxito o fracaso de los participantes."
             }
           }
         ]
@@ -1166,49 +1094,49 @@ export const GENERATED_PATHWAYS: Pathway[] = [
           {
             "id": "condenser_seq9_1",
             "name": {
-              "en": "Astronomy Aficionado Domain Art 1",
-              "es": "Arte de Dominio 1"
+              "en": "Cosmic Attunement",
+              "es": "Sintonía Cósmica"
             },
             "type": "passive",
             "description": {
-              "en": "_Powered by GURPS: Pathways \u2014 Lord of the Mysteries_",
-              "es": "_Powered by GURPS: Pathways \u2014 Lord of the Mysteries_"
+              "en": "They can perceive subtle shifts in the stars and use them to predict imminent danger or luck.",
+              "es": "Pueden percibir cambios sutiles en las estrellas y usarlos para predecir peligros inminentes o suerte."
             }
           },
           {
             "id": "condenser_seq9_2",
             "name": {
-              "en": "Astronomy Aficionado Domain Art 2",
-              "es": "Arte de Dominio 2"
+              "en": "Starlight Navigation",
+              "es": "Navegación Estelar"
             },
             "type": "passive",
             "description": {
-              "en": "The following entries document higher sequences of certain non-standard pathways where the potion formula or boon structure has been recorded.",
-              "es": "The following entries document higher sequences of certain non-standard pathways where the potion formula or boon structure has been recorded."
+              "en": "Never get lost at night. Can use the stars to orient themselves physically and spiritually.",
+              "es": "Nunca se pierden de noche. Pueden usar las estrellas para orientarse física y espiritualmente."
             }
           },
           {
             "id": "condenser_seq9_3",
             "name": {
-              "en": "Astronomy Aficionado Domain Art 3",
-              "es": "Arte de Dominio 3"
+              "en": "Resist Corruption",
+              "es": "Resistir Corrupción"
             },
             "type": "passive",
             "description": {
-              "en": "Reading these entries: See Chapter 9 for instructions on how to read a pathway entry. The same rules for potion-granted skills and attributes from Chapter 9 apply here.",
-              "es": "Reading these entries: See Chapter 9 for instructions on how to read a pathway entry. The same rules for potion-granted skills and attributes from Chapter 9 apply here."
+              "en": "They gain a minor resistance to madness induced by staring into the cosmos or encountering alien entities.",
+              "es": "Obtienen una resistencia menor a la locura inducida por mirar al cosmos o encontrar entidades alienígenas."
             }
           },
           {
             "id": "condenser_seq9_4",
             "name": {
-              "en": "Astronomy Aficionado Domain Art 4",
-              "es": "Arte de Dominio 4"
+              "en": "Telescopic Vision",
+              "es": "Visión Telescópica"
             },
             "type": "passive",
             "description": {
-              "en": "_Powered by GURPS: Pathways \u2014 Lord of the Mysteries_",
-              "es": "_Powered by GURPS: Pathways \u2014 Lord of the Mysteries_"
+              "en": "Their eyes can focus on extremely distant objects with the clarity of a telescope.",
+              "es": "Sus ojos pueden enfocar objetos extremadamente distantes con la claridad de un telescopio."
             }
           }
         ]
@@ -1252,37 +1180,37 @@ export const GENERATED_PATHWAYS: Pathway[] = [
           {
             "id": "second_law_seq8_1",
             "name": {
-              "en": "Secretary Domain Art 1",
-              "es": "Arte de Dominio 1"
+              "en": "Keen Hearing",
+              "es": "Oído Agudo"
             },
             "type": "passive",
             "description": {
-              "en": "faint sounds, eavesdrop",
-              "es": "faint sounds, eavesdrop"
+              "en": "Can hear faint sounds and effectively eavesdrop through solid doors.",
+              "es": "Puede escuchar sonidos tenues y escuchar a escondidas a través de puertas sólidas."
             }
           },
           {
             "id": "second_law_seq8_2",
             "name": {
-              "en": "Secretary Domain Art 2",
-              "es": "Arte de Dominio 2"
+              "en": "Organization & Diplomacy",
+              "es": "Organización y Diplomacia"
             },
             "type": "passive",
             "description": {
-              "en": "through walls, identify|Diplomacy/IQ [Hard]|+2|",
-              "es": "through walls, identify|Diplomacy/IQ [Hard]|+2|"
+              "en": "Grants a +2 bonus to Diplomacy and administration tasks.",
+              "es": "Otorga un bono de +2 a tareas de Diplomacia y administración."
             }
           },
           {
             "id": "second_law_seq8_3",
             "name": {
-              "en": "Secretary Domain Art 3",
-              "es": "Arte de Dominio 3"
+              "en": "Psychological Profiling",
+              "es": "Perfil Psicológico"
             },
             "type": "passive",
             "description": {
-              "en": "speech in noise|Psychology/IQ [Hard]|+3|",
-              "es": "speech in noise|Psychology/IQ [Hard]|+3|"
+              "en": "Grants a +3 bonus to Psychology to understand motives in conversations.",
+              "es": "Otorga un bono de +3 a Psicología para comprender motivos en conversaciones."
             }
           }
         ]
@@ -1326,13 +1254,13 @@ export const GENERATED_PATHWAYS: Pathway[] = [
           {
             "id": "sublunary_eye_seq8_1",
             "name": {
-              "en": "Reporter Domain Art 1",
-              "es": "Arte de Dominio 1"
+              "en": "Information Gathering",
+              "es": "Recopilación de Información"
             },
             "type": "passive",
             "description": {
-              "en": "_Powered by GURPS: Pathways \u2014 Lord of the Mysteries_",
-              "es": "_Powered by GURPS: Pathways \u2014 Lord of the Mysteries_"
+              "en": "Heightened senses for eavesdropping, rapidly memorizing documents, and accurately recalling complex scenes.",
+              "es": "Sentidos agudizados para escuchar a escondidas, memorizar documentos rápidamente y recordar escenas complejas."
             }
           }
         ]
@@ -1363,110 +1291,110 @@ export const GENERATED_PATHWAYS: Pathway[] = [
           {
             "id": "sublunary_eye_seq7_1",
             "name": {
-              "en": "Painter Domain Art 1",
-              "es": "Arte de Dominio 1"
+              "en": "Painting Disguise",
+              "es": "Disfraz Pintado"
             },
             "type": "active",
             "spiCost": 1,
             "description": {
-              "en": "Painting Disguise (2 SPI):They can also use",
-              "es": "Painting Disguise (2 SPI):They can also use"
+              "en": "They can alter their appearance and clothes using their spirituality to paint over their physical body. Can also be done on someone else. Doesn't need a mirror.",
+              "es": "Pueden alterar su apariencia y ropa usando su espiritualidad para pintar sobre su cuerpo físico. También se puede hacer en otra persona. No necesita un espejo."
             }
           },
           {
             "id": "sublunary_eye_seq7_2",
             "name": {
-              "en": "Painter Domain Art 2",
-              "es": "Arte de Dominio 2"
+              "en": "Painting Reality",
+              "es": "Pintar la Realidad"
             },
             "type": "passive",
             "description": {
-              "en": "also be done on someone else. Doesn't need a",
-              "es": "also be done on someone else. Doesn't need a"
+              "en": "By infusing a canvas with Spirituality, they can depict a scene or object. Once completed, the painting manifests a temporary, localized reality or effect.",
+              "es": "Al infundir espiritualidad en un lienzo, pueden representar una escena u objeto. Una vez terminada, la pintura manifiesta una realidad o efecto temporal y localizado."
             }
           },
           {
             "id": "sublunary_eye_seq7_3",
             "name": {
-              "en": "Painter Domain Art 3",
-              "es": "Arte de Dominio 3"
+              "en": "Mesmeric Exhibition",
+              "es": "Exhibición Hipnótica"
             },
             "type": "passive",
             "description": {
-              "en": "Spirituality, they can depict the reality they in",
-              "es": "Spirituality, they can depict the reality they in"
+              "en": "Their paintings naturally draw the gaze. A target looking at one of their paintings must resist being temporarily entranced or suffering subtle mental effects.",
+              "es": "Sus pinturas atraen naturalmente la mirada. Un objetivo que mire una de sus pinturas debe resistir quedar temporalmente hipnotizado o sufrir efectos mentales sutiles."
             }
           },
           {
             "id": "sublunary_eye_seq7_4",
             "name": {
-              "en": "Painter Domain Art 4",
-              "es": "Arte de Dominio 4"
+              "en": "Paper Substitution",
+              "es": "Sustitución de Papel"
             },
             "type": "passive",
             "description": {
-              "en": "effects. A target must stare at a Painting for at",
-              "es": "effects. A target must stare at a Painting for at"
+              "en": "They can swap their physical location with a life-sized painting of themselves, avoiding a lethal blow if prepared in advance.",
+              "es": "Pueden intercambiar su ubicación física con una pintura de tamaño real de sí mismos, evitando un golpe letal si se preparó con anticipación."
             }
           },
           {
             "id": "sublunary_eye_seq7_5",
             "name": {
-              "en": "Painter Domain Art 5",
-              "es": "Arte de Dominio 5"
+              "en": "Concealment Canvas",
+              "es": "Lienzo de Ocultamiento"
             },
             "type": "passive",
             "description": {
-              "en": "as an area of effect. Their Paintings are a type",
-              "es": "as an area of effect. Their Paintings are a type"
+              "en": "They can paint a layer of 'background' over themselves or allies, effectively blending them into the environment like a chameleon.",
+              "es": "Pueden pintar una capa de 'fondo' sobre sí mismos o sus aliados, camuflándolos con el entorno como un camaleón."
             }
           },
           {
             "id": "sublunary_eye_seq7_6",
             "name": {
-              "en": "Painter Domain Art 6",
-              "es": "Arte de Dominio 6"
+              "en": "Portrait of Weakness",
+              "es": "Retrato de Debilidad"
             },
             "type": "passive",
             "description": {
-              "en": "two months when folded and three days when",
-              "es": "two months when folded and three days when"
+              "en": "By painting a target using their blood or spiritual trace, they can inflict curses or weaknesses on the subject through the painting.",
+              "es": "Al pintar a un objetivo usando su sangre o rastro espiritual, pueden infligir maldiciones o debilidades al sujeto a través de la pintura."
             }
           },
           {
             "id": "sublunary_eye_seq7_7",
             "name": {
-              "en": "Painter Domain Art 7",
-              "es": "Arte de Dominio 7"
+              "en": "Living Pigments",
+              "es": "Pigmentos Vivos"
             },
             "type": "passive",
             "description": {
-              "en": "of the Painter and the things painted, with the",
-              "es": "of the Painter and the things painted, with the"
+              "en": "The Painter can use spiritual materials, blood, or corrupted substances as paint, granting their artworks anomalous and dangerous properties.",
+              "es": "El Pintor puede usar materiales espirituales, sangre o sustancias corruptas como pintura, otorgando a sus obras propiedades anómalas y peligrosas."
             }
           },
           {
             "id": "sublunary_eye_seq7_8",
             "name": {
-              "en": "Painter Domain Art 8",
-              "es": "Arte de Dominio 8"
+              "en": "Artistic Intuition",
+              "es": "Intuición Artística"
             },
             "type": "passive",
             "description": {
-              "en": "on an Artist (Painting) roll for the Painting to",
-              "es": "on an Artist (Painting) roll for the Painting to"
+              "en": "They gain a strong intuition for symbolism. Can roll Artist (Painting) to decipher the mystical meaning behind scenes, symbols, or anomalies.",
+              "es": "Obtienen una fuerte intuición para el simbolismo. Pueden tirar Artista (Pintura) para descifrar el significado místico de escenas, símbolos o anomalías."
             }
           },
           {
             "id": "sublunary_eye_seq7_9",
             "name": {
-              "en": "Painter Domain Art 9",
-              "es": "Arte de Dominio 9"
+              "en": "Incomplete Masterpiece",
+              "es": "Obra Maestra Incompleta"
             },
             "type": "passive",
             "description": {
-              "en": "Painting for a more powerful effect.Painting",
-              "es": "Painting for a more powerful effect.Painting"
+              "en": "They can leave a painting slightly unfinished to delay its activation, completing it with a final brushstroke when the moment is right.",
+              "es": "Pueden dejar una pintura ligeramente inacabada para retrasar su activación, completándola con un último trazo cuando sea el momento adecuado."
             }
           }
         ]
@@ -1506,13 +1434,13 @@ export const GENERATED_PATHWAYS: Pathway[] = [
           {
             "id": "eternal_aeon_seq8_1",
             "name": {
-              "en": "Alms Monk Domain Art 1",
-              "es": "Arte de Dominio 1"
+              "en": "Ascetic Endurance",
+              "es": "Resistencia Ascética"
             },
             "type": "passive",
             "description": {
-              "en": "_Powered by GURPS: Pathways \u2014 Lord of the Mysteries_",
-              "es": "_Powered by GURPS: Pathways \u2014 Lord of the Mysteries_"
+              "en": "They gain physical and spiritual fortitude by enduring deprivation, poverty, and fasting.",
+              "es": "Obtienen fortaleza física y espiritual al soportar privaciones, pobreza y ayuno."
             }
           }
         ]
@@ -1560,111 +1488,111 @@ export const GENERATED_PATHWAYS: Pathway[] = [
           {
             "id": "eternal_edict_seq8_1",
             "name": {
-              "en": "Musician Domain Art 1",
-              "es": "Arte de Dominio 1"
+              "en": "Symphony Decryption",
+              "es": "Descifrado Sinfónico"
             },
             "type": "passive",
             "description": {
-              "en": "around them.Symphony Decryption (active",
-              "es": "around them.Symphony Decryption (active"
+              "en": "By listening to the ambient sounds and 'music of fate', they can decipher hidden truths, impending dangers, or the emotional states of those around them.",
+              "es": "Al escuchar los sonidos ambientales y la 'música del destino', pueden descifrar verdades ocultas, peligros inminentes o los estados emocionales de quienes los rodean."
             }
           },
           {
             "id": "eternal_edict_seq8_2",
             "name": {
-              "en": "Musician Domain Art 2",
-              "es": "Arte de Dominio 2"
+              "en": "Sound of Fate",
+              "es": "Sonido del Destino"
             },
             "type": "passive",
             "description": {
-              "en": "Success reveals several possible futures. Criti",
-              "es": "Success reveals several possible futures. Criti"
+              "en": "By playing a specific tune, they can briefly align with the strings of fate. Success reveals glimpses of possible futures; critical success provides extreme clarity.",
+              "es": "Al tocar una melodía específica, pueden alinearse brevemente con los hilos del destino. El éxito revela vislumbres de futuros posibles; un éxito crítico proporciona claridad extrema."
             }
           },
           {
             "id": "eternal_edict_seq8_3",
             "name": {
-              "en": "Musician Domain Art 3",
-              "es": "Arte de Dominio 3"
+              "en": "Discordant Note",
+              "es": "Nota Discordante"
             },
             "type": "passive",
             "description": {
-              "en": "critical failure, spend 3 FP and gain 1 CoR. W",
-              "es": "critical failure, spend 3 FP and gain 1 CoR. W"
+              "en": "They play a harsh, reality-breaking note. Targets in range must resist or suffer mental stun and temporary interruption of their active abilities. On a critical failure by the Musician, they take backlash.",
+              "es": "Tocan una nota áspera que rompe la realidad. Los objetivos en el área deben resistir o sufrir aturdimiento mental e interrupción de sus habilidades. En un fallo crítico del Músico, sufren una reacción."
             }
           },
           {
             "id": "eternal_edict_seq8_4",
             "name": {
-              "en": "Musician Domain Art 4",
-              "es": "Arte de Dominio 4"
+              "en": "Song of Fate",
+              "es": "Canción del Destino"
             },
             "type": "passive",
             "description": {
-              "en": "and GM discretion.Song of Fate (varies):A",
-              "es": "and GM discretion.Song of Fate (varies):A"
+              "en": "By singing or playing a complex piece over several turns, they can subtly manipulate the probabilities of events around them, turning bad luck into good or vice versa for a limited time.",
+              "es": "Al cantar o tocar una pieza compleja durante varios turnos, pueden manipular sutilmente las probabilidades de los eventos a su alrededor, convirtiendo la mala suerte en buena o viceversa por tiempo limitado."
             }
           },
           {
             "id": "eternal_edict_seq8_5",
             "name": {
-              "en": "Musician Domain Art 5",
-              "es": "Arte de Dominio 5"
+              "en": "Harmonic Resonance",
+              "es": "Resonancia Armónica"
             },
             "type": "passive",
             "description": {
-              "en": "singing. Roll Singing (HT/Easy) with a bonu",
-              "es": "singing. Roll Singing (HT/Easy) with a bonu"
+              "en": "They can match the frequency of objects or spells. Roll Singing or Musical Instrument. On a success, they can shatter brittle objects or weaken physical barriers.",
+              "es": "Pueden igualar la frecuencia de objetos o hechizos. Tira Canto o Instrumento Musical. Si tienen éxito, pueden romper objetos frágiles o debilitar barreras físicas."
             }
           },
           {
             "id": "eternal_edict_seq8_6",
             "name": {
-              "en": "Musician Domain Art 6",
-              "es": "Arte de Dominio 6"
+              "en": "Emotional Symphony",
+              "es": "Sinfonía Emocional"
             },
             "type": "active",
             "spiCost": 1,
             "description": {
-              "en": "(GM discretion). Spend SPI appropriate to th",
-              "es": "(GM discretion). Spend SPI appropriate to th"
+              "en": "They project their music into the Astral Projections of others, forcibly altering their emotional state (inducing sleep, rage, sorrow, or joy) depending on the melody.",
+              "es": "Proyectan su música en las Proyecciones Astrales de otros, alterando forzosamente su estado emocional (induciendo sueño, rabia, tristeza o alegría) dependiendo de la melodía."
             }
           },
           {
             "id": "eternal_edict_seq8_7",
             "name": {
-              "en": "Musician Domain Art 7",
-              "es": "Arte de Dominio 7"
+              "en": "Aura of Inspiration",
+              "es": "Aura de Inspiración"
             },
             "type": "active",
             "spiCost": 1,
             "description": {
-              "en": "SPI to forcibly succeed on the Singing roll. F",
-              "es": "SPI to forcibly succeed on the Singing roll. F"
+              "en": "While playing, allies within earshot receive a +1 bonus to all willpower and fear resistance rolls, emboldened by the spirituality of the music.",
+              "es": "Mientras tocan, los aliados que los escuchan reciben un bono de +1 a todas las tiradas de voluntad y resistencia al miedo, envalentonados por la espiritualidad de la música."
             }
           },
           {
             "id": "eternal_edict_seq8_8",
             "name": {
-              "en": "Musician Domain Art 8",
-              "es": "Arte de Dominio 8"
+              "en": "Dirge of Weakness",
+              "es": "Endecha de Debilidad"
             },
             "type": "passive",
             "description": {
-              "en": "the fate of an impending illness forces the tar",
-              "es": "the fate of an impending illness forces the tar"
+              "en": "A mournful tune that saps the physical vitality of enemies. Targets in hearing range must roll HT or suffer -1 to DX and ST while the song continues.",
+              "es": "Una melodía triste que agota la vitalidad física de los enemigos. Los objetivos en el rango auditivo deben tirar HT o sufrir -1 a DX y ST mientras continúe la canción."
             }
           },
           {
             "id": "eternal_edict_seq8_9",
             "name": {
-              "en": "Musician Domain Art 9",
-              "es": "Arte de Dominio 9"
+              "en": "Echoes of the Past",
+              "es": "Ecos del Pasado"
             },
             "type": "passive",
             "description": {
-              "en": "emotional breakdown forces a Will roll or the|enhanced. The Musician constantly hears the symphony of fate",
-              "es": "emotional breakdown forces a Will roll or the|enhanced. The Musician constantly hears the symphony of fate"
+              "en": "By playing in a specific location, they can 'hear' the residual sounds and conversations that occurred there recently, effectively performing auditory psychometry.",
+              "es": "Al tocar en un lugar específico, pueden 'escuchar' los sonidos y conversaciones residuales que ocurrieron allí recientemente, realizando efectivamente una psicometría auditiva."
             }
           }
         ]

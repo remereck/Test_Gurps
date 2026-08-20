@@ -94,20 +94,22 @@ export const redPriestPathway: Pathway = {
         },
         {
           id: 'red_priest_seq8_env_memory',
-          name: { en: 'Reinforced Environment Memory', es: 'Memoria del Entorno Reforzada' },
+          replaces: 'red_priest_seq9_env_memory',
+          name: { en: 'Environment Memory+', es: 'Memoria del Entorno+' },
           type: 'passive',
           description: {
-            en: 'Can now sense alterations within 20 m (double original range). Natural traps are detected automatically at 5 m without any roll.',
-            es: 'Ahora puede sentir alteraciones a 20 m (el doble del rango). Las trampas naturales se detectan automáticamente a 5 m sin tirar.'
+            en: 'Environment Memory: Unwavering memory for surroundings and alterations; detect natural traps instinctively, Environment Memory+ Can now sense alterations within {{20 m}} and natural traps are detected automatically at 5 m {{without any roll}}.',
+            es: 'Memoria del Entorno: Memoria inquebrantable de los alrededores y alteraciones; detecta trampas naturales instintivamente, Memoria del Entorno+ Ahora puede sentir alteraciones a {{20 m}} y las trampas naturales se detectan automáticamente a 5 m {{sin tirar}}.'
           }
         },
         {
           id: 'red_priest_seq8_survival',
-          name: { en: 'Reinforced Survival Knowledge', es: 'Conocimiento de Supervivencia Reforzado' },
+          replaces: 'red_priest_seq9_survival',
+          name: { en: 'Survival Knowledge+', es: 'Conocimiento de Supervivencia+' },
           type: 'passive',
           description: {
-            en: 'Hemostatic poultices now restore 1d+1 HP to a bleeding wound (or 3 HP if not bleeding). Can identify poisonous plants and animal organs instinctively regardless of terrain type.',
-            es: 'Las cataplasmas hemostáticas ahora restauran 1d+1 de HP a una herida sangrante (o 3 HP si no sangra). Puede identificar plantas y órganos venenosos instintivamente sin importar el terreno.'
+            en: 'Survival Knowledge: Innate knowledge of wild plants and animal organs; can prepare hemostatic poultices (1 min, restore 1d HP to bleeding wound or 2 HP if not bleeding), Survival Knowledge+ Hemostatic poultices now restore {{1d+1 HP}} to a bleeding wound (or {{3 HP}} if not bleeding). Can identify poisonous plants and animal organs instinctively {{regardless of terrain type}}.',
+            es: 'Conocimiento de Supervivencia: Conocimiento innato de plantas silvestres y órganos animales; puede preparar cataplasmas hemostáticas (1 min, restaura 1d de HP a una herida sangrante o 2 HP si no sangra), Conocimiento de Supervivencia+ Las cataplasmas hemostáticas ahora restauran {{1d+1 de HP}} a una herida sangrante (o {{3 HP}} si no sangra). Puede identificar plantas y órganos venenosos instintivamente {{sin importar el terreno}}.'
           }
         }
       ]
@@ -126,11 +128,13 @@ export const redPriestPathway: Pathway = {
       abilities: [
         {
           id: 'red_priest_seq7_spirit_vision',
-          name: { en: 'Spirit Vision Enhancement', es: 'Mejora de Visión Espiritual' },
-          type: 'passive',
+          replaces: 'red_priest_seq8_spirit_vision',
+          name: { en: 'Spirit Vision+', es: 'Visión Espiritual+' },
+          type: 'active',
+          spiCost: 1,
           description: {
-            en: 'The Pyromaniac\'s spirit vision is easier to activate and can now perceive the Ether Body of spirits and Beyonders.',
-            es: 'La visión espiritual del Pyromaniac es más fácil de activar y ahora puede percibir el Cuerpo Etéreo de espíritus y Beyonders.'
+            en: 'Spirit Vision: The Provoker activates Spirit Vision with a simple gesture — quickly and discreetly. No concentration or obvious ritual required, Spirit Vision+ The spirit vision is {{easier to activate}} and can now perceive the {{Ether Body}} of spirits and Beyonders.',
+            es: 'Visión Espiritual: El Provoker activa la Visión Espiritual con un simple gesto, de manera rápida y discreta. No requiere concentración ni ritual obvio, Visión Espiritual+ La visión espiritual es {{más fácil de activar}} y ahora puede percibir el {{Cuerpo Etéreo}} de espíritus y Beyonders.'
           }
         },
         {
@@ -234,20 +238,22 @@ export const redPriestPathway: Pathway = {
         },
         {
           id: 'red_priest_seq7_env_memory',
-          name: { en: 'Reinforced Environment Memory', es: 'Memoria del Entorno Reforzada' },
+          replaces: 'red_priest_seq8_env_memory',
+          name: { en: 'Environment Memory++', es: 'Memoria del Entorno++' },
           type: 'passive',
           description: {
-            en: 'Range expands to 30 m. Replay the last 10 minutes of any fire source\'s surroundings. Survival Knowledge analysis of burned area reveals exact cause and metaphysical traces.',
-            es: 'El rango se expande a 30 m. Reproduce los últimos 10 minutos de los alrededores de cualquier fuego. El análisis revela la causa exacta y rastros metafísicos.'
+            en: 'Environment Memory+: Can now sense alterations within 20 m and natural traps are detected automatically at 5 m without any roll, Environment Memory++ Range expands to {{30 m}}. You can replay the last {{10 minutes}} of any fire source\'s surroundings, and analysis of burned areas reveals exact cause and {{metaphysical traces}}.',
+            es: 'Memoria del Entorno+: Ahora puede sentir alteraciones a 20 m y las trampas naturales se detectan automáticamente a 5 m sin tirar, Memoria del Entorno++ El rango se expande a {{30 m}}. Puedes reproducir los últimos {{10 minutos}} de los alrededores de cualquier fuego, y el análisis de áreas quemadas revela la causa exacta y {{rastros metafísicos}}.'
           }
         },
         {
           id: 'red_priest_seq7_survival',
-          name: { en: 'Reinforced Survival Knowledge', es: 'Conocimiento de Supervivencia Reforzado' },
+          replaces: 'red_priest_seq8_survival',
+          name: { en: 'Survival Knowledge++', es: 'Conocimiento de Supervivencia++' },
           type: 'passive',
           description: {
-            en: 'Healing increases to 1d6+2 HP. Can apply to self or an ally once per scene without needing to retreat from combat.',
-            es: 'La curación aumenta a 1d6+2 HP. Puede aplicarse a sí mismo o a un aliado una vez por escena sin necesidad de retirarse del combate.'
+            en: 'Survival Knowledge+: Hemostatic poultices now restore 1d+1 HP to a bleeding wound (or 3 HP if not bleeding). Can identify poisonous plants and animal organs instinctively regardless of terrain type, Survival Knowledge++ Healing increases to {{1d6+2 HP}} and you can apply to self or an ally once per scene {{without needing to retreat}} from combat.',
+            es: 'Conocimiento de Supervivencia+: Las cataplasmas hemostáticas ahora restauran 1d+1 de HP a una herida sangrante (o 3 HP si no sangra). Puede identificar plantas y órganos venenosos instintivamente sin importar el terreno, Conocimiento de Supervivencia++ La curación aumenta a {{1d6+2 HP}} y puede aplicarse a sí mismo o a un aliado una vez por escena {{sin necesidad de retirarse}} del combate.'
           }
         }
       ]

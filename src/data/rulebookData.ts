@@ -176,22 +176,16 @@ export const NATIONS: NationLore[] = [
 
 export const GLOSSARY: GlossaryTerm[] = [
   {
-    "id": "gloss_24",
-    "term": "3d6",
-    "category": "mechanic",
-    "definition": "Three six-sided dice rolled together. The standard die roll for all success checks. Add the three numbers for your result (range 3\u201318)."
-  },
-  {
     "id": "gloss_1",
     "term": "Acting Method",
     "category": "setting",
-    "definition": "The practice of embodying your Beyonder potion's 'role' to digest it safely. The more faithfully you act, the faster you digest (see Digestion)."
+    "definition": "The practice of embodying your Beyonder potion's 'role' to digest it safely. The primary method of Digestion is the **Acting Method**: the Beyonder engrosses themselves in the 'role' of the potion, embodying its nature deeply and consistently. Most Beyonders must wait years between potions to minimise the risk of losing control."
   },
   {
     "id": "gloss_2",
     "term": "Astral Projection / Astral Body",
     "category": "setting",
-    "definition": "The layer of a soul that reveals emotional state. Visible through Spirit Vision."
+    "definition": "Located beneath the Ether Body, it directly reflects a person's emotional and mental state.\n*(Note: The **Spirit Body (Cuerpo Espiritual)** is the fundamental essence that resides within, capable of leaving the physical body upon death or for spirit projection to the Spirit World).* \nWhen a Beyonder activates Spirit Vision, they primarily observe the **Ether Body** and the **Astral Projection**."
   },
   {
     "id": "gloss_3",
@@ -203,13 +197,13 @@ export const GLOSSARY: GlossaryTerm[] = [
     "id": "gloss_4",
     "term": "Beyonder",
     "category": "setting",
-    "definition": "A person who has consumed a potion and gained supernatural abilities along a divine Pathway. Beyonders progress from Sequence 9 (weakest) to Sequence 0 (godlike)."
+    "definition": "There are multiple Pathways for Beyonders to take, all starting from Sequence 9. Beyonders gain power from specific potions or boons, but must endure the side effects — paranoia, hallucinations, altered perception — that ensue upon consuming or being bestowed with them. There is always a chance they will succumb to these side effects and lose control, becoming monsters themselves. In cases where Beyonders grow very old or sustain serious injury, using their abilities risks triggering that same loss of control."
   },
   {
     "id": "gloss_5",
     "term": "Beyonder Weapon",
     "category": "mechanic",
-    "definition": "A weapon imbued with spiritual power (either innately or through a Beyonder's ability) that can damage spirit bodies, incorporeal beings, and spiritually reinforced targets as though it were a Beyonder-level effect. Mundane weapons without this property deal half or no damage to such targets at the GM's discretion."
+    "definition": "**Beyonder Weapons** are weapons that have been augmented by Beyonder means or have Beyonder characteristics embedded in them. This includes: a spirit channel's power manifesting as a weapon, a sealed artifact in weapon form, a mundane weapon reinforced by ritual or spirituality, and any weapon conjured by a Beyonder ability. \nSome Beyonder weapons deal **spiritual damage** alongside physical damage — they can harm spirits, incorporeal beings, and targets with physical DR as though it were a Beyonder-level effect."
   },
   {
     "id": "gloss_6",
@@ -221,25 +215,25 @@ export const GLOSSARY: GlossaryTerm[] = [
     "id": "gloss_7",
     "term": "Character Points",
     "category": "mechanic",
-    "definition": "The currency used to build characters. You spend points on attributes, advantages, and skills. Disadvantages give points back. Starting budget: 70 points."
+    "definition": "GURPS 4th Edition uses a unified point-buy system. Every character is built from the same currency — Character Points — spent on four things: **Attributes** , **Advantages** , **Disadvantages** (which give points back), and **Skills**."
   },
   {
     "id": "gloss_8",
-    "term": "CoR",
+    "term": "CoR (Corruption)",
     "category": "mechanic",
-    "definition": "A measure of how close a Beyonder is to losing control. Max CoR = Will score. At max, the character becomes an NPC monster."
+    "definition": "**CoR** measures how close a Beyonder is to losing their humanity and sanity. Maximum CoR equals the character's Will score. Reaching maximum CoR means the character becomes an NPC monster or irreversibly mad Beyonder — removed from play.\n\n|**Action**|**CoR Gained**|\n|---|---|\n|Using powers while drained of Spirituality|1 CoR per use|\n|Seeing or Hearing things you're not supposed to|1–3 CoR per session|\n|Witnessing higher-Sequence powers (Seq 6 or above)|1–4 CoR|\n|Using forbidden rituals|2–5 CoR|\n|Advancing sequence without full digestion|10+ CoR|\n|Ritual magic critical failure|1d CoR|\n\n**[!] At maximum CoR: The character is permanently lost. The GM takes full control. The other characters now have a new enemy.**"
   },
   {
     "id": "gloss_9",
     "term": "Critical Success / Failure",
     "category": "mechanic",
-    "definition": "Rolling 3\u20134 is always a critical success (brilliant result). Rolling 17\u201318 is always a critical failure (disaster)."
+    "definition": "- **Critical Success:** Roll of 3 or 4 (always succeeds brilliantly). A critical success on an attack roll deals double damage.\n- **Critical Failure:** Roll of 17 or 18, or fail by 10+ (disaster)."
   },
   {
     "id": "gloss_10",
     "term": "Digestion",
     "category": "mechanic",
-    "definition": "The process of safely incorporating a potion's power. Tracked as 0% -> 100%. Must be at or near 100% before advancing to the next Sequence."
+    "definition": "After consuming a potion, a Beyonder must _digest_ it — safely incorporating its power over time. Digestion is tracked as a percentage from 0% to 100%. The primary method is the **Acting Method** : the Beyonder engrosses themselves in the 'role' of the potion, embodying its nature deeply and consistently. Most Beyonders must wait years between potions to minimise the risk of losing control. From **Sequence 5 onward** , advancement also requires a ritual in addition to the potion — without it, the likelihood of losing control becomes near-certain. \n\n|**Acting Quality**|**Digestion Gain Per Session**|\n|---|---|\n|Exemplary (fully embodies pathway nature)|+15–20%|\n|Good (follows most requirements)|+10–15%|\n|Adequate (follows some requirements)|+5–10%|\n|Poor (barely follows pathway)|+0–5%|\n|None (ignores pathway nature entirely)|0% or loses progress|\n\n**Character Point Investment:** A Beyonder may spend earned character points to accelerate digestion at a rate of **1 character point = 1% digestion progress** . This represents the Beyonder using experience and insight to better understand their potion's nature. Digestion progress does **not** decay; once gained, it is permanent. \n\n##### **Potion Consumption Roll**\nWhen a Beyonder drinks a potion to advance to the next Sequence, they must make a **Potion Consumption Roll (PCR)** . This is a raw 3d6 roll — no stat or skill applies. Only the drinker's digestion of their current potion matters.\n\n###### **Roll 3d6 <= 10 + Digestion Modifier.**\n\nThe Digestion Modifier depends on how fully the current potion has been digested:\n\n|**Digestion of Current Potion**|**Modifier**|**Effective Target**|\n|---|---|---|\n|0%|-9|1 — always fails|\n|10%|-7|3|\n|20%|-5|5|\n|30%|-4|6|\n|40%|-2|8|\n|50%|0|10 — even odds|\n|60%|+2|12|\n|70%|+4|14|\n|80%|+5|15|\n|90%|+7|17|\n|100%|+9|19 — always succeeds|"
   },
   {
     "id": "gloss_11",
@@ -251,37 +245,37 @@ export const GLOSSARY: GlossaryTerm[] = [
     "id": "gloss_12",
     "term": "FP (Fatigue Points)",
     "category": "mechanic",
-    "definition": "Energy for physical exertion, extra effort, and some supernatural abilities. Recovered by rest. Equal to HT at character creation."
+    "definition": "FP are used by All-Out maneuvers, Extra Effort, and rituals. They recover quickly compared to HP. Rest (sitting, no strenuous activity) recovers 1 FP per 10 minutes. Sleep recovers all FP."
   },
   {
     "id": "gloss_13",
     "term": "Game Master (GM)",
     "category": "setting",
-    "definition": "The player who runs the game \u2014 describes the world, plays NPCs, calls for rolls, and keeps the story moving."
+    "definition": "One person at the table — the GM — plays the role of the world itself. They describe the foggy streets of Backlund, play the shopkeepers and villains you meet, and decide what happens when you take risks."
   },
   {
     "id": "gloss_14",
     "term": "HP (Hit Points)",
     "category": "mechanic",
-    "definition": "Physical damage capacity. Equal to ST at character creation. At 0 HP you are near death; negative HP forces consciousness checks."
+    "definition": "Physical damage capacity. Equal to ST at character creation. HP are restored through three distinct mechanisms: natural recovery, external healing, and regeneration."
   },
   {
     "id": "gloss_15",
     "term": "Loen Kingdom",
     "category": "setting",
-    "definition": "See Backlund. The dominant nation of the Fifth Epoch, equivalent to Victorian Britain."
+    "definition": "The primary setting of the game, equivalent to the Victorian/Edwardian era of early industrial capitalism. It is centered on its teeming capital Backlund, a city divided sharply by class."
   },
   {
     "id": "gloss_16",
     "term": "Losing Control",
     "category": "setting",
-    "definition": "When a Beyonder's CoR reaches their maximum. They transform into a monster or mad creature \u2014 permanently removed from play."
+    "definition": "No matter the pathway, the higher the Sequence, the greater the insanity and inhuman inclinations that accumulate. Losing control is not solely linked to the potion's effects — it is also intricately connected to a Beyonder's emotions and mental health. The key lies in self-control: resisting the temptations of evil gods and devils, suppressing greed and jealousy, and guarding against the erosion of desire. \n\nLosing control progresses through three stages: \n\n|**Stage**|**Description**|\n|---|---|\n|Stage 1 — Warning Signs|Auditory and visual hallucinations begin. The Beyonder may dismiss them as exhaustion or stress.|\n|Stage 2 — Loss of Control|The body and mind are partially out of control. The Beyonder periodically displays terrifying or strange states they cannot fully explain or suppress.|\n|Stage 3 — Rampager|Complete breakdown. The Beyonder transforms into a terrifying monster. The transition from Stage 2 to Stage 3 can happen rapidly — sometimes within moments of the symptoms appearing.|"
   },
   {
     "id": "gloss_17",
     "term": "Margin of Success / Failure",
     "category": "mechanic",
-    "definition": "The difference between your roll and your target number. A bigger margin means a better (or worse) outcome."
+    "definition": "The difference between your roll and your target is your margin of success/failure. The degree of success or failure often determines the quality of outcome:\n- **Success by 0–2:** Barely succeeded\n- **Success by 3–4:** Clean success\n- **Success by 5+:** Exceptional result\n- **Failure by 1–2:** Barely failed"
   },
   {
     "id": "gloss_18",
@@ -293,60 +287,153 @@ export const GLOSSARY: GlossaryTerm[] = [
     "id": "gloss_19",
     "term": "Potion",
     "category": "setting",
-    "definition": "An alchemical brew that grants Beyonder powers. Must be brewed from specific ingredients, then consumed. Brings side effects and corruption risk."
+    "definition": "Beyonder Potions are the source of a Beyonder's power. Every Sequence requires a specific **Potion Formula**.\n\n- **Main Ingredients:** Usually one or two Beyonder characteristics (crystallized powers from monsters or deceased Beyonders of the same pathway and sequence).\n- **Supplementary Ingredients:** Distilled water, specific herbs, powders, or creature blood. These dilute the madness of the main ingredients.\n- **Brewing:** The supplementary ingredients are mixed first, usually into pure water or alcohol, followed by the main ingredients. Once the main ingredients dissolve, the potion is ready and must be consumed immediately, or preserved in a spirituality-sealed container."
   },
   {
     "id": "gloss_21",
     "term": "SPI \u2014 Spirituality",
     "category": "mechanic",
-    "definition": "A spiritual stat (not a buyable attribute). Measures connection to the spirit world. Fixed at 0 for mortals; increased only by Beyonder potions or supernatural means. Used for Spirit Vision, Ritualistic Magic (as a resource), and Beyonder abilities. Page 156 _Powered by GURPS: Pathways \u2014 Lord of the Mysteries_"
-  },
-  {
-    "id": "gloss_23",
-    "term": "Sea of Collective Subconscious",
-    "category": "setting",
-    "definition": "A shared psychic realm containing the unconscious minds of all sentient beings. Accessible via certain Visionary-pathway abilities (e.g., Psychological Cue). The GM determines effects when a character enters this realm."
-  },
+    "definition": "Spirituality (SPI) is a finite resource. Once spent on abilities, rituals, and skills, it must be carefully restored through rest. \n\n###### **Rest:** \nA character who rests — sitting quietly, sleeping, or engaging in no strenuous physical or spiritual activity — recovers **1 SPI per hour** . This is the standard recovery rate. Combat, ritual casting, or heavy physical exertion interrupts rest and halts recovery. \n\n**Cogitation:** A character may attempt a **Cogitation** roll (Will/Hard) during a rest period. On success, SPI recovery is **doubled** (2 SPI per hour) for that rest. On failure, recovery remains 1 SPI per hour. \n\n###### **SPI Threshold Penalties** \nAs SPI is depleted, the spirit body weakens. Track SPI loss against your maximum SPI value just like HP: \n\n|**SPI Level**|**Effect**|\n|---|---|\n|<= 1/3 Max SPI|Spiritual Attrition: -3 to all SPI-based skill rolls and Beyonder ability checks|\n|0 SPI|Spiritual Exhaustion: All Beyonder abilities deactivate; cannot activate any SPI-cost abilities; Spirit Vision shuts off|\n|Below 0 SPI|Soul Debt: +1 CoR per 1 point below 0 (e.g. SPI -4 = +4 CoR). See CoR (Chapter 6).|"
+  }
+  ,
   {
     "id": "gloss_20",
     "term": "Sequence",
     "category": "setting",
-    "definition": "The numerical rank of a Beyonder's power level. Sequence 9 = newly awakened. Sequence 0 = god-equivalent. Lower numbers are stronger."
+    "definition": "In the hidden world of Beyonders, humans consume carefully crafted potions to walk the path of supreme ascension, unlocking occult powers beyond ordinary comprehension. Twenty-two pathways guide this journey, each beginning at Sequence 9. The lower the sequence, the greater the Beyonder's power. Those who descend all the way to Sequence 0 attain abilities that rival the gods themselves, a transcendence so rare and extraordinary that it is known simply as the path of the divine."
   },
   {
     "id": "gloss_22",
     "term": "Spirit Vision",
     "category": "mechanic",
-    "definition": "A Beyonder ability that reveals auras, Ether Bodies, Astral Bodies, and supernatural entities. Costs 1 SPI per activation regardless of duration."
+    "definition": "The spirit sees what the eye cannot. Through Spirit Vision, Beyonders perceive the auras of life — colors of emotion, threads of health, darkness of corruption. Activate by expending 1 SPI. \n\n##### **The Parts of the Soul (Las Partes del Alma)**\nAccording to mysticism, a living being is composed of four primary layers:\n1. **Physical Body (Cuerpo Físico):** The material shell.\n2. **Ether Body (Cuerpo de Éter):** The outermost spiritual layer that manifests as the aura of life. It reflects vital energy, physical health, and biological functions.\n3. **Astral Projection (Proyección Astral):** Located beneath the Ether Body, it directly reflects a person's emotional and mental state.\n4. **Body of Heart and Mind (Cuerpo de la Mente y el Corazón):** The inner core of consciousness, deep thoughts, and spirituality. Telepathists interact primarily with this layer.\n\n*(Note: The **Spirit Body (Cuerpo Espiritual)** is the fundamental essence that resides within, capable of leaving the physical body upon death or for spirit projection to the Spirit World).*\n\nWhen a Beyonder activates Spirit Vision, they primarily observe the **Ether Body** and the **Astral Projection**.\n\n##### **A. Astral Projection Colors** \nThe Astral Projection lies beneath the Ether Body and reveals emotional state: \n\n|**Color**|**Meaning**|\n|---|---|\n|Red|Passion, excitement, anger|\n|Orange|Warmth, satisfaction|\n|Yellow|Happiness, extroversion|\n|Green|Calm, peace, balance|\n|Blue|Coldness, stillness, logic|\n|White|Brightness, ambition|\n|Dark|Worry, sorrow, fear|\n|Purple|Spirituality, madness|\n\n##### **B. Ether Body Colors** \nThe Ether Body is the outermost layer — shows physical health: \n\n|**Body Region**|**Color**|\n|---|---|\n|Limbs active|Red|\n|Brain|Purple|\n|Waste systems|Orange|\n|Digestion|Yellow|\n|Heart/reg|Green|\n|Nerves|Blue|\n|Healthy|White|\n|Ill|Dark/Thin|\n\nA balanced body appears **white** . Darkness or thinning indicates illness. \n\n##### **C. Pathway Differences** \nNot all Beyonders perceive equally. Pathway and Sequence determine what can be seen: \n\n|**Pathway (Seq 9)**|**Spirit Vision Ability**|\n|---|---|\n|Seer (Fool)|Standard: Ether Body + Astral|\n|Mystery Pryer (Hermit)|**Eyes of Mystery Prying:**See truth, reality, Astral Body|\n|Spectator (Visionary)|Enhanced: Read emotions & thoughts|\n|Sleepless (Darkness)|Limited: Spiritual entities only (no Ether Body analysis)|\n|Corpse Collector (Death)|Passive: See spirits & undead without activation|\n\n##### **D. Reading Spirit Vision** \n**Using Spirit Vision:** Activate by expending 1 SPI (one activation, no per-minute cost to maintain). Make a Perception-based roll to interpret correctly. \n\n|**Roll**|**Effect**|\n|---|---|\n|Success|Identify primary emotion or general health|\n|Success by 3+|Detect specific feelings|\n|Success by 5+|Sense recent events|\n|Critical|Full reading|\n|Failure|Incorrect reading|"
+  },
+  {
+    "id": "gloss_24",
+    "term": "3d6",
+    "category": "mechanic",
+    "definition": "When your character attempts something where failure is interesting — picking a lock, dodging a bullet, lying to a detective — you roll dice to see if you succeed. This book uses three six-sided dice (3d6). You add or subtract modifiers based on how hard the task is and how skilled your character is, then roll. If the total is **equal to or less than your target number**, you succeed."
   },
   {
     "id": "gloss_25",
     "term": "Will",
     "category": "mechanic",
-    "definition": "Mental fortitude and resistance to influence. = IQ at character creation. Used to resist intimidation, mind control, and CoR. _This glossary covers only the terms unique to this book. For full GURPS terminology, refer to the GURPS Basic Set Characters (4th Edition)._ ## **GURPS: VEILED EPOCH**"
+    "definition": "- **Will** = IQ — mental resistance and courage"
   }
 ];
 
-export const CORE_RULES_SUMMARY = {
-  diceSystem: "GURPS 3d6 Roll-Under: Roll 3 six-sided dice. If Total <= Effective Skill/Attribute, the action succeeds. Margin of Success = Target - Roll.",
-  criticalRules: "Critical Success: Roll of 3 or 4 (always), 5 (if skill >= 15), 6 (if skill >= 16). Critical Failure: Roll of 18 (always), 17 (if skill <= 15).",
-  currency: {
-    pound: "1 Pound (£) = 20 Soli = 240 Pence",
-    soli: "1 Soli (s) = 12 Pence",
-    pence: "1 Penny / Pence (d) = Base Copper Coin"
+export const COMBAT_ACTIONS = [
+  {
+    "id": "action_1",
+    "name": "Attack",
+    "type": "Maneuver",
+    "description": "Attack any foe in reach. Roll your weapon skill. If you hit, they may defend."
   },
-  corruptionTiers: [
-    { range: "0 - 34%", label: "Safe / Normal", effect: "Stable mind, standard Beyonder abilities and spirit control." },
-    { range: "35 - 49%", label: "First Warning", effect: "Subtle auditory whispers, faint phantom sightings in mirrors, mild temperature drops." },
-    { range: "50 - 74%", label: "Dangerous Corruption", effect: "Persistent hallucinations, physical twitches, -1 to all Will rolls to maintain focus." },
-    { range: "75 - 99%", label: "Imminent Rampager", effect: "Rapid flesh mutation, intense phantom screams, -3 to Will, at risk of immediate collapse." },
-    { range: "100%", label: "Lost Control (Rampager)", effect: "Total loss of human mind. Body mutates into an Eldritch Monster. Irreversible." }
-  ],
+  {
+    "id": "action_2",
+    "name": "All-Out Attack",
+    "type": "Maneuver",
+    "description": "Attack with a bonus (+4 to hit, or +2 damage, or two attacks). You lose all active defenses until your next turn."
+  },
+  {
+    "id": "action_3",
+    "name": "Move",
+    "type": "Maneuver",
+    "description": "Move your full Basic Move. You may still dodge."
+  },
+  {
+    "id": "action_4",
+    "name": "Move and Attack",
+    "type": "Maneuver",
+    "description": "Move your full Basic Move and attack at a severe penalty (usually -4). You cannot parry or block."
+  },
+  {
+    "id": "action_5",
+    "name": "All-Out Defense",
+    "type": "Maneuver",
+    "description": "Take no offensive action. Gain +2 to one active defense (Dodge, Parry, or Block) or gain two different defenses against a single attack."
+  },
+  {
+    "id": "action_6",
+    "name": "Ready",
+    "type": "Maneuver",
+    "description": "Draw a weapon, reload a gun, open a door, or drink a potion. You may still defend."
+  },
+  {
+    "id": "action_7",
+    "name": "Evaluate",
+    "type": "Maneuver",
+    "description": "Study a foe. Gain +1 to your next attack against them (max +3)."
+  },
+  {
+    "id": "action_8",
+    "name": "Concentrate",
+    "type": "Maneuver",
+    "description": "Focus on a mental task or ritual. If you are hurt or distracted, make a Will-3 roll to maintain concentration."
+  }
+];
+
+export const CORRUPTION_TIERS = [
+  { range: "0 - 34%", label: "Safe / Normal", effect: "Stable mind, standard Beyonder abilities and spirit control." },
+  { range: "35 - 49%", label: "First Warning", effect: "Subtle auditory whispers, faint phantom sightings in mirrors, mild temperature drops." },
+  { range: "50 - 74%", label: "Dangerous Corruption", effect: "Persistent hallucinations, physical twitches, -1 to all Will rolls to maintain focus." },
+  { range: "75 - 99%", label: "Imminent Rampager", effect: "Rapid flesh mutation, intense phantom screams, -3 to Will, at risk of immediate collapse." },
+  { range: "100%", label: "Lost Control (Rampager)", effect: "Total loss of human mind. Body mutates into an Eldritch Monster. Irreversible." }
+];
+
+export const DIVINATION_METHODS = [
+  { name: "Astrology / Horary", desc: "Maps planetary alignments and spirit world echoes to decipher broad fate patterns." },
+  { name: "Tarot / Cards", desc: "Draws symbolic cards to query specific situations. Meaning depends heavily on reader's intuition." },
+  { name: "Pendulum", desc: "Simple yes/no or direction finding tool using a weighted crystal on a chain." },
+  { name: "Scrying (Mirror/Water)", desc: "Staring into a reflective surface to catch visual glimpses of distant or future events." },
+  { name: "Dream Divination", desc: "Analyzing symbolic dreams. Highly potent for certain pathways (like Seer or Nightmare)." },
+  { name: "Coin Toss", desc: "A quick, binary divination relying on immediate fate. Very fast but lacks nuance." }
+];
+
+export const FACTIONS = [
+  {
+    id: "f1",
+    name: "Church of the Evernight Goddess",
+    desc: "The dominant religion in the Loen Kingdom. Associated with darkness, tranquility, concealment, and the dead. Their official Beyonders are the Nighthawks."
+  },
+  {
+    id: "f2",
+    name: "Church of the Lord of Storms",
+    desc: "A powerful church with strong ties to the Royal Navy and Loen military. Associated with the sea, storms, tyranny, and rage. Their official Beyonders are the Mandated Punishers."
+  },
+  {
+    id: "f3",
+    name: "Church of the God of Steam and Machinery",
+    desc: "The driving force behind the industrial revolution. Associated with technology, knowledge, invention, and alchemy. Their official Beyonders are the Machinery Hivemind."
+  },
+  {
+    id: "f4",
+    name: "Secret Order",
+    desc: "An ancient, hidden organization heavily tied to the Seer pathway. They operate from the shadows, prioritizing history, divination, and destiny."
+  },
+  {
+    id: "f5",
+    name: "Moses Ascetic Order",
+    desc: "A reclusive group of scholars and mystics focused on the Mystery Pryer pathway. They seek hidden knowledge and are responsible for many advanced rituals."
+  },
+  {
+    id: "f6",
+    name: "Aurora Order",
+    desc: "A fanatic, dangerous cult worshiping the True Creator. Associated with the Secrets Supplicant pathway. They are considered highly corrupted terrorists by orthodox churches."
+  }
+];
+
+
+export const CORE_RULES_SUMMARY = {
   divinationMethods: [
     { name: "Astrology / Horary", desc: "Maps planetary alignments and spirit world echoes to decipher broad fate patterns." },
-    { name: "Spirit Pendulum (Dowsing)", desc: "Uses a crystal or topaz pendulum over a map/object. Clockwise = Yes, Counter-Clockwise = No." },
-    { name: "Dream Divination", desc: "Enter Cogitation or sleep while holding a divination statement; spirit reveals symbolic revelations." },
-    { name: "Coin Tossing", desc: "Quick binary divination on simple immediate choices with high spirituality." },
-    { name: "Tarot Divination", desc: "Reveals complex archetypal pathways and warns of hidden dangers." }
-  ]
+    { name: "Tarot / Cards", desc: "Draws symbolic cards to query specific situations. Meaning depends heavily on reader's intuition." },
+    { name: "Pendulum", desc: "Simple yes/no or direction finding tool using a weighted crystal on a chain." },
+    { name: "Scrying (Mirror/Water)", desc: "Staring into a reflective surface to catch visual glimpses of distant or future events." },
+    { name: "Dream Divination", desc: "Analyzing symbolic dreams. Highly potent for certain pathways (like Seer or Nightmare)." },
+    { name: "Coin Toss", desc: "A quick, binary divination relying on immediate fate. Very fast but lacks nuance." }
+  ],
+  diceSystem: "When your character attempts something where failure is interesting — picking a lock, dodging a bullet, lying to a detective — you roll dice to see if you succeed. This book uses three six-sided dice (3d6). You add or subtract modifiers based on how hard the task is and how skilled your character is, then roll. Equal to or under your target number = success.",
+  criticalRules: "Rolling a 3 or 4 is a critical success. Rolling a 17 or 18 is a critical failure. A critical success on an attack roll deals double damage."
 };
+

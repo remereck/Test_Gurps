@@ -126,20 +126,22 @@ export const demonessPathway: Pathway = {
         },
         {
           id: 'demoness_seq8_feather_fall',
-          name: { en: 'Feather Fall (Reinforced)', es: 'Caída de Pluma (Reforzada)' },
+          replaces: 'demoness_seq9_feather_fall',
+          name: { en: 'Feather Fall+', es: 'Caída de Pluma+' },
           type: 'passive',
           description: {
-            en: 'Glide 2m horizontal per 3m vertical, arrest fall instantly as free action without SPI cost.',
-            es: 'Planea 2m horizontales por 3m verticales, frena caída al instante como acción libre sin coste de SPI.'
+            en: 'Feather Fall: Descend from any height safely and silently. Can glide 1m horizontal per 2m vertical. No perception roll detects landing through sound, Feather Fall+ Glide {{2m}} horizontal per 3m vertical and you can arrest fall instantly as a {{free action without SPI cost}}.',
+            es: 'Caída de Pluma: Desciende de cualquier altura de forma segura y silenciosa. Puede planear 1m horizontal por cada 2m verticales. Ninguna tirada de Percepción detecta el aterrizaje por sonido, Caída de Pluma+ Planea {{2m}} horizontales por 3m verticales y frena la caída al instante como {{acción libre sin coste de SPI}}.'
           }
         },
         {
           id: 'demoness_seq8_shadow_conceal',
-          name: { en: 'Shadow Concealment (Reinforced)', es: 'Ocultamiento en las Sombras (Reforzado)' },
+          replaces: 'demoness_seq9_shadow_conceal',
+          name: { en: 'Shadow Concealment+', es: 'Ocultamiento en las Sombras+' },
           type: 'passive',
           description: {
-            en: 'Detection penalty increases to -5 when stationary, -2 when moving slowly in shadows.',
-            es: 'La penalidad de detección aumenta a -5 quieto, -2 moviéndose lentamente en las sombras.'
+            en: 'Shadow Concealment: Instinctively blend with shadows. In dim light/shadow, observers roll Perception at -3 if stationary, -1 if moving slowly. Bright daylight negates, Shadow Concealment+ Detection penalty increases to {{-5}} when stationary and {{-2}} when moving slowly in shadows.',
+            es: 'Ocultamiento en las Sombras: Se funde instintivamente con las sombras. En luz tenue, observadores tiran Percepción con -3 si está quieto, -1 si se mueve lento. La luz diurna lo anula, Ocultamiento en las Sombras+ La penalidad de detección aumenta a {{-5}} quieto y {{-2}} moviéndose lentamente en las sombras.'
           }
         }
       ]
@@ -246,20 +248,22 @@ export const demonessPathway: Pathway = {
         },
         {
           id: 'demoness_seq7_feather_fall',
-          name: { en: 'Feather Fall (Mastered)', es: 'Caída de Pluma (Maestría)' },
+          replaces: 'demoness_seq8_feather_fall',
+          name: { en: 'Feather Fall++', es: 'Caída de Pluma++' },
           type: 'passive',
           description: {
-            en: 'Glide ratio 3:1. Can slow fall of 1 ally within 3m.',
-            es: 'Planeo 3:1. Puede ralentizar caída de 1 aliado a 3m.'
+            en: 'Feather Fall+: Fall without taking damage. Move lightly as a feather, Feather Fall++ Glide ratio {{3:1}}. Can slow fall of {{1 ally}} within 3m.',
+            es: 'Caída de Pluma+: Cae sin daño. Se mueve ligero como una pluma, Caída de Pluma++ Planeo {{3:1}}. Puede ralentizar caída de {{1 aliado}} a 3m.'
           }
         },
         {
           id: 'demoness_seq7_shadow_conceal',
-          name: { en: 'Shadow Concealment (Mastered)', es: 'Ocultamiento en las Sombras (Maestría)' },
+          replaces: 'demoness_seq8_shadow_conceal',
+          name: { en: 'Shadow Concealment++', es: 'Ocultamiento en las Sombras++' },
           type: 'passive',
           description: {
-            en: 'Stealth bonus -6. When still in total darkness, observers roll Per-4 to notice (invisible to mundane sight).',
-            es: 'Bono sigilo -6. Quieto en total oscuridad, observadores tiran Per-4 (invisible a visión mundana).'
+            en: 'Shadow Concealment+: Effectively invisible while standing still in darkness. Move in shadows quietly, Shadow Concealment++ Stealth bonus {{-6}}. When still in total darkness, observers roll Per-4 to notice ({{invisible}} to mundane sight).',
+            es: 'Ocultamiento en las Sombras+: Efectivamente invisible al estar quieto en oscuridad, Ocultamiento en las Sombras++ Bono sigilo {{-6}}. Quieto en total oscuridad, observadores tiran Per-4 ({{invisible}} a visión mundana).'
           }
         }
       ]

@@ -84,20 +84,22 @@ export const paragonPathway: Pathway = {
         },
         {
           id: 'paragon_seq8_recall',
-          name: { en: 'Total Memory (Reinforced)', es: 'Memoria Total (Reforzada)' },
+          replaces: 'paragon_seq9_recall',
+          name: { en: 'Total Memory+', es: 'Memoria Total+' },
           type: 'passive',
           description: {
-            en: 'Recall tactile/spatial memory (feel of an object, precise layout of a space). IQ roll to understand mechanism drops to 30 seconds.',
-            es: 'Recuerda memorias táctiles/espaciales (textura de objeto, plano exacto de un lugar). Tirada de IQ para entender mecanismo se reduce a 30 seg.'
+            en: 'Total Memory: Recall every piece of knowledge and experience encountered. No roll required. Understand operation of any mechanism within 1 minute (IQ roll, no penalty), Total Memory+ Can recall {{tactile/spatial memory}} (feel of an object, precise layout of a space) and time to understand mechanism drops to {{30 seconds}}.',
+            es: 'Memoria Total: Recuerda todo el conocimiento y experiencia que haya encontrado. Sin tirada. Comprende el funcionamiento de cualquier mecanismo en 1 min (tirada de IQ sin penalidad), Memoria Total+ Puede recordar {{memorias táctiles/espaciales}} (textura de objeto, plano exacto de un lugar) y el tiempo para entender mecanismos se reduce a {{30 seg}}.'
           }
         },
         {
           id: 'paragon_seq8_rapid_analysis',
-          name: { en: 'Rapid Analysis (Reinforced)', es: 'Análisis Rápido (Reforzado)' },
+          replaces: 'paragon_seq9_rapid_analysis',
+          name: { en: 'Rapid Analysis+', es: 'Análisis Rápido+' },
           type: 'passive',
           description: {
-            en: 'Improvised devices and repairs take 1/4 normal construction time.',
-            es: 'Dispositivos improvisados y reparaciones toman 1/4 del tiempo normal.'
+            en: 'Rapid Analysis: Improvised devices and repairs take half the normal construction time, Rapid Analysis+ Improvised devices and repairs take {{1/4}} normal construction time.',
+            es: 'Análisis Rápido: Los dispositivos improvisados y las reparaciones toman la mitad del tiempo normal, Análisis Rápido+ Dispositivos improvisados y reparaciones toman {{1/4}} del tiempo normal.'
           }
         }
       ]
@@ -123,20 +125,22 @@ export const paragonPathway: Pathway = {
         },
         {
           id: 'paragon_seq7_total_memory',
-          name: { en: 'Total Memory (Mastered)', es: 'Memoria Total (Maestría)' },
+          replaces: 'paragon_seq8_recall',
+          name: { en: 'Total Memory++', es: 'Memoria Total++' },
           type: 'passive',
           description: {
-            en: 'Recall exact spiritual signature of appraised items. Tactile memory extends to textures/spiritual resonance.',
-            es: 'Recuerda firma espiritual exacta de objetos tasados. Memoria táctil abarca texturas/resonancia espiritual.'
+            en: 'Total Memory+: Recall every piece of knowledge. Understand mechanism within 30 seconds. Can recall tactile/spatial memory, Total Memory++ Can recall exact {{spiritual signature}} of appraised items and tactile memory extends to {{textures/spiritual resonance}}.',
+            es: 'Memoria Total+: Recuerda todo el conocimiento. Entiende mecanismos en 30 seg. Puede recordar memorias táctiles/espaciales, Memoria Total++ Puede recordar la {{firma espiritual exacta}} de objetos tasados y la memoria táctil abarca {{texturas/resonancia espiritual}}.'
           }
         },
         {
           id: 'paragon_seq7_rapid_analysis',
-          name: { en: 'Rapid Analysis (Mastered)', es: 'Análisis Rápido (Maestría)' },
+          replaces: 'paragon_seq8_rapid_analysis',
+          name: { en: 'Rapid Analysis++', es: 'Análisis Rápido++' },
           type: 'passive',
           description: {
-            en: '1/4 time becomes 1/5 time (min 1 sec). Can appraise a common item instantly as a free action.',
-            es: '1/4 de tiempo se vuelve 1/5 (mín 1 seg). Puede tasar objetos comunes al instante como acción libre.'
+            en: 'Rapid Analysis+: Improvised devices and repairs take 1/4 normal construction time, Rapid Analysis++ 1/4 time becomes {{1/5 time}} (min 1 sec) and you can appraise a common item instantly as a {{free action}}.',
+            es: 'Análisis Rápido+: Dispositivos improvisados y reparaciones toman 1/4 del tiempo normal, Análisis Rápido++ El tiempo se vuelve {{1/5}} (mín 1 seg) y puedes tasar objetos comunes al instante como {{acción libre}}.'
           }
         }
       ]

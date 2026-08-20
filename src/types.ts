@@ -68,6 +68,7 @@ export interface PotionAbility {
   type: 'passive' | 'active' | 'drawback';
   description: { en: string; es: string };
   spiCost?: number;
+  replaces?: string;
 }
 
 export interface Sequence {

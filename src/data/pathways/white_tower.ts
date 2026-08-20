@@ -54,11 +54,12 @@ export const whiteTowerPathway: Pathway = {
         },
         {
           id: 'white_seq8_reading',
-          name: { en: 'Reading (Reinforced)', es: 'Lectura (Reforzada)' },
+          replaces: 'white_seq9_reading',
+          name: { en: 'Reading+', es: 'Lectura+' },
           type: 'passive',
           description: {
-            en: 'IQ roll for general knowledge gains +2. Obscure material penalties reduced by 2. Language learning time reduced to 1/3.',
-            es: 'Tirada de IQ de conocimiento general gana +2. Penalizaciones de material oscuro reducidas en 2. Idiomas en 1/3 de tiempo.'
+            en: 'Reading: Roll IQ to recall general knowledge from books, even if not specifically researched. Learn languages in half the time., {{Reading+: IQ roll for general knowledge gains +2. Obscure material penalties reduced by 2. Language learning time reduced to 1/3.}}',
+            es: 'Lectura: Tira IQ para recordar conocimiento general de libros. Aprende idiomas en la mitad del tiempo., {{Lectura+: Tirada de IQ de conocimiento general gana +2. Penalizaciones de material oscuro reducidas en 2. Idiomas en 1/3 de tiempo.}}'
           }
         }
       ]
@@ -87,11 +88,12 @@ export const whiteTowerPathway: Pathway = {
         },
         {
           id: 'white_seq7_recall',
-          name: { en: 'Recall (Reinforced)', es: 'Recuerdo (Reforzado)' },
+          replaces: 'white_seq9_eidetic',
+          name: { en: 'Eidetic Memory+', es: 'Memoria Eidética+' },
           type: 'passive',
           description: {
-            en: '+4 to remember any fact personally encountered. Touch-based memory recovery extends to objects touched in the past 24 hours.',
-            es: '+4 para recordar cualquier hecho encontrado personalmente. La recuperación de memoria abarca objetos tocados en las últimas 24 horas.'
+            en: 'Eidetic Memory: +5 to remember things after one reading; near-perfect recall., {{Eidetic Memory+: +4 to remember any fact personally encountered. Touch-based memory recovery extends to objects touched in the past 24 hours.}}',
+            es: 'Memoria Eidética: +5 para recordar cosas tras una lectura; recuerdo casi perfecto., {{Memoria Eidética+: +4 para recordar cualquier hecho encontrado personalmente. La recuperación de memoria abarca objetos tocados en las últimas 24 horas.}}'
           }
         },
         {
@@ -105,11 +107,12 @@ export const whiteTowerPathway: Pathway = {
         },
         {
           id: 'white_seq7_ratiocination',
-          name: { en: 'Ratiocination (Reinforced)', es: 'Raciocinio (Reforzado)' },
+          replaces: 'white_seq8_fluid',
+          name: { en: 'Fluid Intellect+', es: 'Intelecto Fluido+' },
           type: 'passive',
           description: {
-            en: 'Gains +3 to rolls reconstructing a conclusion from scattered clues. Time drops to 1d3 minutes.',
-            es: 'Gana +3 a tiradas reconstruyendo conclusiones de pistas. El tiempo baja a 1d3 minutos.'
+            en: 'Fluid Intellect: IQ-2 to unfamiliar IQ rolls; can attempt VH skills without default penalties., {{Fluid Intellect+: Gains +3 to rolls reconstructing a conclusion from scattered clues. Time drops to 1d3 minutes.}}',
+            es: 'Intelecto Fluido: IQ-2 a tiradas de IQ no familiares; puede intentar habilidades Muy Difíciles sin penalizaciones base., {{Intelecto Fluido+: Gana +3 a tiradas reconstruyendo conclusiones de pistas. El tiempo baja a 1d3 minutos.}}'
           }
         }
       ]
