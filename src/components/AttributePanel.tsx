@@ -172,13 +172,36 @@ export default function AttributePanel() {
               <span className="text-[12px] text-[#aaa] font-bold">Move / Dodge</span>
               <span className="font-mono text-[16px] font-bold">{finalMove} / {finalDodge}</span>
             </div>
-            <div className="flex justify-between items-center pb-1 border-b border-[#222]">
-              <span className="text-[12px] text-[#aaa] font-bold">Spirituality (SPI)</span>
-              <div className="flex items-center gap-2">
-                <button onClick={() => setSpiUsed(Math.min(finalSPI, spiUsed + 1))} className="px-1.5 py-0.5 bg-[#222] border border-[#444] rounded text-purple-400 text-xs hover:bg-[#333]">-</button>
-                <span className="font-mono text-[16px] font-bold text-purple-500 w-16 text-center">{finalSPI - spiUsed} / {finalSPI}</span>
-                <button onClick={() => setSpiUsed(Math.max(0, spiUsed - 1))} className="px-1.5 py-0.5 bg-[#222] border border-[#444] rounded text-purple-400 text-xs hover:bg-[#333]">+</button>
+            <div className="flex flex-col pb-1 border-b border-[#222]">
+              <div className="flex justify-between items-center">
+                <span className="text-[12px] text-[#aaa] font-bold">Spirituality (SPI)</span>
+                <div className="flex items-center gap-2">
+                  <button onClick={() => {
+                    const newUsed = spiUsed + 1;
+                    setSpiUsed(newUsed);
+                    if (finalSPI - newUsed < 0) {
+                      setCorruption(Math.min(finalWill, corruption + 1));
+                    }
+                  }} className="px-1.5 py-0.5 bg-[#222] border border-[#444] rounded text-purple-400 text-xs hover:bg-[#333]">-</button>
+                  <span className={`font-mono text-[16px] font-bold w-16 text-center ${finalSPI - spiUsed < 0 ? 'text-red-500 animate-pulse' : 'text-purple-500'}`}>{finalSPI - spiUsed} / {finalSPI}</span>
+                  <button onClick={() => setSpiUsed(Math.max(0, spiUsed - 1))} className="px-1.5 py-0.5 bg-[#222] border border-[#444] rounded text-purple-400 text-xs hover:bg-[#333]">+</button>
+                </div>
               </div>
+              {finalSPI > 0 && (finalSPI - spiUsed) <= (finalSPI / 3) && (finalSPI - spiUsed) > 0 && (
+                <div className="text-[10px] text-orange-400 mt-1 leading-tight font-semibold bg-[#222] p-1 rounded border border-orange-900/50">
+                  ⚠️ {lang === 'es' ? 'Atrición Espiritual: -3 a tiradas de habilidades basadas en SPI y chequeos de Beyonder.' : 'Spiritual Attrition: -3 to all SPI-based skill rolls and Beyonder ability checks.'}
+                </div>
+              )}
+              {finalSPI > 0 && (finalSPI - spiUsed) === 0 && (
+                <div className="text-[10px] text-red-400 mt-1 leading-tight font-semibold bg-[#222] p-1 rounded border border-red-900/50">
+                  ⚠️ {lang === 'es' ? 'Agotamiento Espiritual: Habilidades y Visión Espiritual desactivadas.' : 'Spiritual Exhaustion: All Beyonder abilities deactivate; cannot activate any SPI-cost abilities; Spirit Vision shuts off.'}
+                </div>
+              )}
+              {finalSPI > 0 && (finalSPI - spiUsed) < 0 && (
+                <div className="text-[10px] text-red-500 mt-1 leading-tight font-semibold animate-pulse bg-[#2a1111] p-1 rounded border border-red-900/50">
+                  ☠️ {lang === 'es' ? 'Deuda de Alma: +1 Corrupción por cada punto por debajo de 0.' : 'Soul Debt: +1 CoR per 1 point below 0. See CoR (Chapter 6).'}
+                </div>
+              )}
             </div>
           </div>
 
