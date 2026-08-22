@@ -40,14 +40,17 @@ export const sunPathway: Pathway = {
       ],
       abilities: [
         {
-          id: 'sun_seq8_sunshine',
-          name: { en: 'Sunshine', es: 'Luz Solar' },
+          id: 'sun_seq8_light_creation',
+          name: { en: 'Light Creation', es: 'Creación de Luz' },
           type: 'active',
-          spiCost: 3,
           description: {
-            en: 'Creates light like a scorching Sun in a 5m radius. Undead/ghosts take 2d6 burning (HT/2 to halve). Living roll HT or blinded 1d3 turns (dazzled -1 on success). Lasts 1 min as full daylight.',
-            es: 'Crea una luz como un Sol abrasador en 5m. No muertos/fantasmas sufren 2d6 quemadura (HT/2 reduce mitad). Vivos tiran HT o quedan ciegos 1d3 turnos. Dura 1 min.'
-          }
+            en: 'Create light to reveal or burn.\n\n{{Sunshine}}: Creates light like a scorching Sun in a 5m radius. Undead/ghosts take 2d6 burning (HT/2 to halve). Living roll HT or blinded 1d3 turns (dazzled -1 on success). Lasts 1 min as full daylight.\n{{Daytime}}: Surrounding 10m receives Light, spreading naturally. Lasts 5 minutes.',
+            es: 'Crea luz para revelar o quemar.\n\n{{Luz Solar}}: Crea luz como un Sol abrasador en 5m. No muertos sufren 2d6 quemadura. Vivos tiran HT o quedan ciegos 1d3 turnos. Dura 1 min.\n{{Día}}: 10m alrededor reciben Luz, esparciéndose naturalmente. Dura 5 minutos.'
+          },
+          spiOptions: [
+            { name: { en: 'Sunshine', es: 'Luz Solar' }, cost: 3 },
+            { name: { en: 'Daytime', es: 'Día' }, cost: 2 }
+          ]
         },
         {
           id: 'sun_seq8_blessing',
@@ -57,16 +60,6 @@ export const sunPathway: Pathway = {
           description: {
             en: 'Bless self and allies within 5m for 10 min: +3 resistance vs Fear/Cold/Darkness/Death. Weapon attacks deal +2 dmg vs undead. Immune to low-level undead passive fear.',
             es: 'Bendice a ti y aliados a 5m por 10 min: +3 a resistencia vs Miedo/Frío/Oscuridad/Muerte. Armas infligen +2 de daño vs no muertos. Inmunidad al miedo de no muertos menores.'
-          }
-        },
-        {
-          id: 'sun_seq8_daytime',
-          name: { en: 'Daytime', es: 'Día' },
-          type: 'active',
-          spiCost: 2,
-          description: {
-            en: 'Surrounding 10m receives Light, spreading naturally. Lasts 5 minutes.',
-            es: '10m alrededor reciben Luz, esparciéndose naturalmente. Dura 5 minutos.'
           }
         },
         {
@@ -160,25 +153,20 @@ export const sunPathway: Pathway = {
           }
         },
         {
-          id: 'sun_seq7_light_summoning',
-          name: { en: 'Holy Light Summoning', es: 'Invocación de Luz Sagrada' },
+          id: 'sun_seq7_holy_spells',
+          name: { en: 'Holy Spells', es: 'Hechizos Sagrados' },
           type: 'active',
-          spiCost: 4,
           description: {
-            en: 'Beam from sky in 30m. 3d6 burning vs Undead/Evil (ignores non-mag DR). 1d6 vs others. Success by 3+ sustains for 2nd round free.',
-            es: 'Rayo desde el cielo a 30m. 3d6 quemadura vs No muertos/Malvados (ignora RD). 1d6 otros. Éxito por 3+ lo mantiene 1 ronda gratis.'
-          }
+            en: 'Potent offensive and utility spells using solar power.\n\n{{Light Summoning}}: Beam from sky in 30m. 3d6 burning vs Undead/Evil (ignores non-mag DR). 1d6 vs others.\n{{Cleave of Purification}}: Imbues weapons for 5 attacks or 1 min: bypass incorporeal DR. Target HT or -2 to rolls for 1d rounds.\n{{Fire of Light}}: Dense golden flames in 5m radius (20m range). Living roll HT or 2d6 holy fire/round. Undead take double.',
+            es: 'Potentes hechizos ofensivos y de utilidad usando poder solar.\n\n{{Invocación de Luz}}: Rayo desde el cielo a 30m. 3d6 quemadura vs No muertos/Malvados (ignora RD). 1d6 otros.\n{{Corte Purificador}}: Imbuye armas para 5 ataques o 1 min: ignora RD incorpórea. Objetivo tira HT o -2 a todo 1d rondas.\n{{Fuego de Luz}}: Llamas doradas densas en 5m. Vivos tiran HT o 2d6 fuego sagrado/ronda. No muertos sufren el doble.'
+          },
+          spiOptions: [
+            { name: { en: 'Light Summoning', es: 'Invocación de Luz' }, cost: 4 },
+            { name: { en: 'Cleave of Purification', es: 'Corte Purificador' }, cost: 2 },
+            { name: { en: 'Fire of Light', es: 'Fuego de Luz' }, cost: 3 }
+          ]
         },
-        {
-          id: 'sun_seq7_cleave',
-          name: { en: 'Cleave of Purification', es: 'Corte de Purificación' },
-          type: 'active',
-          spiCost: 2,
-          description: {
-            en: 'Imbues weapons for 5 attacks or 1 min: bypass incorporeal DR. Target HT or -2 to rolls for 1d rounds. +3 to Purify wraiths.',
-            es: 'Imbuye armas para 5 ataques o 1 min: ignora RD incorpórea. Objetivo tira HT o -2 a todo 1d rondas. +3 para Purificar espectros.'
-          }
-        },
+
         {
           id: 'sun_seq7_horror_immunity',
           name: { en: 'Horror Immunity', es: 'Inmunidad al Horror' },
@@ -187,16 +175,6 @@ export const sunPathway: Pathway = {
           description: {
             en: 'Target immune to Fear for 10 min. Touch range. +1 SPI per extra target.',
             es: 'Objetivo inmune al Miedo por 10 min. Rango de toque. +1 SPI por objetivo adicional.'
-          }
-        },
-        {
-          id: 'sun_seq7_fire',
-          name: { en: 'Fire of Light', es: 'Fuego de Luz' },
-          type: 'active',
-          spiCost: 3,
-          description: {
-            en: 'Dense golden flames in 5m radius (20m range). Living roll HT or 2d6 holy fire/round. Undead take double, HT-2 or Purified. Lasts 3 rounds.',
-            es: 'Llamas doradas densas en 5m. Vivos tiran HT o 2d6 fuego sagrado/ronda. No muertos sufren el doble. Dura 3 rondas.'
           }
         },
         {

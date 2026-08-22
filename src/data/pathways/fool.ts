@@ -122,96 +122,26 @@ export const foolPathway: Pathway = {
       ],
       abilities: [
         {
-          id: 'fool_seq7_damage_transfer',
-          name: { en: 'Damage Transfer', es: 'Transferencia de Daño' },
+          id: 'fool_seq7_magician_spells',
+          name: { en: 'Magician Spells', es: 'Hechizos de Mago' },
           type: 'active',
-          spiCost: 1,
           description: {
-            en: 'Transfer wound on a vital area to a non-vital area as a free action. Fatal becomes major wound.',
-            es: 'Transfiere una herida de un área vital a una no vital (acción gratuita). Fatal se vuelve herida grave.'
-          }
-        },
-        {
-          id: 'fool_seq7_flaming_jump',
-          name: { en: 'Flaming Jump', es: 'Salto Llameante' },
-          type: 'active',
-          spiCost: 1,
-          description: {
-            en: 'Step into any flame source within 30m and emerge from a different flame within range.',
-            es: 'Entra en cualquier fuente de fuego a 30m y emerge de otra llama dentro del rango.'
-          }
-        },
-        {
-          id: 'fool_seq7_air_bullet',
-          name: { en: 'Air Bullet', es: 'Bala de Aire' },
-          type: 'active',
-          spiCost: 1,
-          description: {
-            en: 'Fires invisible compressed-air projectile dealing 2d-1 pi damage. Uses DX/Sleight of Hand.',
-            es: 'Dispara un proyectil invisible de aire comprimido (2d-1 perforante). Usa DX/Juego de Manos.'
-          }
-        },
-        {
-          id: 'fool_seq7_paper_substitute',
-          name: { en: 'Paper Figurine Substitute', es: 'Sustituto de Figura de Papel' },
-          type: 'active',
-          spiCost: 3,
-          description: {
-            en: 'Swap places with a prepared paper figurine when taking damage. You reappear 2m away safe.',
-            es: 'Cambia de lugar con una figura de papel preparada al recibir daño. Reapareces a 2m a salvo.'
-          }
-        },
-        {
-          id: 'fool_seq7_flame_controlling',
-          name: { en: 'Flame Controlling', es: 'Control de Llamas' },
-          type: 'active',
-          spiCost: 1,
-          description: {
-            en: 'Manipulate flames within 30m as a free action, or hurl a flame jet (1d6 burn) as an attack.',
-            es: 'Manipula llamas a 30m como acción gratuita, o lanza un chorro de llamas (1d6 fuego) como ataque.'
-          }
-        },
-        {
-          id: 'fool_seq7_illusion',
-          name: { en: 'Illusion Creation', es: 'Creación de Ilusiones' },
-          type: 'active',
-          spiCost: 1,
-          description: {
-            en: 'Create multi-sensory illusion within 20m. Lasts 1 minute.',
-            es: 'Crea una ilusión multisensorial a 20m. Dura 1 minuto.'
-          }
-        },
-        {
-          id: 'fool_seq7_underwater_breathing',
-          name: { en: 'Underwater Breathing', es: 'Respiración Bajo el Agua' },
-          type: 'active',
-          spiCost: 1,
-          description: {
-            en: 'Creates an invisible 5m air pipe to the surface. Lasts 10 minutes.',
-            es: 'Crea un tubo de aire invisible de 5m hacia la superficie. Dura 10 minutos.'
-          }
+            en: 'A collection of mystical tricks and spells.\n\n{{Damage Transfer}}: Transfer wound on a vital area to a non-vital area as a free action. Fatal becomes major wound.\n{{Flaming Jump}}: Step into any flame source within 30m and emerge from a different flame within range.\n{{Air Bullet}}: Fires invisible compressed-air projectile dealing 2d-1 pi damage. Uses DX/Sleight of Hand.\n{{Paper Substitute}}: Swap places with a prepared paper figurine when taking damage. You reappear 2m away safe.\n{{Flame Controlling}}: Manipulate flames within 30m as a free action, or hurl a flame jet (1d6 burn) as an attack.\n{{Illusion Creation}}: Create multi-sensory illusion within 20m. Lasts 1 minute.\n{{Underwater Breathing}}: Creates an invisible 5m air pipe to the surface. Lasts 10 minutes.\n{{Paper Weaponry}}: Turn paper into functional bladed weapon or simple tools for 1 minute. Lasts multiple attacks.',
+            es: 'Una colección de trucos y hechizos místicos.\n\n{{Transferencia de Daño}}: Transfiere una herida de un área vital a una no vital (acción gratuita). Fatal se vuelve herida grave.\n{{Salto Llameante}}: Entra en cualquier fuente de fuego a 30m y emerge de otra llama dentro del rango.\n{{Bala de Aire}}: Dispara un proyectil invisible de aire comprimido (2d-1 perforante). Usa DX/Juego de Manos.\n{{Sustituto de Papel}}: Cambia de lugar con una figura de papel preparada al recibir daño. Reapareces a 2m a salvo.\n{{Control de Llamas}}: Manipula llamas a 30m como acción gratuita, o lanza un chorro de llamas (1d6 fuego) como ataque.\n{{Creación de Ilusiones}}: Crea una ilusión multisensorial a 20m. Dura 1 minuto.\n{{Respiración Acuática}}: Crea un tubo de aire invisible de 5m hacia la superficie. Dura 10 minutos.\n{{Armamento de Papel}}: Convierte papel en armas blancas funcionales o herramientas simples por 1 minuto. Dura múltiples ataques.'
+          },
+          spiOptions: [
+            { name: { en: 'Damage Transfer', es: 'Transferencia Daño' }, cost: 1 },
+            { name: { en: 'Flaming Jump', es: 'Salto Llameante' }, cost: 1 },
+            { name: { en: 'Air Bullet', es: 'Bala de Aire' }, cost: 1 },
+            { name: { en: 'Paper Substitute', es: 'Sustituto Papel' }, cost: 3 },
+            { name: { en: 'Flame Control', es: 'Control Llama' }, cost: 1 },
+            { name: { en: 'Illusion', es: 'Ilusión' }, cost: 1 },
+            { name: { en: 'Air Pipe', es: 'Tubo de Aire' }, cost: 1 },
+            { name: { en: 'Paper Weapon', es: 'Arma de Papel' }, cost: 1 }
+          ]
         },
         {
           id: 'fool_seq7_bone_softening',
-          name: { en: 'Bone Softening', es: 'Ablandamiento de Huesos' },
-          type: 'passive',
-          description: {
-            en: '+4 to Escape rolls. Dislocate joints painlessly to slip through gaps.',
-            es: '+4 a tiradas de Escape. Disloca articulaciones sin dolor para pasar por huecos.'
-          }
-        },
-        {
-          id: 'fool_seq7_paper_weaponry',
-          name: { en: 'Paper Weaponry', es: 'Armamento de Papel' },
-          type: 'active',
-          spiCost: 1,
-          description: {
-            en: 'Turn paper into functional bladed weapon or simple tools for 1 minute. Lasts multiple attacks.',
-            es: 'Convierte papel en armas blancas funcionales o herramientas simples por 1 minuto. Dura múltiples ataques.'
-          }
-        },
-        {
-          id: 'fool_seq7_clown_agility',
           replaces: 'fool_seq8_intuition',
           name: { en: 'Clown Intuition+', es: 'Intuición de Payaso+' },
           type: 'passive',
@@ -244,8 +174,11 @@ export const foolPathway: Pathway = {
           type: 'active',
           spiCost: 2,
           description: {
-            en: 'Advanced disguise, shapeshifting, and impersonation abilities.',
-            es: 'Disfraces avanzados, cambio de forma y habilidades de suplantación.'
+            en: 'Advanced disguise, shapeshifting, and impersonation abilities. You can completely alter your appearance, voice, and build.',
+            es: 'Disfraces avanzados, cambio de forma y habilidades de suplantación. Puedes alterar completamente tu apariencia, voz y complexión.'
+          },
+          transformation: {
+            durationInSeconds: 3600, // 1 hour
           }
         }
       ]

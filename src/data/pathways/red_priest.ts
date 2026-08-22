@@ -63,34 +63,18 @@ export const redPriestPathway: Pathway = {
           }
         },
         {
-          id: 'red_priest_seq8_vague_insult',
-          name: { en: 'Provocation: Vague Insult', es: 'Provocación: Insulto Vago' },
+          id: 'red_priest_seq8_provocation',
+          name: { en: 'Provocation', es: 'Provocación' },
           type: 'active',
-          spiCost: 0,
           description: {
-            en: 'These insults can target an individual or multiple people and are made up from general terms and insulting words. Target must succeed at a Will roll (-2) to resist being provoked. Failing will cause the target to only target the Provoker for 1 turn.',
-            es: 'Estos insultos pueden dirigirse a un individuo o a varias personas y están formados por términos generales y palabras insultantes. El objetivo debe superar una tirada de Voluntad (-2) para no ser provocado. Si falla, el objetivo solo atacará al Provoker durante 1 turno.'
-          }
-        },
-        {
-          id: 'red_priest_seq8_detailed_insult',
-          name: { en: 'Provocation: Detailed Insult', es: 'Provocación: Insulto Detallado' },
-          type: 'active',
-          spiCost: 0,
-          description: {
-            en: 'The Provoker uses a specific observation as a base for constructing an insult. Target must succeed at a Will roll (-4) to resist. Failing causes the target to only target the Provoker for 2 turns. Can target up to 2 subjects if correlated.',
-            es: 'El Provoker usa una observación específica para construir un insulto. El objetivo debe superar Voluntad (-4) para resistir. Si falla, solo atacará al Provoker durante 2 turnos. Puede afectar hasta a 2 sujetos si hay correlación.'
-          }
-        },
-        {
-          id: 'red_priest_seq8_unique_insult',
-          name: { en: 'Provocation: Unique Insult', es: 'Provocación: Insulto Único' },
-          type: 'active',
-          spiCost: 0,
-          description: {
-            en: 'Based on something that is a part of the target and they know it, hurting their ego. Target must succeed at a Will roll (-6) to resist. Failing causes the target to only target the Provoker for 3 turns.',
-            es: 'Basado en una inseguridad conocida por el objetivo, hiriendo su ego. El objetivo debe superar Voluntad (-6) para resistir. Si falla, solo atacará al Provoker durante 3 turnos.'
-          }
+            en: 'Taunt targets into attacking you or making mistakes.\n\n{{Vague Insult}}: General terms. Target rolls Will-2. Failure forces target to attack you for 1 turn.\n{{Detailed Insult}}: Based on specific observation. Target rolls Will-4. Failure forces target to attack you for 2 turns.\n{{Unique Insult}}: Targets insecurities. Target rolls Will-6. Failure forces target to attack you for 3 turns.',
+            es: 'Burlarse de los objetivos para que te ataquen o cometan errores.\n\n{{Insulto Vago}}: Términos generales. Voluntad-2. Si falla, te ataca por 1 turno.\n{{Insulto Detallado}}: Basado en observación. Voluntad-4. Si falla, te ataca por 2 turnos.\n{{Insulto Único}}: Apunta a inseguridades. Voluntad-6. Si falla, te ataca por 3 turnos.'
+          },
+          spiOptions: [
+            { name: { en: 'Vague Insult', es: 'Insulto Vago' }, cost: 0 },
+            { name: { en: 'Detailed Insult', es: 'Insulto Detallado' }, cost: 0 },
+            { name: { en: 'Unique Insult', es: 'Insulto Único' }, cost: 0 }
+          ]
         },
         {
           id: 'red_priest_seq8_env_memory',
@@ -147,94 +131,24 @@ export const redPriestPathway: Pathway = {
           }
         },
         {
-          id: 'red_priest_seq7_pyrokinesis',
-          name: { en: 'Pyrokinesis', es: 'Piroquinesis' },
+          id: 'red_priest_seq7_pyromancy',
+          name: { en: 'Pyromancy', es: 'Piromancia' },
           type: 'active',
-          spiCost: 0,
           description: {
-            en: 'Freely control existing flames within a 5-meter radius at no cost (shape, move, intensify, or extinguish). Creating flames from nothing requires Conjure. Each additional 15m range costs 1 SPI.',
-            es: 'Controla libremente las llamas existentes en un radio de 5 metros sin coste (forma, mueve, intensifica o extingue). Crear llamas de la nada requiere Conjurar. Cada 15m adicionales de alcance cuestan 1 SPI.'
-          }
-        },
-        {
-          id: 'red_priest_seq7_compress',
-          name: { en: 'Compress', es: 'Comprimir' },
-          type: 'active',
-          spiCost: 1,
-          description: {
-            en: 'Compresses an existing flame before releasing it. Base damage is 1d6 burning. Each turn spent charging adds +3 damage (max +9, requiring 3 turns of charging).',
-            es: 'Comprime una llama existente antes de soltarla. El daño base es 1d6 por quemadura. Cada turno cargando añade +3 de daño (máx +9, requiere 3 turnos).'
-          }
-        },
-        {
-          id: 'red_priest_seq7_fire_armour',
-          name: { en: 'Fire Armour', es: 'Armadura de Fuego' },
-          type: 'active',
-          spiCost: 1,
-          description: {
-            en: 'Wreathes the body in protective flame, granting DR 1 and resistance to cold and poison effects. Lasts until dismissed.',
-            es: 'Envuelve el cuerpo en llamas protectoras, otorgando DR 1 y resistencia al frío y al veneno. Dura hasta que se descarte.'
-          }
-        },
-        {
-          id: 'red_priest_seq7_conjure',
-          name: { en: 'Conjure', es: 'Conjurar' },
-          type: 'active',
-          spiCost: 1,
-          description: {
-            en: 'Conjures a crude flame weapon (improvised weapon stats) that deals burning damage. Lasts 1 minute.',
-            es: 'Conjura un arma de fuego rudimentaria (estadísticas de arma improvisada) que inflige daño por quemadura. Dura 1 minuto.'
-          }
-        },
-        {
-          id: 'red_priest_seq7_area_burst',
-          name: { en: 'Area Burst', es: 'Estallido de Área' },
-          type: 'active',
-          spiCost: 2,
-          description: {
-            en: 'Creates a burst of flame in a 3-meter radius. Targets take 1d6+1 burning damage (Dodge to halve).',
-            es: 'Crea un estallido de llamas en un radio de 3 metros. Los objetivos reciben 1d6+1 de daño por quemadura (Esquivar reduce a la mitad).'
-          }
-        },
-        {
-          id: 'red_priest_seq7_delay_explosions',
-          name: { en: 'Delay Explosions', es: 'Explosiones Retrasadas' },
-          type: 'active',
-          spiCost: 2,
-          description: {
-            en: 'Sets a delayed flame trap. 1d6+3 burning damage on detonation (Dodge to halve). Lasts 1 hour or until triggered.',
-            es: 'Coloca una trampa de fuego retardada. 1d6+3 de daño por quemadura al detonar (Esquivar a la mitad). Dura 1 hora o hasta ser activada.'
-          }
-        },
-        {
-          id: 'red_priest_seq7_fire_enchant',
-          name: { en: 'Fire Enchant', es: 'Encantar con Fuego' },
-          type: 'active',
-          spiCost: 1,
-          description: {
-            en: 'Enchants a held weapon with flame. The weapon deals +1d6 burning damage for 1 minute. Affects spirits and incorporeal beings normally.',
-            es: 'Encanta un arma sostenida con fuego. El arma inflige +1d6 de daño por quemadura durante 1 minuto. Afecta a los espíritus normalmente.'
-          }
-        },
-        {
-          id: 'red_priest_seq7_fire_ravens',
-          name: { en: 'Fire Ravens', es: 'Cuervos de Fuego' },
-          type: 'active',
-          spiCost: 1,
-          description: {
-            en: 'Conjures 1 flaming raven construct per SPI spent. Each raven has Move 8, HP 2, and deals 1d6-1 burning damage on impact (Dodge to avoid). Disperse after 3 turns.',
-            es: 'Conjura 1 cuervo de fuego por SPI gastado. Cada cuervo tiene Mov 8, 2 HP e inflige 1d6-1 de quemadura al impactar. Se dispersan tras 3 turnos.'
-          }
-        },
-        {
-          id: 'red_priest_seq7_fire_infusion',
-          name: { en: 'Fire Infusion', es: 'Infusión de Fuego' },
-          type: 'active',
-          spiCost: 1,
-          description: {
-            en: 'Cost: 1 SPI per hit (free action). Unarmed strikes add 1 stack. Detonate all stacks as a standard action, dealing 1d6 burning damage per stack.',
-            es: '1 SPI por golpe (acción gratuita). Golpes desarmados añaden 1 acumulación. Detonar todas como acción estándar inflige 1d6 de daño por quemadura por acumulación.'
-          }
+            en: 'Mastery over fire creation and manipulation.\n\n{{Pyrokinesis}}: Control existing flames in 5m (free). +15m per 1 SPI.\n{{Compress}}: Charge flame to add +3 damage per turn (max +9, 1d6 base).\n{{Fire Armour}}: Wreath body in flames for DR 1 and cold/poison resist.\n{{Conjure}}: Create a flaming improvised weapon for 1 min.\n{{Area Burst}}: 3m burst, 1d6+1 damage.\n{{Delay Explosions}}: Flame trap, 1d6+3 damage.\n{{Fire Enchant}}: Add +1d6 burning damage to weapon.\n{{Fire Ravens}}: 1 flaming raven construct (Move 8, 2 HP, 1d6-1 dmg) per SPI.\n{{Fire Infusion}}: 1 SPI per unarmed hit. Detonate stacks for 1d6 per stack.',
+            es: 'Maestría sobre la creación y manipulación del fuego.\n\n{{Piroquinesis}}: Controla fuego existente en 5m (gratis). +15m por 1 SPI.\n{{Comprimir}}: Carga fuego sumando +3 daño/turno (máx +9, base 1d6).\n{{Armadura Fuego}}: Envuelve cuerpo para RD 1 y resistencia al frío/veneno.\n{{Conjurar}}: Crea arma de fuego improvisada por 1 min.\n{{Estallido de Área}}: Radio 3m, 1d6+1 daño.\n{{Explosiones Retrasadas}}: Trampa de fuego, 1d6+3 daño.\n{{Encantar con Fuego}}: +1d6 daño de fuego a arma.\n{{Cuervos de Fuego}}: 1 cuervo de fuego por SPI.\n{{Infusión Fuego}}: 1 SPI por golpe desarmado. Detona todo por 1d6 x marca.'
+          },
+          spiOptions: [
+            { name: { en: 'Pyrokinesis', es: 'Piroquinesis' }, cost: 0 },
+            { name: { en: 'Compress', es: 'Comprimir' }, cost: 1 },
+            { name: { en: 'Fire Armour', es: 'Armadura Fuego' }, cost: 1 },
+            { name: { en: 'Conjure', es: 'Conjurar' }, cost: 1 },
+            { name: { en: 'Area Burst', es: 'Estallido Área' }, cost: 2 },
+            { name: { en: 'Delay Explosions', es: 'Explosiones' }, cost: 2 },
+            { name: { en: 'Fire Enchant', es: 'Encantar' }, cost: 1 },
+            { name: { en: 'Fire Ravens', es: 'Cuervos Fuego' }, cost: 1 },
+            { name: { en: 'Fire Infusion', es: 'Infusión Fuego' }, cost: 1 }
+          ]
         },
         {
           id: 'red_priest_seq7_env_memory',

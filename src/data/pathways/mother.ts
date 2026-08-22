@@ -121,44 +121,21 @@ export const motherPathway: Pathway = {
           }
         },
         {
-          id: 'mother_seq7_command_plants',
-          name: { en: 'Command Plants', es: 'Comandar Plantas' },
+          id: 'mother_seq7_nature_miracles',
+          name: { en: 'Nature Manipulation', es: 'Manipulación de la Naturaleza' },
           type: 'active',
-          spiCost: 2,
           description: {
-            en: 'Exert authority over plant life within 20m. Simple commands for up to 1h. Intelligent plant creatures contest SPI vs Will (new roll each min). +3 resist if command harms them/allies.',
-            es: 'Autoridad sobre vida vegetal en 20m. Órdenes simples hasta 1h. Plantas inteligentes contestan SPI vs Voluntad (nueva tirada cada min). +3 resistir si la orden daña a ellos/aliados.'
-          }
-        },
-        {
-          id: 'mother_seq7_weather_rituals',
-          name: { en: 'Weather Rituals', es: 'Rituales Meteorológicos' },
-          type: 'active',
-          spiCost: 0,
-          description: {
-            en: 'Clear Skies (2 SPI): 200m radius, 1d6 min. Summon Rain (2 SPI): 200m radius, 1d6 min. Calm Winds (1 SPI): 100m radius, lasts 10 min.',
-            es: 'Cielos Despejados (2 SPI): radio 200m, 1d6 min. Invocar Lluvia (2 SPI): radio 200m, 1d6 min. Calmar Vientos (1 SPI): radio 100m, dura 10 min.'
-          }
-        },
-        {
-          id: 'mother_seq7_natures_bounty',
-          name: { en: 'Nature\'s Bounty', es: 'Recompensa de la Naturaleza' },
-          type: 'active',
-          spiCost: 1,
-          description: {
-            en: 'Accelerate plant growth in 5m radius (1 min). Produces food for 2 people. Does not affect magical/spiritually-altered flora.',
-            es: 'Acelera crecimiento vegetal en 5m (1 min). Produce comida para 2 personas. No afecta flora mágica/alterada.'
-          }
-        },
-        {
-          id: 'mother_seq7_restorative_harvest',
-          name: { en: 'Restorative Harvest', es: 'Cosecha Restauradora' },
-          type: 'active',
-          spiCost: 2,
-          description: {
-            en: 'Touch living plant to heal self/ally for 1d HP. Plant wilts for 24h and cannot be used again.',
-            es: 'Toca planta viva para curar a ti/aliado por 1d HP. La planta se marchita por 24h y no puede reusarse.'
-          }
+            en: 'Exert authority over nature, plants, and weather.\n\n{{Command Plants}}: Control plant life within 20m for 1h.\n{{Nature\'s Bounty}}: Accelerate plant growth in 5m radius (1 min) to produce food.\n{{Restorative Harvest}}: Touch a plant to heal self/ally for 1d HP (plant wilts).\n{{Clear Skies}}: Weather ritual for a 200m radius.\n{{Summon Rain}}: Weather ritual for a 200m radius.\n{{Calm Winds}}: Weather ritual for a 100m radius.',
+            es: 'Ejerce autoridad sobre la naturaleza, las plantas y el clima.\n\n{{Comandar Plantas}}: Controla flora en 20m por 1h.\n{{Recompensa de la Naturaleza}}: Acelera crecimiento vegetal en 5m para producir comida.\n{{Cosecha Restauradora}}: Toca una planta para curar 1d HP (la planta se marchita).\n{{Cielos Despejados}}: Ritual meteorológico (200m).\n{{Invocar Lluvia}}: Ritual meteorológico (200m).\n{{Calmar Vientos}}: Ritual meteorológico (100m).'
+          },
+          spiOptions: [
+            { name: { en: 'Command Plants', es: 'Comandar Plantas' }, cost: 2 },
+            { name: { en: 'Nature\'s Bounty', es: 'Recompensa Naturaleza' }, cost: 1 },
+            { name: { en: 'Restorative Harvest', es: 'Cosecha Restauradora' }, cost: 2 },
+            { name: { en: 'Clear Skies', es: 'Cielos Despejados' }, cost: 2 },
+            { name: { en: 'Summon Rain', es: 'Invocar Lluvia' }, cost: 2 },
+            { name: { en: 'Calm Winds', es: 'Calmar Vientos' }, cost: 1 }
+          ]
         },
         {
           id: 'mother_seq7_spirit_vision_nature',

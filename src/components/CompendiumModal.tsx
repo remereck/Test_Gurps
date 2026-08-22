@@ -169,12 +169,46 @@ export default function CompendiumModal({ isOpen, onClose }: CompendiumModalProp
     switch (activeTab) {
       
       case 'pathways':
-        return filteredPathways.map((p, index) => ({ 
-          id: p.id, 
-          icon: '🌌', 
-          title: p.name?.[lang] || p.name?.en || 'Unknown', 
-          subtitle: PATHWAYS.indexOf(p) < 22 ? (lang === 'es' ? 'Estándar' : 'Standard') : (lang === 'es' ? 'No Estándar' : 'Non-Standard') 
-        }));
+        return filteredPathways.map((p, index) => {
+          const isStandard = PATHWAYS.indexOf(p) < 22;
+          
+          let iconContent: React.ReactNode = '🌌';
+          if (isStandard) {
+            const fileName = p.id === 'fool' ? 'Fool_Symbol.webp' : 
+              p.id === 'abyss' ? 'Abyss_Symbol2.webp' :
+              p.id === 'black_emperor' ? 'Black_Emperor_Symbol2.webp' :
+              p.id === 'chained' ? 'Chained_Symbol2.webp' :
+              p.id === 'darkness' ? 'Darkness_Symbol2.webp' :
+              p.id === 'death' ? 'Death_Symbol2.webp' :
+              p.id === 'demoness' ? 'Demoness_Symbol2.webp' :
+              p.id === 'door' ? 'Door_Symbol2.webp' :
+              p.id === 'error' ? 'Error_Symbol2.webp' :
+              p.id === 'hanged_man' ? 'Hanged_Man_Symbol2.webp' :
+              p.id === 'hermit' ? 'Hermit_Symbol2.webp' :
+              p.id === 'justiciar' ? 'Justiciar_Symbol2.webp' :
+              p.id === 'moon' ? 'Moon_Symbol2.webp' :
+              p.id === 'mother' ? 'Mother_Symbol2.webp' :
+              p.id === 'paragon' ? 'Paragon_Symbol2.webp' :
+              p.id === 'red_priest' ? 'Red_Priest_Symbol2.webp' :
+              p.id === 'sun' ? 'Sun_Symbol2.webp' :
+              p.id === 'twilight_giant' ? 'Twilight_Giant_Symbol2.webp' :
+              p.id === 'tyrant' ? 'Tyrant_Symbol2.webp' :
+              p.id === 'visionary' ? 'Visionary_Symbol2.webp' :
+              p.id === 'wheel_of_fortune' ? 'Wheel_of_Fortune_Symbol2.webp' :
+              p.id === 'white_tower' ? 'White_Tower_Symbol2.webp' : null;
+
+            if (fileName) {
+              iconContent = <img src={`./PathwaysSimbols/${fileName}`} alt={`${p.name?.en} Symbol`} className="w-6 h-6 object-contain drop-shadow-[0_0_2px_rgba(255,255,255,0.3)]" />;
+            }
+          }
+
+          return { 
+            id: p.id, 
+            icon: iconContent, 
+            title: p.name?.[lang] || p.name?.en || 'Unknown', 
+            subtitle: isStandard ? (lang === 'es' ? 'Estándar' : 'Standard') : (lang === 'es' ? 'No Estándar' : 'Non-Standard') 
+          };
+        });
       case 'churches':
         return filteredChurches.map(c => ({ id: c.id, icon: '🏛️', title: c.deity, subtitle: c.stronghold }));
       case 'organizations':

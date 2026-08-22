@@ -148,11 +148,14 @@ export const errorPathway: Pathway = {
           id: 'error_seq6_main',
           name: { en: 'Prometheus', es: 'Prometeo' },
           type: 'active',
-          spiCost: 2,
           description: {
-            en: 'Can steal abilities and time from others.',
-            es: 'Puede robar habilidades y tiempo de otros.'
-          }
+            en: 'Can steal abstract concepts from others.\n\n{{Steal Ability}}: Temporarily steal a Beyonder ability. Roll SPI vs SPI.\n{{Steal Time}}: Steal someone\'s turn/time, causing them to skip an action while you gain it.',
+            es: 'Puede robar conceptos abstractos de otros.\n\n{{Robar Habilidad}}: Roba temporalmente una habilidad Beyonder. Tira SPI vs SPI.\n{{Robar Tiempo}}: Roba el turno/tiempo de alguien, haciendo que pierdan su acción y tú la ganes.'
+          },
+          spiOptions: [
+            { name: { en: 'Steal Ability', es: 'Robar Habilidad' }, cost: 2 },
+            { name: { en: 'Steal Time', es: 'Robar Tiempo' }, cost: 3 }
+          ]
         }
       ]
     }

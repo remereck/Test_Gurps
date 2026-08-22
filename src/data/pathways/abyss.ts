@@ -103,21 +103,37 @@ export const abyssPathway: Pathway = {
           id: 'abyss_seq8_spells_ht',
           name: { en: 'Abyssal Spells (Resisted by HT)', es: 'Hechizos Abismales (Resistidos por HT)' },
           type: 'active',
-          spiCost: 1, // Actually uses FP, generalized to 1-2
           description: {
-            en: 'Crown of Contempt (1 FP): 5m radius push and -2 to next attack. Poisonous Flames (2 FP): Melee touch 1d6 toxic + 1d6-2/2 turns. Toxic Black Smoke (1 FP): 3m radius cloud, 1d6-2 toxic/turn. Slowness (1 FP): -1 Spd/Move. Rending Grasp (2 FP): Tears 1d6 FP on touch. Fevered Haze (2 FP): 2m radius, -2 DX, -1 Move. Fracture (2 FP): Target\'s next attack deals half damage.',
-            es: 'Corona del Desprecio (1 FP): Empuje en 5m y -2 al próximo ataque. Llamas Venenosas (2 FP): Toque cuerpo a cuerpo 1d6 tóxico + 1d6-2 por 2 turnos. Humo Negro Tóxico (1 FP): Nube de 3m, 1d6-2 tóxico/turno. Lentitud (1 FP): -1 Vel/Mov. Agarre Desgarrador (2 FP): Arranca 1d6 FP al toque. Neblina Febril (2 FP): 2m radio, -2 DX, -1 Mov. Fractura (2 FP): El próximo ataque del objetivo inflige la mitad de daño.'
-          }
+            en: 'Demonic abilities fueled by FP instead of SPI.\n\n{{Crown of Contempt}}: 5m radius push and -2 to next attack.\n{{Poisonous Flames}}: Melee touch 1d6 toxic + 1d6-2/2 turns.\n{{Toxic Black Smoke}}: 3m radius cloud, 1d6-2 toxic/turn.\n{{Slowness}}: -1 Spd/Move.\n{{Rending Grasp}}: Tears 1d6 FP on touch.\n{{Fevered Haze}}: 2m radius, -2 DX, -1 Move.\n{{Fracture}}: Target\'s next attack deals half damage.',
+            es: 'Habilidades demoníacas potenciadas por FP en lugar de SPI.\n\n{{Corona del Desprecio}}: Empuje en 5m y -2 al próximo ataque.\n{{Llamas Venenosas}}: Toque 1d6 tóxico + 1d6-2 por 2 turnos.\n{{Humo Negro Tóxico}}: Nube de 3m, 1d6-2 tóxico/turno.\n{{Lentitud}}: -1 Vel/Mov.\n{{Agarre Desgarrador}}: Arranca 1d6 FP al toque.\n{{Neblina Febril}}: 2m radio, -2 DX, -1 Mov.\n{{Fractura}}: Próximo ataque del objetivo inflige mitad de daño.'
+          },
+          spiOptions: [
+            { name: { en: 'Crown of Contempt', es: 'Corona del Desprecio' }, cost: 1 },
+            { name: { en: 'Poisonous Flames', es: 'Llamas Venenosas' }, cost: 2 },
+            { name: { en: 'Toxic Black Smoke', es: 'Humo Negro Tóxico' }, cost: 1 },
+            { name: { en: 'Slowness', es: 'Lentitud' }, cost: 1 },
+            { name: { en: 'Rending Grasp', es: 'Agarre Desgarrador' }, cost: 2 },
+            { name: { en: 'Fevered Haze', es: 'Neblina Febril' }, cost: 2 },
+            { name: { en: 'Fracture', es: 'Fractura' }, cost: 2 }
+          ]
         },
         {
           id: 'abyss_seq8_spells_will',
           name: { en: 'Abyssal Curses (Resisted by Will)', es: 'Maldiciones Abismales (Resistidas por Voluntad)' },
           type: 'active',
-          spiCost: 1, // Actually uses FP
           description: {
-            en: 'Mirror of Inadequacy (2 FP): -2 to all rolls. Spiritual Covetousness (1 FP): Hoards instead of attacking. Hollow Craving (1 FP): -1 Will/Per. Sever the Bond (2 FP): Ally becomes rival. Drain (1 FP): Lose 2 FP. Stoke the Coal (1 FP): -2 to restraint rolls. Leaden Soul (2 FP): -1 Spd/Move, needs Will to act.',
-            es: 'Espejo de Inadecuación (2 FP): -2 a toda tirada. Codicia Espiritual (1 FP): Acapara en lugar de atacar. Anhelo Hueco (1 FP): -1 Vol/Per. Cortar el Vínculo (2 FP): Aliado se vuelve rival. Drenaje (1 FP): Pierde 2 FP. Avivar el Carbón (1 FP): -2 a tiradas de contención. Alma de Plomo (2 FP): -1 Vel/Mov, requiere Vol para actuar.'
-          }
+            en: 'Demonic curses fueled by FP instead of SPI.\n\n{{Mirror of Inadequacy}}: -2 to all rolls.\n{{Spiritual Covetousness}}: Hoards instead of attacking.\n{{Hollow Craving}}: -1 Will/Per.\n{{Sever the Bond}}: Ally becomes rival.\n{{Drain}}: Lose 2 FP.\n{{Stoke the Coal}}: -2 to restraint rolls.\n{{Leaden Soul}}: -1 Spd/Move, needs Will to act.',
+            es: 'Maldiciones demoníacas potenciadas por FP en lugar de SPI.\n\n{{Espejo de Inadecuación}}: -2 a toda tirada.\n{{Codicia Espiritual}}: Acapara en lugar de atacar.\n{{Anhelo Hueco}}: -1 Vol/Per.\n{{Cortar el Vínculo}}: Aliado se vuelve rival.\n{{Drenaje}}: Pierde 2 FP.\n{{Avivar el Carbón}}: -2 a tiradas de contención.\n{{Alma de Plomo}}: -1 Vel/Mov, requiere Vol para actuar.'
+          },
+          spiOptions: [
+            { name: { en: 'Mirror of Inadequacy', es: 'Espejo Inadecuación' }, cost: 2 },
+            { name: { en: 'Spiritual Covetousness', es: 'Codicia Espiritual' }, cost: 1 },
+            { name: { en: 'Hollow Craving', es: 'Anhelo Hueco' }, cost: 1 },
+            { name: { en: 'Sever the Bond', es: 'Cortar Vínculo' }, cost: 2 },
+            { name: { en: 'Drain', es: 'Drenaje' }, cost: 1 },
+            { name: { en: 'Stoke the Coal', es: 'Avivar Carbón' }, cost: 1 },
+            { name: { en: 'Leaden Soul', es: 'Alma Plomo' }, cost: 2 }
+          ]
         },
         {
           id: 'abyss_seq8_proficiency',

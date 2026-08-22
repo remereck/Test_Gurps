@@ -13,7 +13,7 @@ export default function SkillPanel() {
     advantages, addAdvantage, removeAdvantage, setAdvantageLevel,
     disadvantages, addDisadvantage, removeDisadvantage, setDisadvantageLevel,
     quirks, addQuirk, removeQuirk,
-    ST, DX, IQ, HT, pathwayId, sequenceLevel, setViewerData
+    ST, DX, IQ, HT, pathwayId, sequenceLevel, setViewerData, spiUsed
   } = useCharacterStore();
   const t = TRANSLATIONS[lang];
   const { textAccentClass, isLostControl } = useCorruptionMetrics();
@@ -353,15 +353,23 @@ export default function SkillPanel() {
               const def = SKILLS.find(sd => sd.id === s.id);
               if (!def) return null;
               const attrVal = finalAttrs[def.attr] || 10;
-              const baseLevel = getSkillLevelFromPoints(attrVal, def.difficulty, s.points);
+              let baseLevel = getSkillLevelFromPoints(attrVal, def.difficulty, s.points);
               const potionBonus = getPotionBonus(s.id);
               
+              // Apply SPI Attrition if applicable (-3 to SPI-based skills when SPI <= 33%)
+              const hasSpiAttrition = finalAttrs.SPI > 0 && (finalAttrs.SPI - spiUsed) <= (finalAttrs.SPI / 3);
+              const isSpiSkill = def.attr === 'SPI';
+              const attritionPenalty = (hasSpiAttrition && isSpiSkill) ? 3 : 0;
+              
+              if (baseLevel !== -999) {
+                  baseLevel -= attritionPenalty;
+              }
+
               let finalLevel: number | string = baseLevel;
-              if (potionBonus > 0) {
-                  const baseToUse = baseLevel === -999 ? attrVal : Math.max(baseLevel, attrVal);
-                  finalLevel = baseToUse + potionBonus;
-              } else if (baseLevel === -999) {
+              if (baseLevel === -999) {
                   finalLevel = "-";
+              } else if (potionBonus > 0) {
+                  finalLevel = baseLevel + potionBonus;
               }
 
               const isGifted = potionBonus > 0;
@@ -373,7 +381,7 @@ export default function SkillPanel() {
                   className={`border-l-4 p-1.5 bg-[#181818] flex justify-between items-center cursor-pointer transition-colors hover:bg-[#222] ${isGifted ? 'border-green-500' : 'border-[#444]'}`}
                   onClick={() => setViewerData({
                     title: def.name[lang], 
-                    desc: `${def.description[lang]}\n\n${def.attr}/${def.difficulty}\nBase Attr (${def.attr}): ${attrVal}\nPotion Bonus: +${potionBonus}`, 
+                    desc: `${def.description[lang]}\n\n${def.attr}/${def.difficulty}\nBase Attr (${def.attr}): ${attrVal}\nPotion Bonus: +${potionBonus}${attritionPenalty > 0 ? '\nSPI Attrition Penalty: -3' : ''}`, 
                     type: 'skill',
                     rollTarget: typeof finalLevel === 'number' ? finalLevel : undefined
                   })}
@@ -387,9 +395,9 @@ export default function SkillPanel() {
                       onChange={e => setSkillPoints(s.id, parseInt(e.target.value))}
                       className="bg-[#222] border border-[#444] text-[#ddd] rounded p-0.5 text-[11px] outline-none cursor-pointer"
                     >
-                      {[0, 1, 2, 4, 8, 16, 32].map(pts => <option key={pts} value={pts}>{pts} pts</option>)}
+                      {[0, 1, 2, 4, 8, 12, 16, 20, 24].map(pts => <option key={pts} value={pts}>{pts} pts</option>)}
                     </select>
-                    <span className="font-mono text-[14px] font-bold text-yellow-500 w-5 text-right">{finalLevel}</span>
+                    <span className={`font-mono text-[14px] font-bold w-5 text-right ${attritionPenalty > 0 ? "text-orange-400" : "text-yellow-500"}`}>{finalLevel}</span>
                     <button onClick={() => removeSkill(s.id)} className="text-red-500 text-lg leading-none hover:text-red-400 cursor-pointer">×</button>
                   </div>
                 </div>

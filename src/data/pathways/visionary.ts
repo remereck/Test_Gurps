@@ -76,24 +76,17 @@ export const visionaryPathway: Pathway = {
           }
         },
         {
-          id: 'visionary_seq7_frenzy',
-          name: { en: 'Frenzy', es: 'Frenesí' },
+          id: 'visionary_seq7_manipulation',
+          name: { en: 'Psychological Manipulation', es: 'Manipulación Psicológica' },
           type: 'active',
-          spiCost: 1,
           description: {
-            en: 'Detonate a target\'s emotions. Target rolls Will-3 or loses control, attacking indiscriminately.',
-            es: 'Detona las emociones de un objetivo. El objetivo tira Voluntad-3 o pierde el control, atacando indiscriminadamente.'
-          }
-        },
-        {
-          id: 'visionary_seq7_placate',
-          name: { en: 'Placate', es: 'Aplacar' },
-          type: 'active',
-          spiCost: 1,
-          description: {
-            en: 'Calm a target\'s emotions instantly. Can stop frenzy or extreme emotional states.',
-            es: 'Calma las emociones de un objetivo al instante. Puede detener el frenesí o estados emocionales extremos.'
-          }
+            en: 'Manipulate the emotional state of a target.\n\n{{Frenzy}}: Detonate a target\'s emotions. Target rolls Will-3 or loses control, attacking indiscriminately.\n{{Placate}}: Calm a target\'s emotions instantly. Can stop frenzy or extreme emotional states.',
+            es: 'Manipula el estado emocional de un objetivo.\n\n{{Frenesí}}: Detona las emociones de un objetivo. El objetivo tira Voluntad-3 o pierde el control, atacando indiscriminadamente.\n{{Aplacar}}: Calma las emociones de un objetivo al instante. Puede detener el frenesí o estados emocionales extremos.'
+          },
+          spiOptions: [
+            { name: { en: 'Frenzy', es: 'Frenesí' }, cost: 1 },
+            { name: { en: 'Placate', es: 'Aplacar' }, cost: 1 }
+          ]
         },
         {
           id: 'visionary_seq7_mind_reading',

@@ -21,7 +21,7 @@ export interface CorruptionMetrics {
 }
 
 export function useCorruptionMetrics(): CorruptionMetrics {
-  const { IQ, pathwayId, sequenceLevel, corruption, setHpDamage, ST } = useCharacterStore();
+  const { IQ, pathwayId, sequenceLevel, corruption, setHpDamage, ST, activeTransformations, secondaryPurchases } = useCharacterStore();
 
   const currentPathway = useMemo(() => {
     if (!pathwayId || !sequenceLevel) return null;
@@ -43,11 +43,38 @@ export function useCorruptionMetrics(): CorruptionMetrics {
     return bonuses;
   }, [pathwayId, sequenceLevel, currentPathway]);
 
+  const activeMaxCorruptionMod = useMemo(() => {
+    let mod = 0;
+    if (activeTransformations) {
+      activeTransformations.forEach(t => {
+        if (t.maxCorruptionChange) mod += t.maxCorruptionChange;
+      });
+    }
+    return mod;
+  }, [activeTransformations]);
+
+  const passiveMaxCorruptionMod = useMemo(() => {
+    let mod = 0;
+    if (!pathwayId || !sequenceLevel || !currentPathway) return mod;
+        
+    for (let seq = 9; seq >= sequenceLevel; seq--) {
+      const seqData = currentPathway.sequences.find(s => s.level === seq);
+      if (seqData) {
+        seqData.abilities.forEach(ability => {
+          if (ability.maxCorruptionChange) {
+            mod += ability.maxCorruptionChange;
+          }
+        });
+      }
+    }
+    return mod;
+  }, [pathwayId, sequenceLevel, currentPathway]);
+
   const finalIQ = IQ + (statBonuses.IQ || 0);
-  const finalWill = Math.max(1, finalIQ + (statBonuses.Will || 0));
+  const finalWill = Math.max(1, finalIQ + (statBonuses.Will || 0) + (secondaryPurchases?.Will || 0));
   const finalST = ST + (statBonuses.ST || 0);
-  const finalHP = finalST + (statBonuses.HP || 0);
-  const maxCorruption = finalWill;
+  const finalHP = finalST + (statBonuses.HP || 0) + (secondaryPurchases?.HP || 0);
+  const maxCorruption = Math.max(1, finalWill + activeMaxCorruptionMod + passiveMaxCorruptionMod);
 
   const corruptionPercent = Math.min(100, Math.max(0, (corruption / maxCorruption) * 100));
 

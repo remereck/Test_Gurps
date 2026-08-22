@@ -12,14 +12,44 @@ export function PathwaysView({ selectedItemId, lang }: PathwaysViewProps) {
 
   if (!pathway) return <div className="text-[#888]">Pathway not found.</div>;
 
+  const isStandard = PATHWAYS.indexOf(pathway) < 22;
+  const fileName = pathway.id === 'fool' ? 'Fool_Symbol.webp' : 
+    pathway.id === 'abyss' ? 'Abyss_Symbol2.webp' :
+    pathway.id === 'black_emperor' ? 'Black_Emperor_Symbol2.webp' :
+    pathway.id === 'chained' ? 'Chained_Symbol2.webp' :
+    pathway.id === 'darkness' ? 'Darkness_Symbol2.webp' :
+    pathway.id === 'death' ? 'Death_Symbol2.webp' :
+    pathway.id === 'demoness' ? 'Demoness_Symbol2.webp' :
+    pathway.id === 'door' ? 'Door_Symbol2.webp' :
+    pathway.id === 'error' ? 'Error_Symbol2.webp' :
+    pathway.id === 'hanged_man' ? 'Hanged_Man_Symbol2.webp' :
+    pathway.id === 'hermit' ? 'Hermit_Symbol2.webp' :
+    pathway.id === 'justiciar' ? 'Justiciar_Symbol2.webp' :
+    pathway.id === 'moon' ? 'Moon_Symbol2.webp' :
+    pathway.id === 'mother' ? 'Mother_Symbol2.webp' :
+    pathway.id === 'paragon' ? 'Paragon_Symbol2.webp' :
+    pathway.id === 'red_priest' ? 'Red_Priest_Symbol2.webp' :
+    pathway.id === 'sun' ? 'Sun_Symbol2.webp' :
+    pathway.id === 'twilight_giant' ? 'Twilight_Giant_Symbol2.webp' :
+    pathway.id === 'tyrant' ? 'Tyrant_Symbol2.webp' :
+    pathway.id === 'visionary' ? 'Visionary_Symbol2.webp' :
+    pathway.id === 'wheel_of_fortune' ? 'Wheel_of_Fortune_Symbol2.webp' :
+    pathway.id === 'white_tower' ? 'White_Tower_Symbol2.webp' : null;
+
   return (
-    <div className="animate-fadeIn max-w-4xl mx-auto pb-16">
-      <div className="mb-8">
+    <div className="animate-fadeIn max-w-4xl mx-auto pb-16 relative">
+      <div className="mb-8 pr-32">
         <h2 className="text-3xl font-black text-yellow-500 uppercase tracking-widest font-serif mb-2">
           {pathway.name[lang] || pathway.name.en}
         </h2>
         <div className="w-16 h-1 bg-yellow-600/50 rounded mb-4"></div>
       </div>
+
+      {isStandard && fileName && (
+        <div className="absolute top-0 right-4 w-28 h-28 opacity-80 mix-blend-screen drop-shadow-[0_0_10px_rgba(255,255,255,0.2)] pointer-events-none">
+          <img src={`./PathwaysSimbols/${fileName}`} alt={`${pathway.name.en} Symbol`} className="w-full h-full object-contain" />
+        </div>
+      )}
 
       <div className="space-y-12">
         {pathway.sequences.map(seq => {

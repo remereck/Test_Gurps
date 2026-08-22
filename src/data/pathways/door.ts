@@ -39,11 +39,20 @@ export const doorPathway: Pathway = {
           id: 'door_seq8_spellcasting',
           name: { en: 'Trickmaster Spellcasting', es: 'Hechizos de Maestro de Trucos' },
           type: 'active',
-          spiCost: 1,
           description: {
-            en: 'Cast tricks (1 SPI each, 10m range): Flash (blind), Electric Shock (stun), Freezing (cold), Burning, Wind, Fog, Tumble, Loud Noise, Black Curtain, Escape Trick, Gas Transfer, Object Bounce.',
-            es: 'Lanza trucos (1 SPI, rango 10m): Destello (ciega), Choque Eléctrico (aturde), Congelación, Quemadura, Viento, Niebla, Caída, Ruido Fuerte, Cortina Negra, Truco de Escape, Transferencia de Gas, Rebote de Objetos.'
-          }
+            en: 'Cast tricks (1 SPI each, 10m range):\n{{Flash}}: Blinds the target.\n{{Electric Shock}}: Stuns the target.\n{{Freezing}}: Deals cold damage or freezes surfaces.\n{{Burning}}: Deals fire damage or ignites objects.\n{{Wind}}: Gusts to push or pull.\n{{Fog}}: Obscures vision.\n{{Tumble}}: Forces a fall.\n{{Loud Noise}}: Deafens or distracts.\n{{Black Curtain}}: Blocks light entirely.\n{{Escape Trick}}: Teleport short distances to dodge.\n{{Gas Transfer}}: Moves gas from one area to another.\n{{Object Bounce}}: Makes a thrown object bounce unpredictably.',
+            es: 'Lanza trucos (1 SPI, rango 10m):\n{{Destello}}: Ciega al objetivo.\n{{Choque Eléctrico}}: Aturde al objetivo.\n{{Congelación}}: Daño por frío o congela superficies.\n{{Quemadura}}: Daño por fuego o enciende objetos.\n{{Viento}}: Ráfagas para empujar o tirar.\n{{Niebla}}: Oscurece la visión.\n{{Caída}}: Fuerza una caída.\n{{Ruido Fuerte}}: Ensordece o distrae.\n{{Cortina Negra}}: Bloquea la luz por completo.\n{{Truco de Escape}}: Teletransportación corta para esquivar.\n{{Transferencia de Gas}}: Mueve gas de un área a otra.\n{{Rebote de Objetos}}: Hace que un objeto lanzado rebote impredeciblemente.'
+          },
+          spiOptions: [
+            { name: { en: 'Flash', es: 'Destello' }, cost: 1 },
+            { name: { en: 'Electric Shock', es: 'Choque Eléctrico' }, cost: 1 },
+            { name: { en: 'Freezing', es: 'Congelación' }, cost: 1 },
+            { name: { en: 'Burning', es: 'Quemadura' }, cost: 1 },
+            { name: { en: 'Wind', es: 'Viento' }, cost: 1 },
+            { name: { en: 'Fog', es: 'Niebla' }, cost: 1 },
+            { name: { en: 'Escape Trick', es: 'Truco Escape' }, cost: 1 },
+            { name: { en: 'Other Tricks', es: 'Otros Trucos' }, cost: 1 }
+          ]
         },
         {
           id: 'door_seq8_opening',
@@ -111,11 +120,16 @@ export const doorPathway: Pathway = {
           replaces: 'door_seq8_spellcasting',
           name: { en: 'Trickmaster Spellcasting+', es: 'Hechizos de Maestro de Trucos+' },
           type: 'active',
-          spiCost: 1,
           description: {
-            en: 'Trickmaster Spellcasting: Cast tricks (1 SPI each, 10m range): Flash (blind), Electric Shock (stun), Freezing (cold), Burning, Wind, Fog, Tumble, Loud Noise, Black Curtain, Escape Trick, Gas Transfer, Object Bounce, Trickmaster Spellcasting+ Spells range {{20m}}, Flash/Fog radii {{+2m}}, Escape Trick distance {{10m}}, and Gas Transfer {{30m}}.',
-            es: 'Hechizos de Maestro de Trucos: Lanza trucos (1 SPI, rango 10m): Destello (ciega), Choque Eléctrico (aturde), Congelación, Quemadura, Viento, Niebla, Caída, Ruido Fuerte, Cortina Negra, Truco de Escape, Transferencia de Gas, Rebote de Objetos, Hechizos de Maestro de Trucos+ Rango de hechizos a {{20m}}, radios de Destello/Niebla {{+2m}}, Truco de Escape {{10m}}, y Transferencia de Gas a {{30m}}.'
-          }
+            en: 'Trickmaster Spellcasting: Cast tricks (1 SPI each, 10m range), Trickmaster Spellcasting+ Spells range {{20m}}, Flash/Fog radii {{+2m}}, Escape Trick distance {{10m}}, and Gas Transfer {{30m}}.',
+            es: 'Hechizos de Maestro de Trucos: Lanza trucos (1 SPI, rango 10m), Hechizos de Maestro de Trucos+ Rango de hechizos a {{20m}}, radios de Destello/Niebla {{+2m}}, Truco de Escape {{10m}}, y Transferencia de Gas a {{30m}}.'
+          },
+          spiOptions: [
+            { name: { en: 'Flash+', es: 'Destello+' }, cost: 1 },
+            { name: { en: 'Fog+', es: 'Niebla+' }, cost: 1 },
+            { name: { en: 'Escape Trick+', es: 'Truco Escape+' }, cost: 1 },
+            { name: { en: 'Other Tricks (20m)', es: 'Otros Trucos (20m)' }, cost: 1 }
+          ]
         }
       ]
     },

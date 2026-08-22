@@ -107,9 +107,17 @@ export const chainedPathway: Pathway = {
           id: 'chained_seq8_curse',
           name: { en: "Lunatic's Curse", es: 'Maldición del Lunático' },
           type: 'drawback',
+          maxCorruptionChange: -2,
           description: {
             en: 'Loses control more easily; CoR thresholds reduced by 2. When injured below half HP, automatically enters uncontrolled empowered state (ST +3, HT +2, ignore pain, attack everything) until fight ends or Will-4.',
             es: 'Pierde el control más fácil; umbrales de CoR reducidos en 2. Al ser herido por debajo de media vida, entra en estado de poder descontrolado (ST+3, HT+2, ignora dolor, ataca a todos) hasta fin de pelea o Vol-4.'
+          },
+          transformation: {
+            durationInSeconds: 9999,
+            statBonuses: [
+              { stat: 'ST', bonus: 3 },
+              { stat: 'HT', bonus: 2 }
+            ]
           }
         },
         {
@@ -211,8 +219,16 @@ export const chainedPathway: Pathway = {
           type: 'active',
           spiCost: 1, // per minute
           description: {
-            en: 'Lasts 1 min. ST+3, DX+2. Claws (sw+2 cut), Bite (thr+2 imp). Venom (HT-2 each round or -2 physical). Speed +1 Move. Regen 1 HP/min.',
-            es: 'Dura 1 min. ST+3, DX+2. Garras (sw+2 corte), Mordisco (thr+2 imp). Veneno (HT-2 cada ronda o -2 físico). Vel +1 Mov. Regen 1 HP/min.'
+            en: 'Transform into a Werewolf. ST+3, DX+2. Claws (sw+2 cut), Bite (thr+2 imp). Venom (HT-2 each round or -2 physical). Speed +1 Move. Regen 1 HP/min. Costs 1 SPI per minute.',
+            es: 'Transformación en Hombre Lobo. ST+3, DX+2. Garras (sw+2 corte), Mordisco (thr+2 imp). Veneno (HT-2 cada ronda o -2 físico). Vel +1 Mov. Regen 1 HP/min. Cuesta 1 SPI por minuto.'
+          },
+          transformation: {
+            durationInSeconds: 60,
+            statBonuses: [
+              { stat: 'ST', bonus: 3 },
+              { stat: 'DX', bonus: 2 },
+              { stat: 'BasicMove', bonus: 1 }
+            ]
           }
         },
         {

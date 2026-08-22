@@ -99,44 +99,19 @@ export const hangedManPathway: Pathway = {
       ],
       abilities: [
         {
-          id: 'hanged_seq7_shadow_lurking',
-          name: { en: 'Shadow Lurking', es: 'Acecho en las Sombras' },
+          id: 'hanged_seq7_shadow_manipulation',
+          name: { en: 'Shadow Manipulation', es: 'Manipulación de Sombras' },
           type: 'active',
-          spiCost: 1,
           description: {
-            en: 'Conceal in shadows. Invisible to mundane senses (Per-2 to notice). Move between connected shadows. Lasts 1 min.',
-            es: 'Oculto en sombras. Invisible a sentidos mundanos (Per-2 para notar). Se mueve entre sombras conectadas. Dura 1 min.'
-          }
-        },
-        {
-          id: 'hanged_seq7_shadow_shaping',
-          name: { en: 'Shadow Shaping', es: 'Moldear Sombras' },
-          type: 'active',
-          spiCost: 1,
-          description: {
-            en: 'Shape shadows within 10m into weapons (shadow corrosion damage, bypass non-magical DR) or animal forms for 1 minute.',
-            es: 'Moldea sombras en 10m en armas (daño por corrosión de sombra) o formas animales por 1 minuto.'
-          }
-        },
-        {
-          id: 'hanged_seq7_shadow_chrysalis',
-          name: { en: 'Shadow Chrysalis', es: 'Crisálida de Sombra' },
-          type: 'active',
-          spiCost: 2,
-          description: {
-            en: 'Requires Shadow Lurking. Target\'s shadow forms a cocoon. Quick Contest ST vs SPI. Target trapped takes 1d-2 corrosion damage/turn.',
-            es: 'Requiere Acecho en las Sombras. La sombra del objetivo forma un capullo. Contienda ST vs SPI. Atrapado sufre 1d-2 corrosión/turno.'
-          }
-        },
-        {
-          id: 'hanged_seq7_summon_shadow',
-          name: { en: 'Summon Shadow', es: 'Invocar Sombra' },
-          type: 'active',
-          spiCost: 2,
-          description: {
-            en: 'Roll Ritualistic Magic. Summons shadow servitor for 1 min. Attacks for 1d6 corrosion. Failed roll makes it hostile.',
-            es: 'Tira Magia Ritualística. Invoca servidor de sombra por 1 min. Ataca por 1d6 de corrosión. Si falla, es hostil.'
-          }
+            en: 'Manipulate shadows for stealth, offense, and utility.\n\n{{Shadow Lurking}}: Conceal in shadows. Invisible to mundane senses (Per-2 to notice). Move between connected shadows. Lasts 1 min.\n{{Shadow Shaping}}: Shape shadows within 10m into weapons (shadow corrosion damage, bypass non-magical DR) or animal forms for 1 minute.\n{{Shadow Chrysalis}}: Requires Shadow Lurking. Target\'s shadow forms a cocoon. Quick Contest ST vs SPI. Target trapped takes 1d-2 corrosion damage/turn.\n{{Summon Shadow}}: Roll Ritualistic Magic. Summons shadow servitor for 1 min. Attacks for 1d6 corrosion. Failed roll makes it hostile.',
+            es: 'Manipula las sombras para sigilo, ofensiva y utilidad.\n\n{{Acecho en las Sombras}}: Oculto en sombras. Invisible a sentidos mundanos (Per-2 para notar). Se mueve entre sombras conectadas. Dura 1 min.\n{{Moldear Sombras}}: Moldea sombras en 10m en armas (daño por corrosión de sombra, ignora RD) o formas animales por 1 minuto.\n{{Crisálida de Sombra}}: Requiere Acecho. La sombra del objetivo forma un capullo. Contienda ST vs SPI. Atrapado sufre 1d-2 corrosión/turno.\n{{Invocar Sombra}}: Tira Magia Ritualística. Invoca servidor de sombra por 1 min. Ataca por 1d6 de corrosión. Si falla, es hostil.'
+          },
+          spiOptions: [
+            { name: { en: 'Shadow Lurking', es: 'Acecho en Sombras' }, cost: 1 },
+            { name: { en: 'Shadow Shaping', es: 'Moldear Sombras' }, cost: 1 },
+            { name: { en: 'Shadow Chrysalis', es: 'Crisálida Sombra' }, cost: 2 },
+            { name: { en: 'Summon Shadow', es: 'Invocar Sombra' }, cost: 2 }
+          ]
         },
         {
           id: 'hanged_seq7_listening_control',

@@ -187,64 +187,23 @@ export const demonessPathway: Pathway = {
           }
         },
         {
-          id: 'demoness_seq7_ice_proj',
-          name: { en: 'Ice Projectiles', es: 'Proyectiles de Hielo' },
+          id: 'demoness_seq7_witch_magic',
+          name: { en: 'Witch\'s Dark Arts', es: 'Artes Oscuras de Bruja' },
           type: 'active',
-          spiCost: 1,
           description: {
-            en: 'Project ice at target, 2d-2 damage.',
-            es: 'Proyecta hielo al objetivo, 2d-2 de daño.'
-          }
-        },
-        {
-          id: 'demoness_seq7_mirror_sub',
-          name: { en: 'Mirror/Staff Substitution', es: 'Sustitución con Espejo/Vara' },
-          type: 'active',
-          spiCost: 3,
-          description: {
-            en: 'Transfer next successful attack damage to mirror/staff (shatters). Can be used on ally within 30m if medium is provided.',
-            es: 'Transfiere el daño del próximo ataque a espejo/vara (se rompe). Puede usarse en aliado a 30m con medio.'
-          }
-        },
-        {
-          id: 'demoness_seq7_black_flames',
-          name: { en: 'Black Flames & Enchantment', es: 'Llamas Negras y Encantamiento' },
-          type: 'active',
-          spiCost: 2,
-          description: {
-            en: 'Flames burn spirituality. Cannot extinguish with water. Enchant weapon (2 SPI + 1/turn); on hit detonate flames in veins for 2d6+1 (cost 2 SPI). Compression (2 SPI) cannonball 2d6 + 1d3/turn burn.',
-            es: 'Llamas queman espiritualidad. No se apagan con agua. Encanta arma (2 SPI + 1/turno); al impactar detona venas por 2d6+1 (2 SPI). Compresión (2 SPI) bola 2d6 + 1d3/turno quemadura.'
-          }
-        },
-        {
-          id: 'demoness_seq7_freeze',
-          name: { en: 'Freeze', es: 'Congelar' },
-          type: 'active',
-          spiCost: 2, // 2-3
-          description: {
-            en: 'Target touch (2 SPI): HT-1 or 2d6-1 damage. Area 10m (3 SPI): All roll HT-1 or 2d6-1 damage.',
-            es: 'Toque (2 SPI): HT-1 o 2d6-1 daño. Área 10m (3 SPI): Todos tiran HT-1 o 2d6-1 daño.'
-          }
-        },
-        {
-          id: 'demoness_seq7_ice_wind',
-          name: { en: 'Ice Wind & Seal', es: 'Viento Helado y Sello' },
-          type: 'active',
-          spiCost: 2,
-          description: {
-            en: 'Wind (2 SPI +1/turn): 10m radius, -3 to sight/smell rolls. Seal (2 SPI): Cage of ice for 1d4 turns, break with ST-1.',
-            es: 'Viento (2 SPI +1/turno): 10m, -3 a tiradas de vista/olfato. Sello (2 SPI): Jaula 1d4 turnos, rompe con ST-1.'
-          }
-        },
-        {
-          id: 'demoness_seq7_mirror_magic',
-          name: { en: 'Mirror Magic / Cursing', es: 'Magia de Espejos / Maldición' },
-          type: 'active',
-          spiCost: 1,
-          description: {
-            en: 'Sense mirrors 25m. Hide in mirror 1d6s (2d6 dmg if destroyed). Curse with blood (+2) or flesh/hair doll (+4) using Ritual Magic to deal 2d6 dmg or use as ritual base.',
-            es: 'Siente espejos 25m. Ocultarse en espejo 1d6s (2d6 daño si rompe). Maldice con sangre (+2) o muñeco (+4) para infligir 2d6 daño.'
-          }
+            en: 'A versatile arsenal of offensive black magic.\n\n{{Ice Projectiles}}: Project ice at target, 2d-2 damage.\n{{Black Flames}}: Flames burn spirituality. Cannot extinguish with water. Enchant weapon (2 SPI) or detonate for 2d6+1.\n{{Freeze}}: Target touch (2 SPI): HT-1 or 2d6-1 damage. Area 10m (3 SPI).\n{{Ice Wind & Seal}}: Wind (2 SPI): 10m radius obscurement. Seal (2 SPI): Cage of ice for 1d4 turns.\n{{Mirror Magic / Cursing}}: Hide in mirror 1d6s. Curse with blood or doll using Ritual Magic to deal 2d6 dmg.\n{{Substitution}}: Transfer next successful attack damage to mirror/staff (shatters).',
+            es: 'Un arsenal versátil de magia negra ofensiva.\n\n{{Proyectiles de Hielo}}: Proyecta hielo al objetivo, 2d-2 de daño.\n{{Llamas Negras}}: Llamas que queman espiritualidad. Encanta arma (2 SPI) o detona por 2d6+1.\n{{Congelar}}: Toque (2 SPI): HT-1 o 2d6-1 daño. Área 10m (3 SPI).\n{{Viento Helado y Sello}}: Viento (2 SPI): 10m radio. Sello (2 SPI): Jaula de hielo 1d4 turnos.\n{{Magia de Espejos / Maldición}}: Ocultarse en espejo 1d6s. Maldice con sangre o muñeco para 2d6 daño.\n{{Sustitución}}: Transfiere el daño del próximo ataque a espejo/vara (se rompe).'
+          },
+          spiOptions: [
+            { name: { en: 'Ice Projectiles', es: 'Proyectiles de Hielo' }, cost: 1 },
+            { name: { en: 'Black Flames', es: 'Llamas Negras' }, cost: 2 },
+            { name: { en: 'Freeze (Touch)', es: 'Congelar (Toque)' }, cost: 2 },
+            { name: { en: 'Freeze (Area)', es: 'Congelar (Área)' }, cost: 3 },
+            { name: { en: 'Ice Wind', es: 'Viento Helado' }, cost: 2 },
+            { name: { en: 'Ice Seal', es: 'Sello Helado' }, cost: 2 },
+            { name: { en: 'Mirror Magic / Curse', es: 'Magia de Espejos' }, cost: 1 },
+            { name: { en: 'Substitution', es: 'Sustitución' }, cost: 3 }
+          ]
         },
         {
           id: 'demoness_seq7_feather_fall',

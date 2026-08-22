@@ -115,11 +115,16 @@ export const tyrantPathway: Pathway = {
           id: 'tyrant_seq7_water_spells',
           name: { en: 'Water Spells', es: 'Hechizos de Agua' },
           type: 'active',
-          spiCost: 1, // Varies
           description: {
-            en: 'Suffocation Film (2 SPI): Target suffocates. Azure Wave (2 SPI): Knock targets back 1d meters. Restorative Waters (1 SPI): Restore 1d-2 HP. Aqueous Cleanse (1 SPI).',
-            es: 'Película de Asfixia (2 SPI): Asfixia. Ola Azur (2 SPI): Empuja enemigos 1d metros. Aguas Restaurativas (1 SPI): Cura 1d-2 HP. Limpieza Acuosa (1 SPI).'
-          }
+            en: 'Water-based magical effects.\n\n{{Suffocation Film}}: Target suffocates.\n{{Azure Wave}}: Knock targets back 1d meters.\n{{Restorative Waters}}: Restore 1d-2 HP.\n{{Aqueous Cleanse}}: Clean dirt and toxins.',
+            es: 'Efectos mágicos basados en agua.\n\n{{Película de Asfixia}}: El objetivo se asfixia.\n{{Ola Azur}}: Empuja enemigos 1d metros.\n{{Aguas Restaurativas}}: Cura 1d-2 HP.\n{{Limpieza Acuosa}}: Limpia suciedad y toxinas.'
+          },
+          spiOptions: [
+            { name: { en: 'Suffocation Film', es: 'Película Asfixia' }, cost: 2 },
+            { name: { en: 'Azure Wave', es: 'Ola Azur' }, cost: 2 },
+            { name: { en: 'Restorative Waters', es: 'Aguas Restaurativas' }, cost: 1 },
+            { name: { en: 'Aqueous Cleanse', es: 'Limpieza Acuosa' }, cost: 1 }
+          ]
         },
         {
           id: 'tyrant_seq7_wrath',

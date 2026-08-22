@@ -67,8 +67,16 @@ export interface PotionAbility {
   name: { en: string; es: string };
   type: 'passive' | 'active' | 'drawback';
   description: { en: string; es: string };
-  spiCost?: number;
+  spiCost?: number | number[];
+  spiOptions?: { name: { en: string; es: string }; cost: number }[];
+  maxCorruptionChange?: number;
   replaces?: string;
+  subAbilities?: PotionAbility[];
+  transformation?: {
+    durationInSeconds?: number;
+    statBonuses?: PotionStatBonus[];
+    maxCorruptionChange?: number;
+  };
 }
 
 export interface Sequence {

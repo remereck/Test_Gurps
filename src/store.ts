@@ -2,9 +2,37 @@ import { create } from 'zustand';
 import { Language, UserSkill, UserItem, CoreAttr, UserTrait, UserQuirk, CustomItemDef } from './types';
 import { getAttributeCost } from './utils';
 
+export interface ActiveTransformation {
+  abilityId: string;
+  name: { en: string; es: string };
+  activationGameTime: number;
+  durationInSeconds: number;
+  statBonuses?: any[];
+  maxCorruptionChange?: number;
+}
+
+export interface StatusEffect {
+  id: string;
+  name: string;
+  description: string;
+  durationInSeconds: number; // 0 for infinite/manual
+  activationGameTime: number;
+}
+
 export interface CharacterState {
   lang: Language;
   setLang: (lang: Language) => void;
+
+  // Game Time & Transformations
+  gameTimeElapsed: number; // in seconds
+  addGameTime: (seconds: number) => void;
+  activeTransformations: ActiveTransformation[];
+  toggleTransformation: (trans: Omit<ActiveTransformation, 'activationGameTime'>) => void;
+  
+  // Status Effects
+  statusEffects: StatusEffect[];
+  addStatusEffect: (effect: Omit<StatusEffect, 'id' | 'activationGameTime'>) => void;
+  removeStatusEffect: (id: string) => void;
 
   // Core Attributes
   ST: number;
@@ -94,11 +122,44 @@ const initialState = {
   spiUsed: 0,
   corruption: 0,
   secondaryPurchases: { HP: 0, FP: 0, Will: 0, Per: 0, BasicSpeed: 0, BasicMove: 0 },
+  gameTimeElapsed: 0,
+  activeTransformations: [],
+  statusEffects: [],
 };
 
 export const useCharacterStore = create<CharacterState>((set, get) => ({
   lang: 'es',
   setLang: (lang) => set({ lang }),
+
+  // Game Time & Transformations
+  gameTimeElapsed: initialState.gameTimeElapsed,
+  activeTransformations: initialState.activeTransformations,
+  statusEffects: initialState.statusEffects,
+  addGameTime: (seconds: number) => set((state) => {
+    const newTime = state.gameTimeElapsed + seconds;
+    // Auto-remove expired transformations
+    const newTransformations = state.activeTransformations.filter(t => 
+      t.activationGameTime + t.durationInSeconds > newTime
+    );
+    // Auto-remove expired status effects
+    const newStatuses = state.statusEffects.filter(s => 
+      s.durationInSeconds === 0 || s.activationGameTime + s.durationInSeconds > newTime
+    );
+    return { gameTimeElapsed: newTime, activeTransformations: newTransformations, statusEffects: newStatuses };
+  }),
+  toggleTransformation: (trans) => set((state) => {
+    const exists = state.activeTransformations.find(t => t.abilityId === trans.abilityId);
+    if (exists) {
+      return { activeTransformations: state.activeTransformations.filter(t => t.abilityId !== trans.abilityId) };
+    }
+    return { activeTransformations: [...state.activeTransformations, { ...trans, activationGameTime: state.gameTimeElapsed }] };
+  }),
+  addStatusEffect: (effect) => set((state) => ({
+    statusEffects: [...state.statusEffects, { ...effect, id: Math.random().toString(36).substr(2, 9), activationGameTime: state.gameTimeElapsed }]
+  })),
+  removeStatusEffect: (id) => set((state) => ({
+    statusEffects: state.statusEffects.filter(s => s.id !== id)
+  })),
   
   ...initialState,
 

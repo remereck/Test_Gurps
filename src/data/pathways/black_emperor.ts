@@ -86,51 +86,16 @@ export const blackEmperorPathway: Pathway = {
           id: 'be_seq7_bribery',
           name: { en: 'Bribery', es: 'Soborno' },
           type: 'active',
-          spiCost: 1, // 1 per effect
           description: {
-            en: 'By offering a bribe (material/symbolic), impose an effect. Bribe doesn\'t need to be accepted, just thrown/near target. Diminishing Rule: effects drop by 1 each turn until 0.',
-            es: 'Al ofrecer un soborno (material/simbólico), impone un efecto. El soborno no necesita ser aceptado, solo lanzado/cerca del objetivo. Regla Decreciente: los efectos caen en 1 cada turno hasta 0.'
-          }
-        },
-        {
-          id: 'be_seq7_bribe_weaken',
-          name: { en: 'Bribery — Weaken', es: 'Soborno — Debilitar' },
-          type: 'active',
-          spiCost: 1,
-          description: {
-            en: 'Target suffers -4 to attack and defense rolls (drops -1/turn, lasts 4 turns).',
-            es: 'El objetivo sufre -4 a tiradas de ataque y defensa (cae -1/turno, dura 4 turnos).'
-          }
-        },
-        {
-          id: 'be_seq7_bribe_charm',
-          name: { en: 'Bribery — Charm', es: 'Soborno — Encantar' },
-          type: 'active',
-          spiCost: 1,
-          description: {
-            en: 'Target rolls Will at -3 (drops -1/turn, 3 turns max). Failure: cannot attack briber. Crit fail: lashes out at self/allies.',
-            es: 'Objetivo tira Voluntad a -3 (cae -1/turno, max 3 turnos). Fallo: no puede atacar al sobornador. Fallo crit: ataca a sí mismo/aliados.'
-          }
-        },
-        {
-          id: 'be_seq7_bribe_arrogance',
-          name: { en: 'Bribery — Arrogance', es: 'Soborno — Arrogancia' },
-          type: 'active',
-          spiCost: 1,
-          description: {
-            en: 'Target rolls IQ at -2 (drops -1/turn, 2 turns max). Failure: reckless/stupid action. Crit fail: lose turn.',
-            es: 'Objetivo tira IQ a -2 (cae -1/turno, max 2 turnos). Fallo: acción imprudente/estúpida. Fallo crit: pierde turno.'
-          }
-        },
-        {
-          id: 'be_seq7_bribe_connection',
-          name: { en: 'Bribery — Connection', es: 'Soborno — Conexión' },
-          type: 'active',
-          spiCost: 1,
-          description: {
-            en: 'Mystical link. Gain +2 to Divination and Tracking rolls against them (drops -1/turn, 2 turns max).',
-            es: 'Enlace místico. Gana +2 a tiradas de Adivinación y Rastreo contra ellos (cae -1/turno, max 2 turnos).'
-          }
+            en: 'By offering a bribe (material/symbolic), impose an effect. Bribe doesn\'t need to be accepted, just thrown/near target. Diminishing Rule: effects drop by 1 each turn until 0.\n\n{{Weaken}}: Target suffers -4 to attack and defense rolls (drops -1/turn, lasts 4 turns).\n{{Charm}}: Target rolls Will at -3 (drops -1/turn, 3 turns max). Failure: cannot attack briber. Crit fail: lashes out at self/allies.\n{{Arrogance}}: Target rolls IQ at -2 (drops -1/turn, 2 turns max). Failure: reckless/stupid action. Crit fail: lose turn.\n{{Connection}}: Mystical link. Gain +2 to Divination and Tracking rolls against them (drops -1/turn, 2 turns max).',
+            es: 'Al ofrecer un soborno (material/simbólico), impone un efecto. El soborno no necesita ser aceptado, solo lanzado/cerca del objetivo. Regla Decreciente: los efectos caen en 1 cada turno hasta 0.\n\n{{Debilitar}}: El objetivo sufre -4 a tiradas de ataque y defensa (cae -1/turno, dura 4 turnos).\n{{Encantar}}: Objetivo tira Voluntad a -3 (cae -1/turno, max 3 turnos). Fallo: no puede atacar al sobornador. Fallo crit: ataca a sí mismo/aliados.\n{{Arrogancia}}: Objetivo tira IQ a -2 (cae -1/turno, max 2 turnos). Fallo: acción imprudente/estúpida. Fallo crit: pierde turno.\n{{Conexión}}: Enlace místico. Gana +2 a tiradas de Adivinación y Rastreo contra ellos (cae -1/turno, max 2 turnos).'
+          },
+          spiOptions: [
+            { name: { en: 'Weaken', es: 'Debilitar' }, cost: 1 },
+            { name: { en: 'Charm', es: 'Encantar' }, cost: 1 },
+            { name: { en: 'Arrogance', es: 'Arrogancia' }, cost: 1 },
+            { name: { en: 'Connection', es: 'Conexión' }, cost: 1 }
+          ]
         },
         {
           id: 'be_seq7_eloquence',

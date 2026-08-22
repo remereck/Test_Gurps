@@ -130,11 +130,15 @@ export const whiteTowerPathway: Pathway = {
           id: 'white_seq6_main',
           name: { en: 'Polymath', es: 'Erudito' },
           type: 'active',
-          spiCost: 2,
           description: {
-            en: 'Can analyze and mimic abilities through observation.',
-            es: 'Puede analizar e imitar habilidades a través de la observación.'
-          }
+            en: 'Can analyze and mimic abilities through observation.\n\n{{Analyze Ability}}: Observe an ability to understand its mechanism. Roll IQ.\n{{Mimic Spell/Skill}}: Replicate an observed spell or physical skill temporarily. Costs 2 SPI + Original Cost.\n{{Counter-Spell}}: Anticipate and disrupt an observed spell. Roll IQ vs SPI.',
+            es: 'Puede analizar e imitar habilidades a través de la observación.\n\n{{Analizar Habilidad}}: Observa una habilidad para entender su mecanismo. Tira IQ.\n{{Imitar Hechizo/Técnica}}: Replica temporalmente un hechizo o técnica física. Cuesta 2 SPI + Coste Original.\n{{Contra-hechizo}}: Anticipa e interrumpe un hechizo observado. Tira IQ vs SPI.'
+          },
+          spiOptions: [
+            { name: { en: 'Analyze Ability', es: 'Analizar Habilidad' }, cost: 1 },
+            { name: { en: 'Mimic', es: 'Imitar' }, cost: 2 },
+            { name: { en: 'Counter-Spell', es: 'Contra-hechizo' }, cost: 2 }
+          ]
         }
       ]
     }

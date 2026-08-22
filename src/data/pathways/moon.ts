@@ -164,44 +164,20 @@ export const moonPathway: Pathway = {
           }
         },
         {
-          id: 'moon_seq7_wings',
-          name: { en: 'Wings of Flight', es: 'Alas de Vuelo' },
+          id: 'moon_seq7_vampiric_powers',
+          name: { en: 'Vampiric Powers', es: 'Poderes Vampíricos' },
           type: 'active',
-          spiCost: 1, // per min
           description: {
-            en: 'Gain +2 Basic Move for flight for 1 minute. Extends at 1 SPI/min.',
-            es: 'Gana +2 Movimiento Básico para volar por 1 minuto. Se extiende por 1 SPI/min.'
-          }
-        },
-        {
-          id: 'moon_seq7_bat_swarm',
-          name: { en: 'Bat Swarm Form', es: 'Forma de Enjambre de Murciélagos' },
-          type: 'active',
-          spiCost: 3,
-          description: {
-            en: 'Transform into illusory bats (1 min). Immune to non-magical physical damage. Can emit poison gas (1d6/2 turns) or black flames (1d6 burn/4 turns). Cannot use other abilities.',
-            es: 'Forma de murciélagos ilusorios (1 min). Inmune al daño físico no mágico. Puede emitir gas venenoso o llamas negras. No puede usar otras habilidades.'
-          }
-        },
-        {
-          id: 'moon_seq7_corrosive_claw',
-          name: { en: 'Corrosive Claw', es: 'Garra Corrosiva' },
-          type: 'active',
-          spiCost: 2,
-          description: {
-            en: 'Innate melee attack (Brawling). Counts as knife. Ignores natural DR, but not manufactured/magical armour.',
-            es: 'Ataque cuerpo a cuerpo innato (Pelea). Cuenta como cuchillo. Ignora RD natural, pero no armadura mágica o fabricada.'
-          }
-        },
-        {
-          id: 'moon_seq7_abyss_shackles',
-          name: { en: 'Abyss Shackles', es: 'Cadenas del Abismo' },
-          type: 'active',
-          spiCost: 2,
-          description: {
-            en: 'Ritualistic Magic vs target HT. Success: bound for 3 turns (ST-3 to break free). Dissolves if concentration broken.',
-            es: 'Magia Ritual vs HT del objetivo. Éxito: atado 3 turnos (ST-3 para romper). Se disuelve si se rompe la concentración.'
-          }
+            en: 'Supernatural abilities innate to Vampires.\n\n{{Wings of Flight}}: Gain +2 Basic Move for flight for 1 minute.\n{{Bat Swarm Form}}: Transform into illusory bats (1 min). Immune to non-magical physical dmg.\n{{Corrosive Claw}}: Innate melee attack. Ignores natural DR.\n{{Abyss Shackles}}: Bind target for 3 turns (ST-3 to break free).\n{{Blood Servant Conversion}}: Ritual. Turns living creature into obedient servant.',
+            es: 'Habilidades sobrenaturales innatas de los Vampiros.\n\n{{Alas de Vuelo}}: Gana +2 Movimiento Básico para volar por 1 min.\n{{Forma de Enjambre de Murciélagos}}: Forma de murciélagos ilusorios (1 min). Inmune a daño físico no mágico.\n{{Garra Corrosiva}}: Ataque innato. Ignora RD natural.\n{{Cadenas del Abismo}}: Ata al objetivo por 3 turnos.\n{{Conversión a Siervo de Sangre}}: Ritual. Convierte criatura en siervo obediente.'
+          },
+          spiOptions: [
+            { name: { en: 'Wings of Flight', es: 'Alas de Vuelo' }, cost: 1 },
+            { name: { en: 'Bat Swarm Form', es: 'Enjambre Murciélagos' }, cost: 3 },
+            { name: { en: 'Corrosive Claw', es: 'Garra Corrosiva' }, cost: 2 },
+            { name: { en: 'Abyss Shackles', es: 'Cadenas del Abismo' }, cost: 2 },
+            { name: { en: 'Blood Servant', es: 'Siervo de Sangre' }, cost: 3 }
+          ]
         },
         {
           id: 'moon_seq7_the_embrace',
@@ -211,16 +187,6 @@ export const moonPathway: Pathway = {
           description: {
             en: 'Using surplus characteristics, bestows vampire traits to human (1h ritual). Vampire loses 1 max SPI per use permanently until replenished.',
             es: 'Usando características sobrantes, otorga rasgos vampíricos a un humano. El vampiro pierde 1 SPI máximo permanentemente hasta reponerlo.'
-          }
-        },
-        {
-          id: 'moon_seq7_blood_servant',
-          name: { en: 'Blood Servant Conversion', es: 'Conversión a Siervo de Sangre' },
-          type: 'active',
-          spiCost: 3,
-          description: {
-            en: 'Ritualistic Magic. Turns living creature into servant (must obey, cured of illnesses, +2 HT/HP). Crit fail: target hostile (+2 actions vs Vampire).',
-            es: 'Magia Ritual. Convierte criatura en siervo (debe obedecer, cura enfermedades, +2 HT/HP). Fallo crit: objetivo hostil (+2 acciones vs Vampiro).'
           }
         },
         {

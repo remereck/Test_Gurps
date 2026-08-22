@@ -109,44 +109,19 @@ export const justiciarPathway: Pathway = {
       ],
       abilities: [
         {
-          id: 'justiciar_seq7_illusory_torture',
-          name: { en: 'Illusory Torture Devices', es: 'Dispositivos de Tortura Ilusorios' },
+          id: 'justiciar_seq7_torture_devices',
+          name: { en: 'Psychic Torture Methods', es: 'Métodos de Tortura Psíquica' },
           type: 'active',
-          spiCost: 1,
           description: {
-            en: 'Shape spirituality into torture device (held). Deals spirit body damage as Knife (thr-1 cut / sw-2 imp).',
-            es: 'Forma espiritualidad en dispositivo de tortura (sostenido). Inflige daño de cuerpo espiritual como Cuchillo (thr-1 corte / sw-2 imp).'
-          }
-        },
-        {
-          id: 'justiciar_seq7_psychic_lashing',
-          name: { en: 'Psychic Lashing', es: 'Latigazo Psíquico' },
-          type: 'active',
-          spiCost: 2,
-          description: {
-            en: 'Coats held object with illusory lightning for 1 min. Attacks deal +2 spirit body damage in addition to normal damage.',
-            es: 'Cubre un objeto con rayo ilusorio por 1 min. Ataques infligen +2 de daño de cuerpo espiritual además del normal.'
-          }
-        },
-        {
-          id: 'justiciar_seq7_psychic_piercing',
-          name: { en: 'Psychic Piercing', es: 'Perforación Psíquica' },
-          type: 'active',
-          spiCost: 1,
-          description: {
-            en: 'Range 5m. Target rolls HT or mentally Stunned 1 turn. Deals 2d6-3 spirit body damage.',
-            es: 'Alcance 5m. Objetivo tira HT o queda Aturdido mentalmente 1 turno. Inflige 2d6-3 daño al cuerpo espiritual.'
-          }
-        },
-        {
-          id: 'justiciar_seq7_whip_of_pain',
-          name: { en: 'Whip of Pain', es: 'Látigo del Dolor' },
-          type: 'active',
-          spiCost: 1, // continuous 1/turn
-          description: {
-            en: 'Deals 1d6-3 spirit body damage per turn (costs 1 SPI/turn). Target rolls HT or mentally Stunned. Subseq turns roll Will to recover.',
-            es: 'Inflige 1d6-3 daño espiritual por turno (1 SPI/turno). Objetivo tira HT o Aturdido mentalmente. Siguientes turnos tira Voluntad para recuperar.'
-          }
+            en: 'Uses spirituality to inflict psychological and spiritual pain.\n\n{{Illusory Device}}: Shape spirituality into a held torture device. Deals spirit body damage as Knife (thr-1 cut / sw-2 imp).\n{{Psychic Lashing}}: Coats held object with illusory lightning for 1 min. Attacks deal +2 spirit body damage in addition to normal damage.\n{{Psychic Piercing}}: Range 5m. Target rolls HT or mentally Stunned 1 turn. Deals 2d6-3 spirit body damage.\n{{Whip of Pain}}: Deals 1d6-3 spirit body damage per turn (costs 1 SPI/turn). Target rolls HT or mentally Stunned.',
+            es: 'Usa la espiritualidad para infligir dolor psicológico y espiritual.\n\n{{Dispositivo Ilusorio}}: Forma espiritualidad en dispositivo de tortura (sostenido). Inflige daño de cuerpo espiritual como Cuchillo (thr-1 corte / sw-2 imp).\n{{Latigazo Psíquico}}: Cubre un objeto con rayo ilusorio por 1 min. Ataques infligen +2 de daño espiritual además del normal.\n{{Perforación Psíquica}}: Alcance 5m. Objetivo tira HT o queda Aturdido mentalmente 1 turno. Inflige 2d6-3 daño al cuerpo espiritual.\n{{Látigo del Dolor}}: Inflige 1d6-3 daño espiritual por turno. Objetivo tira HT o Aturdido mentalmente.'
+          },
+          spiOptions: [
+            { name: { en: 'Device', es: 'Dispositivo' }, cost: 1 },
+            { name: { en: 'Lashing', es: 'Latigazo' }, cost: 2 },
+            { name: { en: 'Piercing', es: 'Perforación' }, cost: 1 },
+            { name: { en: 'Whip (per turn)', es: 'Látigo (x turno)' }, cost: 1 }
+          ]
         },
         {
           id: 'justiciar_seq7_authority',

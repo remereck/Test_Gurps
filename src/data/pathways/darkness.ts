@@ -64,11 +64,16 @@ export const darknessPathway: Pathway = {
           id: 'darkness_seq8_poem',
           name: { en: 'Midnight Poem — Spell Effects', es: 'Poema de Medianoche — Efectos de Hechizo' },
           type: 'active',
-          spiCost: 2,
           description: {
-            en: 'Recite poem for 1 round. Tranquilize (calm), Lullaby (sleep, ~20m radius), Pacify (unresponsive), or Fear (dread).',
-            es: 'Recita un poema por 1 ronda. Tranquilizar (calma), Canción de Cuna (sueño, ~20m), Pacificar (no responde) o Miedo (terror).'
-          }
+            en: 'Recite a poem for 1 round to impose effects.\n\n{{Tranquilize}}: Calms the target\'s emotions.\n{{Lullaby}}: Puts targets to sleep in a ~20m radius.\n{{Pacify}}: Makes the target unresponsive and peaceful.\n{{Fear}}: Fills the target with dread and terror.',
+            es: 'Recita un poema por 1 ronda para imponer efectos.\n\n{{Tranquilizar}}: Calma las emociones del objetivo.\n{{Canción de Cuna}}: Duerme a los objetivos en ~20m.\n{{Pacificar}}: Hace que el objetivo sea pacífico y no responda.\n{{Miedo}}: Llena al objetivo de pavor y terror.'
+          },
+          spiOptions: [
+            { name: { en: 'Tranquilize', es: 'Tranquilizar' }, cost: 2 },
+            { name: { en: 'Lullaby', es: 'Canción de Cuna' }, cost: 2 },
+            { name: { en: 'Pacify', es: 'Pacificar' }, cost: 2 },
+            { name: { en: 'Fear', es: 'Miedo' }, cost: 2 }
+          ]
         },
         {
           id: 'darkness_seq8_nocturnality',
@@ -108,34 +113,18 @@ export const darknessPathway: Pathway = {
           }
         },
         {
-          id: 'darkness_seq7_nightmare_state',
-          name: { en: 'Nightmare State', es: 'Estado de Pesadilla' },
+          id: 'darkness_seq7_dream_manipulation',
+          name: { en: 'Dream Manipulation', es: 'Manipulación de Sueños' },
           type: 'active',
-          spiCost: 1,
           description: {
-            en: 'Body sleeps, Soul Body enters dreams within city range. Can see glowing orbs of dreams.',
-            es: 'El cuerpo duerme, el Cuerpo del Alma entra en sueños a rango de ciudad. Ve orbes brillantes de sueños.'
-          }
-        },
-        {
-          id: 'darkness_seq7_dream_shaping',
-          name: { en: 'Dream Shaping', es: 'Moldear Sueños' },
-          type: 'active',
-          spiCost: 1,
-          description: {
-            en: 'Shape target\'s dream for interrogation. Interrogation rolls gain +3. Target rolls Will-2 or reveals secret.',
-            es: 'Moldea el sueño del objetivo para interrogar. Gana +3 en interrogación. Objetivo tira Voluntad-2 o revela secretos.'
-          }
-        },
-        {
-          id: 'darkness_seq7_dream_invasion',
-          name: { en: 'Dream Invasion', es: 'Invasión de Sueños' },
-          type: 'active',
-          spiCost: 2,
-          description: {
-            en: 'Drag target into a dream. Range 20m (100m if 2 turns prep). Both fall asleep into the dream.',
-            es: 'Arrastra al objetivo a un sueño. Rango 20m (100m si prepara 2 turnos). Ambos se duermen en el sueño.'
-          }
+            en: 'Abilities to enter and control dreams.\n\n{{Nightmare State}}: Body sleeps, Soul Body enters dreams within city range. Can see glowing orbs of dreams.\n{{Dream Shaping}}: Shape target\'s dream for interrogation. Interrogation rolls gain +3. Target rolls Will-2 or reveals secret.\n{{Dream Invasion}}: Drag target into a dream. Range 20m (100m if 2 turns prep). Both fall asleep into the dream.',
+            es: 'Habilidades para entrar y controlar sueños.\n\n{{Estado de Pesadilla}}: El cuerpo duerme, el Cuerpo del Alma entra en sueños a rango de ciudad. Ve orbes brillantes de sueños.\n{{Moldear Sueños}}: Moldea el sueño del objetivo para interrogar. Gana +3 en interrogación. Objetivo tira Voluntad-2 o revela secretos.\n{{Invasión de Sueños}}: Arrastra al objetivo a un sueño. Rango 20m (100m si prepara 2 turnos). Ambos se duermen en el sueño.'
+          },
+          spiOptions: [
+            { name: { en: 'Nightmare State', es: 'Estado Pesadilla' }, cost: 1 },
+            { name: { en: 'Dream Shaping', es: 'Moldear Sueños' }, cost: 1 },
+            { name: { en: 'Dream Invasion', es: 'Invasión Sueños' }, cost: 2 }
+          ]
         },
         {
           id: 'darkness_seq7_limbs',

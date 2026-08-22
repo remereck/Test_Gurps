@@ -6,14 +6,16 @@ import { ADVANTAGES, DISADVANTAGES } from '../data/traitsData';
 import { useCorruptionMetrics } from '../utils/corruption';
 import CompendiumModal from './CompendiumModal';
 import RulebookModal from './RulebookModal';
+import StatusEffectsModal from './StatusEffectsModal';
 
 export default function TopNav() {
-  const { lang, setLang, exportData, importData, ST, DX, IQ, HT, skills, disadvantages, advantages, quirks, secondaryPurchases } = useCharacterStore();
+  const { lang, setLang, exportData, importData, ST, DX, IQ, HT, skills, disadvantages, advantages, quirks, secondaryPurchases, statusEffects, activeTransformations } = useCharacterStore();
   const t = TRANSLATIONS[lang];
   const fileInputRef = useRef<HTMLInputElement>(null);
   const { isLostControl, borderClass, textAccentClass, badgeClass } = useCorruptionMetrics();
   const [isCompendiumOpen, setIsCompendiumOpen] = useState(false);
   const [isRulebookModalOpen, setIsRulebookModalOpen] = useState(false);
+  const [isStatusModalOpen, setIsStatusModalOpen] = useState(false);
 
   const pointsSpentOnAttributes = 
     getAttributeCost(9, ST, false) + 
@@ -130,13 +132,40 @@ export default function TopNav() {
             Rulebook
           </button>
 
+          <button
+            onClick={() => setIsStatusModalOpen(true)}
+            className={`px-2 md:px-3 py-1.5 text-[10px] md:text-[11px] cursor-pointer rounded uppercase transition-colors print:hidden flex items-center gap-1.5 font-bold border ${
+              statusEffects.length > 0 
+                ? 'bg-red-950/40 border-red-700/60 text-red-400 hover:bg-red-900/50 hover:text-red-300 shadow-[0_0_10px_rgba(239,68,68,0.15)] animate-pulse' 
+                : activeTransformations.length > 0
+                ? 'bg-purple-950/40 border-purple-700/60 text-purple-400 hover:bg-purple-900/50 hover:text-purple-300 shadow-[0_0_10px_rgba(168,85,247,0.15)] animate-pulse'
+                : 'bg-[#222] border-[#444] text-[#ddd] hover:bg-[#333]'
+            }`}
+          >
+            <span>{statusEffects.length > 0 ? '⚠️' : (activeTransformations.length > 0 ? '✨' : '⚠️')}</span>
+            <span>
+              {lang === 'es' ? 'Estados:' : 'Statuses:'} {
+                statusEffects.length > 0 
+                  ? statusEffects[statusEffects.length - 1].name 
+                  : activeTransformations.length > 0 
+                    ? activeTransformations[activeTransformations.length - 1].name[lang]
+                    : (lang === 'es' ? 'Ninguno' : 'None')
+              }
+            </span>
+          </button>
+
           <div className={`px-2 md:px-3 py-1 rounded-full font-bold text-[12px] md:text-[14px] ${badgeClass} transition-all duration-500 font-mono`}>
             {pointsSpent} / {totalBudget} Character Points
           </div>
         </div>
       </header>
 
-      {/* Compendium Modal */}
+      {/* Modals */}
+      <StatusEffectsModal 
+        isOpen={isStatusModalOpen} 
+        onClose={() => setIsStatusModalOpen(false)} 
+      />
+
       <CompendiumModal 
         isOpen={isCompendiumOpen} 
         onClose={() => setIsCompendiumOpen(false)} 

@@ -3,14 +3,15 @@ import { useCharacterStore } from '../store';
 import { TRANSLATIONS } from '../i18n';
 import { ITEMS, ExtendedItemDef } from '../data/itemsData';
 import { PATHWAYS } from '../data/pathwaysData';
-import { formatMoney } from '../utils';
+import { formatMoney, getSkillLevelFromPoints } from '../utils';
+import { SKILLS } from '../data/skillsData';
 import { useCorruptionMetrics } from '../utils/corruption';
 
 export default function InventoryPanel() {
   const { 
     lang, inventory, customItems, addItem, removeItem, 
     addCustomItem, removeCustomItem, moneyPence, setMoneyPence, 
-    ST, pathwayId, sequenceLevel, setViewerData 
+    ST, DX, IQ, HT, skills, spiUsed, pathwayId, sequenceLevel, setViewerData 
   } = useCharacterStore();
   const t = TRANSLATIONS[lang];
   const { textAccentClass, isLostControl } = useCorruptionMetrics();
@@ -23,22 +24,66 @@ export default function InventoryPanel() {
 
   // Get total stat bonuses to calculate final ST for Basic Lift
   const currentPathway = PATHWAYS.find(p => p.id === pathwayId);
-  const statBonuses = useMemo(() => {
-    let stBonus = 0;
+  const { statBonuses, skillBonuses } = useMemo(() => {
+    const sBonuses: Record<string, number> = {};
+    const skBonuses: Record<string, number> = {};
     if (pathwayId && sequenceLevel && currentPathway) {
       for (let seq = 9; seq >= sequenceLevel; seq--) {
         const seqData = currentPathway.sequences.find(s => s.level === seq);
         if (seqData) {
-          const b = seqData.statBonuses.find(x => x.stat === 'ST');
-          if (b) stBonus += b.bonus;
+          seqData.statBonuses.forEach(b => {
+            sBonuses[b.stat] = (sBonuses[b.stat] || 0) + b.bonus;
+          });
+          seqData.skillBonuses.forEach(b => {
+            skBonuses[b.skillId] = (skBonuses[b.skillId] || 0) + b.bonus;
+          });
         }
       }
     }
-    return stBonus;
+    return { statBonuses: sBonuses, skillBonuses: skBonuses };
   }, [pathwayId, sequenceLevel, currentPathway]);
 
-  const finalST = ST + statBonuses;
+  const finalAttrs: Record<string, number> = {
+    ST: ST + (statBonuses.ST || 0),
+    DX: DX + (statBonuses.DX || 0),
+    IQ: IQ + (statBonuses.IQ || 0),
+    HT: HT + (statBonuses.HT || 0),
+    Per: IQ + (statBonuses.Per || 0),
+    Will: IQ + (statBonuses.Will || 0),
+    SPI: statBonuses.SPI || 0
+  };
+  const finalST = finalAttrs.ST;
   const basicLift = (finalST * finalST) / 5;
+
+  
+  const getWeaponRollTarget = (def: ExtendedItemDef): number | undefined => {
+    let match = def.description.en.match(/(?:Skill|Habilidad):\s*([^|]+)/i);
+    if (!match && def.description.es) {
+      match = def.description.es.match(/(?:Skill|Habilidad):\s*([^|]+)/i);
+    }
+    if (!match) return undefined;
+    const skillName = match[1].trim();
+    // Try to find skill by English or Spanish name
+    const skillDef = SKILLS.find(s => s.name.en.toLowerCase() === skillName.toLowerCase() || s.name.es.toLowerCase() === skillName.toLowerCase());
+    if (!skillDef) return undefined;
+
+    const userSkill = skills.find(s => s.id === skillDef.id);
+    const pts = userSkill ? userSkill.points : 0;
+    const attrVal = finalAttrs[skillDef.attr] || 10;
+    let baseLevel = getSkillLevelFromPoints(attrVal, skillDef.difficulty, pts);
+    const potionBonus = skillBonuses[skillDef.id] || 0;
+
+    const hasSpiAttrition = finalAttrs.SPI > 0 && (finalAttrs.SPI - spiUsed) <= (finalAttrs.SPI / 3);
+    const isSpiSkill = skillDef.attr === 'SPI';
+    const attritionPenalty = (hasSpiAttrition && isSpiSkill) ? 3 : 0;
+
+    if (baseLevel !== -999) {
+      baseLevel -= attritionPenalty;
+    }
+
+    if (baseLevel === -999) return undefined;
+    return baseLevel + potionBonus;
+  };
 
   const allItems: ExtendedItemDef[] = [
     ...ITEMS, 
@@ -169,7 +214,7 @@ export default function InventoryPanel() {
                 setSelectedItem(val);
                 if (val) {
                   const def = allItems.find(i => i.id === val);
-                  if (def) setViewerData({ title: def.name[lang], desc: `${def.description[lang]}\n\nWeight: ${def.weightLbs} lbs | Cost: ${formatMoney(def.costInPence)}`, type: 'item' });
+                  if (def) setViewerData({ title: def.name[lang], desc: `${def.description[lang]}\n\nWeight: ${def.weightLbs} lbs | Cost: ${formatMoney(def.costInPence)}`, type: 'item', rollTarget: getWeaponRollTarget(def) });
                 }
               }} 
               className="flex-1 bg-[#222] border border-[#444] text-[#ddd] rounded p-1 text-[11px] outline-none cursor-pointer"
@@ -213,11 +258,16 @@ export default function InventoryPanel() {
                   onClick={() => setViewerData({
                     title: def.name[lang], 
                     desc: `${def.description[lang]}\n\nWeight: ${(def.weightLbs * invItem.quantity).toFixed(1)} lbs (${def.weightLbs} lbs each)\nUnit Cost: ${formatMoney(def.costInPence)}`, 
-                    type: 'item'
+                    type: 'item', rollTarget: getWeaponRollTarget(def)
                   })}
                 >
                   <div className="flex flex-col flex-1 pr-1">
-                    <span className="text-[#e5e5e5] font-semibold">{def.name[lang]}</span>
+                    <span className="text-[#e5e5e5] font-semibold flex items-center gap-1.5">
+                      {def.name[lang]}
+                      {getWeaponRollTarget(def) !== undefined && (
+                        <span className="text-yellow-500 text-[12px]" title="Rollable">🎲</span>
+                      )}
+                    </span>
                     <span className="text-[9px] text-[#777]">{(def.weightLbs * invItem.quantity).toFixed(1)} lbs</span>
                   </div>
                   <div className="flex items-center gap-1.5">

@@ -1,22 +1,36 @@
-import { SkillDef } from '../types';
+import { SkillDef } from './types';
 
 export interface ExtendedSkillDef extends SkillDef {
-  category?: string;
+  category: string;
 }
 
 export const SKILLS: ExtendedSkillDef[] = [
+  {
+    "id": "axe_mace",
+    "name": {
+      "en": "Axe/Mace",
+      "es": "Hacha/Maza"
+    },
+    "category": "COMBAT",
+    "attr": "DX",
+    "difficulty": "A",
+    "description": {
+      "en": "Any short or medium unbalanced melee weapon",
+      "es": "Cualquier arma cuerpo a cuerpo desequilibrada corta o mediana"
+    }
+  },
   {
     "id": "guns_pistol",
     "name": {
       "en": "Guns (Pistol)",
       "es": "Pistolas"
     },
-    "category": "COMBAT SKILLS",
+    "category": "COMBAT",
     "attr": "DX",
     "difficulty": "E",
     "description": {
       "en": "Derringers, semi-automatic pistols",
-      "es": "Derringers y pistolas semiautom\u00e1ticas"
+      "es": "Derringers, pistolas semiautomáticas"
     }
   },
   {
@@ -25,12 +39,12 @@ export const SKILLS: ExtendedSkillDef[] = [
       "en": "Guns (Revolver)",
       "es": "Rev\u00f3lveres"
     },
-    "category": "COMBAT SKILLS",
+    "category": "COMBAT",
     "attr": "DX",
     "difficulty": "E",
     "description": {
       "en": "Revolvers of all calibres",
-      "es": "Rev\u00f3lveres de todos los calibres"
+      "es": "Revólveres de todos los calibres"
     }
   },
   {
@@ -39,12 +53,12 @@ export const SKILLS: ExtendedSkillDef[] = [
       "en": "Guns (Rifle)",
       "es": "Rifles"
     },
-    "category": "COMBAT SKILLS",
+    "category": "COMBAT",
     "attr": "DX",
     "difficulty": "E",
     "description": {
       "en": "Rifles, muskets, carbines",
-      "es": "Rifles, mosquetes y carabinas"
+      "es": "Rifles, mosquetes, carabinas"
     }
   },
   {
@@ -53,12 +67,12 @@ export const SKILLS: ExtendedSkillDef[] = [
       "en": "Guns (Shotgun)",
       "es": "Escopetas"
     },
-    "category": "COMBAT SKILLS",
+    "category": "COMBAT",
     "attr": "DX",
     "difficulty": "E",
     "description": {
       "en": "Scatter weapons",
-      "es": "Armas de dispersi\u00f3n"
+      "es": "Armas de dispersión (escopetas)"
     }
   },
   {
@@ -67,12 +81,12 @@ export const SKILLS: ExtendedSkillDef[] = [
       "en": "Fast-Draw (Pistol)",
       "es": "Desenfundado R\u00e1pido (Pistola)"
     },
-    "category": "COMBAT SKILLS",
+    "category": "COMBAT",
     "attr": "DX",
     "difficulty": "E",
     "description": {
       "en": "Quick weapon draw from holster",
-      "es": "Desenfundado veloz del arma"
+      "es": "Desenfunde rápido de un arma desde la funda"
     }
   },
   {
@@ -81,12 +95,12 @@ export const SKILLS: ExtendedSkillDef[] = [
       "en": "Brawling",
       "es": "Pelea Callejera"
     },
-    "category": "COMBAT SKILLS",
+    "category": "COMBAT",
     "attr": "DX",
     "difficulty": "E",
     "description": {
       "en": "Untrained street fighting",
-      "es": "Combate sin entrenamiento formal"
+      "es": "Pelea callejera sin entrenamiento"
     }
   },
   {
@@ -95,12 +109,12 @@ export const SKILLS: ExtendedSkillDef[] = [
       "en": "Boxing",
       "es": "Boxeo"
     },
-    "category": "COMBAT SKILLS",
+    "category": "COMBAT",
     "attr": "DX",
     "difficulty": "A",
     "description": {
       "en": "Trained fisticuffs with technique",
-      "es": "Pugilismo t\u00e9cnico"
+      "es": "Pelea a puñetazos con técnica (boxeo)"
     }
   },
   {
@@ -109,7 +123,7 @@ export const SKILLS: ExtendedSkillDef[] = [
       "en": "Knife",
       "es": "Cuchillo"
     },
-    "category": "COMBAT SKILLS",
+    "category": "COMBAT",
     "attr": "DX",
     "difficulty": "E",
     "description": {
@@ -118,45 +132,17 @@ export const SKILLS: ExtendedSkillDef[] = [
     }
   },
   {
-    "id": "axemace",
-    "name": {
-      "en": "Axe/Mace",
-      "es": "Axe/Mace"
-    },
-    "category": "COMBAT SKILLS",
-    "attr": "DX",
-    "difficulty": "A",
-    "description": {
-      "en": "Heavy blunt/edged weapons",
-      "es": "Heavy blunt/edged weapons"
-    }
-  },
-  {
     "id": "bayonet",
     "name": {
       "en": "Bayonet",
-      "es": "Bayonet"
+      "es": "Bayoneta"
     },
-    "category": "COMBAT SKILLS",
+    "category": "COMBAT",
     "attr": "DX",
     "difficulty": "A",
     "description": {
       "en": "Rifle-mounted blade",
-      "es": "Rifle-mounted blade"
-    }
-  },
-  {
-    "id": "_",
-    "name": {
-      "en": "---",
-      "es": "---"
-    },
-    "category": "COMBAT SKILLS",
-    "attr": "IQ",
-    "difficulty": "A",
-    "description": {
-      "en": "---",
-      "es": "---"
+      "es": "Hoja montada en un rifle"
     }
   },
   {
@@ -165,12 +151,12 @@ export const SKILLS: ExtendedSkillDef[] = [
       "en": "Wrestling",
       "es": "Lucha / Agarre"
     },
-    "category": "COMBAT SKILLS",
+    "category": "COMBAT",
     "attr": "DX",
     "difficulty": "A",
     "description": {
       "en": "Grappling and takedowns",
-      "es": "T\u00e9cnicas de sujeci\u00f3n y agarre"
+      "es": "Agarres, forcejeos y derribos"
     }
   },
   {
@@ -179,40 +165,12 @@ export const SKILLS: ExtendedSkillDef[] = [
       "en": "Throwing",
       "es": "Lanzamiento"
     },
-    "category": "COMBAT SKILLS",
+    "category": "COMBAT",
     "attr": "DX",
     "difficulty": "A",
     "description": {
       "en": "Thrown weapons in general",
-      "es": "Lanzamiento de objetos y armas"
-    }
-  },
-  {
-    "id": "thrown_weapon_knife",
-    "name": {
-      "en": "Thrown Weapon (Knife)",
-      "es": "Thrown Weapon (Knife)"
-    },
-    "category": "COMBAT SKILLS",
-    "attr": "DX",
-    "difficulty": "E",
-    "description": {
-      "en": "Throwing knives specifically",
-      "es": "Throwing knives specifically"
-    }
-  },
-  {
-    "id": "gunner_machine_gun",
-    "name": {
-      "en": "Gunner (Machine Gun)",
-      "es": "Gunner (Machine Gun)"
-    },
-    "category": "COMBAT SKILLS",
-    "attr": "DX",
-    "difficulty": "E",
-    "description": {
-      "en": "Vehicle-mounted machine guns, heavy weapon emplacements",
-      "es": "Vehicle-mounted machine guns, heavy weapon emplacements"
+      "es": "Armas arrojadizas en general"
     }
   },
   {
@@ -221,12 +179,12 @@ export const SKILLS: ExtendedSkillDef[] = [
       "en": "Gunner (Cannon)",
       "es": "Gunner (Cannon)"
     },
-    "category": "COMBAT SKILLS",
+    "category": "COMBAT",
     "attr": "DX",
     "difficulty": "E",
     "description": {
       "en": "Artillery pieces, ship cannons, field guns",
-      "es": "Artillery pieces, ship cannons, field guns"
+      "es": "Piezas de artillería, cañones de barco, cañones de campaña"
     }
   },
   {
@@ -235,12 +193,12 @@ export const SKILLS: ExtendedSkillDef[] = [
       "en": "Shortsword",
       "es": "Espada Corta"
     },
-    "category": "COMBAT SKILLS",
+    "category": "COMBAT",
     "attr": "DX",
     "difficulty": "A",
     "description": {
       "en": "Light one-handed blades; includes sabre, cutlass",
-      "es": "Espadas cortas y machetes"
+      "es": "Hojas ligeras a una mano; incluye sable, alfanje"
     }
   },
   {
@@ -249,12 +207,12 @@ export const SKILLS: ExtendedSkillDef[] = [
       "en": "Broadsword",
       "es": "Espada Ancha"
     },
-    "category": "COMBAT SKILLS",
+    "category": "COMBAT",
     "attr": "DX",
     "difficulty": "A",
     "description": {
       "en": "Heavy one-handed blades; includes longsword",
-      "es": "Espadas de una mano"
+      "es": "Hojas pesadas a una mano; incluye espada larga"
     }
   },
   {
@@ -263,12 +221,12 @@ export const SKILLS: ExtendedSkillDef[] = [
       "en": "Polearm",
       "es": "Arma de Asta"
     },
-    "category": "COMBAT SKILLS",
+    "category": "COMBAT",
     "attr": "DX",
     "difficulty": "A",
     "description": {
       "en": "Long hafted weapons; spears, halberds, pikes",
-      "es": "Lanzas, alabardas y picas"
+      "es": "Armas de asta larga; lanzas, alabardas, picas"
     }
   },
   {
@@ -277,12 +235,12 @@ export const SKILLS: ExtendedSkillDef[] = [
       "en": "Shield",
       "es": "Escudo"
     },
-    "category": "COMBAT SKILLS",
+    "category": "COMBAT",
     "attr": "DX",
     "difficulty": "E",
     "description": {
       "en": "Block and parry with any shield type",
-      "es": "Defensa y golpe con escudo"
+      "es": "Bloqueo y parada con cualquier tipo de escudo"
     }
   },
   {
@@ -291,12 +249,12 @@ export const SKILLS: ExtendedSkillDef[] = [
       "en": "Fast-Talk",
       "es": "Charlataner\u00eda"
     },
-    "category": "SOCIAL SKILLS",
+    "category": "SOCIAL",
     "attr": "IQ",
     "difficulty": "A",
     "description": {
       "en": "Con, deceive, talk your way out",
-      "es": "Enga\u00f1o r\u00e1pido y persuasi\u00f3n verbal"
+      "es": "Engañar, embaucar, usar la labia para salir de problemas"
     }
   },
   {
@@ -305,12 +263,12 @@ export const SKILLS: ExtendedSkillDef[] = [
       "en": "Intimidation",
       "es": "Intimidaci\u00f3n"
     },
-    "category": "SOCIAL SKILLS",
+    "category": "SOCIAL",
     "attr": "Will",
     "difficulty": "A",
     "description": {
       "en": "Threaten and coerce others",
-      "es": "Coacci\u00f3n y presencia amenazante"
+      "es": "Amenazar y coaccionar a otros"
     }
   },
   {
@@ -319,26 +277,26 @@ export const SKILLS: ExtendedSkillDef[] = [
       "en": "Diplomacy",
       "es": "Diplomacia"
     },
-    "category": "SOCIAL SKILLS",
+    "category": "SOCIAL",
     "attr": "IQ",
     "difficulty": "H",
     "description": {
       "en": "Negotiate peacefully; reach compromise",
-      "es": "Negociaci\u00f3n formal y elocuencia"
+      "es": "Negociar pacíficamente; llegar a un acuerdo"
     }
   },
   {
     "id": "public_speaking",
     "name": {
       "en": "Public Speaking",
-      "es": "Public Speaking"
+      "es": "Oratoria"
     },
-    "category": "SOCIAL SKILLS",
+    "category": "SOCIAL",
     "attr": "IQ",
     "difficulty": "A",
     "description": {
       "en": "Address crowds effectively",
-      "es": "Address crowds effectively"
+      "es": "Dirigirse a multitudes de manera efectiva"
     }
   },
   {
@@ -347,91 +305,91 @@ export const SKILLS: ExtendedSkillDef[] = [
       "en": "Acting",
       "es": "Actuaci\u00f3n"
     },
-    "category": "SOCIAL SKILLS",
+    "category": "SOCIAL",
     "attr": "IQ",
     "difficulty": "A",
     "description": {
       "en": "Disguise emotions; theatrical performance",
-      "es": "Disfraz y encarnaci\u00f3n de roles (M\u00e9todo de Actuaci\u00f3n)"
+      "es": "Fingir emociones; actuación teatral"
     }
   },
   {
     "id": "leadership",
     "name": {
       "en": "Leadership",
-      "es": "Leadership"
+      "es": "Liderazgo"
     },
-    "category": "SOCIAL SKILLS",
+    "category": "SOCIAL",
     "attr": "IQ",
     "difficulty": "A",
     "description": {
       "en": "Command and inspire others",
-      "es": "Command and inspire others"
+      "es": "Comandar e inspirar a otros"
     }
   },
   {
     "id": "detect_lies",
     "name": {
       "en": "Detect Lies",
-      "es": "Detect Lies"
+      "es": "Detectar Mentiras"
     },
-    "category": "SOCIAL SKILLS",
+    "category": "SOCIAL",
     "attr": "Per",
     "difficulty": "H",
     "description": {
       "en": "Spot deception and falsehood",
-      "es": "Spot deception and falsehood"
+      "es": "Detectar engaños y falsedades"
     }
   },
   {
     "id": "interrogation",
     "name": {
       "en": "Interrogation",
-      "es": "Interrogation"
+      "es": "Interrogatorio"
     },
-    "category": "SOCIAL SKILLS",
+    "category": "SOCIAL",
     "attr": "IQ",
     "difficulty": "A",
     "description": {
       "en": "Extract information under pressure",
-      "es": "Extract information under pressure"
+      "es": "Extraer información bajo presión"
     }
   },
   {
     "id": "observation",
     "name": {
       "en": "Observation",
-      "es": "Observation"
+      "es": "Observación"
     },
-    "category": "SOCIAL SKILLS",
+    "category": "SOCIAL",
     "attr": "Per",
     "difficulty": "A",
     "description": {
       "en": "Notice and remember details",
-      "es": "Notice and remember details"
+      "es": "Notar y recordar detalles"
     }
   },
   {
     "id": "psychology",
     "name": {
       "en": "Psychology",
-      "es": "Psychology"
+      "es": "Psicología"
     },
-    "category": "SOCIAL SKILLS",
+    "category": "SOCIAL",
     "attr": "IQ",
     "difficulty": "H",
     "description": {
       "en": "Understand and predict people",
-      "es": "Understand and predict people"
+      "es": "Entender y predecir el comportamiento de las personas"
     }
   },
   {
     "id": "savoir_faire",
     "name": {
       "en": "Savoir-Faire",
-      "es": "Savoir-Faire"
+      "es": "Etiqueta"
     },
-    "category": "SOCIAL SKILLS",
+    "category": "SOCIAL",
     "attr": "IQ",
     "difficulty": "E",
     "description": {
@@ -443,28 +401,28 @@ export const SKILLS: ExtendedSkillDef[] = [
     "id": "sex_appeal",
     "name": {
       "en": "Sex Appeal",
-      "es": "Sex Appeal"
+      "es": "Seducción"
     },
-    "category": "SOCIAL SKILLS",
+    "category": "SOCIAL",
     "attr": "HT",
     "difficulty": "A",
     "description": {
       "en": "Attract, seduce, or distract through charisma",
-      "es": "Attract, seduce, or distract through charisma"
+      "es": "Atraer, seducir o distraer a través del carisma o atractivo"
     }
   },
   {
     "id": "panhandling",
     "name": {
       "en": "Panhandling",
-      "es": "Panhandling"
+      "es": "Mendigar"
     },
-    "category": "SOCIAL SKILLS",
+    "category": "SOCIAL",
     "attr": "IQ",
     "difficulty": "E",
     "description": {
       "en": "Beg for money or favours on the street",
-      "es": "Beg for money or favours on the street"
+      "es": "Mendigar dinero o favores en la calle"
     }
   },
   {
@@ -473,68 +431,68 @@ export const SKILLS: ExtendedSkillDef[] = [
       "en": "Disguise",
       "es": "Disfraz"
     },
-    "category": "SOCIAL SKILLS",
+    "category": "SOCIAL",
     "attr": "IQ",
     "difficulty": "A",
     "description": {
       "en": "Change appearance convincingly",
-      "es": "Alteraci\u00f3n f\u00edsica de apariencia"
+      "es": "Cambiar de apariencia de manera convincente"
     }
   },
   {
     "id": "forgery",
     "name": {
       "en": "Forgery",
-      "es": "Forgery"
+      "es": "Falsificación"
     },
-    "category": "SOCIAL SKILLS",
+    "category": "SOCIAL",
     "attr": "IQ",
     "difficulty": "H",
     "description": {
       "en": "Create fake documents",
-      "es": "Create fake documents"
+      "es": "Crear documentos e identificaciones falsas"
     }
   },
   {
     "id": "holdout",
     "name": {
       "en": "Holdout",
-      "es": "Holdout"
+      "es": "Ocultar Objetos"
     },
-    "category": "SOCIAL SKILLS",
+    "category": "SOCIAL",
     "attr": "IQ",
     "difficulty": "A",
     "description": {
       "en": "Conceal objects on your person",
-      "es": "Conceal objects on your person"
+      "es": "Ocultar objetos en tu persona o ropaje"
     }
   },
   {
     "id": "research",
     "name": {
       "en": "Research",
-      "es": "Research"
+      "es": "Investigación / Búsqueda"
     },
-    "category": "KNOWLEDGE SKILLS",
+    "category": "KNOWLEDGE",
     "attr": "IQ",
     "difficulty": "A",
     "description": {
       "en": "Find information in libraries",
-      "es": "Find information in libraries"
+      "es": "Encontrar información en bibliotecas y archivos"
     }
   },
   {
     "id": "writing",
     "name": {
       "en": "Writing",
-      "es": "Writing"
+      "es": "Escritura"
     },
-    "category": "KNOWLEDGE SKILLS",
+    "category": "KNOWLEDGE",
     "attr": "IQ",
     "difficulty": "A",
     "description": {
       "en": "Compose documents, reports",
-      "es": "Compose documents, reports"
+      "es": "Redactar documentos y reportes"
     }
   },
   {
@@ -543,26 +501,26 @@ export const SKILLS: ExtendedSkillDef[] = [
       "en": "History",
       "es": "Historia"
     },
-    "category": "KNOWLEDGE SKILLS",
+    "category": "KNOWLEDGE",
     "attr": "IQ",
     "difficulty": "H",
     "description": {
       "en": "Historical knowledge",
-      "es": "Conocimiento de \u00e9pocas y eventos pasados"
+      "es": "Conocimiento histórico"
     }
   },
   {
     "id": "literature",
     "name": {
       "en": "Literature",
-      "es": "Literature"
+      "es": "Literatura"
     },
-    "category": "KNOWLEDGE SKILLS",
+    "category": "KNOWLEDGE",
     "attr": "IQ",
     "difficulty": "H",
     "description": {
       "en": "Literary and cultural knowledge",
-      "es": "Literary and cultural knowledge"
+      "es": "Conocimiento literario y cultural"
     }
   },
   {
@@ -571,21 +529,21 @@ export const SKILLS: ExtendedSkillDef[] = [
       "en": "Occultism",
       "es": "Ocultismo"
     },
-    "category": "KNOWLEDGE SKILLS",
+    "category": "KNOWLEDGE",
     "attr": "IQ",
     "difficulty": "A",
     "description": {
       "en": "General supernatural lore",
-      "es": "Conocimiento de lo m\u00edstico, s\u00edmbolos y entidades"
+      "es": "Sabiduría sobrenatural general"
     }
   },
   {
     "id": "hidden_lore",
     "name": {
       "en": "Hidden Lore",
-      "es": "Hidden Lore"
+      "es": "Conocimiento Oculto"
     },
-    "category": "KNOWLEDGE SKILLS",
+    "category": "KNOWLEDGE",
     "attr": "IQ",
     "difficulty": "A",
     "description": {
@@ -597,126 +555,98 @@ export const SKILLS: ExtendedSkillDef[] = [
     "id": "thaumatology",
     "name": {
       "en": "Thaumatology",
-      "es": "Thaumatology"
+      "es": "Taumaturgia"
     },
-    "category": "KNOWLEDGE SKILLS",
+    "category": "KNOWLEDGE",
     "attr": "IQ",
     "difficulty": "VH",
     "description": {
       "en": "Deep magic theory",
-      "es": "Deep magic theory"
+      "es": "Teoría mágica profunda"
     }
   },
   {
     "id": "theology",
     "name": {
       "en": "Theology",
-      "es": "Theology"
+      "es": "Teología"
     },
-    "category": "KNOWLEDGE SKILLS",
+    "category": "KNOWLEDGE",
     "attr": "IQ",
     "difficulty": "H",
     "description": {
       "en": "Religious doctrine and practice",
-      "es": "Religious doctrine and practice"
+      "es": "Doctrina y práctica religiosa"
     }
   },
   {
     "id": "religious_ritual",
     "name": {
       "en": "Religious Ritual",
-      "es": "Religious Ritual"
+      "es": "Ritual Religioso"
     },
-    "category": "KNOWLEDGE SKILLS",
+    "category": "KNOWLEDGE",
     "attr": "IQ",
     "difficulty": "H",
     "description": {
       "en": "Conduct religious ceremonies",
-      "es": "Conduct religious ceremonies"
+      "es": "Llevar a cabo ceremonias religiosas"
     }
   },
   {
     "id": "appraisal",
     "name": {
       "en": "Appraisal",
-      "es": "Appraisal"
+      "es": "Tasación"
     },
-    "category": "KNOWLEDGE SKILLS",
+    "category": "KNOWLEDGE",
     "attr": "IQ",
     "difficulty": "A",
     "description": {
       "en": "Value items and artifacts",
-      "es": "Value items and artifacts"
-    }
-  },
-  {
-    "id": "__46",
-    "name": {
-      "en": "---",
-      "es": "---"
-    },
-    "category": "KNOWLEDGE SKILLS",
-    "attr": "IQ",
-    "difficulty": "A",
-    "description": {
-      "en": "---",
-      "es": "---"
+      "es": "Valorar y tasar artículos y artefactos"
     }
   },
   {
     "id": "merchant",
     "name": {
       "en": "Merchant",
-      "es": "Merchant"
+      "es": "Comerciante / Mercader"
     },
-    "category": "KNOWLEDGE SKILLS",
+    "category": "KNOWLEDGE",
     "attr": "IQ",
     "difficulty": "A",
     "description": {
       "en": "Trade, negotiation, market knowledge",
-      "es": "Trade, negotiation, market knowledge"
+      "es": "Comercio, negociación, conocimiento del mercado"
     }
   },
   {
     "id": "criminology",
     "name": {
       "en": "Criminology",
-      "es": "Criminology"
+      "es": "Criminología"
     },
-    "category": "KNOWLEDGE SKILLS",
+    "category": "KNOWLEDGE",
     "attr": "IQ",
     "difficulty": "A",
     "description": {
       "en": "Crime investigation methods",
-      "es": "Crime investigation methods"
-    }
-  },
-  {
-    "id": "explosives_demolition",
-    "name": {
-      "en": "Explosives (Demolition)",
-      "es": "Explosives (Demolition)"
-    },
-    "category": "KNOWLEDGE SKILLS",
-    "attr": "IQ",
-    "difficulty": "A",
-    "description": {
-      "en": "Prepare and set explosives to destroy targets",
-      "es": "Prepare and set explosives to destroy targets"
+      "es": "Métodos de investigación criminal"
     }
   },
   {
     "id": "diagnosis",
     "name": {
       "en": "Diagnosis",
-      "es": "Diagnosis"
+      "es": "Diagnóstico"
     },
-    "category": "KNOWLEDGE SKILLS",
+    "category": "KNOWLEDGE",
     "attr": "IQ",
     "difficulty": "H",
     "description": {
       "en": "Identify ailments and conditions",
-      "es": "Identify ailments and conditions"
+      "es": "Identificar dolencias y condiciones médicas"
     }
   },
   {
@@ -725,12 +655,12 @@ export const SKILLS: ExtendedSkillDef[] = [
       "en": "Physician",
       "es": "Medicina"
     },
-    "category": "KNOWLEDGE SKILLS",
+    "category": "KNOWLEDGE",
     "attr": "IQ",
     "difficulty": "H",
     "description": {
       "en": "Medical treatment and surgery",
-      "es": "Diagn\u00f3stico, tratamiento y f\u00e1rmacos"
+      "es": "Tratamiento médico general y cuidados"
     }
   },
   {
@@ -739,12 +669,12 @@ export const SKILLS: ExtendedSkillDef[] = [
       "en": "Surgery",
       "es": "Cirug\u00eda"
     },
-    "category": "KNOWLEDGE SKILLS",
+    "category": "KNOWLEDGE",
     "attr": "IQ",
     "difficulty": "VH",
     "description": {
       "en": "Invasive medical procedures; requires Physician",
-      "es": "Procedimientos quir\u00fargicos invasivos"
+      "es": "Procedimientos médicos invasivos; requiere la habilidad Médico"
     }
   },
   {
@@ -753,77 +683,49 @@ export const SKILLS: ExtendedSkillDef[] = [
       "en": "Pharmacy",
       "es": "Farmacia / Botica"
     },
-    "category": "KNOWLEDGE SKILLS",
+    "category": "KNOWLEDGE",
     "attr": "IQ",
     "difficulty": "H",
     "description": {
       "en": "Drug and remedy preparation",
-      "es": "Preparaci\u00f3n de pociones, venenos y medicinas"
-    }
-  },
-  {
-    "id": "law_specify",
-    "name": {
-      "en": "Law (specify)",
-      "es": "Law (specify)"
-    },
-    "category": "KNOWLEDGE SKILLS",
-    "attr": "IQ",
-    "difficulty": "H",
-    "description": {
-      "en": "Legal knowledge; specializations include Military, Criminal, Civil",
-      "es": "Legal knowledge; specializations include Military, Criminal, Civil"
-    }
-  },
-  {
-    "id": "connoisseur_specify",
-    "name": {
-      "en": "Connoisseur (specify)",
-      "es": "Connoisseur (specify)"
-    },
-    "category": "KNOWLEDGE SKILLS",
-    "attr": "IQ",
-    "difficulty": "A",
-    "description": {
-      "en": "Expert knowledge of quality/value in a specific field (antiques, art, / wine, etc.)",
-      "es": "Expert knowledge of quality/value in a specific field (antiques, art, / wine, etc.)"
+      "es": "Preparación de medicamentos y remedios"
     }
   },
   {
     "id": "streetwise",
     "name": {
       "en": "Streetwise",
-      "es": "Streetwise"
+      "es": "Bajos Fondos"
     },
-    "category": "KNOWLEDGE SKILLS",
+    "category": "KNOWLEDGE",
     "attr": "IQ",
     "difficulty": "A",
     "description": {
       "en": "Urban underworld knowledge",
-      "es": "Urban underworld knowledge"
+      "es": "Conocimiento del hampa y los bajos fondos"
     }
   },
   {
     "id": "gambling",
     "name": {
       "en": "Gambling",
-      "es": "Gambling"
+      "es": "Juego de Apuestas"
     },
-    "category": "KNOWLEDGE SKILLS",
+    "category": "KNOWLEDGE",
     "attr": "IQ",
     "difficulty": "A",
     "description": {
       "en": "Games of chance",
-      "es": "Games of chance"
+      "es": "Juegos de azar y apuestas"
     }
   },
   {
     "id": "area_knowledge",
     "name": {
       "en": "Area Knowledge",
-      "es": "Area Knowledge"
+      "es": "Conocimiento del Área"
     },
-    "category": "KNOWLEDGE SKILLS",
+    "category": "KNOWLEDGE",
     "attr": "IQ",
     "difficulty": "E",
     "description": {
@@ -835,9 +737,9 @@ export const SKILLS: ExtendedSkillDef[] = [
     "id": "current_affairs",
     "name": {
       "en": "Current Affairs",
-      "es": "Current Affairs"
+      "es": "Actualidad"
     },
-    "category": "KNOWLEDGE SKILLS",
+    "category": "KNOWLEDGE",
     "attr": "IQ",
     "difficulty": "E",
     "description": {
@@ -851,12 +753,12 @@ export const SKILLS: ExtendedSkillDef[] = [
       "en": "Cryptography",
       "es": "Criptograf\u00eda"
     },
-    "category": "KNOWLEDGE SKILLS",
+    "category": "KNOWLEDGE",
     "attr": "IQ",
     "difficulty": "H",
     "description": {
       "en": "Create and break codes, ciphers, and hidden messages",
-      "es": "Descifrado de c\u00f3digos y escrituras secretas"
+      "es": "Crear y descifrar códigos, cifrados y mensajes ocultos"
     }
   },
   {
@@ -865,12 +767,12 @@ export const SKILLS: ExtendedSkillDef[] = [
       "en": "Alchemy",
       "es": "Alquimia"
     },
-    "category": "KNOWLEDGE SKILLS",
+    "category": "KNOWLEDGE",
     "attr": "IQ",
     "difficulty": "VH",
     "description": {
-      "en": "Transform substances; prepare elixirs, alchemical potions, and / magical compounds",
-      "es": "Transmutaci\u00f3n de materiales y esencias"
+      "en": "Transform substances; prepare elixirs, alchemical potions",
+      "es": "Transformar sustancias; preparar elixires y pociones alquímicas"
     }
   },
   {
@@ -879,12 +781,12 @@ export const SKILLS: ExtendedSkillDef[] = [
       "en": "Ritualistic Magic",
       "es": "Magia Ritual"
     },
-    "category": "KNOWLEDGE SKILLS",
+    "category": "KNOWLEDGE",
     "attr": "IQ",
     "difficulty": "VH",
     "description": {
-      "en": "Perform supernatural rituals: divination, summoning, binding,",
-      "es": "Confecci\u00f3n y ejecuci\u00f3n de rituales"
+      "en": "Perform supernatural rituals: divination, summoning, binding, enchanting",
+      "es": "Realizar rituales sobrenaturales: adivinación, invocación, atadura, encantamiento"
     }
   },
   {
@@ -893,12 +795,12 @@ export const SKILLS: ExtendedSkillDef[] = [
       "en": "Pickpocket",
       "es": "Hurto"
     },
-    "category": "THIEF SKILLS",
+    "category": "THIEF",
     "attr": "DX",
     "difficulty": "H",
     "description": {
       "en": "Steal from people's person",
-      "es": "Robo sigiloso y prestidigitaci\u00f3n"
+      "es": "Robar de los bolsillos o persona"
     }
   },
   {
@@ -907,12 +809,12 @@ export const SKILLS: ExtendedSkillDef[] = [
       "en": "Lockpicking",
       "es": "Ganzuar / Cerrajer\u00eda"
     },
-    "category": "THIEF SKILLS",
+    "category": "THIEF",
     "attr": "IQ",
     "difficulty": "A",
     "description": {
       "en": "Open locks without key",
-      "es": "Apertura de cerraduras y mecanismos"
+      "es": "Open locks without key"
     }
   },
   {
@@ -921,12 +823,12 @@ export const SKILLS: ExtendedSkillDef[] = [
       "en": "Stealth",
       "es": "Sigilo"
     },
-    "category": "THIEF SKILLS",
+    "category": "THIEF",
     "attr": "DX",
     "difficulty": "A",
     "description": {
       "en": "Move silently, avoid detection",
-      "es": "Movimiento silencioso e infiltraci\u00f3n"
+      "es": "Moverse silenciosamente, evitar la detección"
     }
   },
   {
@@ -935,26 +837,26 @@ export const SKILLS: ExtendedSkillDef[] = [
       "en": "Shadowing",
       "es": "Seguimiento"
     },
-    "category": "THIEF SKILLS",
+    "category": "THIEF",
     "attr": "IQ",
     "difficulty": "A",
     "description": {
       "en": "Follow without being noticed",
-      "es": "Rastreo urbano de objetivos sin ser visto"
+      "es": "Seguir a alguien sin ser notado"
     }
   },
   {
     "id": "traps",
     "name": {
       "en": "Traps",
-      "es": "Traps"
+      "es": "Trampas"
     },
-    "category": "THIEF SKILLS",
+    "category": "THIEF",
     "attr": "IQ",
     "difficulty": "A",
     "description": {
       "en": "Detect, disarm, set traps",
-      "es": "Detect, disarm, set traps"
+      "es": "Detectar, desarmar y colocar trampas"
     }
   },
   {
@@ -963,26 +865,26 @@ export const SKILLS: ExtendedSkillDef[] = [
       "en": "Climbing",
       "es": "Escalada"
     },
-    "category": "PHYSICAL SKILLS",
+    "category": "PHYSICAL",
     "attr": "DX",
     "difficulty": "A",
     "description": {
       "en": "Scale surfaces and walls",
-      "es": "Ascenso por muros y terrenos escarpados"
+      "es": "Escalar superficies y paredes"
     }
   },
   {
     "id": "knot_tying",
     "name": {
       "en": "Knot-Tying",
-      "es": "Knot-Tying"
+      "es": "Atar Nudos"
     },
-    "category": "PHYSICAL SKILLS",
+    "category": "PHYSICAL",
     "attr": "DX",
     "difficulty": "E",
     "description": {
       "en": "Bind, secure, and rig ropes; escape bonds at -2",
-      "es": "Bind, secure, and rig ropes; escape bonds at -2"
+      "es": "Atar, asegurar y aparejar cuerdas; escapar de ataduras a -2"
     }
   },
   {
@@ -991,26 +893,26 @@ export const SKILLS: ExtendedSkillDef[] = [
       "en": "Acrobatics",
       "es": "Acrobacias"
     },
-    "category": "PHYSICAL SKILLS",
+    "category": "PHYSICAL",
     "attr": "DX",
     "difficulty": "H",
     "description": {
       "en": "Tumbling, balance, gymnastics",
-      "es": "Maniobras gimn\u00e1sticas y equilibrio"
+      "es": "Acrobacias, equilibrio, gimnasia"
     }
   },
   {
     "id": "aerobatics",
     "name": {
       "en": "Aerobatics",
-      "es": "Aerobatics"
+      "es": "Acrobacia Aérea"
     },
-    "category": "PHYSICAL SKILLS",
+    "category": "PHYSICAL",
     "attr": "DX",
     "difficulty": "H",
     "description": {
       "en": "Aerial maneuvers, stunts, and diving",
-      "es": "Aerial maneuvers, stunts, and diving"
+      "es": "Maniobras aéreas, acrobacias y buceo en el aire"
     }
   },
   {
@@ -1019,12 +921,12 @@ export const SKILLS: ExtendedSkillDef[] = [
       "en": "Running",
       "es": "Carrera"
     },
-    "category": "PHYSICAL SKILLS",
+    "category": "PHYSICAL",
     "attr": "HT",
     "difficulty": "A",
     "description": {
       "en": "Sprint and long-distance endurance",
-      "es": "Velocidad y resistencia al correr"
+      "es": "Sprint y resistencia en larga distancia"
     }
   },
   {
@@ -1033,54 +935,54 @@ export const SKILLS: ExtendedSkillDef[] = [
       "en": "Swimming",
       "es": "Nataci\u00f3n"
     },
-    "category": "PHYSICAL SKILLS",
+    "category": "PHYSICAL",
     "attr": "HT",
     "difficulty": "E",
     "description": {
       "en": "Move through water",
-      "es": "Navegaci\u00f3n acu\u00e1tica"
+      "es": "Nadar, moverse a través del agua"
     }
   },
   {
     "id": "jumping",
     "name": {
       "en": "Jumping",
-      "es": "Jumping"
+      "es": "Saltar"
     },
-    "category": "PHYSICAL SKILLS",
+    "category": "PHYSICAL",
     "attr": "DX",
     "difficulty": "E",
     "description": {
       "en": "Leap distances",
-      "es": "Leap distances"
+      "es": "Saltar largas distancias"
     }
   },
   {
     "id": "lifting",
     "name": {
       "en": "Lifting",
-      "es": "Lifting"
+      "es": "Levantamiento"
     },
-    "category": "PHYSICAL SKILLS",
+    "category": "PHYSICAL",
     "attr": "HT",
     "difficulty": "A",
     "description": {
       "en": "Hoist heavy loads",
-      "es": "Hoist heavy loads"
+      "es": "Levantar cargas pesadas"
     }
   },
   {
     "id": "hiking",
     "name": {
       "en": "Hiking",
-      "es": "Hiking"
+      "es": "Excursionismo / Marcha"
     },
-    "category": "PHYSICAL SKILLS",
+    "category": "PHYSICAL",
     "attr": "HT",
     "difficulty": "A",
     "description": {
-      "en": "Long-distance foot travel; pace and endurance overland",
-      "es": "Long-distance foot travel; pace and endurance overland"
+      "en": "Long-distance foot travel",
+      "es": "Viajar largas distancias a pie"
     }
   },
   {
@@ -1089,21 +991,21 @@ export const SKILLS: ExtendedSkillDef[] = [
       "en": "First Aid",
       "es": "Primeros Auxilios"
     },
-    "category": "PHYSICAL SKILLS",
+    "category": "PHYSICAL",
     "attr": "IQ",
     "difficulty": "E",
     "description": {
       "en": "Emergency medical care",
-      "es": "Tratamiento de emergencia y estabilizaci\u00f3n"
+      "es": "Atención médica de emergencia, primeros auxilios"
     }
   },
   {
     "id": "mechanic",
     "name": {
       "en": "Mechanic",
-      "es": "Mechanic"
+      "es": "Mecánica"
     },
-    "category": "CRAFT & TECHNICAL",
+    "category": "CRAFT",
     "attr": "IQ",
     "difficulty": "A",
     "description": {
@@ -1112,73 +1014,45 @@ export const SKILLS: ExtendedSkillDef[] = [
     }
   },
   {
-    "id": "__79",
-    "name": {
-      "en": "---",
-      "es": "---"
-    },
-    "category": "CRAFT & TECHNICAL",
-    "attr": "IQ",
-    "difficulty": "A",
-    "description": {
-      "en": "---",
-      "es": "---"
-    }
-  },
-  {
     "id": "engineering",
     "name": {
       "en": "Engineering",
-      "es": "Engineering"
+      "es": "Ingeniería"
     },
-    "category": "CRAFT & TECHNICAL",
+    "category": "CRAFT",
     "attr": "IQ",
     "difficulty": "H",
     "description": {
       "en": "Design and analyse mechanical systems, structures, and blueprints",
-      "es": "Design and analyse mechanical systems, structures, and blueprints"
-    }
-  },
-  {
-    "id": "armoury_any",
-    "name": {
-      "en": "Armoury (any)",
-      "es": "Armoury (any)"
-    },
-    "category": "CRAFT & TECHNICAL",
-    "attr": "IQ",
-    "difficulty": "A",
-    "description": {
-      "en": "Repair and maintain weapons",
-      "es": "Repair and maintain weapons"
+      "es": "Diseñar y analizar sistemas mecánicos, estructuras y planos"
     }
   },
   {
     "id": "electrician",
     "name": {
       "en": "Electrician",
-      "es": "Electrician"
+      "es": "Electricista"
     },
-    "category": "CRAFT & TECHNICAL",
+    "category": "CRAFT",
     "attr": "IQ",
     "difficulty": "A",
     "description": {
       "en": "Work with electrical systems",
-      "es": "Work with electrical systems"
+      "es": "Trabajar con sistemas eléctricos"
     }
   },
   {
     "id": "inventor",
     "name": {
       "en": "Inventor!",
-      "es": "Inventor!"
+      "es": "¡Inventor!"
     },
-    "category": "CRAFT & TECHNICAL",
+    "category": "CRAFT",
     "attr": "IQ",
     "difficulty": "WC",
     "description": {
-      "en": "Wildcard skill covering all invention, engineering, and mechanical / tasks",
-      "es": "Wildcard skill covering all invention, engineering, and mechanical / tasks"
+      "en": "Wildcard skill covering all invention, engineering, and mechanical tasks",
+      "es": "Habilidad comodín que cubre todas las tareas de invención, ingeniería y mecánica"
     }
   },
   {
@@ -1187,26 +1061,26 @@ export const SKILLS: ExtendedSkillDef[] = [
       "en": "Spiritual Intuition",
       "es": "Intuici\u00f3n Espiritual"
     },
-    "category": "SPIRITUAL SKILLS",
+    "category": "SPIRITUAL",
     "attr": "SPI",
     "difficulty": "H",
     "description": {
-      "en": "Sense the flow of fate and changes in destiny; detect threats at a / glance",
-      "es": "Sensibilidad y percepci\u00f3n del mundo espiritual"
+      "en": "Sense the flow of fate and changes in destiny; detect threats at a glance",
+      "es": "Sentir el flujo del destino y los cambios; detectar amenazas a simple vista"
     }
   },
   {
     "id": "spiritual_perception",
     "name": {
       "en": "Spiritual Perception",
-      "es": "Spiritual Perception"
+      "es": "Percepción Espiritual"
     },
-    "category": "SPIRITUAL SKILLS",
+    "category": "SPIRITUAL",
     "attr": "SPI",
     "difficulty": "A",
     "description": {
-      "en": "Passive innate sense: see ghosts, auras, and traces of magic. Peers / into the Astral and Spiritual Bodies of beings.",
-      "es": "Passive innate sense: see ghosts, auras, and traces of magic. Peers / into the Astral and Spiritual Bodies of beings."
+      "en": "Passive innate sense: see ghosts, auras, traces of magic; peers into Astral and Spiritual Bodies",
+      "es": "Sentido innato pasivo: ver fantasmas, auras, rastros de magia; vislumbra Cuerpos Astrales y Espirituales"
     }
   },
   {
@@ -1215,12 +1089,12 @@ export const SKILLS: ExtendedSkillDef[] = [
       "en": "Divination Arts",
       "es": "Artes de Adivinaci\u00f3n"
     },
-    "category": "SPIRITUAL SKILLS",
+    "category": "SPIRITUAL",
     "attr": "IQ",
     "difficulty": "H",
     "description": {
-      "en": "Active analytical divination: pendulum, tarot, scrying, dream / interpretation. Uses tools to extract precise information from the / Spirit Realm. SPI augments the roll (1 SPI = +1).",
-      "es": "Interpretaci\u00f3n de presagios, p\u00e9ndulo, tarot y sue\u00f1os"
+      "en": "Active analytical divination: pendulum, tarot, scrying, dream interpretation; SPI augments roll",
+      "es": "Adivinación analítica activa: péndulo, tarot, adivinación, interpretación de sueños; SPI aumenta la tirada"
     }
   },
   {
@@ -1229,40 +1103,40 @@ export const SKILLS: ExtendedSkillDef[] = [
       "en": "Survival",
       "es": "Supervivencia"
     },
-    "category": "SURVIVAL & OTHER",
+    "category": "SURVIVAL",
     "attr": "Per",
     "difficulty": "A",
     "description": {
       "en": "Live off land (specify terrain)",
-      "es": "Subsistencia en entornos hostiles"
+      "es": "Live off land (specify terrain)"
     }
   },
   {
     "id": "urban_survival",
     "name": {
       "en": "Urban Survival",
-      "es": "Urban Survival"
+      "es": "Supervivencia Urbana"
     },
-    "category": "SURVIVAL & OTHER",
+    "category": "SURVIVAL",
     "attr": "Per",
     "difficulty": "A",
     "description": {
       "en": "Survive in urban environments",
-      "es": "Survive in urban environments"
+      "es": "Sobrevivir en entornos urbanos y de ciudad"
     }
   },
   {
     "id": "scrounging",
     "name": {
       "en": "Scrounging",
-      "es": "Scrounging"
+      "es": "Rebuscar / Hurgar"
     },
-    "category": "SURVIVAL & OTHER",
+    "category": "SURVIVAL",
     "attr": "Per",
     "difficulty": "E",
     "description": {
       "en": "Find useful items in unlikely places",
-      "es": "Find useful items in unlikely places"
+      "es": "Encontrar objetos útiles en lugares improbables (hurgar)"
     }
   },
   {
@@ -1271,12 +1145,12 @@ export const SKILLS: ExtendedSkillDef[] = [
       "en": "Navigation",
       "es": "Navegaci\u00f3n"
     },
-    "category": "SURVIVAL & OTHER",
+    "category": "SURVIVAL",
     "attr": "IQ",
     "difficulty": "A",
     "description": {
       "en": "Find your way; chart courses",
-      "es": "Orientaci\u00f3n mar\u00edtima y cartas de navegaci\u00f3n"
+      "es": "Encontrar el camino; trazar rutas de navegación"
     }
   },
   {
@@ -1285,12 +1159,12 @@ export const SKILLS: ExtendedSkillDef[] = [
       "en": "Tracking",
       "es": "Rastreo"
     },
-    "category": "SURVIVAL & OTHER",
+    "category": "SURVIVAL",
     "attr": "Per",
     "difficulty": "A",
     "description": {
       "en": "Follow trails and quarry",
-      "es": "Seguimiento de huellas en exteriores"
+      "es": "Seguir rastros y rastrear presas"
     }
   },
   {
@@ -1299,26 +1173,26 @@ export const SKILLS: ExtendedSkillDef[] = [
       "en": "Seamanship",
       "es": "Mariner\u00eda"
     },
-    "category": "SURVIVAL & OTHER",
+    "category": "SURVIVAL",
     "attr": "IQ",
     "difficulty": "E",
     "description": {
       "en": "Work aboard ships",
-      "es": "Manejo de nav\u00edos y aparejos"
+      "es": "Trabajar a bordo de barcos"
     }
   },
   {
     "id": "camouflage",
     "name": {
       "en": "Camouflage",
-      "es": "Camouflage"
+      "es": "Camuflaje"
     },
-    "category": "SURVIVAL & OTHER",
+    "category": "SURVIVAL",
     "attr": "IQ",
     "difficulty": "E",
     "description": {
       "en": "Hide yourself or objects",
-      "es": "Hide yourself or objects"
+      "es": "Ocultarse a sí mismo o esconder objetos"
     }
   },
   {
@@ -1327,96 +1201,82 @@ export const SKILLS: ExtendedSkillDef[] = [
       "en": "Tactics",
       "es": "T\u00e1cticas"
     },
-    "category": "SURVIVAL & OTHER",
+    "category": "SURVIVAL",
     "attr": "IQ",
     "difficulty": "H",
     "description": {
       "en": "Military and combat planning",
-      "es": "Estrategia y movimiento en combate"
+      "es": "Planificación táctica militar y de combate"
     }
   },
   {
     "id": "fortune_telling",
     "name": {
       "en": "Fortune Telling",
-      "es": "Fortune Telling"
+      "es": "Adivinación (Mundana)"
     },
-    "category": "SURVIVAL & OTHER",
+    "category": "SURVIVAL",
     "attr": "IQ",
     "difficulty": "A",
     "description": {
       "en": "Read cards, palms; mundane methods",
-      "es": "Read cards, palms; mundane methods"
+      "es": "Leer cartas, palmas; métodos mundanos de adivinación de ferias"
     }
   },
   {
     "id": "astrology",
     "name": {
       "en": "Astrology",
-      "es": "Astrology"
+      "es": "Astrología"
     },
-    "category": "SURVIVAL & OTHER",
+    "category": "SURVIVAL",
     "attr": "IQ",
     "difficulty": "H",
     "description": {
-      "en": "Interpret celestial patterns for divination, navigation, and / fate-reading",
-      "es": "Interpret celestial patterns for divination, navigation, and / fate-reading"
+      "en": "Interpret celestial patterns for divination, navigation, and fate-reading",
+      "es": "Interpretar patrones celestiales para adivinación, navegación y lectura del destino"
     }
   },
   {
     "id": "cogitation",
     "name": {
       "en": "Cogitation",
-      "es": "Cogitation"
+      "es": "Cogitación"
     },
-    "category": "SURVIVAL & OTHER",
+    "category": "SURVIVAL",
     "attr": "Will",
     "difficulty": "H",
     "description": {
-      "en": "A focused mental state that allows Beyonders to stabilise their / spirituality, resist mental interference, and prepare for divination or / spirit-related abilities. Replaces Meditation for Beyonder purposes.",
-      "es": "A focused mental state that allows Beyonders to stabilise their / spirituality, resist mental interference, and prepare for divination or / spirit-related abilities. Replaces Meditation for Beyonder purposes."
+      "en": "Focused mental state to stabilise spirituality, resist mental interference, prepare for divination",
+      "es": "Estado mental enfocado para estabilizar la espiritualidad, resistir la interferencia y prepararse para adivinar"
     }
   },
   {
     "id": "carousing",
     "name": {
       "en": "Carousing",
-      "es": "Carousing"
+      "es": "Juerga / Socializar"
     },
-    "category": "SURVIVAL & OTHER",
+    "category": "SURVIVAL",
     "attr": "HT",
     "difficulty": "E",
     "description": {
       "en": "Drink and socialize effectively",
-      "es": "Drink and socialize effectively"
+      "es": "Beber y socializar de manera efectiva (Juerga)"
     }
   },
   {
     "id": "weather_sense",
     "name": {
       "en": "Weather Sense",
-      "es": "Weather Sense"
+      "es": "Sentido del Clima"
     },
-    "category": "SURVIVAL & OTHER",
+    "category": "SURVIVAL",
     "attr": "IQ",
     "difficulty": "A",
     "description": {
       "en": "Predict weather from natural observation",
-      "es": "Predict weather from natural observation"
-    }
-  },
-  {
-    "id": "boating_sailboat",
-    "name": {
-      "en": "Boating (Sailboat)",
-      "es": "Boating (Sailboat)"
-    },
-    "category": "SURVIVAL & OTHER",
-    "attr": "DX",
-    "difficulty": "A",
-    "description": {
-      "en": "Sail and maneuver sailing vessels",
-      "es": "Sail and maneuver sailing vessels"
+      "es": "Predecir el clima a partir de la observación natural"
     }
   },
   {
@@ -1425,68 +1285,54 @@ export const SKILLS: ExtendedSkillDef[] = [
       "en": "Boating (Unpowered)",
       "es": "Boating (Unpowered)"
     },
-    "category": "SURVIVAL & OTHER",
+    "category": "SURVIVAL",
     "attr": "DX",
     "difficulty": "A",
     "description": {
       "en": "Row and handle small unpowered boats",
-      "es": "Row and handle small unpowered boats"
-    }
-  },
-  {
-    "id": "_investigation__dete",
-    "name": {
-      "en": "\u2014 INVESTIGATION & DETE",
-      "es": "\u2014 INVESTIGATION & DETE"
-    },
-    "category": "SURVIVAL & OTHER",
-    "attr": "IQ",
-    "difficulty": "A",
-    "description": {
-      "en": "CTION",
-      "es": "CTION"
+      "es": "Remar y manejar pequeñas embarcaciones sin motor"
     }
   },
   {
     "id": "body_language",
     "name": {
       "en": "Body Language",
-      "es": "Body Language"
+      "es": "Lenguaje Corporal"
     },
-    "category": "SURVIVAL & OTHER",
+    "category": "INVESTIGATION",
     "attr": "Per",
     "difficulty": "A",
     "description": {
       "en": "Read physical cues; posture, expression, tells",
-      "es": "Read physical cues; posture, expression, tells"
+      "es": "Leer señales físicas; postura, expresión, tics verbales"
     }
   },
   {
     "id": "forensics",
     "name": {
       "en": "Forensics",
-      "es": "Forensics"
+      "es": "Forense"
     },
-    "category": "SURVIVAL & OTHER",
+    "category": "INVESTIGATION",
     "attr": "IQ",
     "difficulty": "H",
     "description": {
       "en": "Scientific crime scene investigation",
-      "es": "Scientific crime scene investigation"
+      "es": "Investigación científica de la escena del crimen"
     }
   },
   {
     "id": "intelligence_analysis",
     "name": {
       "en": "Intelligence Analysis",
-      "es": "Intelligence Analysis"
+      "es": "Análisis de Inteligencia"
     },
-    "category": "SURVIVAL & OTHER",
+    "category": "INVESTIGATION",
     "attr": "IQ",
     "difficulty": "H",
     "description": {
       "en": "Evaluate and interpret gathered information",
-      "es": "Evaluate and interpret gathered information"
+      "es": "Evaluar e interpretar la información de inteligencia reunida"
     }
   },
   {
@@ -1495,91 +1341,77 @@ export const SKILLS: ExtendedSkillDef[] = [
       "en": "Search",
       "es": "B\u00fasqueda"
     },
-    "category": "SURVIVAL & OTHER",
+    "category": "INVESTIGATION",
     "attr": "Per",
     "difficulty": "A",
     "description": {
       "en": "Systematically locate hidden objects or people",
-      "es": "Inspecci\u00f3n minuciosa de \u00e1reas y personas"
+      "es": "Localizar sistemáticamente objetos o personas ocultas"
     }
   },
   {
     "id": "lip_reading",
     "name": {
       "en": "Lip Reading",
-      "es": "Lip Reading"
+      "es": "Leer los Labios"
     },
-    "category": "SURVIVAL & OTHER",
+    "category": "INVESTIGATION",
     "attr": "Per",
     "difficulty": "A",
     "description": {
       "en": "Understand speech without hearing it",
-      "es": "Understand speech without hearing it"
+      "es": "Entender el habla sin escucharla (Leer los labios)"
     }
   },
   {
     "id": "cartography",
     "name": {
       "en": "Cartography",
-      "es": "Cartography"
+      "es": "Cartografía"
     },
-    "category": "SURVIVAL & OTHER",
+    "category": "INVESTIGATION",
     "attr": "IQ",
     "difficulty": "A",
     "description": {
       "en": "Read, draw, and interpret maps",
-      "es": "Read, draw, and interpret maps"
-    }
-  },
-  {
-    "id": "__109",
-    "name": {
-      "en": "---",
-      "es": "---"
-    },
-    "category": "SURVIVAL & OTHER",
-    "attr": "IQ",
-    "difficulty": "A",
-    "description": {
-      "en": "---",
-      "es": "---"
+      "es": "Leer, dibujar e interpretar mapas cartográficos"
     }
   },
   {
     "id": "performance",
     "name": {
       "en": "Performance",
-      "es": "Performance"
+      "es": "Actuación"
     },
-    "category": "PERFORMANCE & ARTS",
+    "category": "PERFORMANCE",
     "attr": "IQ",
     "difficulty": "A",
     "description": {
       "en": "General stage and platform performance",
-      "es": "General stage and platform performance"
+      "es": "Actuación general en escenario y plataforma"
     }
   },
   {
     "id": "singing",
     "name": {
       "en": "Singing",
-      "es": "Singing"
+      "es": "Canto"
     },
-    "category": "PERFORMANCE & ARTS",
+    "category": "PERFORMANCE",
     "attr": "HT",
     "difficulty": "E",
     "description": {
       "en": "Vocal performance; also used by Bards for Beyonder abilities",
-      "es": "Vocal performance; also used by Bards for Beyonder abilities"
+      "es": "Actuación vocal; también utilizada por Bardos para habilidades de Beyonder"
     }
   },
   {
     "id": "musical_instrument",
     "name": {
       "en": "Musical Instrument",
-      "es": "Musical Instrument"
+      "es": "Instrumento Musical"
     },
-    "category": "PERFORMANCE & ARTS",
+    "category": "PERFORMANCE",
     "attr": "IQ",
     "difficulty": "H",
     "description": {
@@ -1591,14 +1423,14 @@ export const SKILLS: ExtendedSkillDef[] = [
     "id": "dancing",
     "name": {
       "en": "Dancing",
-      "es": "Dancing"
+      "es": "Danza / Baile"
     },
-    "category": "PERFORMANCE & ARTS",
+    "category": "PERFORMANCE",
     "attr": "DX",
     "difficulty": "A",
     "description": {
       "en": "Formal and social dance",
-      "es": "Formal and social dance"
+      "es": "Baile formal y social"
     }
   },
   {
@@ -1607,12 +1439,12 @@ export const SKILLS: ExtendedSkillDef[] = [
       "en": "Artist (Drawing)",
       "es": "Artist (Drawing)"
     },
-    "category": "PERFORMANCE & ARTS",
+    "category": "PERFORMANCE",
     "attr": "IQ",
     "difficulty": "H",
     "description": {
       "en": "Illustration and portraiture",
-      "es": "Illustration and portraiture"
+      "es": "Ilustración y retratos (dibujo)"
     }
   },
   {
@@ -1621,68 +1453,68 @@ export const SKILLS: ExtendedSkillDef[] = [
       "en": "Artist (Painting)",
       "es": "Artist (Painting)"
     },
-    "category": "PERFORMANCE & ARTS",
+    "category": "PERFORMANCE",
     "attr": "IQ",
     "difficulty": "H",
     "description": {
       "en": "Painted works on canvas or paper",
-      "es": "Painted works on canvas or paper"
+      "es": "Obras pintadas en lienzo o papel"
     }
   },
   {
     "id": "ventriloquism",
     "name": {
       "en": "Ventriloquism",
-      "es": "Ventriloquism"
+      "es": "Ventriloquia"
     },
-    "category": "PERFORMANCE & ARTS",
+    "category": "PERFORMANCE",
     "attr": "IQ",
     "difficulty": "H",
     "description": {
       "en": "Project voice to deceive listeners",
-      "es": "Project voice to deceive listeners"
+      "es": "Proyectar la voz para engañar a los oyentes"
     }
   },
   {
     "id": "poetry",
     "name": {
       "en": "Poetry",
-      "es": "Poetry"
+      "es": "Poesía"
     },
-    "category": "PERFORMANCE & ARTS",
+    "category": "PERFORMANCE",
     "attr": "IQ",
     "difficulty": "A",
     "description": {
       "en": "Write verse; also aids public speaking",
-      "es": "Write verse; also aids public speaking"
+      "es": "Escribir versos poéticos; también ayuda en la Oratoria"
     }
   },
   {
     "id": "accounting",
     "name": {
       "en": "Accounting",
-      "es": "Accounting"
+      "es": "Contabilidad"
     },
     "category": "ACADEMIC",
     "attr": "IQ",
     "difficulty": "H",
     "description": {
       "en": "Financial records and business maths",
-      "es": "Financial records and business maths"
+      "es": "Registros financieros y matemáticas comerciales"
     }
   },
   {
     "id": "administration",
     "name": {
       "en": "Administration",
-      "es": "Administration"
+      "es": "Administración"
     },
     "category": "ACADEMIC",
     "attr": "IQ",
     "difficulty": "A",
     "description": {
       "en": "Bureaucratic management and procedure",
-      "es": "Bureaucratic management and procedure"
+      "es": "Gestión y procedimientos burocráticos"
     }
   },
   {
@@ -1696,21 +1528,21 @@ export const SKILLS: ExtendedSkillDef[] = [
     "difficulty": "H",
     "description": {
       "en": "Markets, trade, and financial systems",
-      "es": "Comercio, mercados y contabilidad"
+      "es": "Mercados, comercio y sistemas financieros"
     }
   },
   {
     "id": "philosophy",
     "name": {
       "en": "Philosophy",
-      "es": "Philosophy"
+      "es": "Filosofía"
     },
     "category": "ACADEMIC",
     "attr": "IQ",
     "difficulty": "H",
     "description": {
       "en": "Formal logic and ethical reasoning",
-      "es": "Formal logic and ethical reasoning"
+      "es": "Lógica formal y razonamiento ético"
     }
   },
   {
@@ -1724,21 +1556,21 @@ export const SKILLS: ExtendedSkillDef[] = [
     "difficulty": "H",
     "description": {
       "en": "Study of language structure; accelerates language learning",
-      "es": "Comprensi\u00f3n de idiomas arcaicos como Hermes y Jotun"
+      "es": "Estudio de la estructura del lenguaje; acelera el aprendizaje de idiomas"
     }
   },
   {
     "id": "anthropology",
     "name": {
       "en": "Anthropology",
-      "es": "Anthropology"
+      "es": "Antropología"
     },
     "category": "ACADEMIC",
     "attr": "IQ",
     "difficulty": "H",
     "description": {
       "en": "Cultures, customs, and social structures",
-      "es": "Cultures, customs, and social structures"
+      "es": "Culturas, costumbres y estructuras sociales"
     }
   },
   {
@@ -1752,161 +1584,147 @@ export const SKILLS: ExtendedSkillDef[] = [
     "difficulty": "H",
     "description": {
       "en": "Excavation and analysis of ancient sites",
-      "es": "Estudio de ruinas y civilizaciones antiguas"
+      "es": "Excavación y análisis de sitios antiguos"
     }
   },
   {
     "id": "sociology",
     "name": {
       "en": "Sociology",
-      "es": "Sociology"
+      "es": "Sociología"
     },
     "category": "ACADEMIC",
     "attr": "IQ",
     "difficulty": "H",
     "description": {
       "en": "Broad study of human society and groups",
-      "es": "Broad study of human society and groups"
+      "es": "Estudio amplio de la sociedad y grupos humanos"
     }
   },
   {
     "id": "astronomy",
     "name": {
       "en": "Astronomy",
-      "es": "Astronomy"
+      "es": "Astronomía"
     },
     "category": "ACADEMIC",
     "attr": "IQ",
     "difficulty": "H",
     "description": {
       "en": "Celestial bodies and their movements",
-      "es": "Celestial bodies and their movements"
-    }
-  },
-  {
-    "id": "mathematics_applied",
-    "name": {
-      "en": "Mathematics (Applied)",
-      "es": "Mathematics (Applied)"
-    },
-    "category": "ACADEMIC",
-    "attr": "IQ",
-    "difficulty": "H",
-    "description": {
-      "en": "Practical maths for engineering and science",
-      "es": "Practical maths for engineering and science"
+      "es": "Cuerpos celestiales y sus movimientos"
     }
   },
   {
     "id": "chemistry",
     "name": {
       "en": "Chemistry",
-      "es": "Chemistry"
+      "es": "Química"
     },
     "category": "ACADEMIC",
     "attr": "IQ",
     "difficulty": "H",
     "description": {
       "en": "Compounds, reactions, and substances",
-      "es": "Compounds, reactions, and substances"
+      "es": "Compuestos, reacciones y sustancias químicas"
     }
   },
   {
     "id": "physics",
     "name": {
       "en": "Physics",
-      "es": "Physics"
+      "es": "Física"
     },
     "category": "ACADEMIC",
     "attr": "IQ",
     "difficulty": "VH",
     "description": {
       "en": "Natural laws governing matter and energy; requires Mathematics",
-      "es": "Natural laws governing matter and energy; requires Mathematics"
+      "es": "Leyes naturales que rigen la materia y energía; requiere Matemáticas"
     }
   },
   {
     "id": "teaching",
     "name": {
       "en": "Teaching",
-      "es": "Teaching"
+      "es": "Enseñanza"
     },
     "category": "ACADEMIC",
     "attr": "IQ",
     "difficulty": "A",
     "description": {
       "en": "Instruct and educate others effectively",
-      "es": "Instruct and educate others effectively"
+      "es": "Instruir y educar a otros de manera efectiva"
     }
   },
   {
     "id": "speed_reading",
     "name": {
       "en": "Speed-Reading",
-      "es": "Speed-Reading"
+      "es": "Lectura Rápida"
     },
     "category": "ACADEMIC",
     "attr": "IQ",
     "difficulty": "A",
     "description": {
       "en": "Read and comprehend text at high speed",
-      "es": "Read and comprehend text at high speed"
+      "es": "Leer y comprender textos a alta velocidad"
     }
   },
   {
     "id": "carpentry",
     "name": {
       "en": "Carpentry",
-      "es": "Carpentry"
+      "es": "Carpintería"
     },
-    "category": "TRADE & CRAFT",
+    "category": "TRADE",
     "attr": "IQ",
     "difficulty": "E",
     "description": {
       "en": "Work with wood; build and repair structures",
-      "es": "Work with wood; build and repair structures"
+      "es": "Trabajar con madera; construir y reparar estructuras"
     }
   },
   {
     "id": "masonry",
     "name": {
       "en": "Masonry",
-      "es": "Masonry"
+      "es": "Albañilería"
     },
-    "category": "TRADE & CRAFT",
+    "category": "TRADE",
     "attr": "IQ",
     "difficulty": "E",
     "description": {
       "en": "Stonework and brick construction",
-      "es": "Stonework and brick construction"
+      "es": "Construcción en piedra y ladrillo"
     }
   },
   {
     "id": "sewing",
     "name": {
       "en": "Sewing",
-      "es": "Sewing"
+      "es": "Costura"
     },
-    "category": "TRADE & CRAFT",
+    "category": "TRADE",
     "attr": "DX",
     "difficulty": "E",
     "description": {
       "en": "Stitch, repair, and make garments",
-      "es": "Stitch, repair, and make garments"
+      "es": "Coser, reparar y hacer prendas"
     }
   },
   {
     "id": "leatherworking",
     "name": {
       "en": "Leatherworking",
-      "es": "Leatherworking"
+      "es": "Peletería / Cuero"
     },
-    "category": "TRADE & CRAFT",
+    "category": "TRADE",
     "attr": "DX",
     "difficulty": "E",
     "description": {
       "en": "Craft and repair leather goods and harnesses",
-      "es": "Craft and repair leather goods and harnesses"
+      "es": "Fabricar y reparar artículos de cuero y arneses"
     }
   },
   {
@@ -1915,110 +1733,82 @@ export const SKILLS: ExtendedSkillDef[] = [
       "en": "Smith (Iron)",
       "es": "Smith (Iron)"
     },
-    "category": "TRADE & CRAFT",
+    "category": "TRADE",
     "attr": "IQ",
     "difficulty": "A",
     "description": {
       "en": "Forge and work iron tools and parts",
-      "es": "Forge and work iron tools and parts"
+      "es": "Forjar y trabajar herramientas y piezas de hierro"
     }
   },
   {
     "id": "cooking",
     "name": {
       "en": "Cooking",
-      "es": "Cooking"
+      "es": "Cocina"
     },
-    "category": "TRADE & CRAFT",
+    "category": "TRADE",
     "attr": "IQ",
     "difficulty": "A",
     "description": {
       "en": "Prepare food; basic herbalism uses this as default",
-      "es": "Prepare food; basic herbalism uses this as default"
+      "es": "Preparar comida; la herboristería básica usa esto por defecto"
     }
   },
   {
     "id": "jeweler",
     "name": {
       "en": "Jeweler",
-      "es": "Jeweler"
+      "es": "Joyero"
     },
-    "category": "TRADE & CRAFT",
+    "category": "TRADE",
     "attr": "IQ",
     "difficulty": "H",
     "description": {
       "en": "Work with precious metals and gems",
-      "es": "Work with precious metals and gems"
+      "es": "Trabajar con metales preciosos y gemas"
     }
   },
   {
     "id": "machinist",
     "name": {
       "en": "Machinist",
-      "es": "Machinist"
+      "es": "Maquinista"
     },
-    "category": "TRADE & CRAFT",
+    "category": "TRADE",
     "attr": "IQ",
     "difficulty": "A",
     "description": {
       "en": "Operate and maintain machine tools",
-      "es": "Operate and maintain machine tools"
+      "es": "Operar y mantener herramientas y maquinaria"
     }
   },
   {
     "id": "photography",
     "name": {
       "en": "Photography",
-      "es": "Photography"
+      "es": "Fotografía"
     },
-    "category": "TRADE & CRAFT",
+    "category": "TRADE",
     "attr": "IQ",
     "difficulty": "A",
     "description": {
       "en": "Operate cameras; develop images in darkroom",
-      "es": "Operate cameras; develop images in darkroom"
+      "es": "Operar cámaras; revelar imágenes en un cuarto oscuro"
     }
   },
   {
     "id": "freight_handling",
     "name": {
       "en": "Freight Handling",
-      "es": "Freight Handling"
+      "es": "Manejo de Carga"
     },
-    "category": "TRADE & CRAFT",
+    "category": "TRADE",
     "attr": "IQ",
     "difficulty": "A",
     "description": {
       "en": "Dock and warehouse logistics",
-      "es": "Dock and warehouse logistics"
-    }
-  },
-  {
-    "id": "animal_handling_any",
-    "name": {
-      "en": "Animal Handling (any)",
-      "es": "Animal Handling (any)"
-    },
-    "category": "ANIMALS & OUTDOORS",
-    "attr": "IQ",
-    "difficulty": "A",
-    "description": {
-      "en": "Control and care for animals (specify type)",
-      "es": "Control and care for animals (specify type)"
-    }
-  },
-  {
-    "id": "__143",
-    "name": {
-      "en": "---",
-      "es": "---"
-    },
-    "category": "ANIMALS & OUTDOORS",
-    "attr": "IQ",
-    "difficulty": "A",
-    "description": {
-      "en": "---",
-      "es": "---"
+      "es": "Logística portuaria y de almacenes"
     }
   },
   {
@@ -2027,152 +1817,138 @@ export const SKILLS: ExtendedSkillDef[] = [
       "en": "Riding (Horse)",
       "es": "Riding (Horse)"
     },
-    "category": "ANIMALS & OUTDOORS",
+    "category": "ANIMALS",
     "attr": "DX",
     "difficulty": "A",
     "description": {
       "en": "Ride and direct a mounted animal at speed",
-      "es": "Ride and direct a mounted animal at speed"
+      "es": "Montar y dirigir un animal a velocidad"
     }
   },
   {
     "id": "falconry",
     "name": {
       "en": "Falconry",
-      "es": "Falconry"
+      "es": "Cetrería"
     },
-    "category": "ANIMALS & OUTDOORS",
+    "category": "ANIMALS",
     "attr": "IQ",
     "difficulty": "A",
     "description": {
       "en": "Train and hunt with birds of prey",
-      "es": "Train and hunt with birds of prey"
+      "es": "Entrenar y cazar con aves rapaces"
     }
   },
   {
     "id": "fishing",
     "name": {
       "en": "Fishing",
-      "es": "Fishing"
+      "es": "Pesca"
     },
-    "category": "ANIMALS & OUTDOORS",
+    "category": "ANIMALS",
     "attr": "Per",
     "difficulty": "E",
     "description": {
       "en": "Catch fish; read water conditions",
-      "es": "Catch fish; read water conditions"
+      "es": "Atrapar peces; leer las condiciones del agua"
     }
   },
   {
     "id": "gardening",
     "name": {
       "en": "Gardening",
-      "es": "Gardening"
+      "es": "Jardinería"
     },
-    "category": "ANIMALS & OUTDOORS",
+    "category": "ANIMALS",
     "attr": "IQ",
     "difficulty": "E",
     "description": {
       "en": "Cultivate plants in managed spaces",
-      "es": "Cultivate plants in managed spaces"
+      "es": "Cultivar plantas en espacios manejados (jardines)"
     }
   },
   {
     "id": "farming",
     "name": {
       "en": "Farming",
-      "es": "Farming"
+      "es": "Agricultura"
     },
-    "category": "ANIMALS & OUTDOORS",
+    "category": "ANIMALS",
     "attr": "IQ",
     "difficulty": "E",
     "description": {
       "en": "Cultivate crops and manage farmland",
-      "es": "Cultivate crops and manage farmland"
+      "es": "Cultivar cultivos y gestionar tierras de cultivo"
     }
   },
   {
     "id": "naturalist",
     "name": {
       "en": "Naturalist",
-      "es": "Naturalist"
+      "es": "Naturalista"
     },
-    "category": "ANIMALS & OUTDOORS",
+    "category": "ANIMALS",
     "attr": "IQ",
     "difficulty": "H",
     "description": {
       "en": "Broad knowledge of plants, animals, and ecology",
-      "es": "Broad knowledge of plants, animals, and ecology"
+      "es": "Amplio conocimiento de plantas, animales y ecología"
     }
   },
   {
     "id": "herbal_medicine",
     "name": {
       "en": "Herbal Medicine",
-      "es": "Herbal Medicine"
+      "es": "Medicina Herbal"
     },
-    "category": "ANIMALS & OUTDOORS",
+    "category": "ANIMALS",
     "attr": "IQ",
     "difficulty": "VH",
     "description": {
       "en": "Natural therapeutic use of plants; requires Naturalist",
-      "es": "Natural therapeutic use of plants; requires Naturalist"
+      "es": "Uso terapéutico natural de plantas; requiere Naturalista"
     }
   },
   {
     "id": "herb_lore",
     "name": {
       "en": "Herb Lore",
-      "es": "Herb Lore"
+      "es": "Conocimiento de Hierbas (Magia)"
     },
-    "category": "ANIMALS & OUTDOORS",
+    "category": "ANIMALS",
     "attr": "IQ",
     "difficulty": "VH",
     "description": {
-      "en": "Magical/occult plant knowledge; preparation of mystical herbal / remedies and poisons",
-      "es": "Magical/occult plant knowledge; preparation of mystical herbal / remedies and poisons"
+      "en": "Magical/occult plant knowledge; preparation of mystical herbal remedies and poisons",
+      "es": "Conocimiento mágico/oculto de plantas; preparación de remedios y venenos"
     }
   },
   {
     "id": "veterinary",
     "name": {
       "en": "Veterinary",
-      "es": "Veterinary"
+      "es": "Veterinaria"
     },
-    "category": "ANIMALS & OUTDOORS",
+    "category": "ANIMALS",
     "attr": "IQ",
     "difficulty": "H",
     "description": {
       "en": "Medical diagnosis and treatment for animals",
-      "es": "Medical diagnosis and treatment for animals"
-    }
-  },
-  {
-    "id": "_underworld__cove_",
-    "name": {
-      "en": "\u2014 UNDERWORLD & COVE /",
-      "es": "\u2014 UNDERWORLD & COVE /"
-    },
-    "category": "ANIMALS & OUTDOORS",
-    "attr": "IQ",
-    "difficulty": "A",
-    "description": {
-      "en": "/ \u2014 /",
-      "es": "/ \u2014 /"
+      "es": "Diagnóstico y tratamiento médico para animales"
     }
   },
   {
     "id": "filch",
     "name": {
       "en": "Filch",
-      "es": "Filch"
+      "es": "Hurtar / Ratear"
     },
-    "category": "ANIMALS & OUTDOORS",
+    "category": "UNDERWORLD",
     "attr": "DX",
     "difficulty": "A",
     "description": {
       "en": "Swipe items from surfaces without notice",
-      "es": "Swipe items from surfaces without notice"
+      "es": "Hurtar pequeños objetos sin ser notado"
     }
   },
   {
@@ -2181,124 +1957,110 @@ export const SKILLS: ExtendedSkillDef[] = [
       "en": "Sleight of Hand",
       "es": "Juegos de Manos"
     },
-    "category": "ANIMALS & OUTDOORS",
+    "category": "UNDERWORLD",
     "attr": "DX",
     "difficulty": "H",
     "description": {
       "en": "Conceal and manipulate objects in plain sight",
-      "es": "Manipulaci\u00f3n fina y trucos manuales"
+      "es": "Ocultar y manipular objetos a simple vista (Juegos de manos)"
     }
   },
   {
     "id": "escape",
     "name": {
       "en": "Escape",
-      "es": "Escape"
+      "es": "Escapismo"
     },
-    "category": "ANIMALS & OUTDOORS",
+    "category": "UNDERWORLD",
     "attr": "DX",
     "difficulty": "H",
     "description": {
       "en": "Free oneself from bonds and confinement",
-      "es": "Free oneself from bonds and confinement"
+      "es": "Liberarse de ataduras y confinamiento"
     }
   },
   {
     "id": "counterfeiting",
     "name": {
       "en": "Counterfeiting",
-      "es": "Counterfeiting"
+      "es": "Falsificación (Moneda)"
     },
-    "category": "ANIMALS & OUTDOORS",
+    "category": "UNDERWORLD",
     "attr": "IQ",
     "difficulty": "H",
     "description": {
       "en": "Replicate currency or official seals",
-      "es": "Replicate currency or official seals"
+      "es": "Replicar moneda o sellos oficiales"
     }
   },
   {
     "id": "smuggling",
     "name": {
       "en": "Smuggling",
-      "es": "Smuggling"
+      "es": "Contrabando"
     },
-    "category": "ANIMALS & OUTDOORS",
+    "category": "UNDERWORLD",
     "attr": "IQ",
     "difficulty": "A",
     "description": {
       "en": "Move contraband past inspections",
-      "es": "Move contraband past inspections"
+      "es": "Pasar contrabando a través de inspecciones"
     }
   },
   {
     "id": "poisons",
     "name": {
       "en": "Poisons",
-      "es": "Poisons"
+      "es": "Venenos"
     },
-    "category": "ANIMALS & OUTDOORS",
+    "category": "UNDERWORLD",
     "attr": "IQ",
     "difficulty": "H",
     "description": {
       "en": "Know, prepare, and apply toxins; also detect them",
-      "es": "Know, prepare, and apply toxins; also detect them"
+      "es": "Conocer, preparar y aplicar toxinas; también detectarlas"
     }
   },
   {
     "id": "soldier",
     "name": {
       "en": "Soldier",
-      "es": "Soldier"
+      "es": "Soldado"
     },
-    "category": "MILITARY & NAVAL",
+    "category": "MILITARY",
     "attr": "IQ",
     "difficulty": "A",
     "description": {
       "en": "General military knowledge, drill, and doctrine",
-      "es": "General military knowledge, drill, and doctrine"
+      "es": "Conocimiento militar general, simulacros y doctrina"
     }
   },
   {
     "id": "strategy",
     "name": {
       "en": "Strategy",
-      "es": "Strategy"
+      "es": "Estrategia"
     },
-    "category": "MILITARY & NAVAL",
+    "category": "MILITARY",
     "attr": "IQ",
     "difficulty": "H",
     "description": {
       "en": "Large-scale military and operational planning",
-      "es": "Large-scale military and operational planning"
+      "es": "Planificación militar y operativa a gran escala"
     }
   },
   {
     "id": "forward_observer",
     "name": {
       "en": "Forward Observer",
-      "es": "Forward Observer"
+      "es": "Observador Avanzado"
     },
-    "category": "MILITARY & NAVAL",
+    "category": "MILITARY",
     "attr": "IQ",
     "difficulty": "A",
     "description": {
       "en": "Direct artillery or ranged fire from a distant position",
-      "es": "Direct artillery or ranged fire from a distant position"
-    }
-  },
-  {
-    "id": "shiphandling_ship",
-    "name": {
-      "en": "Shiphandling (Ship)",
-      "es": "Shiphandling (Ship)"
-    },
-    "category": "MILITARY & NAVAL",
-    "attr": "IQ",
-    "difficulty": "H",
-    "description": {
-      "en": "Command and navigate a large sailing or steam vessel",
-      "es": "Command and navigate a large sailing or steam vessel"
+      "es": "Dirigir artillería o fuego a distancia desde una posición distante"
     }
   },
   {
@@ -2307,12 +2069,12 @@ export const SKILLS: ExtendedSkillDef[] = [
       "en": "Navigation (Sea)",
       "es": "Navigation (Sea)"
     },
-    "category": "MILITARY & NAVAL",
+    "category": "MILITARY",
     "attr": "IQ",
     "difficulty": "A",
     "description": {
       "en": "Determine course by stars and charts at sea",
-      "es": "Determine course by stars and charts at sea"
+      "es": "Determinar curso por estrellas y cartas náuticas en el mar"
     }
   },
   {
@@ -2321,12 +2083,12 @@ export const SKILLS: ExtendedSkillDef[] = [
       "en": "Navigation (Land)",
       "es": "Navigation (Land)"
     },
-    "category": "MILITARY & NAVAL",
+    "category": "MILITARY",
     "attr": "IQ",
     "difficulty": "A",
     "description": {
       "en": "Orienteer and chart routes overland",
-      "es": "Orienteer and chart routes overland"
+      "es": "Orientación y trazar rutas por tierra"
     }
-  }
+  },
 ];

@@ -9,9 +9,9 @@ import { PlusCircle, X } from 'lucide-react';
 
 export default function AttributePanel() {
   const [isSecondaryModalOpen, setSecondaryModalOpen] = useState(false);
-  const { lang, ST, DX, IQ, HT, setAttribute, pathwayId, sequenceLevel, disadvantages, quirks, skills, advantages, setViewerData, spiUsed, setSpiUsed, corruption, setCorruption, hpDamage, setHpDamage, fpSpent, setFpSpent, secondaryPurchases, setSecondaryPurchase } = useCharacterStore();
+  const { lang, ST, DX, IQ, HT, setAttribute, pathwayId, sequenceLevel, disadvantages, quirks, skills, advantages, setViewerData, spiUsed, setSpiUsed, corruption, setCorruption, hpDamage, setHpDamage, fpSpent, setFpSpent, secondaryPurchases, setSecondaryPurchase, activeTransformations } = useCharacterStore();
   const t = TRANSLATIONS[lang];
-  const { textAccentClass, corruptionPercent, isLostControl, colorStage } = useCorruptionMetrics();
+  const { textAccentClass, corruptionPercent, isLostControl, colorStage, maxCorruption } = useCorruptionMetrics();
 
   const currentSequence = useMemo(() => {
     if (!pathwayId || !sequenceLevel) return null;
@@ -21,22 +21,34 @@ export default function AttributePanel() {
 
   // Accumulate stat bonuses
   const statBonuses = useMemo(() => {
-    const bonuses: Record<string, number> = { ST: 0, DX: 0, IQ: 0, HT: 0, Per: 0, Will: 0, SPI: 0, BasicSpeed: 0, HP: 0, FP: 0 };
-    if (!pathwayId || !sequenceLevel) return bonuses;
-    const pathway = PATHWAYS.find(p => p.id === pathwayId);
-    if (!pathway) return bonuses;
-    
-    // Accumulate from 9 down to current sequence
-    for (let seq = 9; seq >= sequenceLevel; seq--) {
-      const seqData = pathway.sequences.find(s => s.level === seq);
-      if (seqData) {
-        seqData.statBonuses.forEach(b => {
-          bonuses[b.stat] += b.bonus;
-        });
+    const bonuses: Record<string, number> = { ST: 0, DX: 0, IQ: 0, HT: 0, Per: 0, Will: 0, SPI: 0, BasicSpeed: 0, HP: 0, FP: 0, BasicMove: 0 };
+    if (pathwayId && sequenceLevel) {
+      const pathway = PATHWAYS.find(p => p.id === pathwayId);
+      if (pathway) {
+        // Accumulate from 9 down to current sequence
+        for (let seq = 9; seq >= sequenceLevel; seq--) {
+          const seqData = pathway.sequences.find(s => s.level === seq);
+          if (seqData) {
+            seqData.statBonuses.forEach(b => {
+              if (bonuses[b.stat] !== undefined) bonuses[b.stat] += b.bonus;
+            });
+          }
+        }
       }
     }
+
+    if (activeTransformations) {
+      activeTransformations.forEach(trans => {
+        if (trans.statBonuses) {
+          trans.statBonuses.forEach(b => {
+            if (bonuses[b.stat] !== undefined) bonuses[b.stat] += b.bonus;
+          });
+        }
+      });
+    }
+    
     return bonuses;
-  }, [pathwayId, sequenceLevel]);
+  }, [pathwayId, sequenceLevel, activeTransformations]);
 
   const finalST = ST + statBonuses.ST;
   const finalDX = DX + statBonuses.DX;
@@ -180,7 +192,7 @@ export default function AttributePanel() {
                     const newUsed = spiUsed + 1;
                     setSpiUsed(newUsed);
                     if (finalSPI - newUsed < 0) {
-                      setCorruption(Math.min(finalWill, corruption + 1));
+                      setCorruption(Math.min(maxCorruption, corruption + 1));
                     }
                   }} className="px-1.5 py-0.5 bg-[#222] border border-[#444] rounded text-purple-400 text-xs hover:bg-[#333]">-</button>
                   <span className={`font-mono text-[16px] font-bold w-16 text-center ${finalSPI - spiUsed < 0 ? 'text-red-500 animate-pulse' : 'text-purple-500'}`}>{finalSPI - spiUsed} / {finalSPI}</span>
@@ -221,10 +233,10 @@ export default function AttributePanel() {
                   -
                 </button>
                 <span className={`font-mono text-[13px] font-bold w-12 text-center shrink-0 ${corruptionPercent >= 75 ? 'text-red-400 animate-pulse' : 'text-red-500'}`}>
-                  {corruption} / {finalWill}
+                  {corruption} / {maxCorruption}
                 </span>
                 <button 
-                  onClick={() => setCorruption(Math.min(finalWill, corruption + 1))} 
+                  onClick={() => setCorruption(Math.min(maxCorruption, corruption + 1))} 
                   className="w-5 h-5 flex items-center justify-center bg-[#222] border border-[#444] rounded text-red-500 text-xs font-bold hover:bg-[#333] cursor-pointer shrink-0 transition-colors"
                   title="Increase corruption"
                 >

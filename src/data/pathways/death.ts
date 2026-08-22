@@ -153,11 +153,15 @@ export const deathPathway: Pathway = {
           id: 'death_seq7_main',
           name: { en: 'Spirit Medium', es: 'Médium Espiritual' },
           type: 'active',
-          spiCost: 2,
           description: {
-            en: 'Can commune and control dead bodies and spirits.',
-            es: 'Puede comunicarse y controlar cuerpos muertos y espíritus.'
-          }
+            en: 'Can commune and control dead bodies and spirits.\n\n{{Spirit Channelling}}: Communicate with spirits. Roll SPI.\n{{Exorcism}}: Dispel hostile spirits. Roll SPI vs SPI.\n{{Undead Control}}: Command an undead creature. Roll SPI.',
+            es: 'Puede comunicarse y controlar cuerpos muertos y espíritus.\n\n{{Canalización Espiritual}}: Comunica con espíritus. Tira SPI.\n{{Exorcismo}}: Disipa espíritus hostiles. Tira SPI vs SPI.\n{{Control de No-muerto}}: Comanda a una criatura no-muerta. Tira SPI.'
+          },
+          spiOptions: [
+            { name: { en: 'Spirit Channelling', es: 'Canalización Espiritual' }, cost: 1 },
+            { name: { en: 'Exorcism', es: 'Exorcismo' }, cost: 2 },
+            { name: { en: 'Undead Control', es: 'Control No-muerto' }, cost: 2 }
+          ]
         }
       ]
     },
